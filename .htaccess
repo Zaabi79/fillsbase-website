@@ -8,6 +8,9 @@ RewriteRule ^database/?$ index.php [R=301,L,NC]
 RewriteRule ^ddos/?$ index.php [R=301,L,NC]
 RewriteRule ^colocation/?$ index.php [R=301,L,NC]
 
+# Domain checker — use custom wrapper
+RewriteRule ^domainchecker/?$ domainchecker_custom.php [L,NC,QSA]
+
 # Knowledgebase routing
 RewriteRule ^knowledgebase/([0-9]+)/.*\.html$ knowledgebase.php?action=displayarticle&id=$1 [L,NC,QSA]
 RewriteRule ^knowledgebase/([0-9]+)/([^/]*)$ knowledgebase.php?action=displaycat&id=$1 [L,NC,QSA]
@@ -17,11 +20,10 @@ RewriteRule ^knowledgebase-list/?$ knowledgebase.php [L,NC,QSA]
 # Contact page
 RewriteRule ^contact/?$ contact.php [L,NC,QSA]
 
-# WHMCS direct PHP pages — serve as PHP directly (no dispatcher)
-RewriteRule ^(cart|clientarea|register|login|logout|dologin|pwreset|submitticket|supporttickets|viewticket|viewinvoice|viewquote|creditcard|domainchecker|whois|serverstatus|announcements|downloads|dl|affiliates|unsubscribe|upgrade|configuressl|networkissues|banned)/?$ $1.php [L,NC,QSA]
+# WHMCS direct PHP pages
+RewriteRule ^(cart|clientarea|register|login|logout|dologin|pwreset|submitticket|supporttickets|viewticket|viewinvoice|viewquote|creditcard|whois|serverstatus|announcements|downloads|dl|affiliates|unsubscribe|upgrade|configuressl|networkissues|banned)/?$ $1.php [L,NC,QSA]
 
-# For all other extensionless URLs: route through index.php dispatcher
-# (handles .html pages like /hosting, /vps, /seo etc AND .php fallbacks)
+# All other extensionless URLs through index.php dispatcher (handles .html and .php)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^.]+)$ index.php [L,QSA]
