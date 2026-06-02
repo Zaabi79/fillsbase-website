@@ -25,3 +25,7 @@ jobs:
             find . -type f -not -path './.git/*' -exec chmod 644 {} \;
             find . -type d -not -path './.git/*' -exec chmod 755 {} \;
             chown -R fillsbase:fillsbase .
+            chmod 777 templates_c
+            chmod 600 configuration.php
+            rm -f vendor/.htaccess
+            rm -rf templates_c/*
