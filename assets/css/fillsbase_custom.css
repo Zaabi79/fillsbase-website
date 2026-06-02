@@ -80,8 +80,8 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* Custom Hero Section Styles - Fillsbase */
 .hero-new {
-    padding: 28px 0 90px 0;
-    background: linear-gradient(135deg, #f0faf6 0%, #eaf6ff 40%, #f4f0ff 100%);
+    padding: 60px 0 100px 0;
+    background: linear-gradient(135deg, #c8b6e2 0%, #e8b4cb 30%, #f5c6a0 65%, #f9d8b0 100%);
     overflow: hidden;
     position: relative;
 }
@@ -107,19 +107,19 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 .hero-orb-1 {
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(80,210,158,0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(180,100,220,0.30) 0%, transparent 70%);
     top: -150px; left: -100px;
     animation: orb-float 8s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(240,100,160,0.25) 0%, transparent 70%);
     bottom: -80px; right: 5%;
     animation: orb-float 10s ease-in-out infinite alternate-reverse;
 }
 .hero-orb-3 {
     width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(249,180,100,0.30) 0%, transparent 70%);
     top: 40%; left: 40%;
     animation: orb-float 12s ease-in-out infinite alternate;
 }
@@ -129,21 +129,21 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .hero-domain-wrapper {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 4px 30px rgba(80,210,158,0.1), 0 1px 0 rgba(255,255,255,0.8) inset;
-    border: 1px solid rgba(255,255,255,0.7);
-    margin-bottom: 25px;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(160,80,200,0.15), 0 1px 0 rgba(255,255,255,0.9) inset;
+    border: 1px solid rgba(255,255,255,0.75);
+    margin-bottom: 32px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     transition: box-shadow 0.3s ease;
 }
 .hero-domain-wrapper:focus-within {
-    box-shadow: 0 4px 40px rgba(80,210,158,0.25), 0 0 0 3px rgba(80,210,158,0.15);
+    box-shadow: 0 8px 50px rgba(160,80,200,0.30), 0 0 0 3px rgba(180,100,220,0.20);
 }
 
 .hero-search-form {
@@ -246,15 +246,16 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .feature-card.white {
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.70);
+    box-shadow: 0 4px 30px rgba(180,80,200,0.08);
 }
 
 .feature-card.teal {
-    background: linear-gradient(135deg, #3ec99a 0%, #50d29e 60%, #2ab88a 100%);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 40%, #c084fc 100%);
+    border: 1px solid rgba(255,255,255,0.25);
 }
 
 .feature-card .card-text {
@@ -2219,4 +2220,57 @@ img { max-width: 100%; height: auto; }
   .menu-wrap.mobile {
     background-color: #0f1923 !important;
   }
+}
+/* ══════════════════════════════════════════
+   HERO TOP TEXT — Amelia-style pill + headline
+   ══════════════════════════════════════════ */
+.hero-top-text {
+    padding-top: 20px;
+}
+
+.hero-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.70);
+    color: #5b21b6;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 22px;
+    transition: background 0.25s, transform 0.2s;
+    box-shadow: 0 2px 12px rgba(160,80,200,0.12);
+}
+.hero-pill-badge:hover {
+    background: rgba(255,255,255,0.75);
+    transform: translateY(-2px);
+    color: #4c1d95;
+}
+
+.hero-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #1a0533;
+    margin-bottom: 16px;
+}
+
+.hero-sub-title {
+    font-size: 1.15rem;
+    color: rgba(30,10,60,0.65);
+    max-width: 580px;
+    margin: 0 auto 8px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero-main-title { font-size: 1.9rem; }
+    .hero-sub-title  { font-size: 1rem; padding: 0 10px; }
+    .hero-pill-badge { font-size: 0.78rem; }
 }

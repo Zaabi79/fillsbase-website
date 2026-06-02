@@ -120,6 +120,14 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     <div class="hero-bg-orb hero-orb-2"></div>
     <div class="hero-bg-orb hero-orb-3"></div>
     <div class="container" style="position:relative;z-index:2;">
+      <!-- Hero Top: Pill Badge + Headline -->
+      <div class="hero-top-text text-center mb-4">
+        <a href="/blackfriday" class="hero-pill-badge">
+          <i class="fas fa-tags me-1"></i> Special Offers Live Now &nbsp;<i class="fas fa-arrow-right"></i>
+        </a>
+        <h1 class="hero-main-title" data-i18n="hero.main_title">Web Hosting, Domains &amp; Digital Solutions</h1>
+        <p class="hero-sub-title" data-i18n="hero.sub_title">Reliable hosting, smart domains, and powerful digital tools for businesses in Africa and beyond.</p>
+      </div>
       <!-- Domain Search Wrapper -->
       <div class="hero-domain-wrapper">
         <form class="hero-search-form" id="heroSearchForm" action="javascript:void(0);" method="post">
