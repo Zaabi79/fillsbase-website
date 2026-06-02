@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* ===== AI CARD ===== */
 .feature-card.ai-card {
-    background: linear-gradient(135deg, #0a0e1a 0%, #0f1f35 50%, #0d1a2e 100%);
+    background: linear-gradient(135deg, #1e0a3c 0%, #3b0f6b 50%, #5b1fa0 100%);
     overflow: hidden;
     position: relative;
 }
@@ -2281,4 +2281,129 @@ img { max-width: 100%; height: auto; }
     .hero-main-title { font-size: 1.9rem; }
     .hero-sub-title  { font-size: 1rem; padding: 0 10px; }
     .hero-pill-badge { font-size: 0.78rem; }
+}
+
+
+/* ══════════════════════════════════════════════════════
+   HOMEPAGE SECTION CONSISTENCY — white-left / gradient-right
+   All sections share the same palette as the hero
+   ══════════════════════════════════════════════════════ */
+
+/* ── Process Section ── */
+.process-section.sec-normal {
+    background: linear-gradient(to right, #ffffff 0%, #f9f5ff 30%, #f0e0f5 65%, #fde8d8 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+.process-section.sec-normal::after {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,100,220,0.12) 0%, transparent 70%);
+    top: -100px; right: -80px;
+    pointer-events: none;
+}
+
+/* ── Pricing Section ── */
+.pricing.special {
+    background: linear-gradient(to right, #ffffff 0%, #f7f2ff 25%, #edd5f0 60%, #fcd9be 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+.pricing.special::after {
+    content: '';
+    position: absolute;
+    width: 600px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,160,100,0.15) 0%, transparent 70%);
+    bottom: -100px; right: 5%;
+    pointer-events: none;
+}
+
+/* ── Why Choose Section ── */
+.why-choose-new.sec-normal {
+    background: linear-gradient(to right, #ffffff 0%, #f5f0ff 30%, #e8c8e8 62%, #f8d5b8 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+.why-choose-new.sec-normal::after {
+    content: '';
+    position: absolute;
+    width: 450px; height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,120,240,0.12) 0%, transparent 70%);
+    top: 0; right: -60px;
+    pointer-events: none;
+}
+
+/* ── Map / Services Section ── */
+section.services.maping {
+    background: linear-gradient(to right, #1a0533 0%, #2d1052 50%, #4a1a6e 100%) !important;
+}
+
+/* ── Help Section ── */
+section.services.help {
+    background: linear-gradient(to right, #ffffff 0%, #f8f3ff 30%, #edd8f2 65%, #fce0c8 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+section.services.help::after {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,80,220,0.10) 0%, transparent 70%);
+    top: -80px; right: -60px;
+    pointer-events: none;
+}
+
+/* ── Section headings — consistent dark color on light bg ── */
+.process-section h2,
+.process-section h3,
+.why-choose-new h2,
+.why-choose-new h3,
+.pricing.special h2,
+.pricing.special h3,
+section.services.help h2,
+section.services.help h3 {
+    color: #0f0a1e !important;
+}
+
+.process-section p,
+.why-choose-new p,
+section.services.help p {
+    color: #555370 !important;
+}
+
+/* ── Cards inside sections — glass effect ── */
+.process-section .normal-sec .col-md-4 > div,
+.process-section .item-block,
+.why-choose-new .item-block {
+    background: rgba(255,255,255,0.75) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.70) !important;
+    border-radius: 16px;
+}
+
+/* ── Pricing cards on gradient bg ── */
+.pricing.special .pricing-table {
+    background: rgba(255,255,255,0.80) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.65) !important;
+    border-radius: 20px;
+}
+
+/* ── General section text readability on gradient ── */
+.process-section .mergecolor,
+.why-choose-new .mergecolor,
+section.services.help .mergecolor {
+    color: #0f0a1e !important;
+}
+.process-section .seccolor,
+.why-choose-new .seccolor,
+section.services.help .seccolor {
+    color: #555370 !important;
 }
