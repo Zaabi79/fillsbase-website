@@ -8,29 +8,22 @@ RewriteRule ^database/?$ index.php [R=301,L,NC]
 RewriteRule ^ddos/?$ index.php [R=301,L,NC]
 RewriteRule ^colocation/?$ index.php [R=301,L,NC]
 
-
-# 1. Match the exact Production Article Pattern
-# Production: /client/knowledgebase/1/slug.html
-# Local: /knowledgebase/1/slug.html
+# Knowledgebase routing
 RewriteRule ^knowledgebase/([0-9]+)/.*\.html$ knowledgebase.php?action=displayarticle&id=$1 [L,NC,QSA]
-
-# 2. Match the exact Production Category Pattern
-# Production: /client/knowledgebase/1/slug
-# Local: /knowledgebase/1/slug
 RewriteRule ^knowledgebase/([0-9]+)/([^/]*)$ knowledgebase.php?action=displaycat&id=$1 [L,NC,QSA]
-
-# 3. Handle root Knowledgebase
 RewriteRule ^knowledgebase/?$ knowledgebase.php [L,NC]
-
-# 4. Dynamic PHP pages override
 RewriteRule ^knowledgebase-list/?$ knowledgebase.php [L,NC,QSA]
 
-# Contact page — serve WHMCS contact.php with custom template
+# Contact page
 RewriteRule ^contact/?$ contact.php [L,NC,QSA]
 
-# 5. Standard Logicweb Static HTML Fallback
+# WHMCS direct PHP pages — serve as PHP directly (no dispatcher)
+RewriteRule ^(cart|clientarea|register|login|logout|dologin|pwreset|submitticket|supporttickets|viewticket|viewinvoice|viewquote|creditcard|domainchecker|whois|serverstatus|announcements|downloads|dl|affiliates|unsubscribe|upgrade|configuressl|networkissues|banned)/?$ $1.php [L,NC,QSA]
+
+# For all other extensionless URLs: route through index.php dispatcher
+# (handles .html pages like /hosting, /vps, /seo etc AND .php fallbacks)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^.]+)$ $1.html [L]
+RewriteRule ^([^.]+)$ index.php [L,QSA]
 
-DirectoryIndex index.html index.php
+DirectoryIndex index.php index.html
