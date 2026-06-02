@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* Custom Hero Section Styles - Fillsbase */
 .hero-new {
-    padding: 60px 0 100px 0;
+    padding: 60px 0 120px 0;
     background: linear-gradient(135deg, #c8b6e2 0%, #e8b4cb 30%, #f5c6a0 65%, #f9d8b0 100%);
     overflow: hidden;
     position: relative;
@@ -136,11 +136,13 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     border-radius: 20px;
     box-shadow: 0 8px 40px rgba(160,80,200,0.15), 0 1px 0 rgba(255,255,255,0.9) inset;
     border: 1px solid rgba(255,255,255,0.75);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     transition: box-shadow 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 .hero-domain-wrapper:focus-within {
     box-shadow: 0 8px 50px rgba(160,80,200,0.30), 0 0 0 3px rgba(180,100,220,0.20);
@@ -220,10 +222,13 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     font-weight: 600;
 }
 
+.hero-search-cards-gap { height: 8px; }
 .hero-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    position: relative;
+    z-index: 2;
 }
 
 .feature-card {
@@ -241,8 +246,9 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .feature-card:hover {
-    transform: translateY(-14px) scale(1.015);
+    transform: translateY(-8px) scale(1.012);
     box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+    z-index: 3;
 }
 
 .feature-card.white {
@@ -2226,6 +2232,8 @@ img { max-width: 100%; height: auto; }
    ══════════════════════════════════════════ */
 .hero-top-text {
     padding-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-pill-badge {
