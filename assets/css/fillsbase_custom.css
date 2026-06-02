@@ -563,21 +563,46 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* --- Process Section Styles --- */
 .process-section {
-    padding: 100px 0;
+    padding: 60px 0 80px;
     position: relative;
     overflow: hidden;
-    background: #ffffff !important;
+    background: #f4f7fb !important;
 }
 
+.process-section .process-inner-card {
+    background: linear-gradient(135deg, #2d4f7e 0%, #3d6fa8 60%, #5589c4 100%);
+    border-radius: 28px;
+    padding: 60px 50px 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(45,79,126,0.28);
+}
+.process-section .process-inner-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    border-radius: 28px;
+}
+.process-section .process-inner-card::after {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 65%);
+    top: -200px; right: -100px;
+    pointer-events: none;
+}
 .process-section .section-heading {
-    color: #0f0a1e !important;
-    font-weight: 600 !important;
-    font-size: 2.8rem !important;
-    letter-spacing: -0.01em !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 2.4rem !important;
+    letter-spacing: -0.02em !important;
 }
-
 .process-section .section-subheading {
-    color: #555370 !important;
+    color: rgba(255,255,255,0.75) !important;
 }
 
 .process-container {
@@ -598,9 +623,9 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 .process-line-fill {
     height: 100%;
     width: 0;
-    background: var(--primary-color);
+    background: rgba(255,255,255,0.60);
     transition: width 2.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 12px rgba(255,255,255,0.30);
 }
 
 .aos-animate .process-line-fill {
@@ -648,19 +673,19 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 .process-icon {
     font-size: 28px;
-    color: #2d4f7e;
+    color: #ffffff;
     transition: all 0.5s ease;
 }
 
 /* Active State Styles */
 .process-step.active .process-icon-wrap {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 30px rgba(0,209,178,0.5);
+    border-color: rgba(255,255,255,0.85);
+    box-shadow: 0 0 30px rgba(255,255,255,0.25);
     transform: scale(1.1);
 }
 
 .process-step.active .process-icon {
-    color: var(--primary-color);
+    color: #ffffff;
 }
 
 .process-step:hover .process-icon-wrap {
@@ -675,13 +700,13 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 12px;
-    color: #0f0a1e;
+    color: #ffffff;
     letter-spacing: 0;
 }
 
 .process-content p {
     font-size: 15px;
-    color: #555370;
+    color: rgba(255,255,255,0.72);
     line-height: 1.6;
     max-width: 220px;
     margin: 0 auto;
@@ -2290,7 +2315,7 @@ img { max-width: 100%; height: auto; }
    All sections share the same palette as the hero
    ══════════════════════════════════════════════════════ */
 
-/* ── Process Section — white bg, handled in .process-section rule above ── */
+
 
 /* ── Pricing Section ── */
 .pricing.special {
