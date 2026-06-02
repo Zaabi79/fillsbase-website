@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 /* Custom Hero Section Styles - Fillsbase */
 .hero-new {
     padding: 60px 0 120px 0;
-    background: linear-gradient(to right, #ffffff 0%, #f5f0ff 25%, #e8c5e0 55%, #f5b8a0 80%, #f9cfa0 100%);
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%);
     overflow: hidden;
     position: relative;
 }
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 .hero-orb-1 {
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(180,100,220,0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45,79,126,0.25) 0%, transparent 70%);
     top: -200px; right: -50px; left: auto;
     animation: orb-float 8s ease-in-out infinite alternate;
 }
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     -webkit-backdrop-filter: blur(16px);
     padding: 16px;
     border-radius: 20px;
-    box-shadow: 0 8px 40px rgba(160,80,200,0.15), 0 1px 0 rgba(255,255,255,0.9) inset;
+    box-shadow: 0 8px 40px rgba(45,79,126,0.15), 0 1px 0 rgba(255,255,255,0.9) inset;
     border: 1px solid rgba(255,255,255,0.75);
     margin-bottom: 40px;
     display: flex;
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     z-index: 10;
 }
 .hero-domain-wrapper:focus-within {
-    box-shadow: 0 8px 50px rgba(160,80,200,0.30), 0 0 0 3px rgba(180,100,220,0.20);
+    box-shadow: 0 8px 50px rgba(45,79,126,0.30), 0 0 0 3px rgba(45,79,126,0.20);
 }
 
 .hero-search-form {
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .feature-card.teal {
-    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 40%, #c084fc 100%);
+    background: linear-gradient(135deg, #2d4f7e 0%, #3d6fa8 40%, #5589c4 100%);
     border: 1px solid rgba(255,255,255,0.25);
 }
 
@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* ===== AI CARD ===== */
 .feature-card.ai-card {
-    background: linear-gradient(135deg, #1e0a3c 0%, #3b0f6b 50%, #5b1fa0 100%);
+    background: linear-gradient(135deg, #0d1f3c 0%, #1a3a6b 50%, #2d4f7e 100%);
     overflow: hidden;
     position: relative;
 }
@@ -591,7 +591,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     left: 10%;
     width: 80%;
     height: 2px;
-    background: #e0d8f0;
+    background: #c8d8f0;
     z-index: 1;
 }
 
@@ -617,8 +617,8 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     width: 80px;
     height: 80px;
     background: #ffffff;
-    border: 2px solid #e0d8f0;
-    box-shadow: 0 4px 20px rgba(140,80,200,0.12);
+    border: 2px solid #c8d8f0;
+    box-shadow: 0 4px 20px rgba(45,79,126,0.12);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -648,7 +648,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 .process-icon {
     font-size: 28px;
-    color: #6d28d9;
+    color: #2d4f7e;
     transition: all 0.5s ease;
 }
 
@@ -2244,8 +2244,8 @@ img { max-width: 100%; height: auto; }
     background: rgba(245,240,255,0.80);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(180,130,230,0.35);
-    color: #6d28d9;
+    border: 1px solid rgba(45,79,126,0.30);
+    color: #2d4f7e;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 9px 20px;
@@ -2253,12 +2253,12 @@ img { max-width: 100%; height: auto; }
     text-decoration: none;
     margin-bottom: 22px;
     transition: background 0.25s, transform 0.2s;
-    box-shadow: 0 2px 12px rgba(160,80,200,0.12);
+    box-shadow: 0 2px 12px rgba(45,79,126,0.12);
 }
 .hero-pill-badge:hover {
     background: rgba(255,255,255,0.75);
     transform: translateY(-2px);
-    color: #4c1d95;
+    color: #1e3a5f;
 }
 
 .hero-main-title {
@@ -2294,7 +2294,7 @@ img { max-width: 100%; height: auto; }
 
 /* ── Pricing Section ── */
 .pricing.special {
-    background: linear-gradient(to right, #ffffff 0%, #f7f2ff 25%, #edd5f0 60%, #fcd9be 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #ccdaf2 60%, #fcd9be 100%) !important;
     position: relative;
     overflow: hidden;
 }
@@ -2310,7 +2310,7 @@ img { max-width: 100%; height: auto; }
 
 /* ── Why Choose Section ── */
 .why-choose-new.sec-normal {
-    background: linear-gradient(to right, #ffffff 0%, #f5f0ff 30%, #e8c8e8 62%, #f8d5b8 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 30%, #c8d8f2 62%, #f8d5b8 100%) !important;
     position: relative;
     overflow: hidden;
 }
@@ -2319,19 +2319,19 @@ img { max-width: 100%; height: auto; }
     position: absolute;
     width: 450px; height: 450px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,120,240,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45,79,126,0.12) 0%, transparent 70%);
     top: 0; right: -60px;
     pointer-events: none;
 }
 
 /* ── Map / Services Section ── */
 section.services.maping {
-    background: linear-gradient(to right, #1a0533 0%, #2d1052 50%, #4a1a6e 100%) !important;
+    background: linear-gradient(to right, #0a1628 0%, #162847 50%, #2d4f7e 100%) !important;
 }
 
 /* ── Help Section ── */
 section.services.help {
-    background: linear-gradient(to right, #ffffff 0%, #f8f3ff 30%, #edd8f2 65%, #fce0c8 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 30%, #ccdaf2 65%, #fce0c8 100%) !important;
     position: relative;
     overflow: hidden;
 }
@@ -2340,7 +2340,7 @@ section.services.help::after {
     position: absolute;
     width: 400px; height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(180,80,220,0.10) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45,79,126,0.10) 0%, transparent 70%);
     top: -80px; right: -60px;
     pointer-events: none;
 }
