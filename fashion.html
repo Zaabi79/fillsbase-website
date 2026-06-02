@@ -1,0 +1,281 @@
+<?php
+if (file_exists('init.php')) {
+    require_once('init.php');
+}
+require_once __DIR__ . '/includes/fillsbase_helpers.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Custom fashion store and luxury e-commerce development by Fillsbase. Build your own high-end retail ecosystem with AI merchandising and global logistics.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Fillsbase - Fashion Store Development</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <style>
+      .hero-section-fashion {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/img/fashion_ecommerce_bg_1778938495635.png');
+        background-size: cover;
+        background-position: center;
+        padding: 160px 0;
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+      }
+      .feature-card-custom {
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 40px;
+        height: 100%;
+        background: rgba(255,255,255,0.02);
+        backdrop-filter: blur(15px);
+      }
+      .feature-card-custom:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        border-color: #ee5586;
+      }
+      .tech-pill {
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 25px;
+        background: rgba(238, 85, 134, 0.15);
+        color: #ee5586;
+        margin: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .dashboard-preview-img {
+        border-radius: 25px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        border: 5px solid rgba(255,255,255,0.08);
+      }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #ee5586;
+      }
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="box-container limit-width">
+      <section id="settings"> </section>
+
+      <div id="spinner-area">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+          <div class="spinner-txt">Fillsbase...</div>
+        </div>
+      </div>
+
+      <header id="header"> </header>
+
+      <!-- ***** HERO SECTION ***** -->
+      <section class="hero-section-fashion main-container">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+              <h1 class="text-white display-3 fw-bold mb-4">Architecting the Future of <span class="c-pink">Luxury Commerce</span></h1>
+              <p class="text-white lead mb-5 opacity-90">We design high-conversion custom fashion ecosystems, combining artisanal design with enterprise-grade logistics. From independent boutiques to major global fashion houses, we build your brand's digital gateway.</p>
+              <div class="d-flex flex-wrap gap-4">
+                <a href="contact" class="btn btn-default-pink-fill btn-lg px-5">Talk to Our Experts</a>
+                <a href="#solutions" class="btn btn-outline-light btn-lg px-5">Our Solutions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** CORE SOLUTIONS ***** -->
+      <section id="solutions" class="sec-normal bg-colorstyle toppadding bottompadding">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2 class="section-heading mergecolor">Custom E-commerce Excellence</h2>
+              <p class="section-subheading mergecolor opacity-75">Bespoke development services designed specifically for the high-end fashion industry.</p>
+            </div>
+          </div>
+          <div class="row g-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-card-custom text-center">
+                <div class="mb-4">
+                  <img src="./assets/img/ai_merchandising_fashion_1778941238829.png" alt="AI Merchandising" class="img-fluid rounded-3 mb-3" style="max-height: 200px; object-fit: cover; width: 100%;">
+                </div>
+                <h4 class="mergecolor mb-3 h3">AI Merchandising</h4>
+                <p class="seccolor mb-4">Sophisticated visual search and personalized recommendation engines that replicate the personal shopper experience online.</p>
+                <div class="tech-pill">Visual Search</div>
+                <div class="tech-pill">Personalization</div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-card-custom text-center border-pink">
+                <div class="mb-4">
+                  <img src="./assets/img/virtual_fitting_fashion_1778941297121.png" alt="Virtual Fitting Room" class="img-fluid rounded-3 mb-3" style="max-height: 200px; object-fit: cover; width: 100%;">
+                </div>
+                <h4 class="mergecolor mb-3 h3">Virtual Fitting Room</h4>
+                <p class="seccolor mb-4">Advanced AR try-on solutions that reduce returns and strengthen customer confidence in sizing and fit.</p>
+                <div class="tech-pill">AR Try-On</div>
+                <div class="tech-pill">Sizing AI</div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-card-custom text-center">
+                <div class="mb-4">
+                  <img src="./assets/img/global_logistics_fashion_1778941394828.png" alt="Global Logistics" class="img-fluid rounded-3 mb-3" style="max-height: 200px; object-fit: cover; width: 100%;">
+                </div>
+                <h4 class="mergecolor mb-3 h3">Global Logistics</h4>
+                <p class="seccolor mb-4">Omnichannel inventory management that synchronizes your physical stores with global warehouse networks.</p>
+                <div class="tech-pill">Omnichannel</div>
+                <div class="tech-pill">Stock Synchronization</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** DASHBOARD PREVIEW ***** -->
+      <section class="sec-normal sec-bg3 bg-seccolorstyle toppadding bottompadding overflow-hidden">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 pr-lg-5" data-aos="fade-right">
+              <h2 class="section-heading text-white mergecolor mb-4">Fashion <span class="c-pink">Enterprise</span> Suite</h2>
+              <p class="text-white lead mb-5">Run your fashion empire from a single, unified interface. Monitor real-time sell-through rates, manage international duties and orchestrate global marketing campaigns.</p>
+
+              <div class="row g-4 mb-5">
+                <div class="col-sm-6">
+                  <div class="stat-number">98%</div>
+                  <div class="text-white opacity-75">Inventory Accuracy</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-number">45%</div>
+                  <div class="text-white opacity-75">Higher Conversion</div>
+                </div>
+              </div>
+
+              <a href="contact" class="btn btn-default-yellow-fill btn-lg">Request a Suite Demo</a>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+              <img src="./assets/img/fashion_dashboard_preview_1778938556059.png" alt="Fashion Store Dashboard" class="img-fluid dashboard-preview-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** PRICING ***** -->
+      <section class="pricing special sec-normal bottompadding bg-colorstyle">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2 class="section-heading mergecolor h1"><b class="c-pink">Luxury</b> Architecture</h2>
+              <p class="section-subheading mergecolor opacity-75">Scalable solutions for every stage of your brand's evolution.</p>
+            </div>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="price-container wrapper first text-start noshadow h-100">
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h3 mb-3">Boutique</div>
+                  <div class="price seccolor h2 mb-4"><sup class="coin">$</sup><span class="value">4,999</span> <span class="small text-muted">/setup</span></div>
+                  <p class="seccolor mb-4">High-end digital presence for independent designers.</p>
+                  <a href="contact" class="btn btn-default-yellow-fill w-100 py-3">Get Started</a>
+                </div>
+                <ul class="list-info bg-purple p-5 list-unstyled">
+                  <li><i class="fas fa-check me-2"></i> Custom Visual Design</li>
+                  <li><i class="fas fa-check me-2"></i> Advanced Merchandising</li>
+                  <li><i class="fas fa-check me-2"></i> Multi-Currency Support</li>
+                  <li><i class="fas fa-check me-2"></i> Global Shipping Sync</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="price-container wrapper text-start noshadow h-100">
+                <div class="plans badge feat bg-pink">MOST POPULAR</div>
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h3 mb-3">Fashion Pro</div>
+                  <div class="price seccolor h2 mb-4"><sup class="coin">$</sup><span class="value">9,999</span> <span class="small text-muted">/setup</span></div>
+                  <p class="seccolor mb-4">Omnichannel infrastructure for growing retailers.</p>
+                  <a href="contact" class="btn btn-default-pink-fill w-100 py-3">Get Started</a>
+                </div>
+                <ul class="list-info bg-pink p-5 list-unstyled">
+                  <li><i class="fas fa-check me-2"></i> AI Recommendation Suite</li>
+                  <li><i class="fas fa-check me-2"></i> iOS & Android Apps</li>
+                  <li><i class="fas fa-check me-2"></i> POS Integration</li>
+                  <li><i class="fas fa-check me-2"></i> Dynamic Lookbooks</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="price-container wrapper third text-start noshadow h-100">
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h3 mb-3">Luxury Group</div>
+                  <div class="price seccolor h2 mb-4">Custom</div>
+                  <p class="seccolor mb-4">Global infrastructure for international fashion groups.</p>
+                  <a href="contact" class="btn btn-default-yellow-fill w-100 py-3">Contact Sales</a>
+                </div>
+                <ul class="list-info bg-purple p-5 list-unstyled">
+                  <li><i class="fas fa-check me-2"></i> AR Try-On Engine</li>
+                  <li><i class="fas fa-check me-2"></i> Custom Middleware</li>
+                  <li><i class="fas fa-check me-2"></i> Dedicated Lead Developer</li>
+                  <li><i class="fas fa-check me-2"></i> 24/7 Global Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** TECHNOLOGY STACK ***** -->
+      <section class="sec-normal bg-colorstyle toppadding bottompadding border-top border-secondary">
+        <div class="container text-center">
+          <h3 class="mergecolor mb-5">The Fashion Stack</h3>
+          <div class="d-flex flex-wrap justify-content-center">
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">Shopify Plus</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">React Native</span>
+            <span class="tech-pill">AWS Cloud</span>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer"> </footer>
+    </div>
+
+    <a href="#0" class="cd-top"> <i class="fas fa-angle-up"></i> </a>
+    <script>
+      $(window).on('load', function() {
+        $("#spinner-area").fadeOut("slow");
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 1000,
+            once: true
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

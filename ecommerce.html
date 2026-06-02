@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Custom e-commerce store development by Fillsbase. Build your own retail ecosystem with advanced inventory management, customer portals and mobile app solutions.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Fillsbase - E-commerce Store Development</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <style>
+      .hero-section-ecom {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./assets/img/ecommerce_platform_bg.png');
+        background-size: cover;
+        background-position: center;
+        padding: 160px 0;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
+      .feature-card-custom {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 15px;
+        padding: 30px;
+        height: 100%;
+        background: rgba(255,255,255,0.03);
+        backdrop-filter: blur(10px);
+      }
+      .feature-card-custom:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        border-color: #ee5586;
+      }
+      .tech-pill {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        background: rgba(238, 85, 134, 0.1);
+        color: #ee5586;
+        margin: 5px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .dashboard-preview-img {
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        border: 4px solid rgba(255,255,255,0.05);
+      }
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/flickity-fade.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body>
+    <div class="box-container limit-width">
+      <!-- ***** SETTINGS ****** -->
+      <section id="settings"> </section>
+      
+      <!-- ***** LOADING PAGE ****** -->
+      <div id="spinner-area">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+          <div class="spinner-txt">Fillsbase...</div>
+        </div>
+      </div>
+
+      <header id="header"> </header>
+
+      <!-- ***** HERO SECTION ***** -->
+      <section class="hero-section-ecom main-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="fade-right">
+              <h1 class="text-white display-4 fw-bold mb-4">Shaping the Future of <span class="c-pink">Digital Commerce</span></h1>
+              <p class="text-white lead mb-5">We build enterprise-grade custom e-commerce stores that combine stunning design with powerful inventory management. From boutique brands to global distribution networks, we build your commercial ecosystem from A to Z.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact" class="btn btn-default-pink-fill btn-lg">Launch Your Store</a>
+                <a href="#solutions" class="btn btn-outline-light btn-lg">Explore Solutions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** CORE SOLUTIONS ***** -->
+      <section id="solutions" class="sec-normal bg-colorstyle toppadding bottompadding">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-heading mergecolor">Complete Retail Ecosystem</h2>
+              <p class="section-subheading mergecolor">Complete development services tailored to the modern digital merchant.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-card-custom">
+                <i class="fas fa-desktop fa-3x c-pink mb-4"></i>
+                <h4 class="mergecolor mb-3">Admin Panel</h4>
+                <p class="seccolor">A powerful command center to manage your entire catalog, track orders in real time and organize customer data with precision.</p>
+                <ul class="list-unstyled seccolor">
+                  <li><i class="fas fa-check c-pink me-2"></i> Advanced inventory synchronization</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> Dynamic pricing rules</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> Order fulfillment tracking</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-card-custom">
+                <i class="fas fa-shopping-cart fa-3x c-pink mb-4"></i>
+                <h4 class="mergecolor mb-3">Customer Website</h4>
+                <p class="seccolor">High-conversion storefronts designed to engage shoppers with lightning-fast performance and an intuitive checkout flow.</p>
+                <ul class="list-unstyled seccolor">
+                  <li><i class="fas fa-check c-pink me-2"></i> Smart product search</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> SEO-optimized architecture</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> One-click checkout</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-card-custom">
+                <i class="fas fa-mobile-alt fa-3x c-pink mb-4"></i>
+                <h4 class="mergecolor mb-3">iOS & Android Apps</h4>
+                <p class="seccolor">Full native app development delivering a seamless shopping experience for customers on the go.</p>
+                <ul class="list-unstyled seccolor">
+                  <li><i class="fas fa-check c-pink me-2"></i> Push notification offers</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> Biometric authentication payments</li>
+                  <li><i class="fas fa-check c-pink me-2"></i> Built-in loyalty program</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** DASHBOARD PREVIEW ***** -->
+      <section class="sec-normal sec-bg3 bg-seccolorstyle toppadding bottompadding overflow-hidden">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="section-heading text-white mergecolor">The <span class="c-pink">Ultimate</span> Commerce Command Center</h2>
+              <p class="text-white lead mb-4">Take total control of your retail empire with our proprietary management interface. Monitor live sales growth, manage global inventory and track customer trends in real time.</p>
+              <div class="row g-3 mb-5">
+                <div class="col-6">
+                  <div class="p-3 border border-secondary rounded">
+                    <h5 class="text-white">Growth Analytics</h5>
+                    <p class="small text-muted mb-0">Real-time revenue visualization.</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border border-secondary rounded">
+                    <h5 class="text-white">Smart Inventory</h5>
+                    <p class="small text-muted mb-0">AI-powered stock forecasting.</p>
+                  </div>
+                </div>
+              </div>
+              <a href="contact" class="btn btn-default-yellow-fill">Get a Demo</a>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+              <img src="./assets/img/ecommerce_dashboard.png" alt="Ecommerce Dashboard" class="img-fluid dashboard-preview-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** TECHNOLOGY STACK ***** -->
+      <section class="sec-normal bg-colorstyle toppadding bottompadding">
+        <div class="container text-center">
+          <h2 class="section-heading mergecolor mb-5">Technology Stack</h2>
+          <div class="d-flex flex-wrap justify-content-center">
+            <span class="tech-pill">Laravel</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">React Native</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** PRICING ***** -->
+      <section class="tabs pricing special sec-normal sec-bg1 bottompadding bg-colorstyle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="section-heading mergecolor">Development <b class="c-pink">Packages</b></h2>
+              <p class="section-subheading mergecolor">Choose the level of engineering your retail business needs.</p>
+            </div>
+          </div>
+          <div class="row g-4 mt-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="price-container wrapper first text-start noshadow">
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h4 mb-3">Standard</div>
+                  <div class="price seccolor h2 mb-4"><sup class="coin">$</sup><span class="value">2,499</span> <span class="small text-muted">/setup</span></div>
+                  <p class="small seccolor mb-4">Ideal for emerging brands looking for a professional online presence.</p>
+                  <a href="contact" class="btn btn-default-yellow-fill w-100">Get Started</a>
+                </div>
+                <ul class="list-info bg-purple p-4">
+                  <li><i class="fas fa-check"></i> Custom storefront</li>
+                  <li><i class="fas fa-check"></i> Basic admin panel</li>
+                  <li><i class="fas fa-check"></i> 1000 product limit</li>
+                  <li><i class="fas fa-check"></i> Stripe/PayPal integration</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="price-container wrapper text-start noshadow">
+                <div class="plans badge feat bg-pink">MOST POPULAR</div>
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h4 mb-3">Enterprise Pro</div>
+                  <div class="price seccolor h2 mb-4"><sup class="coin">$</sup><span class="value">5,499</span> <span class="small text-muted">/setup</span></div>
+                  <p class="small seccolor mb-4">Complete retail ecosystem for high-volume commercial merchants.</p>
+                  <a href="contact" class="btn btn-default-pink-fill w-100">Get Started</a>
+                </div>
+                <ul class="list-info bg-pink p-4">
+                  <li><i class="fas fa-check"></i> iOS & Android apps</li>
+                  <li><i class="fas fa-check"></i> Multi-warehouse synchronization</li>
+                  <li><i class="fas fa-check"></i> Full source code</li>
+                  <li><i class="fas fa-check"></i> Advanced analytics</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="price-container wrapper third text-start noshadow">
+                <div class="price-content top-content bg-seccolorstyle topradius p-5">
+                  <div class="title h4 mb-3">Custom Store</div>
+                  <div class="price seccolor h2 mb-4">Custom Quote</div>
+                  <p class="small seccolor mb-4">Tailor-made infrastructure for global distribution groups and marketplaces.</p>
+                  <a href="contact" class="btn btn-default-yellow-fill w-100">Contact Sales</a>
+                </div>
+                <ul class="list-info bg-purple p-4">
+                  <li><i class="fas fa-check"></i> High-load architecture</li>
+                  <li><i class="fas fa-check"></i> AI recommendation engine</li>
+                  <li><i class="fas fa-check"></i> Dedicated engineering</li>
+                  <li><i class="fas fa-check"></i> 24/7 SLA support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** FAQ ***** -->
+      <section class="sec-normal bg-seccolorstyle toppadding bottompadding">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-heading mergecolor">F.A.Q</h2>
+            </div>
+          </div>
+          <div class="accordion" id="ecomFaq">
+            <div class="accordion-item bg-transparent border-secondary mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent mergecolor" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Can you migrate our existing store from Shopify or Magento?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#ecomFaq">
+                <div class="accordion-body seccolor">
+                  Yes, we specialize in zero-downtime data migration. We can securely transfer your entire product catalog, customer history and order data from any platform to your new custom store.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-secondary mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent mergecolor" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Do the mobile apps sync with the website inventory?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#ecomFaq">
+                <div class="accordion-body seccolor">
+                  Absolutely. Our architecture uses a unified central database, ensuring that stock levels, prices and orders are synchronized in real time between the website and the mobile apps.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-secondary mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent mergecolor" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  How do you handle high traffic during commercial events like Black Friday?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#ecomFaq">
+                <div class="accordion-body seccolor">
+                  We build on auto-scaling cloud infrastructure and implement advanced caching strategies, allowing your store to handle massive traffic spikes without any performance degradation.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer"> </footer>
+    </div>
+    <!-- ***** BUTTON GO TOP ***** -->
+    <a href="#0" class="cd-top"> <i class="fas fa-angle-up"></i> </a>
+    <script>
+      $(window).on('load', function() {
+        $("#spinner-area").fadeOut("slow");
+        if (typeof AOS !== 'undefined') {
+          AOS.init();
+        }
+      });
+      setTimeout(function() {
+        $("#spinner-area").fadeOut("slow");
+      }, 3000);
+    </script>
+  </body>
+</html>

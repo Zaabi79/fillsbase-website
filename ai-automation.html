@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fillsbase.com automates your business workflows with AI — eliminating manual tasks, reducing errors and freeing your team for high-value work.">
+        <link href="assets/img/favicon.ico" rel="shortcut icon">
+        <title>Fillsbase - AI Automation</title>
+        <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+        <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+        <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+        <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+        <style>
+          .hero-section-automation {
+            background: linear-gradient(135deg, rgba(0,20,10,0.90) 0%, rgba(0,80,40,0.82) 100%),
+                        url('assets/img/react_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+          }
+          .auto-icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #059669, #ee5586);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+          }
+          .auto-icon-box i { font-size: 28px; color: #fff; }
+          .step-card {
+            border-left: 3px solid #059669;
+            padding-left: 18px;
+            margin-bottom: 28px;
+          }
+          .workflow-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+          }
+          .workflow-node {
+            background: #ee5586;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            white-space: nowrap;
+          }
+          .workflow-arrow { color: #ee5586; font-size: 1.2rem; }
+          .roi-stat { text-align: center; padding: 28px 16px; }
+          .roi-stat .number { font-size: 2.8rem; font-weight: 800; color: #ee5586; }
+          .roi-stat .label { font-size: 0.95rem; }
+        </style>
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+        <script type="text/javascript" src="assets/js/typed.js"></script>
+        <script async type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+    </head>
+    <body>
+        <div class="box-container limit-width">
+            <section id="settings"></section>
+            <div id="spinner-area">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                    <div class="spinner-txt">Fillsbase...</div>
+                </div>
+            </div>
+            <div class="body-borders" data-border="20">
+                <div class="top-border bg-white"></div>
+                <div class="right-border bg-white"></div>
+                <div class="bottom-border bg-white"></div>
+                <div class="left-border bg-white"></div>
+            </div>
+            <header id="header"></header>
+
+            <!-- HERO -->
+            <section class="hero-section-automation main-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container text-center">
+                                <h1 class="display-4 fw-bolder text-white mergecolor mb-3" data-aos="fade-up" data-aos-duration="800">
+                                    AI Automation <span id="typed-auto"></span>
+                                </h1>
+                                <p class="h5 c-grey-light mergecolor" data-aos="fade-up" data-aos-duration="1200">
+                                    <b class="c-pink">Eliminate manual work</b> from your business processes —<br>faster, cheaper and more accurate than any human team.
+                                </p>
+                                <div class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                    <a href="contact.php" class="btn btn-default-pink-fill me-3">Automate My Business</a>
+                                    <a href="#scroll" class="btn btn-outline-light">See Use Cases</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROI STATS -->
+            <section class="services sec-up-slider pb-0 bg-colorstyle nobottompadding specialposition">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row text-center">
+                            <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-duration="700">
+                                <div class="roi-stat">
+                                    <div class="number mergecolor">80%</div>
+                                    <div class="label seccolor text-muted">of repetitive tasks<br>eliminated from day one</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-duration="900">
+                                <div class="roi-stat">
+                                    <div class="number mergecolor">10×</div>
+                                    <div class="label seccolor text-muted">faster processing<br>than manual workflows</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-duration="1100">
+                                <div class="roi-stat">
+                                    <div class="number mergecolor">24/7</div>
+                                    <div class="label seccolor text-muted">automation runs<br>without interruption or error</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-duration="1300">
+                                <div class="roi-stat">
+                                    <div class="number mergecolor">3 wks</div>
+                                    <div class="label seccolor text-muted">average time until<br>your first automation goes live</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES -->
+            <section id="scroll" class="history-section feat01 sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="randomline"><div class="bigline"></div><div class="smallline"></div></div>
+                    <div class="sec-main sec-bg1 bg-colorstyle noshadow nopadding">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-5 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-gears" style="font-size:130px;color:#059669;opacity:0.85;"></i>
+                            </div>
+                            <div class="col-md-12 col-lg-6 offset-lg-1">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">AI automation that actually works in the real world</h1>
+                                    <p class="seccolor">Unlike generic RPA tools that break the moment a screen changes, our AI-powered automations understand intent. They handle exceptions, adapt to variations and integrate directly with your existing systems via API — no screen scraping.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Start Automating</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">Connect every tool in your stack — no more copy-paste</h1>
+                                    <p class="seccolor">We build automation pipelines that link your CRM, helpdesk, billing system, spreadsheets, email, WhatsApp and internal databases — so data flows automatically and your team focuses on decisions, not data entry.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Book a Discovery Call</a>
+                            </div>
+                            <div class="col-md-12 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+                                <i class="fa-solid fa-arrows-spin" style="font-size:110px;color:#ee5586;opacity:0.85;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- USE CASES -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <h2 class="section-heading mergecolor">What we automate for you</h2>
+                                <p class="section-subheading text-muted mergecolor">Every workflow below has been delivered for a real client.</p>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-ticket"></i></div>
+                                    <div class="title mergecolor">Support Ticket Triage</div>
+                                    <p class="subtitle seccolor text-muted">AI reads every incoming ticket, classifies it, extracts key information, assigns a priority, routes it to the right team and drafts a first response.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-file-invoice"></i></div>
+                                    <div class="title mergecolor">Invoicing &amp; Payment Flows</div>
+                                    <p class="subtitle seccolor text-muted">Automatic invoice generation on trigger, sending payment reminders, reconciling payments and flagging overdue accounts — zero manual steps.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-user-plus"></i></div>
+                                    <div class="title mergecolor">Customer Onboarding</div>
+                                    <p class="subtitle seccolor text-muted">From sign-up to a fully provisioned account — sending welcome sequences, creating records across all systems and automatically scheduling kickoff calls.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-chart-bar"></i></div>
+                                    <div class="title mergecolor">Reporting &amp; Analytics</div>
+                                    <p class="subtitle seccolor text-muted">Scheduled pipelines that pull data from multiple sources, transform it and deliver clean reports to your inbox or Slack every morning.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-users"></i></div>
+                                    <div class="title mergecolor">HR &amp; Recruitment</div>
+                                    <p class="subtitle seccolor text-muted">Resume screening, candidate scoring, interview scheduling, sending offer letters and triggering onboarding flows — all automated end to end.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="auto-icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+                                    <div class="title mergecolor">Content Production</div>
+                                    <p class="subtitle seccolor text-muted">AI pipelines that generate, review, format and publish blog posts, social content and product descriptions on a defined schedule.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WORKFLOW EXAMPLE -->
+            <section class="services sec-normal pb-100 history-section motpath noimage bg-seccolorstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center mb-5">
+                            <h2 class="section-heading mergecolor">Example: Automated Support Flow</h2>
+                            <p class="section-subheading text-muted mergecolor">What happens the moment a customer emails you — without a human stepping in.</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="workflow-row justify-content-center">
+                                <div class="workflow-node">Customer sends an email</div>
+                                <span class="workflow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="workflow-node">AI reads &amp; classifies</div>
+                                <span class="workflow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="workflow-node">Searches the knowledge base</div>
+                                <span class="workflow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="workflow-node">Drafts the response</div>
+                                <span class="workflow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="workflow-node">Sends or escalates</div>
+                                <span class="workflow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="workflow-node">Logs in the CRM</div>
+                            </div>
+                            <p class="text-center seccolor f-15 mt-3">Average processing time: <b class="c-pink">under 30 seconds</b>. A human only steps in if the confidence score falls below the threshold.</p>
+                        </div>
+                    </div>
+                    <hr class="mt-5">
+                    <div class="row mt-5">
+                        <div class="col-sm-12 col-md-12 col-lg-7">
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">01.</span> Automation Audit</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We map every manual task your team performs, rank them by time cost and automation feasibility, and deliver a prioritized roadmap.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">02.</span> Pipeline Design</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We design the trigger → action → validation flow for each automation, including exception handling and escalation paths.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">03.</span> Build &amp; Test</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We build the automation with APIs, AI models and integration platforms, then test it across hundreds of real cases.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">04.</span> Monitor &amp; Improve</div>
+                                <p class="f-15 lh-32 text-muted seccolor">Live dashboards track success rates, processing time and cost per run. We iterate every month to improve accuracy and expand coverage.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-1"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 text-start">
+                            <div class="mb-5 mt-5 agpanel">
+                                <h2 class="mergecolor">Our automation delivery process</h2>
+                                <p class="seccolor f-15">We don't just connect Zapier — we architect robust, AI-powered pipelines that handle the real mess of your business data.</p>
+                            </div>
+                            <a href="contact.php" class="btn btn-default-pink-fill">Get a Free Audit</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">Businesses saving time every day</h2>
+                                <p class="section-subheading text-muted mergecolor">Real results from companies that chose to automate with Fillsbase.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"We cut invoice processing from 2 days to 4 minutes. The ROI was immediate."</div>
+                                    <div class="row"><div class="col-md-8">
+                                        <p class="h6 fw-bold mb-1 mt-4 seccolor">Chidi Okonkwo</p>
+                                        <p class="subtitle seccolor">CFO, BuildRight Nigeria</p>
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"The onboarding automation alone saved my team 20 hours a week."</div>
+                                    <div class="row"><div class="col-md-8">
+                                        <p class="h6 fw-bold mb-1 mt-4 seccolor">Zara Diallo</p>
+                                        <p class="subtitle seccolor">Head of Operations, Dakar SaaS Co.</p>
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-grey-light"></i>
+                                    <div class="title fw-normal mergecolor">"Reports that took my analyst a full day now land in my inbox at 7am automatically."</div>
+                                    <div class="row"><div class="col-md-8">
+                                        <p class="h6 fw-bold mb-1 mt-4 seccolor">Nadia Kamau</p>
+                                        <p class="subtitle seccolor">CEO, Nairobi Analytics Ltd</p>
+                                    </div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="sec-normal pb-80 bg-colorstyle nobottompadding">
+                <div class="faq">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">FAQ — Questions about AI Automation</h2>
+                                <p class="section-subheading mergecolor">What clients ask before their first automation project.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="accordion faq pt-5">
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>Do I need to replace my existing software?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse"><div class="wrapper-collapse"><div class="info">
+                                            <ul class="list seccolor"><li><p>No. We build automation layers on top of your existing tools via APIs and webhooks. Your team keeps using the same software — they just stop doing the repetitive parts manually.</p></li></ul>
+                                        </div></div></div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How is this different from Zapier or Make?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse"><div class="wrapper-collapse"><div class="info">
+                                            <ul class="list seccolor"><li><p>Zapier and Make are great for simple "if this, then that" rules. We handle the complex, messy cases — unstructured data, conditional logic, AI decision-making, exception handling and high-volume pipelines that no-code tools struggle to handle at scale.</p></li></ul>
+                                        </div></div></div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How quickly can I see results?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse"><div class="wrapper-collapse"><div class="info">
+                                            <ul class="list seccolor"><li><p>Most clients have their first automation live within 2 to 3 weeks. We start with the highest-impact, lowest-risk workflow so you see clear ROI before moving on to more complex pipelines.</p></li></ul>
+                                        </div></div></div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>What happens if the automation makes a mistake?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse"><div class="wrapper-collapse"><div class="info">
+                                            <ul class="list seccolor"><li><p>Every automation we build includes confidence thresholds, error logging and human escalation paths. Low-confidence cases are flagged for human review rather than handled incorrectly — you always have a safety net.</p></li></ul>
+                                        </div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NAV HELP -->
+            <section class="help pb-80 bg-colorstyle tophalfpadding">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat left bg-grey"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                    <a href="agentic-ai" class="help-item">
+                                        <div class="img"><i class="fa-solid fa-robot" style="font-size:36px;color:#ee5586;"></i></div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to AI Agents</div>
+                                            <div class="description seccolor">Need agents that reason and act autonomously?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-grey"><i class="fas fa-long-arrow-alt-right"></i></div>
+                                    <a href="saas" class="help-item">
+                                        <div class="img"><i class="fa-solid fa-cloud" style="font-size:36px;color:#ee5586;"></i></div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to SaaS Development</div>
+                                            <div class="description seccolor">Want to embed automation in a SaaS product?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer"></footer>
+        </div>
+        <a href="#" class="cd-top" title="Back to top"><i class="fas fa-angle-up"></i></a>
+        <script>
+        var typedAuto = new Typed('#typed-auto', {
+            strings: ["for your business.", "that saves hours every day.", "without replacing your tools.", "that scales with you."],
+            typeSpeed: 50, backSpeed: 20, smartBackspace: true, loop: true
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+            $('.popup-youtube, .popup-vimeo').magnificPopup({
+                disableOn: 700, type: 'iframe', mainClass: 'mfp-fade',
+                removalDelay: 160, preloader: false, fixedContentPos: false
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fillsbase.com develops scalable, multi-tenant SaaS platforms, from MVP to enterprise-grade products.">
+        <link href="assets/img/favicon.ico" rel="shortcut icon">
+        <title>Fillsbase - SaaS Development</title>
+        <!-- Font Style -->
+        <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+        <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+        <!-- RTL Style -->
+        <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <!-- CSS Style -->
+        <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+        <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+        <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+        <style>
+          .hero-section-saas {
+            background: linear-gradient(135deg, rgba(5,15,40,0.88) 0%, rgba(0,60,100,0.80) 100%),
+                        url('assets/img/react_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+          }
+          .saas-icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #ee5586, #1a6fd4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+          }
+          .saas-icon-box i {
+            font-size: 26px;
+            color: #fff;
+          }
+          .step-card {
+            border-left: 3px solid #ee5586;
+            padding-left: 18px;
+            margin-bottom: 28px;
+          }
+          .pricing-card {
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 0.2s;
+          }
+          .pricing-card:hover {
+            transform: translateY(-6px);
+          }
+          .pricing-card .price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ee5586;
+          }
+          .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #888;
+          }
+          .pricing-card ul.feat-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+          }
+          .pricing-card ul.feat-list li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+          }
+          .pricing-card ul.feat-list li i {
+            color: #ee5586;
+            margin-right: 8px;
+          }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+        <script type="text/javascript" src="assets/js/typed.js"></script>
+        <script async type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+    </head>
+    <body>
+        <div class="box-container limit-width">
+            <!-- ***** SETTINGS ****** -->
+            <section id="settings"></section>
+            <!-- ***** LOADING PAGE ****** -->
+            <div id="spinner-area">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                    <div class="spinner-txt">Fillsbase...</div>
+                </div>
+            </div>
+            <!-- ***** FRAME MODE ****** -->
+            <div class="body-borders" data-border="20">
+                <div class="top-border bg-white"></div>
+                <div class="right-border bg-white"></div>
+                <div class="bottom-border bg-white"></div>
+                <div class="left-border bg-white"></div>
+            </div>
+            <!-- ***** HEADER ****** -->
+            <header id="header"></header>
+
+            <!-- ***** HERO ***** -->
+            <section class="hero-section-saas main-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container text-center">
+                                <h1 class="display-4 fw-bolder text-white mergecolor mb-3" data-aos="fade-up" data-aos-duration="800">
+                                    SaaS Development <span id="typed-saas"></span>
+                                </h1>
+                                <p class="h5 c-grey-light mergecolor" data-aos="fade-up" data-aos-duration="1200">
+                                    We build <b class="c-pink">scalable, multi-tenant SaaS platforms</b> from MVP to enterprise —<br>faster, more efficiently, and designed to generate recurring revenue.
+                                </p>
+                                <div class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                    <a href="cart.php?a=add&pid=saas-dev" class="btn btn-default-pink-fill me-3">Launch Your SaaS</a>
+                                    <a href="#scroll" class="btn btn-outline-light">See What We Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** INTRO CARDS ***** -->
+            <section class="services sec-up-slider pb-0 bg-colorstyle nobottompadding specialposition">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="saas-icon-box">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                    </div>
+                                    <div class="title mergecolor">Multi-Tenant Architecture</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Proper tenant isolation, custom subdomains and role-based access so every customer has their own secure space.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-pink">build</div>
+                                    <div class="saas-icon-box">
+                                        <i class="fa-solid fa-credit-card"></i>
+                                    </div>
+                                    <div class="title mergecolor">Subscriptions &amp; Billing</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Stripe, Paystack or Flutterwave integrations with plan management, trial periods, upgrades and automated billing.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="saas-icon-box">
+                                        <i class="fa-solid fa-arrow-trend-up"></i>
+                                    </div>
+                                    <div class="title mergecolor">Built to Scale</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Cloud-native infrastructure on AWS, GCP or Hetzner — auto-scaling, CI/CD pipelines and 99.9% uptime SLA.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FEATURES ***** -->
+            <section id="scroll" class="history-section feat01 sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="randomline">
+                        <div class="bigline"></div>
+                        <div class="smallline"></div>
+                    </div>
+                    <div class="sec-main sec-bg1 bg-colorstyle noshadow nopadding">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-5 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-cloud" style="font-size:130px;color:#ee5586;opacity:0.85;"></i>
+                            </div>
+                            <div class="col-md-12 col-lg-6 offset-lg-1">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">Launch your SaaS product faster, with no technical debt</h1>
+                                    <p class="seccolor">We handle everything from database schema design and API architecture to frontend dashboards and payment flows — so you can focus on your product and customers, not infrastructure headaches.</p>
+                                </div>
+                                <a href="cart.php?a=add&pid=saas-dev" class="btn btn-default-pink-fill mt-3">Launch a Project</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">From idea to first paying customers in weeks, not months</h1>
+                                    <p class="seccolor">Our SaaS starter kits accelerate delivery — pre-built authentication, tenant management, billing and admin panels so you build features, not boilerplate code.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Book a Discovery Call</a>
+                            </div>
+                            <div class="col-md-12 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+                                <i class="fa-solid fa-cubes" style="font-size:110px;color:#ee5586;opacity:0.85;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** WHAT WE BUILD ***** -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <h2 class="section-heading mergecolor">Types of SaaS we develop</h2>
+                                <p class="section-subheading text-muted mergecolor">From niche vertical tools to horizontal platforms — we've built them all.</p>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-briefcase f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">B2B SaaS Platforms</div>
+                                    <p class="subtitle seccolor text-muted">CRMs, project management tools, HR systems, ERP modules — custom-built for teams and businesses.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-store f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Marketplace Platforms</div>
+                                    <p class="subtitle seccolor text-muted">Two-sided marketplaces with vendor onboarding, escrow, reviews and commission management.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-graduation-cap f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">EdTech &amp; LMS Platforms</div>
+                                    <p class="subtitle seccolor text-muted">Course builders, live classes, certification engines and student progress tracking.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-chart-pie f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Analytics &amp; BI Tools</div>
+                                    <p class="subtitle seccolor text-muted">Custom dashboards, data visualization and reporting platforms with real-time insights.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-hospital f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">HealthTech &amp; FinTech</div>
+                                    <p class="subtitle seccolor text-muted">Compliant platforms for health, lending, payments and insurance with built-in audit trails.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-plug f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">API-First Platforms</div>
+                                    <p class="subtitle seccolor text-muted">Headless SaaS with developer-friendly REST/GraphQL APIs, webhooks and SDK documentation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** HOW IT WORKS ***** -->
+            <section class="services sec-normal pb-100 history-section motpath noimage bg-seccolorstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-7">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="step-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">01.</span> Product Discovery</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">We define your target users, core features, monetization model and technical architecture in a structured sprint.</p>
+                                    </div>
+                                    <div class="step-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">02.</span> MVP Development</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">We build the minimal version of your product that validates your hypothesis and wins your first paying customers.</p>
+                                    </div>
+                                    <div class="step-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">03.</span> Launch &amp; Growth</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">Deployment to production infrastructure, analytics setup, onboarding early users and iterating based on real feedback.</p>
+                                    </div>
+                                    <div class="step-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">04.</span> Scaling &amp; Optimization</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">Adding features, improving performance, expanding to new markets and integrating AI capabilities as your MRR grows.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-1"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 text-start">
+                            <div class="mb-5 mt-5 agpanel">
+                                <h2 class="mergecolor">Our SaaS development process</h2>
+                                <p class="seccolor f-15">A proven process that takes you from an idea on paper to a live, revenue-generating product.</p>
+                            </div>
+                            <a href="contact.php" class="btn btn-default-pink-fill">Book a Free Call</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** PRICING ***** -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center mb-5">
+                            <h2 class="section-heading mergecolor">Simple, transparent pricing</h2>
+                            <p class="section-subheading text-muted mergecolor">Choose the engagement model that fits your stage and budget.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                            <div class="pricing-card bg-seccolorstyle noshadow">
+                                <div class="title mergecolor mb-2">MVP Starter</div>
+                                <div class="price">$2,499 <span>one-time payment</span></div>
+                                <ul class="feat-list seccolor">
+                                    <li><i class="fa-solid fa-check"></i> Up to 10 core features</li>
+                                    <li><i class="fa-solid fa-check"></i> Authentication &amp; user management</li>
+                                    <li><i class="fa-solid fa-check"></i> Basic subscription billing</li>
+                                    <li><i class="fa-solid fa-check"></i> Admin dashboard</li>
+                                    <li><i class="fa-solid fa-check"></i> Cloud deployment</li>
+                                    <li><i class="fa-solid fa-check"></i> 30 days post-launch support</li>
+                                </ul>
+                                <a href="contact.php" class="btn btn-default-pink-fill w-100">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="pricing-card bg-seccolorstyle noshadow" style="border: 2px solid #ee5586;">
+                                <div class="plans badge feat bg-pink mb-2">Popular</div>
+                                <div class="title mergecolor mb-2">SaaS Growth</div>
+                                <div class="price">$5,999 <span>one-time payment</span></div>
+                                <ul class="feat-list seccolor">
+                                    <li><i class="fa-solid fa-check"></i> Unlimited features (scoped)</li>
+                                    <li><i class="fa-solid fa-check"></i> Multi-tenant architecture</li>
+                                    <li><i class="fa-solid fa-check"></i> Advanced billing &amp; plans</li>
+                                    <li><i class="fa-solid fa-check"></i> API + webhooks</li>
+                                    <li><i class="fa-solid fa-check"></i> Custom subdomain routing</li>
+                                    <li><i class="fa-solid fa-check"></i> 90 days post-launch support</li>
+                                </ul>
+                                <a href="contact.php" class="btn btn-default-pink-fill w-100">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="pricing-card bg-seccolorstyle noshadow">
+                                <div class="title mergecolor mb-2">Enterprise</div>
+                                <div class="price">Custom Quote <span>/ custom</span></div>
+                                <ul class="feat-list seccolor">
+                                    <li><i class="fa-solid fa-check"></i> Dedicated development team</li>
+                                    <li><i class="fa-solid fa-check"></i> White-label &amp; reseller-ready</li>
+                                    <li><i class="fa-solid fa-check"></i> AI &amp; automation integrations</li>
+                                    <li><i class="fa-solid fa-check"></i> SLA support &amp; compliance</li>
+                                    <li><i class="fa-solid fa-check"></i> On-premises deployment option</li>
+                                    <li><i class="fa-solid fa-check"></i> Maintenance contract available</li>
+                                </ul>
+                                <a href="contact.php" class="btn btn-default-pink-fill w-100">Contact Sales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** TESTIMONIALS ***** -->
+            <section class="services sec-normal bg-seccolorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">Trusted by founders across Africa</h2>
+                                <p class="section-subheading text-muted mergecolor">Real founders. Real products. Real revenue.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-colorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"We went from mockups to our first paying customer in 6 weeks. Incredible pace."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">Tunde Adeyemi</p>
+                                            <p class="subtitle seccolor">Founder, ProcureNG</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-colorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"The multi-tenant billing system they built handles our 500+ subscribers flawlessly."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">Fatima Al-Hassan</p>
+                                            <p class="subtitle seccolor">CTO, SchoolStack</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-colorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-grey-light"></i>
+                                    <div class="title fw-normal mergecolor">"The best decision we made was handing development to Fillsbase. Clean code, delivered on time."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">Kwame Mensah</p>
+                                            <p class="subtitle seccolor">CEO, FleetTrack Africa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FAQ ***** -->
+            <section class="sec-normal pb-80 bg-colorstyle nobottompadding">
+                <div class="faq">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">FAQ — Common SaaS questions</h2>
+                                <p class="section-subheading mergecolor">Everything founders ask before starting their SaaS project.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="accordion faq pt-5">
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>What technology stack do you use to build SaaS?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>We typically use Laravel or Node.js for the backend, React or Next.js for the frontend, and PostgreSQL or MySQL for the database. We choose the stack based on your product needs, your team's preferences and scaling requirements — not a one-size-fits-all approach.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How long does it take to build an MVP?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>A well-scoped MVP typically takes 4 to 8 weeks. The more clearly your features are defined before we start, the faster we move. Our initial discovery sprint is designed to lock down scope and avoid costly mid-development changes.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>Do you offer ongoing maintenance after launch?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>Yes. All packages include a post-launch support period, and we offer monthly contracts for new feature development, bug fixes, performance monitoring and infrastructure management.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>Will I own the source code?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>Absolutely. After full payment, you receive complete ownership of the entire source code, assets and intellectual property. We hand over the full Git repository and all access — you're never locked in to us.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** NAVIGATION HELP ***** -->
+            <section class="help pb-80 bg-colorstyle tophalfpadding">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat left bg-grey"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                    <a href="aiagents" class="help-item">
+                                        <div class="img">
+                                            <i class="fa-solid fa-robot" style="font-size:36px;color:#ee5586;"></i>
+                                        </div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to AI Automation &amp; Agents</div>
+                                            <div class="description seccolor">Want to add AI superpowers to your SaaS?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-grey"><i class="fas fa-long-arrow-alt-right"></i></div>
+                                    <a href="reactdev" class="help-item">
+                                        <div class="img">
+                                            <i class="fa-brands fa-react" style="font-size:36px;color:#ee5586;"></i>
+                                        </div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to React Development</div>
+                                            <div class="description seccolor">Need a lightning-fast frontend for your SaaS?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FOOTER ****** -->
+            <footer id="footer"></footer>
+        </div>
+        <!-- ***** BUTTON GO TOP ***** -->
+        <a href="#" class="cd-top" title="Back to top"><i class="fas fa-angle-up"></i></a>
+        <!-- ***** SCRIPTS ***** -->
+        <script>
+        var typedSaas = new Typed('#typed-saas', {
+            strings: ["that scales.", "that generates recurring revenue.", "built for Africa.", "from MVP to enterprise."],
+            typeSpeed: 50,
+            backSpeed: 20,
+            smartBackspace: true,
+            loop: true
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+            $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+            });
+        });
+        </script>
+    </body>
+</html>

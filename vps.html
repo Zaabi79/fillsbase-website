@@ -1,0 +1,335 @@
+<?php
+if (file_exists('init.php')) {
+    require_once('init.php');
+}
+require_once __DIR__ . '/includes/fillsbase_helpers.php';
+
+// VPS product prices
+$vpsPrice1 = formatFillsbasePrice(getFillsbaseProductPrice(312, 'monthly')) . ' /mois';
+$vpsPrice2 = formatFillsbasePrice(getFillsbaseProductPrice(313, 'monthly')) . ' /mois';
+$vpsPrice3 = formatFillsbasePrice(getFillsbaseProductPrice(314, 'monthly')) . ' /mois';
+$vpsPrice4 = formatFillsbasePrice(getFillsbaseProductPrice(315, 'monthly')) . ' /mois';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fillsbase.com fournit des services d'hébergement web premium, VPS, serveurs dédiés et enregistrement de noms de domaine.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Fillsbase - Fournisseur d'Hébergement & Modèle WHMCS</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/typed.js"></script>
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/flickity-fade.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script async type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body >
+    <div class="box-container limit-width">
+      <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Fillsbase...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML ***** -->
+  <header id="header"> </header>
+  <!-- ***** SLIDER ***** -->
+  <style>
+    .vps-hero .carousel-cell { background: linear-gradient(135deg, #0a0f1e 0%, #0d1f35 40%, #1a2a4a 70%, #0b1929 100%) !important; }
+  </style>
+  <section class="main-container slider vps-hero">
+    <div class="silder-container">
+      <div class="carousel header-main-slider">
+        <!-- 1 Slider -->
+        <div class="carousel-cell total-grad-pink-blue-intense">
+          <div class="slider-content">
+            <div class="container">
+              <img class="svg custom-element-right" src="assets/patterns/dedicatedserver3d.svg" alt="Serveur Dédié 3D">
+              <div class="col-sm-12 col-md-8 px-0">
+                <h1 data-aos="fade-up" data-aos-duration="800">Dédié Avec <div class="animatype"> <span id="typed3"></span></div></h1>
+                <p data-aos="fade-up" data-aos-duration="1200" class="subheading">Des serveurs puissants avec des ressources haut de gamme garantissant une exclusivité des ressources, à partir de
+                  <b class="c-pink"><?php echo $dedicatedPrice; ?></b>
+                </p>
+                <a href="vps" class="btn btn-default-yellow-fill me-3 mt-3">Voir les tarifs</a>
+                <a href="vps" class="btn btn-default-pink-fill mt-3">Serveurs dédiés</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2 Slider -->
+        <div class="carousel-cell total-grad-pink-blue-intense">
+          <div class="slider-content">
+            <div class="container">
+              <img class="svg custom-element-right" src="assets/patterns/cloud3d.svg" alt="Serveur Cloud VPS">
+              <div class="col-sm-12 col-md-6 px-0">
+                <h1 data-aos="fade-up" data-aos-duration="800">Serveurs<br>Cloud Virtuels</h1>
+                <p data-aos="fade-up" data-aos-duration="1200">
+                  <i class="c-pink feat fas fa-check-circle me-2"></i> Évolutivité immédiate<br>
+                  <i class="c-pink feat fas fa-check-circle me-2"></i> Haute performance<br>
+                  <i class="c-pink feat fas fa-check-circle me-2"></i> Déploiement rapide
+                </p>
+                <a href="vps" class="btn btn-default-yellow-fill me-3 mt-3">Voir les tarifs</a>
+                <a href="vps" class="btn btn-default-pink-fill mt-3">Serveurs VPS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** PRICING TABLES ***** -->
+  <section class="pricing special sec-up-slider pb-5 bg-colorstyle specialposition">
+    <div class="container">
+      <div class="randomline"><div class="bigline"></div><div class="smallline"></div></div>
+      <div class="row justify-content-center">
+        <!-- VPS Starter -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper text-start noshadow">
+            <div class="plans badge feat bg-purple">Starter</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-rocket fa-2x c-pink mb-3"></i>
+              <div class="title">VPS Starter</div>
+              <div class="fromer seccolor">Idéal pour débuter</div>
+              <div class="price mergecolor"><?php echo $vpsPrice1; ?></div>
+              <a href="order" class="btn btn-default-yellow-fill">Commander</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-cpu"></i> <div>CPU<br><span>1 vCPU</span></div></li>
+              <li><i class="icon-ram"></i> <div>RAM<br><span>1 Go</span></div></li>
+              <li><i class="icon-drivessd"></i> <div>DISQUE<br><span>20 Go SSD</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDE PASSANTE<br><span>1 To</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <!-- VPS Pro -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper text-start noshadow">
+            <div class="plans badge feat bg-pink">Populaire</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-server fa-2x c-pink mb-3"></i>
+              <div class="title">VPS Pro</div>
+              <div class="fromer seccolor">Pour les PME</div>
+              <div class="price mergecolor"><?php echo $vpsPrice2; ?></div>
+              <a href="order" class="btn btn-default-yellow-fill">Commander</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-cpu"></i> <div>CPU<br><span>2 vCPU</span></div></li>
+              <li><i class="icon-ram"></i> <div>RAM<br><span>4 Go</span></div></li>
+              <li><i class="icon-drivessd"></i> <div>DISQUE<br><span>80 Go SSD</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDE PASSANTE<br><span>2 To</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <!-- VPS Business -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper text-start noshadow">
+            <div class="plans badge feat bg-purple">Business</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-building fa-2x c-pink mb-3"></i>
+              <div class="title">VPS Business</div>
+              <div class="fromer seccolor">Haute performance</div>
+              <div class="price mergecolor"><?php echo $vpsPrice3; ?></div>
+              <a href="order" class="btn btn-default-yellow-fill">Commander</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-cpu"></i> <div>CPU<br><span>4 vCPU</span></div></li>
+              <li><i class="icon-ram"></i> <div>RAM<br><span>8 Go</span></div></li>
+              <li><i class="icon-drivessd"></i> <div>DISQUE<br><span>160 Go SSD</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDE PASSANTE<br><span>4 To</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <!-- VPS Enterprise -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper text-start noshadow">
+            <div class="plans badge feat bg-purple">Enterprise</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-crown fa-2x c-pink mb-3"></i>
+              <div class="title">VPS Enterprise</div>
+              <div class="fromer seccolor">Pour les grandes entreprises</div>
+              <div class="price mergecolor"><?php echo $vpsPrice4; ?></div>
+              <a href="order" class="btn btn-default-yellow-fill">Commander</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-cpu"></i> <div>CPU<br><span>8 vCPU</span></div></li>
+              <li><i class="icon-ram"></i> <div>RAM<br><span>16 Go</span></div></li>
+              <li><i class="icon-drivessd"></i> <div>DISQUE<br><span>320 Go SSD</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDE PASSANTE<br><span>8 To</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** FEATURES ***** -->
+  <section class="services sec-normal sec-bg4 exapath">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2 class="section-heading">Pourquoi choisir <span class="dynamic-brand-name" data-brand="name">Fillsbase</span> ?</h2>
+            <p class="section-subheading"><span class="dynamic-brand-name" data-brand="domain">Fillsbase.com</span> propose une infrastructure d'hébergement de premier plan conçue pour accélérer votre présence en ligne. Nous nous concentrons sur la disponibilité, la sécurité et un support exceptionnel.</p>
+          </div>
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+            <div class="service-section bg-colorstyle noshadow">
+              <div class="plans badge feat bg-purple">Premium</div>
+              <div class="lazyload">
+                <!-- svg -->
+              </div>
+              <div class="title mergecolor">Support 24x7x365</div>
+              <p class="subtitle seccolor">
+                Excepteur sint occaecat cupidatat non proident voluptate
+              </p>
+              <a href="#" class="btn btn-default-yellow-fill">En savoir plus</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+            <div class="service-section bg-colorstyle noshadow">
+              <div class="plans badge feat bg-purple">Panneau de contrôle</div>
+              <div class="lazyload">
+                <!-- svg -->
+              </div>
+              <div class="title mergecolor">WHM & cPanel gratuits</div>
+              <p class="subtitle seccolor">
+                Excepteur sint occaecat cupidatat non proident dolor
+              </p>
+              <a href="#" class="btn btn-default-yellow-fill">En savoir plus</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+            <div class="service-section bg-colorstyle noshadow">
+              <div class="lazyload">
+                <!-- svg -->
+              </div>
+              <div class="title mergecolor">Performance optimisée</div>
+              <p class="subtitle seccolor">
+                Excepteur sint occaecat cupidatat non proident voluptate
+              </p>
+              <a href="#" class="btn btn-default-yellow-fill">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** HELP ***** -->
+  <section class="services help sec-bg2 pt-4 pb-80 bg-colorstyle">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-seccolorstyle">
+              <a href="#" class="help-item" title="Chat en direct">
+                <div class="img">
+                  <div class="lazyload">
+                    <!-- svg -->
+                  </div>
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Chat en direct</div>
+                  <div class="description seccolor">At vero eos et accusamus et iusto odio dignissimos.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-seccolorstyle">
+              <a href="contact" class="help-item" title="Nous contacter">
+                <div class="img">
+                  <div class="lazyload">
+                    <!-- svg -->
+                  </div>
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Envoyer un ticket</div>
+                  <div class="description seccolor">Profitez d'un hébergement haute performance propulsé par <span class="dynamic-brand-name" data-brand="domain">Fillsbase.com</span>.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-seccolorstyle">
+              <a href="knowledgebase.php" class="help-item" title="Base de connaissances">
+                <div class="img">
+                  <div class="lazyload">
+                    <!-- svg -->
+                  </div>
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Base de connaissances</div>
+                  <div class="description seccolor">Explorez nos outils et fonctionnalités puissants.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+<footer id="footer"> </footer>
+</div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#" class="cd-top" title="Haut de page"> <i class="fas fa-angle-up"></i> </a>
+<!-- ***** SCRIPTS ***** -->
+<script>
+var typed3 = new Typed('#typed3', {
+strings: ["Matériel premium.", "Grande performance.", "Entièrement dédié."],
+typeSpeed: 50,
+backSpeed: 20,
+smartBackspace: true,
+loop: true
+});
+</script>
+<script>
+$('.carousel').flickity({
+fullscreen: true,
+draggable: true,
+prevNextButtons: false,
+pageDots: true,
+autoPlay: 6000,
+fade: true
+});
+</script>
+<script>
+$(function() {
+$('[data-bs-toggle="tooltip"]')
+.tooltip()
+})
+</script>
+</body>
+</html>

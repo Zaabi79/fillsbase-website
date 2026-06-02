@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="X Booking - AI-Powered Travel & Booking Platform. Manage Hotel, Tours, Space, Car, Event, Flight, Boat and Visa bookings from a single AI-driven dashboard.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>X Booking - AI-Powered Travel & Booking Platform | Fillsbase</title>
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #000; font-size: 16px !important; }
+      h1,h2,h3,h4,h5,h6 { font-family: 'Inter', sans-serif; letter-spacing: -0.02em; color: #000; }
+      p,li,td,th { font-family: 'Inter', sans-serif; font-size: 16px !important; }
+      a,input,button,label,span { font-family: 'Inter', sans-serif; }
+      main p,main li,section p,section li,.container p,.container li { color: #000; }
+      section h1,section h2,section h3,main h1,main h2,main h3 { color: #000; }
+
+      /* Hero */
+      .hero-booking { background: #FDCBDF; padding: 80px 0 60px; min-height: 50vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+      .hero-booking::before { content:''; position:absolute; top:-60px; right:-60px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(233,30,99,.08) 0%,transparent 70%); pointer-events:none; }
+      .hero-booking h1 { font-size:2.5rem; font-weight:900; line-height:1.2; color:#000 !important; letter-spacing:-0.03em; }
+      .hero-booking .hero-desc { font-size:0.96rem; color:#000 !important; line-height:1.85; font-weight:450; }
+      .hero-btn { display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:0.85rem; padding:14px 28px; border-radius:14px; letter-spacing:0.6px; text-decoration:none; transition:0.2s; border:2.5px solid; white-space:nowrap; background:#fff; }
+      .hero-btn-blue { border-color:#2563eb; color:#2563eb; }
+      .hero-btn-blue:hover { background:#2563eb; color:#fff; }
+      .hero-btn-orange { border-color:#f97316; color:#f97316; }
+      .hero-btn-orange:hover { background:#f97316; color:#fff; }
+      .hero-btn-green { border-color:#16a34a; color:#16a34a; }
+      .hero-btn-green:hover { background:#16a34a; color:#fff; }
+      .hero-img-wrap { position:relative; border-radius:24px; overflow:hidden; }
+      .hero-img-wrap img { width:100%; display:block; border-radius:24px; }
+
+
+      /* Steps */
+      .steps-bar { background:transparent; position:relative; z-index:10; margin-top:-60px; margin-bottom:-60px; padding:0; }
+      .step-card { background:#fff; border:1px solid #e8e8e8; border-radius:12px; padding:22px 20px; height:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; transition:0.3s; box-shadow:0 4px 20px rgba(0,0,0,.08); }
+      .step-card:hover { box-shadow:0 8px 30px rgba(0,0,0,.12); transform:translateY(-3px); }
+      .step-card h5 { font-weight:700; font-size:0.95rem; margin:0; color:#0D1C30; flex:1; }
+      .step-icon { font-size:1.6rem; color:#4f46e5; flex-shrink:0; }
+
+      /* Modules grid */
+      .modules-section { background:#fff !important; padding:60px 0 80px; }
+      .modules-section h2 { font-size:2rem; font-weight:800; color:#0D1C30; }
+      .modules-section .sub { color:#555; font-size:1rem; max-width:700px; margin:12px auto 50px; }
+      .module-card { background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:20px; height:100%; transition:0.25s; }
+      .module-card:hover { border-color:#4f46e5; box-shadow:0 6px 24px rgba(0,0,0,.08); transform:translateY(-3px); }
+      .module-card-header { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
+      .module-icon { width:62px; height:62px; border-radius:12px; background:#f0f4ff; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:2rem; line-height:1; }
+      .module-card h6 { font-weight:700; font-size:0.95rem; margin:0; color:#0D1C30; line-height:1.3; }
+      .module-card p { font-size:0.82rem; color:#666; line-height:1.65; margin:0; }
+
+      /* MF cards */
+      .mf-card { display:flex; align-items:flex-start; gap:14px; border-radius:12px; padding:18px; height:100%; transition:0.25s; background:#fff; border:1.5px solid #e5e5e5; }
+      .mf-card:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(0,0,0,.08); }
+      .mf-card.pink   { background:#fff0f4; border-color:#fbc4d0; }
+      .mf-card.blue   { background:#eff6ff; border-color:#bfdbfe; }
+      .mf-card.green  { background:#f0fdf4; border-color:#bbf7d0; }
+      .mf-card.yellow { background:#fefce8; border-color:#fde68a; }
+      .mf-card.purple { background:#faf5ff; border-color:#e9d5ff; }
+      .mf-card.orange { background:#fff7ed; border-color:#fed7aa; }
+      .mf-card.teal   { background:#f0fdfa; border-color:#99f6e4; }
+      .mf-card.red    { background:#fff1f2; border-color:#fecdd3; }
+      .mf-card.indigo { background:#eef2ff; border-color:#c7d2fe; }
+      .mf-icon { width:52px; height:52px; min-width:52px; background:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; box-shadow:0 2px 8px rgba(0,0,0,.08); border:1px solid rgba(0,0,0,.06); }
+      .mf-card h6 { font-weight:700; font-size:0.92rem; color:#0D1C30; margin:0 0 6px; }
+      .mf-card p { font-size:0.8rem; color:#555; line-height:1.65; margin:0; }
+
+      /* App highlight row */
+      .app-highlight {
+        background: linear-gradient(135deg,#fdf4ff,#ede9fe);
+        border: 1.5px solid #c4b5fd !important;
+        border-radius: 8px;
+        padding: 10px 12px !important;
+        margin: 4px 0;
+      }
+      .app-highlight i.fa-check { color: #7c3aed !important; }
+      .app-highlight span { font-weight: 700; color: #5b21b6; }
+      .pricing-card.recommended .app-highlight {
+        background: rgba(167,139,250,.15);
+        border-color: rgba(167,139,250,.4) !important;
+      }
+      .pricing-card.recommended .app-highlight span { color: #c4b5fd; }
+      .app-tag {
+        display:inline-block; background:#7c3aed; color:#fff;
+        font-size:0.62rem; font-weight:800; padding:2px 7px;
+        border-radius:50px; letter-spacing:.5px; margin-left:6px;
+        vertical-align:middle; text-transform:uppercase;
+      }
+      .pricing-card.recommended .app-tag { background:#a78bfa; color:#1e1b4b; }
+      /* Pricing */
+      .pricing-card { border-radius:24px; padding:36px 32px; height:100%; border:1.5px solid #e8edf5; background:#fff; transition:0.3s; position:relative; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.05); }
+      .pricing-card.recommended { background:linear-gradient(145deg,#0D1C30 0%,#0f2a45 100%); border-color:#4f46e5; box-shadow:0 24px 70px rgba(79,70,229,.22); transform:translateY(-12px); }
+      .pricing-card:hover { transform:translateY(-6px); box-shadow:0 16px 50px rgba(0,0,0,.1); }
+      .pricing-card.recommended:hover { transform:translateY(-16px); }
+      .recommended-badge { position:absolute; top:20px; right:20px; background:#4f46e5; color:#fff; font-size:0.7rem; font-weight:800; padding:5px 14px; border-radius:50px; letter-spacing:1px; }
+      .pricing-card .plan-name { font-size:1rem; font-weight:800; color:#4f46e5; margin-bottom:6px; letter-spacing:.5px; text-transform:uppercase; }
+      .pricing-card.recommended .plan-name { color:#a5b4fc; }
+      .pricing-card .plan-sub { font-size:0.88rem; color:#888; margin-bottom:24px; line-height:1.5; }
+      .pricing-card.recommended .plan-sub { color:rgba(255,255,255,.6); }
+      .pricing-card .price { font-size:2.8rem; font-weight:900; color:#0D1C30; line-height:1; }
+      .pricing-card.recommended .price { color:#fff; }
+      .pricing-card .price span { font-size:1rem; font-weight:500; color:#999; }
+      .pricing-card.recommended .price span { color:rgba(255,255,255,.5); }
+      .pricing-card .price-note { font-size:0.78rem; color:#bbb; margin:8px 0 28px; line-height:1.6; }
+      .pricing-card.recommended .price-note { color:rgba(255,255,255,.45); }
+      .pricing-card ul { list-style:none; padding:0; margin:0 0 28px; }
+      .pricing-card ul li { padding:9px 0; font-size:0.92rem; color:#333; border-bottom:1px solid #f0f4f8; display:flex; align-items:center; gap:10px; }
+      .pricing-card.recommended ul li { color:rgba(255,255,255,.85); border-bottom-color:rgba(255,255,255,.08); }
+      .pricing-card ul li i.fa-check { color:#4f46e5; }
+      .pricing-card.recommended ul li i.fa-check { color:#a5b4fc; }
+      .pricing-card ul li i.fa-times { color:#ddd; }
+      .pricing-card.recommended ul li i.fa-times { color:rgba(255,255,255,.25); }
+      .btn-buy { display:block; width:100%; text-align:center; background:#4f46e5; color:#fff; font-weight:800; border:none; padding:14px; border-radius:12px; text-decoration:none; transition:0.3s; font-size:1rem; letter-spacing:.5px; }
+      .btn-buy:hover { background:#4338ca; color:#fff; transform:translateY(-2px); }
+      .btn-buy-outline { display:block; width:100%; text-align:center; background:transparent; color:#4f46e5; font-weight:800; border:2px solid #4f46e5; padding:14px; border-radius:12px; text-decoration:none; transition:0.3s; font-size:1rem; letter-spacing:.5px; }
+      .btn-buy-outline:hover { background:#4f46e5; color:#fff; transform:translateY(-2px); }
+
+      /* Trust */
+      .trust-section { background:linear-gradient(135deg,#0D1C30,#1e1b4b); padding:70px 0; }
+
+      /* FAQ */
+      .faq-section { background:#e8edf8; padding:80px 0; }
+      .faq-section h2 { font-size:1.9rem; font-weight:800; color:#0D1C30; margin-bottom:40px; }
+      .faq-col-wrap { background:#fff; border-radius:14px; box-shadow:0 4px 24px rgba(0,0,0,.06); padding:8px 28px; height:100%; }
+      .faq-item { background:transparent; border:none; border-bottom:1.5px solid #edf0f7; border-radius:0; margin-bottom:0; overflow:hidden; }
+      .faq-item:last-child { border-bottom:none; }
+      .faq-question { padding:20px 0; font-weight:700; font-size:0.92rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:transparent; color:#0D1C30; transition:color .2s; gap:16px; }
+      .faq-question:hover { color:#4f46e5; }
+      .faq-q-icon { width:30px; height:30px; min-width:30px; border:2px solid #c5cfe0; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; color:#0D1C30; font-weight:400; transition:all .25s; flex-shrink:0; line-height:1; }
+      .faq-item.open .faq-q-icon { background:#0D1C30; border-color:#0D1C30; color:#fff; }
+      .faq-item.open .faq-q-icon::before { content:'−'; }
+      .faq-q-icon::before { content:'+'; }
+      .faq-answer { padding:0 0 18px; color:#666; font-size:0.88rem; line-height:1.8; display:none; }
+      .faq-item.open .faq-answer { display:block; }
+      .faq-item.open .faq-question { color:#4f46e5; }
+
+      /* AI Banner */
+      .ai-banner { background:#060f1e; padding:90px 0; position:relative; overflow:hidden; }
+      .ai-banner::before { content:''; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:700px; height:700px; background:radial-gradient(ellipse,rgba(79,70,229,.14) 0%,transparent 65%); pointer-events:none; }
+      .ai-chip { display:inline-flex; align-items:center; gap:8px; background:rgba(79,70,229,.12); border:1px solid rgba(79,70,229,.3); color:#a5b4fc; border-radius:50px; padding:7px 20px; font-size:0.8rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px; }
+      .ai-chip .chip-dot { width:7px; height:7px; background:#818cf8; border-radius:50%; animation:pulse-dot 1.5s infinite; }
+      @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+      .ai-banner h2 { color:#fff; font-weight:800; font-size:2.4rem; line-height:1.2; margin-bottom:16px; }
+      .ai-banner h2 span { color:#818cf8; }
+      .ai-banner .sub-text { color:rgba(255,255,255,.55); font-size:1rem; line-height:1.75; max-width:560px; margin:0 auto 56px; }
+      .ai-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:20px; padding:32px 28px; height:100%; position:relative; transition:all .35s ease; overflow:hidden; }
+      .ai-card::before { content:''; position:absolute; inset:0; border-radius:20px; background:linear-gradient(135deg,rgba(79,70,229,.08) 0%,transparent 60%); opacity:0; transition:opacity .35s; }
+      .ai-card:hover { transform:translateY(-6px); border-color:rgba(79,70,229,.3); box-shadow:0 20px 50px rgba(79,70,229,.1); }
+      .ai-card:hover::before { opacity:1; }
+      .ai-card-icon { width:58px; height:58px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:20px; }
+      .ai-card-icon.indigo { background:rgba(79,70,229,.15); color:#a5b4fc; box-shadow:0 0 0 8px rgba(79,70,229,.05); }
+      .ai-card-icon.blue   { background:rgba(37,99,235,.15); color:#60a5fa; box-shadow:0 0 0 8px rgba(37,99,235,.05); }
+      .ai-card-icon.green  { background:rgba(22,163,74,.15); color:#4ade80; box-shadow:0 0 0 8px rgba(22,163,74,.05); }
+      .ai-card-icon.purple { background:rgba(124,58,237,.15); color:#c084fc; box-shadow:0 0 0 8px rgba(124,58,237,.05); }
+      .ai-card h5 { color:#fff; font-weight:700; font-size:1rem; margin:0 0 10px; }
+      .ai-card p { color:rgba(255,255,255,.5); font-size:0.88rem; line-height:1.7; margin:0; }
+      .ai-card .ai-tag { display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:.5px; padding:3px 10px; border-radius:50px; margin-bottom:16px; }
+      .ai-tag.indigo { background:rgba(79,70,229,.15); color:#a5b4fc; }
+      .ai-tag.blue   { background:rgba(37,99,235,.12); color:#60a5fa; }
+      .ai-tag.green  { background:rgba(22,163,74,.12); color:#4ade80; }
+      .ai-tag.purple { background:rgba(124,58,237,.12); color:#c084fc; }
+
+      /* Misc */
+      .section-label { display:inline-block; background:rgba(79,70,229,.1); color:#4f46e5; border:1px solid rgba(79,70,229,.25); border-radius:50px; padding:5px 16px; font-size:0.8rem; font-weight:700; letter-spacing:.5px; margin-bottom:14px; }
+      .ai-badge { display:inline-flex; align-items:center; gap:7px; background:linear-gradient(135deg,#0D1C30,#1a3a5c); color:#818cf8; border:1px solid rgba(79,70,229,.4); border-radius:50px; padding:6px 16px; font-size:0.8rem; font-weight:700; letter-spacing:.5px; margin-bottom:12px; }
+      .screenshot-placeholder { border-radius:14px; display:flex; align-items:center; justify-content:center; min-height:220px; }
+      /* Phone screenshot wrapper */
+      .phone-wrap { display:flex; justify-content:center; }
+      .phone-wrap img { width:260px; max-width:100%; border-radius:28px; box-shadow:0 12px 40px rgba(0,0,0,.18); border:6px solid #1a1a2e; }
+      /* Double phone side-by-side */
+      .double-phone-wrap { display:flex; justify-content:center; align-items:flex-start; gap:20px; position:relative; padding:20px 0; }
+      .dphone img { width:220px; max-width:100%; border-radius:26px; box-shadow:0 14px 44px rgba(0,0,0,.2); border:5px solid #1a1a2e; display:block; transition:transform .3s; }
+      .dphone img:hover { transform:translateY(-6px); }
+      .dphone-back { transform:rotate(-4deg) translateY(10px); }
+      .dphone-front { transform:rotate(3deg); }
+      /* Gallery thumbnails */
+      .gallery-wrap img { width:100%; border-radius:20px; box-shadow:0 4px 20px rgba(0,0,0,.1); border:4px solid #e8edf5; }
+      .support-banner { background:#4f46e5; padding:60px 0; text-align:center; }
+      .support-banner h2 { color:#fff; font-weight:800; font-size:1.8rem; margin-bottom:20px; }
+      .btn-contact { background:#0D1C30; color:#fff; font-weight:700; padding:13px 36px; border-radius:8px; text-decoration:none; display:inline-block; transition:0.3s; }
+      .btn-contact:hover { background:#1e1b4b; color:#fff; }
+      [data-aos] { opacity:1 !important; transform:none !important; }
+      @media(max-width:768px){
+        .hero-booking h1{font-size:2rem;}
+        .hero-booking{padding:100px 0 60px;min-height:auto;}
+        .search-fields{flex-direction:column;}
+      }
+    </style>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/flickity-fade.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body>
+    <div class="box-container limit-width">
+      <section id="settings"></section>
+      <div id="spinner-area">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+          <div class="spinner-txt">Fillsbase...</div>
+        </div>
+      </div>
+      <header id="header"></header>
+
+      <!-- HERO -->
+      <section class="hero-booking main-container">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="ai-badge"><i class="fas fa-microchip"></i> AI-Powered Platform</div>
+              <h1 class="mb-4">X Booking — AI-Powered Travel &amp; Booking Platform.</h1>
+              <p class="hero-desc mb-4">
+                X Booking is an AI-powered, all-in-one travel and booking management platform that simplifies reservations across every category from a single smart dashboard. Manage Hotel, Tours, Space rentals, Car hire, Events, Flights, Boat charters, and Visa applications in one place. AI-driven analytics deliver real-time insights into booking trends, revenue, and occupancy, while smart automation handles confirmations, reminders, and availability in real time. With 9+ integrated modules and a powerful multi-currency, multilingual search engine, X Booking reduces manual work, maximizes conversions, and empowers travel businesses of all sizes to make data-driven decisions for maximum growth.
+              </p>
+              <div class="d-flex gap-2 flex-wrap mb-4">
+                <a href="#" target="_blank" class="hero-btn hero-btn-blue">LIVE DEMO</a>
+                <a href="#pricing" class="hero-btn hero-btn-blue">PRICING</a>
+                <a href="#" class="hero-btn hero-btn-orange">DOCUMENTATION</a>
+                <a href="#pricing" class="hero-btn hero-btn-green">BUY NOW</a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="hero-img-wrap">
+                <img src="assets/img/xbooking.png" alt="X Booking - All-in-One Travel Booking Platform">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEPS BAR -->
+      <section class="steps-bar" style="background:transparent !important;">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-3">
+              <div class="step-card">
+                <h5>Choose and Purchase the X Booking Package That Fits Your Business</h5>
+                <i class="fas fa-shopping-cart step-icon"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="step-card">
+                <h5>Install and Deploy the Platform on Your Server Environment</h5>
+                <i class="fas fa-server step-icon"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="step-card">
+                <h5>Configure Your Listings, Pricing, and Payment Settings</h5>
+                <i class="fas fa-sliders-h step-icon"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="step-card">
+                <h5>Start Accepting and Managing Bookings From One Dashboard</h5>
+                <i class="fas fa-tasks step-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section id="tech-stack" style="background:#f8fafc;padding:28px 0;border-top:1px solid #e8edf5;border-bottom:1px solid #e8edf5;">
+        <div class="container">
+          <p style="text-align:center;font-size:0.8rem;font-weight:700;letter-spacing:2px;color:#888;text-transform:uppercase;margin-bottom:28px;">Built With</p>
+          <div style="display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <i class="fab fa-laravel" style="font-size:36px;color:#FF2D20;"></i>
+              <span style="font-size:1.1rem;font-weight:700;color:#000;">Laravel</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <i class="fab fa-react" style="font-size:36px;color:#61dafb;"></i>
+              <span style="font-size:1.1rem;font-weight:700;color:#000;">React Native Expo</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <i class="fas fa-microchip" style="font-size:36px;color:#4f46e5;"></i>
+              <span style="font-size:1.1rem;font-weight:700;color:#000;">Artificial Intelligence</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULES OVERVIEW -->
+      <section class="modules-section" style="background:#fff !important;">
+        <div class="container">
+          <div class="text-center">
+            <div class="ai-badge"><i class="fas fa-robot"></i> AI-Enhanced Modules</div>
+            <h2>9+ AI-Enhanced Modules To Manage Every Booking Type</h2>
+            <p class="sub">Every module is powered by AI analytics and smart automation — from hotel reservations and flight bookings to car rentals and visa processing — giving you real-time insights and intelligent automation from a single dashboard.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#3b82f6;">
+                <div class="module-card-header"><div class="module-icon" style="background:#dbeafe;">🏨</div><h6>Hotel Booking</h6></div>
+                <p>Manage hotel listings, room types, availability calendars, and reservations. Real-time occupancy tracking, dynamic pricing, instant confirmation emails, and full invoice management for every guest stay.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#22c55e;">
+                <div class="module-card-header"><div class="module-icon" style="background:#dcfce7;">🗺️</div><h6>Tours &amp; Activities</h6></div>
+                <p>List and sell guided tours, day trips, and multi-day packages. Manage itineraries, departure times, group sizes, pricing tiers, and guide assignments. Supports featured listings and promotional discounts.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#8b5cf6;">
+                <div class="module-card-header"><div class="module-icon" style="background:#ede9fe;">🏢</div><h6>Space Rental</h6></div>
+                <p>Rent out apartments, villas, holiday homes, and co-working spaces. Manage per-night or per-day pricing, amenities, availability blocks, and multi-photo galleries for every property listing.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#f59e0b;">
+                <div class="module-card-header"><div class="module-icon" style="background:#fef9c3;">🚗</div><h6>Car Rental</h6></div>
+                <p>List vehicles with full specs, photos, fuel type, and seat count. Handle daily rental pricing, pickup/drop-off locations, driver options, insurance tiers, and fleet availability in real time.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#ef4444;">
+                <div class="module-card-header"><div class="module-icon" style="background:#fee2e2;">🎉</div><h6>Event Booking</h6></div>
+                <p>Create and manage events with ticket tiers, seat maps, start times, duration, and venue details. Track attendance, send automated reminders, and handle group bookings with ease.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#0ea5e9;">
+                <div class="module-card-header"><div class="module-icon" style="background:#dbeafe;">✈️</div><h6>Flight Booking</h6></div>
+                <p>Manage flight listings, seat classes, and departure schedules. Support one-way, round-trip, and multi-city searches. Integrate with GDS or manage your own charter and airline inventory.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#06b6d4;">
+                <div class="module-card-header"><div class="module-icon" style="background:#cffafe;">⛵</div><h6>Boat Charter</h6></div>
+                <p>List yachts, sailboats, and cruise vessels with capacity, speed, and length specs. Manage charter durations, captain options, departure ports, and seasonal pricing for every vessel.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#ec4899;">
+                <div class="module-card-header"><div class="module-icon" style="background:#fce7f3;">🛂</div><h6>Visa Processing</h6></div>
+                <p>Handle visa applications end-to-end. Manage document checklists, processing fees, country requirements, status tracking, and automated notifications to keep applicants informed at every step.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="module-card" style="border-color:#6366f1;">
+                <div class="module-card-header"><div class="module-icon" style="background:#e0e7ff;">⚙️</div><h6>Admin &amp; Settings</h6></div>
+                <p>Complete control panel with user role management, payment gateway configuration, multi-currency support, SMTP email settings, SEO tools, coupons, reviews moderation, and detailed analytics reports.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: HOTEL -->
+      <section style="background:#fff;padding:60px 0;">
+        <div class="container">
+          <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Hotel Booking</h2>
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-5">
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">The Hotel module lets property owners and travel agencies list, manage, and sell hotel rooms through a fully automated booking engine. Guests can search by location, dates, and preferences, view real-time availability, compare room types, and complete reservations in seconds. Hoteliers get a powerful back-office to manage inventory, set dynamic pricing rules, block dates, and track every reservation. Automated confirmation emails, invoice generation, and payment tracking eliminate manual follow-up, while the AI occupancy engine forecasts demand and suggests pricing adjustments to maximize revenue across every season and property.</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookinghoteldetail.png" alt="Hotel Detail">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookinghotelsearch.png" alt="Hotel Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-lg-5 d-flex flex-column gap-3">
+              <div class="mf-card blue">
+                <div class="mf-icon" style="background:#dbeafe;"><i class="fas fa-chart-line" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                <div><h6>Booking Analytics</h6><p>View daily, weekly, and monthly booking reports. Analyze occupancy rates, revenue per room, and guest demographics to optimize pricing and availability.</p></div>
+              </div>
+              <div class="mf-card green">
+                <div class="mf-icon" style="background:#dcfce7;"><i class="fas fa-calendar-check" style="color:#16a34a;font-size:1.2rem;"></i></div>
+                <div><h6>Availability Calendar</h6><p>Visual drag-and-drop calendar to block dates, manage seasonal rates, and monitor real-time room availability across all property types.</p></div>
+              </div>
+              <div class="mf-card yellow">
+                <div class="mf-icon" style="background:#fef9c3;"><i class="fas fa-tags" style="color:#ca8a04;font-size:1.2rem;"></i></div>
+                <div><h6>Dynamic Pricing</h6><p>Set rules-based pricing based on season, occupancy level, and advance booking window to automatically maximize revenue per available room.</p></div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="mf-card purple">
+                    <div class="mf-icon" style="background:#ede9fe;"><i class="fas fa-bed" style="color:#7c3aed;font-size:1.2rem;"></i></div>
+                    <div><h6>Room Management</h6><p>Add and manage room types with photos, amenities, bed configuration, and per-night pricing. Set different rates for weekdays and weekends.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card orange">
+                    <div class="mf-icon" style="background:#fff7ed;"><i class="fas fa-file-invoice-dollar" style="color:#ea580c;font-size:1.2rem;"></i></div>
+                    <div><h6>Invoice &amp; Payments</h6><p>Auto-generate invoices on booking confirmation. Accept online payments via Stripe, PayPal, or bank transfer with full transaction history.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card pink">
+                    <div class="mf-icon" style="background:#fce7f3;"><i class="fas fa-star" style="color:#db2777;font-size:1.2rem;"></i></div>
+                    <div><h6>Reviews &amp; Ratings</h6><p>Collect and display verified guest reviews with star ratings. Respond to feedback and showcase top-rated properties to boost conversions.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card teal">
+                    <div class="mf-icon" style="background:#ccfbf1;"><i class="fas fa-envelope" style="color:#0d9488;font-size:1.2rem;"></i></div>
+                    <div><h6>Automated Emails</h6><p>Send booking confirmations, check-in reminders, and post-stay review requests automatically using customizable email templates.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: TOURS -->
+      <section style="background:#f8fafb;padding:60px 0;">
+        <div class="container">
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookinghome.png" alt="Tour Home">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingsearchtour.png" alt="Tour Search">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Tours &amp; Activities</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">The Tours module enables travel operators to list, manage, and sell guided experiences effortlessly. From half-day city walks to multi-week adventures, operators can define itineraries, availability windows, group size limits, pricing tiers, and included services. Customers browse featured tours by destination, duration, and category, then book and pay instantly. The AI recommendation engine surfaces the most relevant tours based on traveller history and trending destinations. Automated booking confirmations, guide assignment notifications, and post-trip review requests keep operations smooth and conversion rates high.</p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="mf-card green">
+                <div class="mf-icon" style="background:#dcfce7;"><i class="fas fa-route" style="color:#16a34a;font-size:1.2rem;"></i></div>
+                <div><h6>Itinerary Builder</h6><p>Create detailed day-by-day itineraries with stops, activities, meals, and accommodation for each tour package.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card blue">
+                <div class="mf-icon" style="background:#dbeafe;"><i class="fas fa-users" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                <div><h6>Group Management</h6><p>Set minimum and maximum group sizes, manage waitlists, and automatically close bookings when capacity is reached.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card yellow">
+                <div class="mf-icon" style="background:#fef9c3;"><i class="fas fa-percentage" style="color:#ca8a04;font-size:1.2rem;"></i></div>
+                <div><h6>Discount &amp; Promo</h6><p>Create early-bird discounts, group rates, coupon codes, and last-minute deals to maximize tour occupancy.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card purple">
+                <div class="mf-icon" style="background:#ede9fe;"><i class="fas fa-user-tie" style="color:#7c3aed;font-size:1.2rem;"></i></div>
+                <div><h6>Guide Assignment</h6><p>Assign certified guides to tours, track their schedules, and send automated briefing notifications before each departure.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card orange">
+                <div class="mf-icon" style="background:#fff7ed;"><i class="fas fa-map-pin" style="color:#ea580c;font-size:1.2rem;"></i></div>
+                <div><h6>Destination Manager</h6><p>Manage destination pages with photos, highlights, and linked tours. Top-destination rankings auto-update from booking data.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card teal">
+                <div class="mf-icon" style="background:#ccfbf1;"><i class="fas fa-chart-bar" style="color:#0d9488;font-size:1.2rem;"></i></div>
+                <div><h6>Tour Analytics</h6><p>Analyze booking volumes, revenue per tour, conversion rates, and seasonal trends to optimize your catalog and marketing spend.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: CAR -->
+      <section style="background:#fff;padding:60px 0;">
+        <div class="container">
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Car Rental</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">The Car Rental module gives fleet operators a complete digital solution to list, manage, and rent out vehicles of any type. Each vehicle listing includes full specs — make, model, seats, fuel type, transmission, and photos — alongside daily pricing and location details. Customers filter by city, vehicle type, and date range to find the perfect car instantly. The system handles booking confirmations, driver option add-ons, insurance tier selection, and payment processing automatically. Fleet managers gain a unified view of availability, utilization rates, maintenance schedules, and revenue per vehicle — all from one powerful dashboard.</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookingcardetail.png" alt="Car Detail">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingcarsearch.png" alt="Car Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="mf-card yellow">
+                <div class="mf-icon" style="background:#fef9c3;"><i class="fas fa-car-side" style="color:#ca8a04;font-size:1.2rem;"></i></div>
+                <div><h6>Fleet Management</h6><p>Add unlimited vehicles with photos, specs, and condition notes. Track each car's booking history, mileage, and service schedule.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card blue">
+                <div class="mf-icon" style="background:#dbeafe;"><i class="fas fa-map-marker-alt" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                <div><h6>Pickup &amp; Drop-off</h6><p>Define multiple pickup and return locations. Support airport transfers, city-centre pickups, and one-way rentals with different pricing.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card orange">
+                <div class="mf-icon" style="background:#fff7ed;"><i class="fas fa-shield-alt" style="color:#ea580c;font-size:1.2rem;"></i></div>
+                <div><h6>Insurance &amp; Add-ons</h6><p>Offer optional extras such as insurance tiers, GPS units, child seats, and fuel plans as paid add-ons at the checkout stage.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: EVENT -->
+      <section style="background:#f8fafb;padding:60px 0;">
+        <div class="container">
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookinglevent.png" alt="Event Detail">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingsearchevent.png" alt="Event Search">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Event Booking</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">The Event module empowers organizers to create, publish, and sell tickets to any type of event — concerts, corporate conferences, cultural festivals, workshops, and private experiences. Each listing includes a rich description, venue map, schedule, speaker profiles, and multiple ticket categories with independent pricing. Attendees can browse upcoming events, select seats or ticket tiers, and pay securely in any supported currency. The AI-driven attendance predictor helps organizers anticipate demand, while automated reminders, QR code tickets, and check-in tools make day-of logistics effortless.</p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="mf-card red">
+                <div class="mf-icon" style="background:#fee2e2;"><i class="fas fa-ticket-alt" style="color:#dc2626;font-size:1.2rem;"></i></div>
+                <div><h6>Ticket Tiers</h6><p>Create General Admission, VIP, and Early Bird ticket categories with individual pricing, quotas, and sale windows for each event.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card purple">
+                <div class="mf-icon" style="background:#ede9fe;"><i class="fas fa-qrcode" style="color:#7c3aed;font-size:1.2rem;"></i></div>
+                <div><h6>QR Code Check-in</h6><p>Generate unique QR code tickets for every booking. Use the mobile check-in app to scan and validate tickets instantly at the venue entrance.</p></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mf-card green">
+                <div class="mf-icon" style="background:#dcfce7;"><i class="fas fa-chart-pie" style="color:#16a34a;font-size:1.2rem;"></i></div>
+                <div><h6>Attendance Analytics</h6><p>Track ticket sales in real time, monitor occupancy against capacity, and analyze revenue by ticket tier and sales channel.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: FLIGHT & BOAT -->
+      <section style="background:#fff;padding:60px 0;">
+        <div class="container">
+          <!-- Flight -->
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Flight Booking</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">Manage flight schedules, seat classes, and charter inventory from one dashboard. Support one-way, round-trip, and multi-city searches with real-time seat selection, baggage add-ons, and meal preferences. The system handles booking confirmations, boarding pass generation, and automated flight status notifications so passengers are always informed.</p>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <div class="mf-card indigo">
+                    <div class="mf-icon" style="background:#eef2ff;"><i class="fas fa-plane-departure" style="color:#4f46e5;font-size:1.2rem;"></i></div>
+                    <div><h6>Flight Schedules</h6><p>Manage departure and arrival schedules, seat classes, and aircraft capacity in real time.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card blue">
+                    <div class="mf-icon" style="background:#dbeafe;"><i class="fas fa-suitcase-rolling" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                    <div><h6>Baggage &amp; Add-ons</h6><p>Sell baggage allowance, seat upgrades, and meal selections as paid extras at checkout.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookingwallet.png" alt="Wallet">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingflightsearch.png" alt="Flight Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Boat -->
+          <div class="row align-items-start g-5">
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookingaccount.png" alt="Account">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingsearchboat.png" alt="Boat Search">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Boat Charter</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">List yachts, sailboats, and cruise vessels with capacity, speed, and length specifications. Manage charter durations, captain options, departure ports, and seasonal pricing for every vessel. Customers compare vessels by specs and photos, select their dates and crew preferences, and book instantly with secure online payment.</p>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <div class="mf-card teal">
+                    <div class="mf-icon" style="background:#ccfbf1;"><i class="fas fa-ship" style="color:#0d9488;font-size:1.2rem;"></i></div>
+                    <div><h6>Vessel Listings</h6><p>Add boats with photos, capacity, speed, length, and charter pricing. Manage seasonal rates and blackout dates.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card blue">
+                    <div class="mf-icon" style="background:#dbeafe;"><i class="fas fa-anchor" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                    <div><h6>Captain &amp; Crew</h6><p>Offer captain-only, skippered, or bare-boat charters. Assign crew and send pre-departure briefings automatically.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE DETAIL: SPACE & VISA -->
+      <section style="background:#f8fafb;padding:60px 0;">
+        <div class="container">
+          <!-- Space -->
+          <div class="row align-items-start g-5 mb-5">
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Space Rental</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">Manage apartments, villas, holiday homes, and co-working spaces with full availability control. Set per-night or per-day pricing, define amenities and house rules, block unavailable dates, and upload photo galleries for each listing. Guests browse and filter by location, size, and amenities, then book and pay instantly. Automated check-in instructions and post-stay reviews are sent without any manual effort.</p>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <div class="mf-card purple">
+                    <div class="mf-icon" style="background:#ede9fe;"><i class="fas fa-home" style="color:#7c3aed;font-size:1.2rem;"></i></div>
+                    <div><h6>Property Listings</h6><p>Add unlimited spaces with photos, amenities, rules, and per-night pricing. Manage seasonal rate adjustments.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card green">
+                    <div class="mf-icon" style="background:#dcfce7;"><i class="fas fa-calendar-minus" style="color:#16a34a;font-size:1.2rem;"></i></div>
+                    <div><h6>Availability Blocks</h6><p>Block dates for maintenance or personal use. Sync with external calendars via iCal to avoid double-bookings.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookingspace.png" alt="Space Detail">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingsearchspace.png" alt="Space Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Visa -->
+          <div class="row align-items-start g-5">
+            <div class="col-lg-7">
+              <div class="double-phone-wrap">
+                <div class="dphone dphone-back">
+                  <img src="assets/img/xbookinglogin.png" alt="Login">
+                </div>
+                <div class="dphone dphone-front">
+                  <img src="assets/img/xbookingsearchvisa.png" alt="Visa Search">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-bottom:18px;">Visa Processing</h2>
+              <p style="color:#555;line-height:1.85;font-size:0.95rem;">Handle visa applications end-to-end through a structured digital workflow. Agents upload document checklists per destination country, set processing fees and timelines, and manage each application through the pipeline. Applicants receive automated status updates at every stage — from submission and review to approval and passport return. The system keeps a complete audit trail and supports bulk processing for group visa applications.</p>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <div class="mf-card pink">
+                    <div class="mf-icon" style="background:#fce7f3;"><i class="fas fa-passport" style="color:#db2777;font-size:1.2rem;"></i></div>
+                    <div><h6>Document Checklist</h6><p>Define required documents per visa type and country. Guide applicants through each upload step with validations.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mf-card orange">
+                    <div class="mf-icon" style="background:#fff7ed;"><i class="fas fa-bell" style="color:#ea580c;font-size:1.2rem;"></i></div>
+                    <div><h6>Status Tracking</h6><p>Automated email and SMS notifications at every processing stage so applicants always know where their visa stands.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MORE MODULES -->
+      <section style="background:#fff;padding:70px 0;">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="section-label">More Features</span>
+            <h2 style="margin-top:10px;">Everything Else You Need to <span style="color:#4f46e5;">Run Your Booking Business</span></h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card indigo" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-credit-card" style="color:#4f46e5;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">Payment Gateways</h6>
+                </div>
+                <p>Stripe, PayPal, bank transfer, and regional payment methods. Multi-currency checkout with automatic exchange rate conversion and full refund management.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card green" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-store" style="color:#16a34a;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">Multi-Vendor</h6>
+                </div>
+                <p>Each vendor gets their own dashboard to manage listings, bookings, and payouts. Platform owner controls commission rates, approvals, and payout schedules.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card yellow" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-percentage" style="color:#ca8a04;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">Coupons &amp; Deals</h6>
+                </div>
+                <p>Create and manage promotional coupons, holiday sale banners, and featured deal listings to drive conversions and reward loyal customers.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card purple" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-language" style="color:#7c3aed;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">Multilingual &amp; Multi-Currency</h6>
+                </div>
+                <p>Serve international customers in their native language and preferred currency. Add new language files easily with no coding required.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card orange" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-search" style="color:#ea580c;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">SEO &amp; Marketing</h6>
+                </div>
+                <p>Built-in SEO meta management, sitemap generation, newsletter subscriptions, and blog module to attract organic traffic and grow your customer base.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="mf-card blue" style="flex-direction:column;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+                  <div class="mf-icon"><i class="fas fa-cog" style="color:#2563eb;font-size:1.2rem;"></i></div>
+                  <h6 style="margin:0;font-size:1rem;">Admin &amp; Configuration</h6>
+                </div>
+                <p>Role-based access, SMTP settings, SEO tools, coupon management, and system health monitoring from one comprehensive control panel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLATFORM SCREENSHOTS GALLERY -->
+      <section style="background:#f8fafc;padding:70px 0;overflow:hidden;">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="section-label">Platform Screenshots</span>
+            <h2 style="margin-top:10px;font-size:2rem;font-weight:800;color:#0D1C30;">See X Booking <span style="color:#4f46e5;">In Action</span></h2>
+            <p style="color:#555;max-width:580px;margin:12px auto 0;">A look inside the platform — every screen is designed for speed, clarity, and a seamless booking experience.</p>
+          </div>
+        </div>
+        <!-- Scrolling track — full width, no container constraint -->
+        <div class="scroll-track-outer">
+          <div class="scroll-track" id="scrollTrack">
+            <div class="scroll-item"><img src="assets/img/xbookinghome.png" alt="X Booking Home"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinghotelsearch.png" alt="Hotel Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinghoteldetail.png" alt="Hotel Detail"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchtour.png" alt="Tour Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingcarsearch.png" alt="Car Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingcardetail.png" alt="Car Detail"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchevent.png" alt="Event Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinglevent.png" alt="Event Detail"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingflightsearch.png" alt="Flight Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchboat.png" alt="Boat Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingspace.png" alt="Space Rental"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchvisa.png" alt="Visa Processing"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingwallet.png" alt="Wallet"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingaccount.png" alt="Account"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinglogin.png" alt="Login"></div>
+            <!-- duplicate for seamless loop -->
+            <div class="scroll-item"><img src="assets/img/xbookinghome.png" alt="X Booking Home"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinghotelsearch.png" alt="Hotel Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinghoteldetail.png" alt="Hotel Detail"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchtour.png" alt="Tour Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingcarsearch.png" alt="Car Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingcardetail.png" alt="Car Detail"></div>
+            <div class="scroll-item"><img src="assets/img/xbookingsearchevent.png" alt="Event Search"></div>
+            <div class="scroll-item"><img src="assets/img/xbookinglevent.png" alt="Event Detail"></div>
+          </div>
+        </div>
+        <style>
+          .scroll-track-outer { width:100%; overflow:hidden; padding:20px 0 10px; cursor:grab; }
+          .scroll-track-outer:active { cursor:grabbing; }
+          .scroll-track { display:flex; gap:20px; width:max-content; animation:autoScroll 40s linear infinite; }
+          .scroll-track:hover { animation-play-state:paused; }
+          .scroll-item img { height:420px; width:auto; border-radius:24px; box-shadow:0 12px 40px rgba(0,0,0,.15); border:5px solid #1a1a2e; display:block; transition:transform .3s; }
+          .scroll-item img:hover { transform:scale(1.04); box-shadow:0 20px 60px rgba(79,70,229,.25); }
+          @keyframes autoScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        </style>
+      </section>
+
+
+      <!-- PRICING -->
+      <section id="pricing" style="background:#f0f4f8;padding:80px 0;">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="section-label">Pricing</span>
+            <h2 style="font-size:2rem;font-weight:800;color:#0D1C30;margin-top:10px;">X Booking Pricing — <span style="color:#4f46e5;">Affordable Packages</span></h2>
+            <p style="color:#555;max-width:580px;margin:12px auto 0;">Choose the plan that matches your business size. One-time purchase, full Laravel source code, yours to own.</p>
+          </div>
+          <div class="row g-4 align-items-stretch">
+            <!-- BASIC -->
+            <div class="col-md-4">
+              <div class="pricing-card">
+                <p class="plan-name">X-Booking Basic</p>
+                <p class="plan-sub">Perfect for startups launching an online travel booking platform.</p>
+                <div class="price">$299 <span>/ one-time</span></div>
+                <p class="price-note">Support Renewal After 6 Months: $50</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Web Booking Platform</li>
+                  <li><i class="fas fa-check"></i> Full Laravel Source Code</li>
+                  <li><i class="fas fa-check"></i> All 9+ Booking Modules</li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span><i class="fab fa-react" style="margin-right:5px;"></i>React Native Mobile App<span class="app-tag">NEW</span></span></li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span>📱 Android &amp; iOS App Code</span></li>
+                  <li><i class="fas fa-check"></i> Installation Guide</li>
+                  <li><i class="fas fa-times"></i> No Server Setup Included</li>
+                  <li><i class="fas fa-check"></i> Lifetime Free Updates</li>
+                  <li><i class="fas fa-check"></i> 6 Month Support</li>
+                  <li><i class="fas fa-times"></i> No Daily Backups</li>
+                </ul>
+                <a href="add_product.php?pid=320&billingcycle=monthly" class="btn-buy-outline">Buy Now</a>
+              </div>
+            </div>
+            <!-- PROFESSIONAL -->
+            <div class="col-md-4">
+              <div class="pricing-card recommended">
+                <span class="recommended-badge">RECOMMENDED</span>
+                <p class="plan-name">X-Booking Professional</p>
+                <p class="plan-sub">Best for growing travel businesses needing full deployment &amp; app publishing.</p>
+                <div class="price">$599 <span>/ yr</span></div>
+                <p class="price-note">You pay $599 today. Renews at $150/yr.<br>Support Renewal After 6 Months: $50</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Web Booking Platform</li>
+                  <li><i class="fas fa-check"></i> Full Laravel Source Code</li>
+                  <li><i class="fas fa-check"></i> All 9+ Booking Modules</li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span><i class="fab fa-react" style="margin-right:5px;"></i>React Native Mobile App<span class="app-tag">NEW</span></span></li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span>📱 Android &amp; iOS App Code</span></li>
+                  <li><i class="fas fa-check"></i> App Store Publishing Guide</li>
+                  <li><i class="fas fa-check"></i> Complete Installation Included</li>
+                  <li><i class="fas fa-check"></i> Server Setup Included</li>
+                  <li><i class="fas fa-check"></i> Lifetime Free Updates</li>
+                  <li><i class="fas fa-check"></i> 6 Month Support</li>
+                  <li><i class="fas fa-times"></i> No Daily Backups</li>
+                </ul>
+                <a href="add_product.php?pid=321&billingcycle=annually" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+            <!-- ENTERPRISE -->
+            <div class="col-md-4">
+              <div class="pricing-card">
+                <p class="plan-name">X-Booking Enterprise</p>
+                <p class="plan-sub">For large OTAs and enterprises needing custom branding &amp; full app deployment.</p>
+                <div class="price">$1,000 <span>/ starting</span></div>
+                <p class="price-note">Starting from $1,000 — depending on customization.<br>Support Renewal After 6 Months: $50</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Web Booking Platform</li>
+                  <li><i class="fas fa-check"></i> Full Laravel Source Code</li>
+                  <li><i class="fas fa-check"></i> All 9+ Booking Modules</li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span><i class="fab fa-react" style="margin-right:5px;"></i>React Native Mobile App<span class="app-tag">NEW</span></span></li>
+                  <li class="app-highlight"><i class="fas fa-check"></i> <span>📱 Android &amp; iOS App Code</span></li>
+                  <li><i class="fas fa-check"></i> Custom App Branding &amp; Publishing</li>
+                  <li><i class="fas fa-check"></i> Complete Installation Included</li>
+                  <li><i class="fas fa-check"></i> Server Setup Included</li>
+                  <li><i class="fas fa-check"></i> Lifetime Free Updates</li>
+                  <li><i class="fas fa-check"></i> Priority Support</li>
+                  <li><i class="fas fa-check"></i> Daily Backups</li>
+                </ul>
+                <a href="add_product.php?pid=322&billingcycle=monthly" class="btn-buy-outline">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST -->
+      <section class="trust-section">
+        <div class="container">
+          <h2 style="color:#fff;font-weight:800;font-size:1.8rem;text-align:center;margin-bottom:40px;">Built With AI, Travel Experts &amp; <span style="color:#a5b4fc;">Real Booking Operators</span></h2>
+          <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:12px;"><i class="fas fa-brain" style="font-size:1.6rem;color:#a5b4fc;"></i><span style="color:#fff;font-weight:600;">AI-Powered</span></div>
+            <div style="display:flex;align-items:center;gap:12px;"><i class="fas fa-globe" style="font-size:1.6rem;color:#a5b4fc;"></i><span style="color:#fff;font-weight:600;">Multi-Currency</span></div>
+            <div style="display:flex;align-items:center;gap:12px;"><i class="fas fa-shield-alt" style="font-size:1.6rem;color:#a5b4fc;"></i><span style="color:#fff;font-weight:600;">Secure Payments</span></div>
+            <div style="display:flex;align-items:center;gap:12px;"><i class="fas fa-file-export" style="font-size:1.6rem;color:#a5b4fc;"></i><span style="color:#fff;font-weight:600;">PDF &amp; Excel Export</span></div>
+            <div style="display:flex;align-items:center;gap:12px;"><i class="fas fa-language" style="font-size:1.6rem;color:#a5b4fc;"></i><span style="color:#fff;font-weight:600;">Multilingual</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="text-center">Frequently Asked Questions — FAQ</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="faq-col-wrap">
+                <div class="faq-item"><div class="faq-question">What Is X Booking?<span class="faq-q-icon"></span></div><div class="faq-answer">X Booking is an AI-powered, all-in-one travel and booking platform built on Laravel. It lets businesses manage Hotel, Tours, Space, Car, Event, Flight, Boat, and Visa bookings from a single smart dashboard.</div></div>
+                <div class="faq-item"><div class="faq-question">Who Can Use X Booking?<span class="faq-q-icon"></span></div><div class="faq-answer">X Booking is suitable for travel agencies, hotels, tour operators, car rental companies, event organizers, boat charter businesses, and any OTA looking to digitize and automate their booking operations.</div></div>
+                <div class="faq-item"><div class="faq-question">What Booking Modules Are Included?<span class="faq-q-icon"></span></div><div class="faq-answer">X Booking includes 9+ modules: Hotel, Tours &amp; Activities, Space Rental, Car Rental, Event Booking, Flight Booking, Boat Charter, Visa Processing, and Admin &amp; Configuration.</div></div>
+                <div class="faq-item"><div class="faq-question">Does X Booking Support Multiple Currencies?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. X Booking supports multiple currencies with automatic exchange rate conversion. Customers can browse and pay in their preferred currency across all booking types.</div></div>
+                <div class="faq-item"><div class="faq-question">Can I Customize The Platform For My Brand?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. You receive the full Laravel source code. Themes, colors, languages, payment methods, and all booking workflows are fully configurable and extendable.</div></div>
+                <div class="faq-item"><div class="faq-question">How Do I Get Started With X Booking?<span class="faq-q-icon"></span></div><div class="faq-answer">Choose your package → purchase → install on your server → add your listings → start accepting bookings. Professional and Enterprise plans include full installation and server setup.</div></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="faq-col-wrap">
+                <div class="faq-item"><div class="faq-question">What Payment Gateways Are Supported?<span class="faq-q-icon"></span></div><div class="faq-answer">X Booking supports Stripe, PayPal, bank transfer, and regional payment gateways. All payments are processed securely with automatic invoice generation and refund management.</div></div>
+                <div class="faq-item"><div class="faq-question">Does The System Send Automated Emails?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. X Booking sends automated booking confirmations, payment receipts, check-in reminders, review requests, and cancellation notices using fully customizable email templates.</div></div>
+                <div class="faq-item"><div class="faq-question">Is X Booking Available In Multiple Languages?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. The platform supports multiple frontend and backend languages. You can add new language files easily to serve international travellers in their native language.</div></div>
+                <div class="faq-item"><div class="faq-question">Can I Manage Finance And Revenue Reports?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. The admin dashboard includes detailed revenue reports, booking statistics, payment history, payout management, and exportable PDF and Excel reports across all modules.</div></div>
+                <div class="faq-item"><div class="faq-question">Is Technical Support Included?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes, all plans include 6 months of technical support. Support can be renewed after 6 months for $50 per renewal.</div></div>
+                <div class="faq-item"><div class="faq-question">Can Multiple Vendors List On The Platform?<span class="faq-q-icon"></span></div><div class="faq-answer">Yes. X Booking supports multi-vendor operation. Each vendor gets their own dashboard to manage listings, bookings, and payouts while the platform owner controls commission rates and approvals.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUPPORT BANNER -->
+      <section class="support-banner">
+        <div class="container">
+          <h2>Need help? Talk to our team &mdash; <a href="tel:+971505442538" style="color:#fff;text-decoration:underline;opacity:.85;">+971-50-544-2538</a></h2>
+          <p style="color:#fff;opacity:.8;margin-bottom:28px;font-size:1rem;">Our experts are ready to help you set up and get the most out of X Booking.</p>
+          <a href="contact.php" class="btn-contact">Contact Us</a>
+          <p style="margin-top:28px;font-size:0.72rem;color:rgba(255,255,255,.45);letter-spacing:0.3px;">The X Booking mobile app is built on the <a href="#" style="color:rgba(255,255,255,.55);text-decoration:underline;">Booking Core</a> script.</p>
+        </div>
+      </section>
+
+      <footer id="footer"></footer>
+    </div>
+
+    <a href="#0" class="cd-top"><i class="fas fa-angle-up"></i></a>
+    <script>
+      $(window).on('load', function() {
+        $("#spinner-area").fadeOut("slow");
+        if (typeof AOS !== 'undefined') { AOS.init(); }
+      });
+      setTimeout(function() { $("#spinner-area").fadeOut("slow"); }, 3000);
+    </script>
+    <script>
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = this.closest('.faq-item');
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+    </script>
+  </body>
+</html>

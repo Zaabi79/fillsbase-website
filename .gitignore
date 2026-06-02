@@ -1,0 +1,34 @@
+# Sensitive config
+configuration.php
+configuration.sample.php
+
+# Logs and temp files
+*.log
+*.tmp
+/scratch/
+/attachments/
+/downloads/
+
+# Audit/debug files
+audit_results.json
+extracted_text.json
+missing_translations.json
+debug_router.php
+final_audit.php
+restore_ui.php
+restore_ui_final.php
+
+# Test/temp screenshots
+*.png
+localhost_hosting_page_*.png
+hosting_page_check_*.png
+test_routing_page_*.png
+
+# Python scripts (server-side tools)
+fix_menu.py
+remove_inebur.py
+
+# Dependencies (installed via composer/package manager on server)
+vendor/
+node_modules/
+ioncube/

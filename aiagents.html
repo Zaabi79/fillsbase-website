@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fillsbase.com builds intelligent AI automation systems and autonomous agents to streamline your workflows.">
+        <link href="assets/img/favicon.ico" rel="shortcut icon">
+        <title>Fillsbase - AI Automation &amp; Agents</title>
+        <!-- Font Style -->
+        <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+        <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+        <!-- RTL Style -->
+        <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <!-- CSS Style -->
+        <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+        <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+        <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+        <style>
+          .hero-section-ai {
+            background: linear-gradient(135deg, rgba(10,10,30,0.85) 0%, rgba(80,0,80,0.75) 100%),
+                        url('assets/img/react_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+          }
+          .ai-icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #ee5586, #9b59b6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+          }
+          .ai-icon-box i {
+            font-size: 26px;
+            color: #fff;
+          }
+          .agent-card {
+            border-left: 3px solid #ee5586;
+            padding-left: 18px;
+            margin-bottom: 28px;
+          }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+        <script type="text/javascript" src="assets/js/typed.js"></script>
+        <script async type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+    </head>
+    <body>
+        <div class="box-container limit-width">
+            <!-- ***** SETTINGS ****** -->
+            <section id="settings"></section>
+            <!-- ***** LOADING PAGE ****** -->
+            <div id="spinner-area">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                    <div class="spinner-txt">Fillsbase...</div>
+                </div>
+            </div>
+            <!-- ***** FRAME MODE ****** -->
+            <div class="body-borders" data-border="20">
+                <div class="top-border bg-white"></div>
+                <div class="right-border bg-white"></div>
+                <div class="bottom-border bg-white"></div>
+                <div class="left-border bg-white"></div>
+            </div>
+            <!-- ***** HEADER ****** -->
+            <header id="header"></header>
+
+            <!-- ***** HERO ***** -->
+            <section class="hero-section-ai main-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container text-center">
+                                <h1 class="display-4 fw-bolder text-white mergecolor mb-3" data-aos="fade-up" data-aos-duration="800">
+                                    AI Automation &amp; Agents <span id="typed-ai"></span>
+                                </h1>
+                                <p class="h5 c-grey-light mergecolor" data-aos="fade-up" data-aos-duration="1200">
+                                    Deploy intelligent <b class="c-pink">AI Agents</b> that work 24/7 to automate your workflows,<br>handle customer requests and scale your operations.
+                                </p>
+                                <div class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                    <a href="cart.php?a=add&pid=ai-agent" class="btn btn-default-pink-fill me-3">Get Started</a>
+                                    <a href="#scroll" class="btn btn-outline-light">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** INTRO CARDS ***** -->
+            <section class="services sec-up-slider pb-0 bg-colorstyle nobottompadding specialposition">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="ai-icon-box">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+                                    <div class="title mergecolor">Autonomous AI Agents</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Custom AI agents that reason, plan and act — accomplishing complex, multi-step tasks without human intervention.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-pink">new</div>
+                                    <div class="ai-icon-box">
+                                        <i class="fa-solid fa-gears"></i>
+                                    </div>
+                                    <div class="title mergecolor">Workflow Automation</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Automate repetitive business processes across CRMs, email, tickets, billing and data pipelines.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="ai-icon-box">
+                                        <i class="fa-solid fa-comments"></i>
+                                    </div>
+                                    <div class="title mergecolor">Conversational AI</div>
+                                    <p class="subtitle seccolor text-muted">
+                                        Intelligent chatbots and voice assistants trained on your data to handle support, sales and onboarding.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FEATURES ***** -->
+            <section id="scroll" class="history-section feat01 sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="randomline">
+                        <div class="bigline"></div>
+                        <div class="smallline"></div>
+                    </div>
+                    <div class="sec-main sec-bg1 bg-colorstyle noshadow nopadding">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-5 d-flex align-items-center justify-content-center">
+                                <div style="font-size: 140px; opacity: 0.15; line-height:1;">
+                                    <i class="fa-solid fa-brain" style="color:#ee5586;opacity:1;font-size:120px;"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 offset-lg-1">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">Build AI agents that think and act like your best employee</h1>
+                                    <p class="seccolor">We design multi-agent systems powered by large language models that integrate directly with your existing tools — from WHMCS and Slack to databases and REST APIs. Your agents work continuously, escalating to humans only when truly necessary.</p>
+                                </div>
+                                <a href="cart.php?a=add&pid=ai-agent" class="btn btn-default-pink-fill mt-3">Launch a Project</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">Everything you need to automate your business at scale</h1>
+                                    <p class="seccolor">From simple task bots to complete agentic pipelines with memory, tool use and RAG — we architect solutions that scale with you.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Talk to an Expert</a>
+                            </div>
+                            <div class="col-md-12 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-network-wired" style="font-size:100px;color:#ee5586;opacity:0.85;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** USE CASES ***** -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <h2 class="section-heading mergecolor">What our AI Agents can do for you</h2>
+                                <p class="section-subheading text-muted mergecolor">Real-world automations built for African and global businesses.</p>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-headset f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">24/7 Customer Support Agent</div>
+                                    <p class="subtitle seccolor text-muted">Handle tickets, answer FAQs and escalate complex cases — without a human agent on duty around the clock.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-file-invoice-dollar f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Billing Automation</div>
+                                    <p class="subtitle seccolor text-muted">Automatically generate invoices, follow up on overdue payments and reconcile accounts with no manual effort.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-magnifying-glass-chart f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Sales Prospecting &amp; Outreach</div>
+                                    <p class="subtitle seccolor text-muted">AI agents that find prospects, enrich data and send personalized messages at scale.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-database f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Data Extraction &amp; Reporting</div>
+                                    <p class="subtitle seccolor text-muted">Scheduled agents that extract, transform and summarize data from any source into clear reports.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-server f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Server &amp; Infrastructure Monitoring</div>
+                                    <p class="subtitle seccolor text-muted">Agents that monitor your hosting stack, detect anomalies and automatically trigger corrective actions.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-pen-to-square f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Content &amp; SEO Automation</div>
+                                    <p class="subtitle seccolor text-muted">Generate blog posts, product descriptions and meta tags tailored to your brand at scale.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** HOW IT WORKS ***** -->
+            <section class="services sec-normal pb-100 history-section motpath noimage bg-seccolorstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-7">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="agent-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">01.</span> Discovery &amp; Design</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">We map your workflows, identify automation opportunities and architect the agent system.</p>
+                                    </div>
+                                    <div class="agent-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">02.</span> Development &amp; Integration</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">We build, test and connect your agents to your existing tools and data sources.</p>
+                                    </div>
+                                    <div class="agent-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">03.</span> Deployment &amp; Monitoring</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">Go live with full observability dashboards and human escalation paths.</p>
+                                    </div>
+                                    <div class="agent-card">
+                                        <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">04.</span> Optimization &amp; Scaling</div>
+                                        <p class="f-15 lh-32 text-muted seccolor">Continuous improvement through real-world feedback, fine-tuning and capability expansion.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-1"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 text-start">
+                            <div class="mb-5 mt-5 agpanel">
+                                <h2 class="mergecolor">How we build your AI Agent</h2>
+                                <p class="seccolor f-15">A proven four-step process to go from idea to production-ready automation, fast.</p>
+                            </div>
+                            <a href="contact.php" class="btn btn-default-pink-fill">Book a Free Call</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** TESTIMONIALS ***** -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">Trusted by businesses worldwide</h2>
+                                <p class="section-subheading text-muted mergecolor">Our AI solutions are already transforming operations for businesses across Africa and beyond.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"The AI support agent handles 80% of our tickets automatically. A real game changer."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">Amara Osei</p>
+                                            <p class="subtitle seccolor">CEO, TechHub Ghana</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <div class="title fw-normal mergecolor">"The billing automation alone saved us 15 hours a week. The ROI was immediate."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">Sarah M. Kimani</p>
+                                            <p class="subtitle seccolor">Operations Manager, Nairobi Fintech</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-yellow-dark"></i>
+                                    <i class="fa-solid fa-star f-18 c-grey-light"></i>
+                                    <div class="title fw-normal mergecolor">"The multi-agent pipeline they built replaced an entire data-entry team."</div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="h6 fw-bold mb-1 mt-4 seccolor">David Nkosi</p>
+                                            <p class="subtitle seccolor">CTO, Cape Town SaaS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FAQ ***** -->
+            <section class="sec-normal pb-80 bg-colorstyle nobottompadding">
+                <div class="faq">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">FAQ — Still have questions?</h2>
+                                <p class="section-subheading mergecolor">Everything you need to know about AI automation and what we build.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="accordion faq pt-5">
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>What is an AI Agent?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>An AI Agent is a software system powered by a large language model (LLM) that can perceive its environment, reason about goals and take actions — such as calling APIs, searching the web, writing code or sending messages — to accomplish tasks autonomously without constant human intervention.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How does AI automation differ from traditional automation (RPA)?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>Traditional RPA follows rigid rules and breaks when processes change. AI agents understand natural language, intelligently handle exceptions and adapt to new situations — making them far more resilient and capable for complex, variable workflows.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>What tools and platforms can AI agents integrate with?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>Our agents integrate with virtually any platform that has an API — including WHMCS, Salesforce, HubSpot, Slack, WhatsApp, Google Workspace, Shopify, MySQL databases and custom internal systems.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>Is my data safe with AI agents?</span>
+                                            <div class="float-end">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-minus c-pink"></i>
+                                            </div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse">
+                                                <div class="info">
+                                                    <ul class="list seccolor"><li><p>Yes. We deploy agents following enterprise-grade security practices — with role-based permissions, encrypted credentials, audit logs, and the ability to run entirely on-premises or in your private cloud environment so your data never leaves your infrastructure.</p></li></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** NAVIGATION HELP ***** -->
+            <section class="help pb-80 bg-colorstyle tophalfpadding">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat left bg-grey"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                    <a href="reactdev" class="help-item">
+                                        <div class="img">
+                                            <i class="fa-brands fa-react" style="font-size:36px;color:#ee5586;"></i>
+                                        </div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to React Development</div>
+                                            <div class="description seccolor">Need a modern, lightning-fast frontend?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-grey"><i class="fas fa-long-arrow-alt-right"></i></div>
+                                    <a href="hosting" class="help-item">
+                                        <div class="img">
+                                            <i class="fa-solid fa-cloud" style="font-size:36px;color:#ee5586;"></i>
+                                        </div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to Cloud Hosting</div>
+                                            <div class="description seccolor">Need infrastructure to run your agents?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ***** FOOTER ****** -->
+            <footer id="footer"></footer>
+        </div>
+        <!-- ***** BUTTON GO TOP ***** -->
+        <a href="#" class="cd-top" title="Back to top"><i class="fas fa-angle-up"></i></a>
+        <!-- ***** SCRIPTS ***** -->
+        <script>
+        var typedAi = new Typed('#typed-ai', {
+            strings: ["intelligently.", "autonomously.", "at scale.", "24/7."],
+            typeSpeed: 50,
+            backSpeed: 20,
+            smartBackspace: true,
+            loop: true
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+            $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+            });
+        });
+        </script>
+    </body>
+</html>

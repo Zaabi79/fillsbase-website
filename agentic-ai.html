@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fillsbase.com builds autonomous AI agents and multi-agent systems that can reason, plan and act to accomplish complex tasks on your behalf.">
+        <link href="assets/img/favicon.ico" rel="shortcut icon">
+        <title>Fillsbase - AI Agents & Agentic AI</title>
+        <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+        <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+        <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+        <link type="text/css" href="assets/css/aos.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+        <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+        <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+        <style>
+          .hero-section-agentic {
+            background: linear-gradient(135deg, rgba(5,0,25,0.90) 0%, rgba(60,0,120,0.82) 100%),
+                        url('assets/img/react_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+          }
+          .agent-icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #7c3aed, #ee5586);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+          }
+          .agent-icon-box i { font-size: 28px; color: #fff; }
+          .step-card {
+            border-left: 3px solid #7c3aed;
+            padding-left: 18px;
+            margin-bottom: 28px;
+          }
+          .agent-type-card {
+            border-radius: 14px;
+            padding: 28px 24px;
+            border-top: 3px solid #ee5586;
+            transition: transform 0.2s;
+          }
+          .agent-type-card:hover { transform: translateY(-5px); }
+        </style>
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+        <script type="text/javascript" src="assets/js/typed.js"></script>
+        <script async type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+        <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+    </head>
+    <body>
+        <div class="box-container limit-width">
+            <section id="settings"></section>
+            <div id="spinner-area">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                    <div class="spinner-txt">Fillsbase...</div>
+                </div>
+            </div>
+            <div class="body-borders" data-border="20">
+                <div class="top-border bg-white"></div>
+                <div class="right-border bg-white"></div>
+                <div class="bottom-border bg-white"></div>
+                <div class="left-border bg-white"></div>
+            </div>
+            <header id="header"></header>
+
+            <!-- HERO -->
+            <section class="hero-section-agentic main-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container text-center">
+                                <h1 class="display-4 fw-bolder text-white mergecolor mb-3" data-aos="fade-up" data-aos-duration="800">
+                                    AI Agents &amp; Agentic AI <span id="typed-agentic"></span>
+                                </h1>
+                                <p class="h5 c-grey-light mergecolor" data-aos="fade-up" data-aos-duration="1200">
+                                    Autonomous agents that <b class="c-pink">reason, plan, use tools and act</b> —<br>accomplishing complex, multi-step tasks without human intervention.
+                                </p>
+                                <div class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                    <a href="contact.php" class="btn btn-default-pink-fill me-3">Build Your Agent</a>
+                                    <a href="#scroll" class="btn btn-outline-light">How It Works</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTRO CARDS -->
+            <section class="services sec-up-slider pb-0 bg-colorstyle nobottompadding specialposition">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="agent-icon-box"><i class="fa-solid fa-brain"></i></div>
+                                    <div class="title mergecolor">Reasoning &amp; Planning</div>
+                                    <p class="subtitle seccolor text-muted">LLM-powered agents that break complex goals into steps, reason about context and choose the right action at each stage.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-pink">essential</div>
+                                    <div class="agent-icon-box"><i class="fa-solid fa-wrench"></i></div>
+                                    <div class="title mergecolor">Tool Use &amp; Integration</div>
+                                    <p class="subtitle seccolor text-muted">Agents that call APIs, query databases, browse the web, execute code, send emails and interact with any system you connect.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="service-section bg-seccolorstyle noshadow">
+                                    <div class="agent-icon-box"><i class="fa-solid fa-diagram-project"></i></div>
+                                    <div class="title mergecolor">Multi-Agent Systems</div>
+                                    <p class="subtitle seccolor text-muted">Orchestrated networks of specialized agents — a planner, a researcher, a writer and a reviewer — collaborating on complex tasks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHAT IS AGENTIC AI -->
+            <section id="scroll" class="history-section feat01 sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="randomline"><div class="bigline"></div><div class="smallline"></div></div>
+                    <div class="sec-main sec-bg1 bg-colorstyle noshadow nopadding">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-5 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-robot" style="font-size:130px;color:#7c3aed;opacity:0.85;"></i>
+                            </div>
+                            <div class="col-md-12 col-lg-6 offset-lg-1">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">What is Agentic AI?</h1>
+                                    <p class="seccolor">Traditional AI gives you answers. <b>Agentic AI takes action.</b> An AI agent perceives its environment, sets sub-goals, selects tools, executes steps, evaluates results and loops until the task is complete — without you having to click a button. Think of it as a tireless digital employee that never sleeps and never makes the same mistake twice.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Start a Project</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="info-content">
+                                    <h1 class="fw-bold mb-3 mergecolor">Single agents or full agent pipelines — we build both</h1>
+                                    <p class="seccolor">From a simple customer support agent to a complete multi-agent pipeline with a supervisor, worker agents and a memory layer — we architect the right level of complexity for your use case.</p>
+                                </div>
+                                <a href="contact.php" class="btn btn-default-pink-fill mt-3">Talk to an Expert</a>
+                            </div>
+                            <div class="col-md-12 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+                                <i class="fa-solid fa-network-wired" style="font-size:110px;color:#ee5586;opacity:0.85;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AGENT TYPES -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <h2 class="section-heading mergecolor">Types of AI agents we build</h2>
+                                <p class="section-subheading text-muted mergecolor">Every agent is custom-built for your specific domain and data.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-headset f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Customer Support Agent</div>
+                                    <p class="subtitle seccolor text-muted">Handles tickets, escalates complex cases and resolves requests via email, chat and WhatsApp — 24/7.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-magnifying-glass f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Research Agent</div>
+                                    <p class="subtitle seccolor text-muted">Browses the web, reads documents, extracts data and produces structured reports on any topic within minutes.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-code f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Development Agent</div>
+                                    <p class="subtitle seccolor text-muted">Writes, reviews, tests and debugs code autonomously — integrated directly into your CI/CD pipeline.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-envelope-open-text f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Sales Outreach Agent</div>
+                                    <p class="subtitle seccolor text-muted">Finds prospects, researches targets, drafts personalized messages and follows up — fully on autopilot.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-database f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Data Agent</div>
+                                    <p class="subtitle seccolor text-muted">Queries databases, transforms data and generates scheduled reports from natural language instructions.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="agent-type-card bg-seccolorstyle noshadow">
+                                    <i class="fa-solid fa-sitemap f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Orchestrator Agent</div>
+                                    <p class="subtitle seccolor text-muted">A supervisor agent that delegates tasks to specialized sub-agents, monitors progress and assembles the final results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOW WE BUILD -->
+            <section class="services sec-normal pb-100 history-section motpath noimage bg-seccolorstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-7">
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">01.</span> Define the Agent's Goal and Scope</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We work with you to precisely define what the agent must accomplish, the tools it needs and the points where human oversight is required.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">02.</span> Design the Reasoning Loop</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We architect the Perceive → Think → Act → Evaluate loop, choosing the right LLM, memory strategy and tool set for your domain.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">03.</span> Build, Evaluate &amp; Adversarial-Test</div>
+                                <p class="f-15 lh-32 text-muted seccolor">We build the agent, subject it to intensive testing with adversarial inputs, measure performance and refine until it meets production quality standards.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="mergecolor h5 mb-1"><span class="c-pink fw-bold">04.</span> Deploy with Observability</div>
+                                <p class="f-15 lh-32 text-muted seccolor">Full tracing, logging, cost tracking and human-in-the-loop escalation paths — so you always know what your agent is doing and why.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-1"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 text-start">
+                            <div class="mb-5 mt-5 agpanel">
+                                <h2 class="mergecolor">How we build production-ready AI agents</h2>
+                                <p class="seccolor f-15">Rigorous engineering — not prompt tinkering — is how we deliver agents that work reliably in the real world.</p>
+                            </div>
+                            <a href="contact.php" class="btn btn-default-pink-fill">Book a Free Call</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TECH STACK -->
+            <section class="services sec-normal bg-colorstyle">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <h2 class="section-heading mergecolor">Technologies we work with</h2>
+                                <p class="section-subheading text-muted mergecolor">We choose the best tool for your agent, not the trendiest one.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-3" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-section bg-seccolorstyle noshadow text-center">
+                                    <i class="fa-solid fa-microchip f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">LLM Providers</div>
+                                    <p class="subtitle seccolor text-muted">Claude, GPT-4o, Gemini, Llama 3, Mistral — or models fine-tuned on your own data.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3" data-aos="fade-up" data-aos-duration="900">
+                                <div class="service-section bg-seccolorstyle noshadow text-center">
+                                    <i class="fa-solid fa-link f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Frameworks</div>
+                                    <p class="subtitle seccolor text-muted">LangChain, LangGraph, CrewAI, AutoGen and Anthropic's Agent SDK for multi-agent orchestration.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-section bg-seccolorstyle noshadow text-center">
+                                    <i class="fa-solid fa-memory f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Memory &amp; RAG</div>
+                                    <p class="subtitle seccolor text-muted">Pinecone, Weaviate, pgvector — vector databases powering long-term memory and retrieval-augmented generation.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3" data-aos="fade-up" data-aos-duration="1100">
+                                <div class="service-section bg-seccolorstyle noshadow text-center">
+                                    <i class="fa-solid fa-eye f-28 c-pink mb-3"></i>
+                                    <div class="title mergecolor">Observability</div>
+                                    <p class="subtitle seccolor text-muted">LangSmith, Langfuse and custom dashboards to trace every agent decision in production.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="sec-normal pb-80 bg-colorstyle nobottompadding">
+                <div class="faq">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <h2 class="section-heading mergecolor">FAQ — Questions about Agentic AI</h2>
+                                <p class="section-subheading mergecolor">What businesses ask us before building their first AI agent.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="accordion faq pt-5">
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How is an AI agent different from a chatbot?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse"><div class="info">
+                                                <ul class="list seccolor"><li><p>A chatbot responds to prompts. An AI agent pursues goals. Agents have access to tools (APIs, code execution, web search), retain memory across sessions, can make decisions autonomously and will keep working until the task is complete — not just until the conversation ends.</p></li></ul>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>Can agents make mistakes or go off-script?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse"><div class="info">
+                                                <ul class="list seccolor"><li><p>Yes, which is why we always build in human checkpoints for high-stakes actions, confidence thresholds that trigger escalation, and complete logging so every decision can be audited and corrected. We design agents that fail safely.</p></li></ul>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>What data should the agent have access to?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse"><div class="info">
+                                                <ul class="list seccolor"><li><p>It depends on the task. At minimum, most agents need read access to relevant business data (via API or database). We enforce strict role-based permissions so agents only access what they need — never more.</p></li></ul>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-wrap">
+                                        <div class="panel-title seccolor">
+                                            <span>How much does running an AI agent in production cost?</span>
+                                            <div class="float-end"><i class="fa fa-plus"></i><i class="fa fa-minus c-pink"></i></div>
+                                        </div>
+                                        <div class="panel-collapse">
+                                            <div class="wrapper-collapse"><div class="info">
+                                                <ul class="list seccolor"><li><p>Costs depend on the LLM used, task frequency and context window size. We always optimize for cost efficiency during the build — caching responses, using lighter models where appropriate, and providing cost dashboards to avoid any surprises.</p></li></ul>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NAV HELP -->
+            <section class="help pb-80 bg-colorstyle tophalfpadding">
+                <div class="container">
+                    <div class="service-wrap">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat left bg-grey"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                    <a href="ai-automation" class="help-item">
+                                        <div class="img"><i class="fa-solid fa-gears" style="font-size:36px;color:#ee5586;"></i></div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to AI Automation</div>
+                                            <div class="description seccolor">Automate workflows without the complexity of agents?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="help-container bg-seccolorstyle noshadow">
+                                    <div class="plans badge feat bg-grey"><i class="fas fa-long-arrow-alt-right"></i></div>
+                                    <a href="saas" class="help-item">
+                                        <div class="img"><i class="fa-solid fa-cloud" style="font-size:36px;color:#ee5586;"></i></div>
+                                        <div class="inform">
+                                            <div class="title mergecolor">Go to SaaS Development</div>
+                                            <div class="description seccolor">Want to embed agents in a SaaS product?</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer"></footer>
+        </div>
+        <a href="#" class="cd-top" title="Back to top"><i class="fas fa-angle-up"></i></a>
+        <script>
+        var typedAgentic = new Typed('#typed-agentic', {
+            strings: ["that think.", "that plan.", "that act.", "that learn."],
+            typeSpeed: 50, backSpeed: 20, smartBackspace: true, loop: true
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+            $('.popup-youtube, .popup-vimeo').magnificPopup({
+                disableOn: 700, type: 'iframe', mainClass: 'mfp-fade',
+                removalDelay: 160, preloader: false, fixedContentPos: false
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,501 @@
+<?php
+if (file_exists('init.php')) {
+    require_once('init.php');
+}
+require_once __DIR__ . '/includes/fillsbase_helpers.php';
+
+// Fetch product prices
+$businessPrice = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually')) . ' /yr';
+$proPrice = formatFillsbasePrice(getFillsbaseProductPrice(294, 'annually')) . ' /yr';
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fillsbase.com offers premium web hosting, VPS, dedicated servers and domain name registration services.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Shared Hosting | Fast &amp; Reliable Web Hosting | Fillsbase Africa</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.circliful.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body >
+    <div class="box-container limit-width">
+      <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Fillsbase...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML ***** -->
+  <header id="header"> </header>
+  <!-- ***** SLIDER ***** -->
+  <style>
+    .hosting-hero {
+      background: linear-gradient(135deg, #0a1628 0%, #0d2137 40%, #1a3a5c 70%, #0f2d4a 100%) !important;
+    }
+    .hosting-hero .img-defaultbanner { display: none !important; }
+    .hosting-pricing-bg {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a2a4a 40%, #0f2d4a 70%, #112240 100%) !important;
+    }
+  </style>
+  <div class="top-header overlay hosting-hero">
+    <div class="lazyload"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="wrapper">
+            <h1 class="heading text-center">cPanel Web Hosting</h1>
+            <div class="subheading text-center mb-5">Discover the power of cPanel web hosting for a fast, secure and reliable website.</div>
+            <div id="run-switch" class="run-switch">
+              <div class="mo">Monthly Pricing</div>
+              <div class="switch"></div>
+              <div class="an active">Annual Pricing</div>
+            </div>
+            <div class="included">
+              <div class="h4 mb-3">All plans include</div>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> cPanel or Plesk</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Unlimited Email</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Free SSL Certificate</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Redundant DNS</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Powerful SSD</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> 24/7/365 Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** FEATURES DIVISION ***** -->
+  <a class="gocontent godown gocheck" href="#scroll" >
+    <div class="lazyload">
+      <!-- svg -->
+    </div>
+    <span>Features</span>
+  </a>
+  <!-- ***** PRICING TABLES ***** -->
+  <section class="pricing special sec-uping pb-5 specialposition hosting-pricing-bg">
+    <div class="container">
+      <div class="randomline">
+        <div class="bigline"></div>
+        <div class="smallline"></div>
+      </div>
+      <div class="row justify-content-center">
+
+        <!-- Personal Pack 1 -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper price-container text-start noshadow">
+            <div class="plans badge feat bg-purple">Starter</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-seedling fa-2x c-pink mb-3"></i>
+              <div class="title">Personal Pack</div>
+              <div class="fromer seccolor">1 Free Domain Name</div>
+              <div class="price-content">
+                <div class="price">
+                  <span class="period mo" style="display:none;">
+                    <span class="discount mergecolor">FCFA 1,500 <small>/mo</small></span>
+                  </span>
+                  <span class="period an">
+                    <span class="discount mergecolor">FCFA 15,000 <small>/yr</small></span>
+                  </span>
+                </div>
+              </div>
+              <a href="cart.php?a=add&pid=1" class="btn btn-default-yellow-fill">Select</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>10 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>100 GB</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>10 Accounts</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>10</span></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Personal Pack 2 -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper price-container text-start noshadow">
+            <div class="plans badge feat bg-pink">Popular</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-rocket fa-2x c-pink mb-3"></i>
+              <div class="title">Pro Pack</div>
+              <div class="fromer seccolor">1 Free Domain Name</div>
+              <div class="price-content">
+                <div class="price">
+                  <span class="period mo" style="display:none;">
+                    <span class="discount mergecolor">FCFA 2,500 <small>/mo</small></span>
+                  </span>
+                  <span class="period an">
+                    <span class="discount mergecolor">FCFA 25,000 <small>/yr</small></span>
+                  </span>
+                </div>
+              </div>
+              <a href="cart.php?a=add&pid=2" class="btn btn-default-yellow-fill">Select</a>
+            </div>
+            <ul class="list-info bg-pink">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>100 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>100 GB</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>200 Accounts</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Business Pack -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper price-container text-start noshadow">
+            <div class="plans badge feat bg-grey">Business</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-building fa-2x c-pink mb-3"></i>
+              <div class="title">Business Pack</div>
+              <div class="fromer seccolor">1 Free Domain Name</div>
+              <div class="price-content">
+                <div class="price">
+                  <span class="period mo" style="display:none;">
+                    <span class="discount mergecolor">FCFA 5,000 <small>/mo</small></span>
+                  </span>
+                  <span class="period an">
+                    <span class="discount mergecolor">FCFA 50,000 <small>/yr</small></span>
+                  </span>
+                </div>
+              </div>
+              <a href="cart.php?a=add&pid=3" class="btn btn-default-yellow-fill">Select</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>500 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>100 GB</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enterprise Pack -->
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="wrapper price-container text-start noshadow">
+            <div class="plans badge feat bg-purple">Enterprise</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <i class="fas fa-crown fa-2x c-pink mb-3"></i>
+              <div class="title">Enterprise Pack</div>
+              <div class="fromer seccolor">2 Free Domain Names</div>
+              <div class="price-content">
+                <div class="price">
+                  <span class="period mo" style="display:none;">
+                    <span class="discount mergecolor">FCFA 7,500 <small>/mo</small></span>
+                  </span>
+                  <span class="period an">
+                    <span class="discount mergecolor">FCFA 75,000 <small>/yr</small></span>
+                  </span>
+                </div>
+              </div>
+              <a href="cart.php?a=add&pid=4" class="btn btn-default-yellow-fill">Select</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ***** FEATURES ***** -->
+  <svg class="division-ontop bg-white d-none" viewBox="0 0 1440 150">
+    <path fill="#fdd700" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+    </path>
+  </svg>
+
+  <!-- ***** WHY CHOOSE ***** -->
+  <section class="services sec-normal motpath sec-bg4">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2 class="section-heading">Why choose <span class="dynamic-brand-name" data-brand="name">Fillsbase</span> for your hosting?</h2>
+            <p class="section-subheading">Everything you need to run fast, secure and scalable websites — included in every plan.</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="service-section bg-colorstyle">
+              <div class="plans badge feat bg-purple">Softaculous</div>
+              <i class="fas fa-magic fa-2x c-pink mb-3"></i>
+              <div class="title mergecolor">Easy 1-Click Install</div>
+              <p class="subtitle seccolor">
+                Install WordPress, Joomla, Magento and over 400 other applications in seconds with Softaculous — no technical setup required.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="service-section bg-colorstyle">
+              <i class="fas fa-tachometer-alt fa-2x c-pink mb-3"></i>
+              <div class="title mergecolor">Ultra-Fast Websites</div>
+              <p class="subtitle seccolor">
+                NVMe SSD storage, LiteSpeed web server and a global CDN ensure your site loads in milliseconds — anywhere in the world.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="service-section bg-colorstyle">
+              <div class="plans badge feat bg-purple">Free</div>
+              <i class="fas fa-exchange-alt fa-2x c-pink mb-3"></i>
+              <div class="title mergecolor">Free Site Migrations</div>
+              <p class="subtitle seccolor">
+                Migrating from another host? Our expert team migrates your website, databases and emails — completely free of charge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** TECH STACK SCROLLER ***** -->
+  <section class="sec-normal bg-colorstyle py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-heading mergecolor">Our Technologies</h2>
+        <p class="section-subheading seccolor">A modern, high-performance infrastructure for your applications</p>
+      </div>
+    </div>
+    <style>
+      .tech-scroller-wrap { overflow: hidden; position: relative; }
+      .tech-scroller-wrap::before, .tech-scroller-wrap::after {
+        content: ''; position: absolute; top: 0; width: 80px; height: 100%; z-index: 2;
+        background: linear-gradient(to right, var(--bg-color, #fff), transparent);
+      }
+      .tech-scroller-wrap::after { right: 0; left: auto; background: linear-gradient(to left, var(--bg-color, #fff), transparent); }
+      .tech-scroller { display: flex; gap: 20px; animation: techScroll 28s linear infinite; width: max-content; }
+      .tech-scroller:hover { animation-play-state: paused; }
+      @keyframes techScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .tech-item {
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        min-width: 110px; padding: 18px 14px; border-radius: 14px;
+        background: var(--theme-sec-bg, #f8f9fa); border: 1px solid rgba(100,200,200,0.15);
+        transition: transform 0.2s, box-shadow 0.2s; cursor: default;
+      }
+      .tech-item:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,200,180,0.15); }
+      .tech-item img { width: 42px; height: 42px; object-fit: contain; margin-bottom: 8px; }
+      .tech-item .tech-icon { font-size: 28px; margin-bottom: 8px; color: #20c997; }
+      .tech-item span { font-size: 12px; font-weight: 600; text-align: center; }
+      .hosting-feature-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      @media (max-width: 768px) { .hosting-feature-cards { grid-template-columns: 1fr; } }
+      .hosting-feat-card {
+        border-radius: 16px; padding: 32px 28px;
+        background: linear-gradient(135deg, rgba(15,45,74,0.06) 0%, rgba(32,201,151,0.06) 100%);
+        border: 1px solid rgba(32,201,151,0.2);
+      }
+      .hosting-feat-card .feat-icon { font-size: 36px; color: #20c997; margin-bottom: 16px; }
+      .hosting-feat-card h4 { font-weight: 700; margin-bottom: 10px; }
+      .hosting-feat-card p { line-height: 1.7; font-size: 15px; margin: 0; }
+    </style>
+    <div class="tech-scroller-wrap py-3">
+      <div class="tech-scroller">
+        <!-- Set 1 -->
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-server tech-icon"></i><span class="mergecolor">cPanel</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-php tech-icon"></i><span class="mergecolor">PHP 8.x</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-database tech-icon"></i><span class="mergecolor">MySQL</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-shield-alt tech-icon"></i><span class="mergecolor">Free SSL</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-bolt tech-icon"></i><span class="mergecolor">LiteSpeed</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-hdd tech-icon"></i><span class="mergecolor">NVMe SSD</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-cloud-upload-alt tech-icon"></i><span class="mergecolor">Backup</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-wordpress tech-icon"></i><span class="mergecolor">WordPress</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-envelope tech-icon"></i><span class="mergecolor">Webmail</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-globe tech-icon"></i><span class="mergecolor">DNS Manager</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-python tech-icon"></i><span class="mergecolor">Python</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-magic tech-icon"></i><span class="mergecolor">Softaculous</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-lock tech-icon"></i><span class="mergecolor">Imunify360</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-tachometer-alt tech-icon"></i><span class="mergecolor">CloudLinux</span></div>
+        <!-- Set 2 (duplicate for infinite loop) -->
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-server tech-icon"></i><span class="mergecolor">cPanel</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-php tech-icon"></i><span class="mergecolor">PHP 8.x</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-database tech-icon"></i><span class="mergecolor">MySQL</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-shield-alt tech-icon"></i><span class="mergecolor">Free SSL</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-bolt tech-icon"></i><span class="mergecolor">LiteSpeed</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-hdd tech-icon"></i><span class="mergecolor">NVMe SSD</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-cloud-upload-alt tech-icon"></i><span class="mergecolor">Backup</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-wordpress tech-icon"></i><span class="mergecolor">WordPress</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-envelope tech-icon"></i><span class="mergecolor">Webmail</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-globe tech-icon"></i><span class="mergecolor">DNS Manager</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fab fa-python tech-icon"></i><span class="mergecolor">Python</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-magic tech-icon"></i><span class="mergecolor">Softaculous</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-lock tech-icon"></i><span class="mergecolor">Imunify360</span></div>
+        <div class="tech-item bg-seccolorstyle"><i class="fas fa-tachometer-alt tech-icon"></i><span class="mergecolor">CloudLinux</span></div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** STATISTICS ***** -->
+  <section class="circle-section sec-normal sec-bg1 bg-seccolorstyle bottomhalfpadding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 text-center">
+          <h2 class="section-heading mergecolor">Our Statistics</h2>
+          <p class="section-subheading mergecolor"><span class="dynamic-brand-name" data-brand="domain">Fillsbase.com</span> offers leading hosting infrastructure designed to accelerate your online presence. We focus on uptime, security and exceptional support.</p>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center pt-5">
+          <div class="col-sm-12 col-md-4 col-lg-4 float-start">
+            <div class="skill-section">
+              <div class="circle-wrapper">
+                <div class="circle-entry clearfix">
+                  <div class="circle center-block color-dark-2" data-startdegree="0" data-dimension="180" data-text="<strong class='number seccolor'>99.9%</strong><div class='title-round'>Uptime SLA</div>" data-width="5" data-fontsize="17" data-percent="99" data-fgcolor="#ee5586" data-bgcolor="transparent" data-bordersize="1"></div>
+                </div>
+                <p class="seccolor">Industry-leading uptime guaranteed by redundant infrastructure, automatic failover and 24/7/365 real-time health monitoring.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 float-start">
+            <div class="skill-section">
+              <div class="circle-wrapper">
+                <div class="circle-entry clearfix">
+                  <div class="circle center-block color-dark-2 seccolor" data-startdegree="0" data-dimension="180" data-text="<strong class='number seccolor'>500+</strong><div class='title-round'>Clients</div>" data-width="5" data-fontsize="17" data-percent="65" data-fgcolor="#ee5586" data-bgcolor="transparent" data-bordersize="1"></div>
+                </div>
+                <p class="seccolor">Hundreds of businesses and developers across Africa trust Fillsbase for their hosting, web applications and digital presence.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 float-start">
+            <div class="skill-section">
+              <div class="circle-wrapper">
+                <div class="circle-entry clearfix">
+                  <div class="circle center-block color-dark-2 seccolor" data-startdegree="0" data-dimension="180" data-text="<strong class='number seccolor'>24/7</strong><div class='title-round'>Support</div>" data-width="5" data-fontsize="17" data-percent="80" data-fgcolor="#ee5586" data-bgcolor="transparent" data-bordersize="1"></div>
+                </div>
+                <p class="seccolor">Our expert support team is available around the clock via live chat, email and ticket — always ready to help you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** FAQ ***** -->
+  <section class="sec-normal sec-bg2 bg-colorstyle">
+    <div class="faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 text-center">
+            <h2 class="section-heading mergecolor">Frequently Asked Questions</h2>
+            <p class="section-subheading mergecolor">Questions about our shared hosting plans? We have the answers.</p>
+          </div>
+          <div class="col-sm-12">
+            <div class="accordion faq pt-5">
+              <div class="panel-wrap">
+                <div class="panel-title seccolor active">
+                  <span>What is Shared Hosting?</span>
+                  <div class="float-end">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-minus c-pink"></i>
+                  </div>
+                </div>
+                <div class="panel-collapse" style="display: block;">
+                  <div class="wrapper-collapse">
+                    <div class="info">
+                      <ul class="list seccolor"><li><p>Shared hosting means your website is hosted on a server alongside other sites, sharing resources such as CPU and RAM. It is the most affordable and beginner-friendly hosting option — perfect for small businesses, blogs and portfolios. At Fillsbase, our shared plans include cPanel, free SSL, unlimited email and daily backups.</p></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-wrap">
+                <div class="panel-title seccolor">
+                  <span>Does Shared Web Hosting also include Email Hosting?</span>
+                  <div class="float-end">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-minus c-pink"></i>
+                  </div>
+                </div>
+                <div class="panel-collapse">
+                  <div class="wrapper-collapse">
+                    <div class="info">
+                      <ul class="list seccolor"><li><p>Yes! All Fillsbase shared hosting plans include professional email hosting. You can create custom email addresses with your domain (e.g. you@yourbusiness.com), set up redirects, auto-replies and access your mail via webmail or any email client such as Outlook or Gmail.</p></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-wrap">
+                <div class="panel-title seccolor">
+                  <span>Can I upgrade my hosting plan later?</span>
+                  <div class="float-end">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-minus c-pink"></i>
+                  </div>
+                </div>
+                <div class="panel-collapse">
+                  <div class="wrapper-collapse">
+                    <div class="info">
+                      <ul class="list seccolor"><li><p>Absolutely. You can upgrade from Business SSD to Pro SSD — or migrate to a VPS or dedicated server — at any time directly from your client portal. Upgrades are seamless with no service interruption, and you only pay the pro-rated difference for the remaining billing period.</p></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-wrap">
+                <div class="panel-title seccolor">
+                  <span>Is there a money-back guarantee?</span>
+                  <div class="float-end">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-minus c-pink"></i>
+                  </div>
+                </div>
+                <div class="panel-collapse">
+                  <div class="wrapper-collapse">
+                    <div class="info">
+                      <ul class="list seccolor"><li><p>Yes. We offer a 30-day money-back guarantee on all shared hosting plans. If you are not fully satisfied within the first 30 days, contact our support team and we will refund your payment — no questions asked.</p></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+<footer id="footer"> </footer>
+</div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#0" class="cd-top" title="Back to top"> <i class="fas fa-angle-up"></i> </a>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<?php
+if (file_exists('init.php')) {
+    require_once('init.php');
+}
+require_once __DIR__ . '/includes/fillsbase_helpers.php';
+
+// Fetch product prices from WHMCS
+$dedicatedPrice1 = formatFillsbasePrice(getFillsbaseProductPrice(296, 'monthly')) . ' /mois';
+$dedicatedPrice2 = formatFillsbasePrice(getFillsbaseProductPrice(299, 'monthly')) . ' /mois';
+$dedicatedPrice3 = formatFillsbasePrice(getFillsbaseProductPrice(308, 'monthly')) . ' /mois';
+$dedicatedPrice4 = formatFillsbasePrice(getFillsbaseProductPrice(309, 'monthly')) . ' /mois';
+$dedicatedPrice5 = formatFillsbasePrice(getFillsbaseProductPrice(310, 'monthly')) . ' /mois';
+$dedicatedPrice6 = formatFillsbasePrice(getFillsbaseProductPrice(311, 'monthly')) . ' /mois';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fillsbase.com propose des services d'hébergement web premium, VPS, serveurs dédiés et enregistrement de noms de domaine.">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Fillsbase - Fournisseur d'hébergement & Template WHMCS</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link href="assets/css/fillsbase_custom.css?v=4.0" rel="stylesheet">
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixitup.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixitup.multifilter.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixevents.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/filter.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body >
+  <div class="box-container limit-width">
+    <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Fillsbase...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML *****  -->
+    <header id="header"> </header>
+    <!-- ***** BANNER ***** -->
+    <style>
+      .dedicated-hero {
+        background: linear-gradient(135deg, #0a0f1e 0%, #0d1f35 40%, #1a2a4a 70%, #0b1929 100%) !important;
+      }
+    </style>
+    <div class="top-header overlay dedicated-hero">
+      <div class="lazyload"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="wrapper">
+              <h1 class="heading">Serveurs dédiés</h1>
+              <div class="subheading mb-3">Serveurs dédiés haute performance avec flexibilité et évolutivité cloud.</div>
+              <a href="#features" class="golink gocheck"> Fonctionnalités </a>
+              <a href="#addons" class="golink gocheck"> Modules complémentaires </a>
+              <a href="#highlights" class="golink gocheck"> Points forts</a><br>
+              <a class="btn btn-default-pink-fill cd-filter-trigger"><i class="fa fa-filter"></i> Afficher le filtre</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** CONTROLS ***** -->
+    <section class="cd-main-content sec-up bg-seccolorstyle">
+      <div class="cd-filter bg-seccolorstyle">
+        <form>
+          <div class="container">
+            <div class="sec-main pb-5 sec-bg1 p-5 bg-seccolorstyle noshadow nopadding">
+              <div class="row">
+                <a href="#" class="cd-close" title="Fermer l'onglet"><i class="fas fa-long-arrow-alt-left"></i></a>
+                <div class="col-md-6">
+                  <div class="cd-filter-block" data-filter-group>
+                    <p class="mergecolor fw-bolder">Choisir un serveur</p>
+                    <ul class="radio-group radios-filter cd-filter-content list">
+                      <li>
+                        <input value="all" type="radio" name="radioButton" id="radio1" checked/>
+                        <label class="radio-label seccolor" for="radio1">Tous les serveurs</label>
+                      </li>
+                      <li>
+                        <input value=".linux" type="radio" name="radioButton" id="radio2">
+                        <label class="radio-label seccolor" for="radio2">Linux</label>
+                      </li>
+                      <li>
+                        <input value=".windows" type="radio" name="radioButton" id="radio3">
+                        <label class="radio-label seccolor" for="radio3">Windows</label>
+                      </li>
+                      <li>
+                        <input value=".managed" type="radio" name="radioButton" id="radio4">
+                        <label class="radio-label seccolor" for="radio4">Managed</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cd-filter-block" data-filter-group>
+                    <p class="mergecolor fw-bolder">Localisation</p>
+                    <div class="cd-filter-content cd-select">
+                      <select class="select-filter seccolor" aria-label="Sélectionner un centre de données">
+                        <option value="all">Sélectionner un centre de données</option>
+                        <option value=".data1">New York</option>
+                        <option value=".data2">Montreal</option>
+                        <option value=".data3">Portugal</option>
+                        <option value=".data4">London</option>
+                        <option value=".data5">Moscow</option>
+                        <option value=".data6">Hong Kong</option>
+                        <option value=".data7">Singapure</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cd-filter-block checkbox-group" data-filter-group>
+                    <p class="mergecolor fw-bolder">Cœurs CPU</p>
+                    <ul class="cd-filter-content cd-filters list">
+                      <li>
+                        <input class="filter" value=".cores2" type="checkbox" id="checkbox1">
+                        <label class="checkbox-label seccolor" for="checkbox1">2</label>
+                      </li>
+                      <li>
+                        <input class="filter" value=".cores4" type="checkbox" id="checkbox2">
+                        <label class="checkbox-label seccolor" for="checkbox2">4</label>
+                      </li>
+                      <li>
+                        <input class="filter" value=".cores6" type="checkbox" id="checkbox3">
+                        <label class="checkbox-label seccolor" for="checkbox3">6</label>
+                      </li>
+                      <li>
+                        <input class="filter" value=".cores8" type="checkbox" id="checkbox4">
+                        <label class="checkbox-label seccolor" for="checkbox4">8</label>
+                      </li>
+                      <li>
+                        <input class="filter" value=".cores12" type="checkbox" id="checkbox5">
+                        <label class="checkbox-label seccolor" for="checkbox5">12</label>
+                      </li>
+                      <li>
+                        <input class="filter" value=".cores16" type="checkbox" id="checkbox6">
+                        <label class="checkbox-label seccolor" for="checkbox6">16</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cd-filter-block" data-filter-group>
+                    <p class="mergecolor fw-bolder">Mémoire RAM</p>
+                    <div class="cd-filter-content cd-filters list seccolor">
+                      <datalist>
+                        <option value="0"> 16</option>
+                        <option value="1"> 32</option>
+                        <option value="2"> 64</option>
+                        <option value="3"> 96</option>
+                        <option value="4"> 128</option>
+                        <option value="5"> 256</option>
+                      </datalist>
+                      <div class="range-slider">
+                        <input name="minSize" aria-label="minSize" class="range-slider-input tooltip-parent seccolor" type="range" min="0" max="5" value="0" data-list="sizeLegend"/>
+                      </div>
+                      <div class="range-slider">
+                        <input name="maxSize" aria-label="maxSize" class="range-slider-input tooltip-parent seccolor" type="range" min="0" max="5" value="5" data-list="sizeLegend"/>
+                      </div>
+                    </div>
+                    <div class="search-disabled">
+                      <input type="text" aria-label="Rechercher" class="input" data-ref="input-search" placeholder="Entrez une extension de domaine (.com)"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- ***** FILTER PLANS ***** -->
+      <div class="mixcontainer pb-5 bg-colorstyle tophalfpadding" data-ref="container">
+      <div class="container ">
+        <div class="pricing special">
+          <div class="p-0 m-0">
+            <div class="mix linux data1 cores2" data-size="0">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-grey">linux</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path fill="#5e686c" d="M15.04 6.33a1.66 1.66 0 0 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.49a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65zm4.5 11.82a.41.41 0 0 1-.38-.59c.27-.55.4-1.17.4-1.8 0-2-1.27-3.61-2.83-3.61s-2.84 1.61-2.84 3.6c0 .64.14 1.27.4 1.81.09.21 0 .45-.2.55a.42.42 0 0 1-.56-.2 5.2 5.2 0 0 1-.46-2.16c0-2.44 1.64-4.43 3.65-4.43s3.66 1.98 3.66 4.43c0 .76-.16 1.5-.46 2.17a.41.41 0 0 1-.38.23z"/><path fill="#5e686c" d="M18.41 6.33a1.66 1.66 0 1 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.49a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65zm-1.68 4.3a.42.42 0 0 1-.18-.04l-1.69-.8c-.2-.1-.3-.34-.2-.55s.35-.3.56-.2l1.51.73 1.51-.72c.2-.1.45-.02.55.19s.02.45-.2.55l-1.68.8a.53.53 0 0 1-.19.04z"/><path fill="#5e686c" d="M7.3 15.74a.41.41 0 0 1-.37-.22c-.45-.86.54-2.37 2.32-4.95 1.43-2.07 3.04-4.4 3.04-5.73v-.17a4.44 4.44 0 0 1 8.87 0v.2c0 1.4 1.62 3.73 3.05 5.79 1.72 2.46 2.66 3.9 2.27 4.77-.1.2-.34.3-.55.2a.42.42 0 0 1-.21-.55c.22-.49-1.18-2.49-2.19-3.95-1.57-2.26-3.2-4.6-3.2-6.26v-.2a3.61 3.61 0 0 0-7.21 0v.17c0 1.58-1.62 3.93-3.19 6.2-1 1.45-2.5 3.63-2.26 4.1.1.2.02.45-.18.56a.58.58 0 0 1-.2.04zm8.68 16.07c-.91 0-1.66-.74-1.66-1.65a1.66 1.66 0 1 1 1.66 1.65zm0-2.48a.82.82 0 0 0-.82.83.83.83 0 1 0 1.65 0 .82.82 0 0 0-.83-.83z"/><path fill="#5e686c" d="M15.98 29.33a.41.41 0 0 1-.41-.41v-2.48c0-.23.19-.42.41-.42s.41.2.41.42v2.48c0 .22-.18.41-.4.41zm-1.24 1.24H7.82a.41.41 0 0 1 0-.83h6.92c.23 0 .41.2.41.42a.4.4 0 0 1-.41.4zm9.4 0h-6.92a.41.41 0 0 1 0-.83h6.92c.23 0 .41.2.41.42a.4.4 0 0 1-.41.4z"/><path id="svg-ico" fill="#ee5586" d="M23.45 21.73a1.66 1.66 0 1 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.48a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65z"/><path id="svg-ico" fill="#ee5586" d="M27.63 25.2H4.32c-.99 0-1.8-.75-1.8-1.66V16.6c0-.9.81-1.65 1.8-1.65h23.3c.98 0 1.78.74 1.78 1.65v6.93c0 .91-.8 1.65-1.78 1.65zm-23.3-9.41c-.53 0-.96.37-.96.82v6.93c0 .45.43.83.96.83h23.3c.53 0 .96-.37.96-.83V16.6c0-.45-.43-.82-.97-.82H4.34z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1231 v5 / 4x 3.20Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice1; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>4x 3.20Ghz 2 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>16GB (up to 32GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>2 x 1TB SATA 3.5</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 20TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mix windows data2 cores4" data-size="1">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-grey">windows</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path fill="#5e686b" d="M5.94 10.57h8.12a.4.4 0 0 0 .4-.4V2.28a.4.4 0 0 0-.46-.4L5.88 3.01a.4.4 0 0 0-.35.4v6.76c0 .22.18.4.4.4zm.4-6.82 7.32-1.01v7.03H6.34V3.75zm9.09 6.82h10.64a.4.4 0 0 0 .4-.4V.71c0-.12-.05-.23-.14-.3s-.2-.12-.32-.1L15.38 1.77a.4.4 0 0 0-.35.4v8c0 .22.18.4.4.4zm.4-8.04 9.83-1.36v8.6h-9.83V2.54z"/><path id="svg-ico" fill="#ee5586" d="M23.26 18.38a1.6 1.6 0 1 0 0 3.21 1.6 1.6 0 0 0 0-3.2zm0 2.41c-.44 0-.8-.36-.8-.8s.36-.8.8-.8c.45 0 .8.35.8.8s-.35.8-.8.8z"/><path fill="#5e686b" d="M6.34 11.94h7.32v3.07h.8v-3.47a.4.4 0 0 0-.4-.4H5.94a.4.4 0 0 0-.4.4v3.47h.8v-3.07zm9.49 0h9.83v3.07h.8v-3.47a.4.4 0 0 0-.4-.4H15.44a.4.4 0 0 0-.4.4v3.47h.8v-3.07z"/><path id="svg-ico" fill="#ee5586" d="M27.32 15.01H4.68c-.96 0-1.74.72-1.74 1.6v6.74c0 .89.78 1.6 1.74 1.6h22.64c.97 0 1.74-.71 1.74-1.6v-6.73c0-.89-.77-1.6-1.73-1.6zm.94 8.34c0 .44-.42.8-.94.8H4.68c-.52 0-.94-.36-.94-.8v-6.73c0-.45.42-.8.94-.8h22.64c.52 0 .94.35.94.8v6.73z"/><path fill="#5e686b" d="M23.94 29.74h-6.38c-.14-.56-.6-1-1.15-1.16v-2.06c0-.23-.18-.4-.4-.4s-.4.18-.4.4v2.06c-.57.15-1.01.6-1.16 1.16H8.08a.4.4 0 0 0-.4.4c0 .22.18.4.4.4h6.37a1.6 1.6 0 0 0 3.11 0h6.38a.4.4 0 0 0 .4-.4.4.4 0 0 0-.4-.4zM16 30.94a.81.81 0 0 1-.8-.8c0-.45.36-.8.8-.8s.8.35.8.8a.8.8 0 0 1-.8.8z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1230 v6 / 6x 3.20Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice2; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>6x 3.20Ghz 4 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>32GB (up to 64GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>2 x 1TB SATA 3.0</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 20TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mix managed data3 cores6" data-size="2">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-purple">special</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path id="svg-ico" fill="#ee5586" d="M25.7 18.4a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2zm0 2.4a.8.8 0 0 1 0-1.6.8.8 0 0 1 0 1.6zm-14.4-6.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-5.2a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zm15.8 20.5h-6.4c-.1-.6-.6-1-1.2-1.2v-2a.4.4 0 1 0-.8 0v2c-.5.2-1 .6-1.1 1.2h-6.4a.4.4 0 1 0 0 .8h6.4c.1.7.8 1.2 1.5 1.2s1.4-.5 1.6-1.2H27c.2 0 .4-.2.4-.4s-.2-.4-.4-.4zm-8 1.2c-.4 0-.8-.3-.8-.8s.4-.8.8-.8c.5 0 .8.4.8.8 0 .5-.3.8-.8.8z"/><path fill="#5e686c" d="M6.2 19.2c-.5 0-1-.1-1.4-.4-.6-.5-1.1-1-1.6-1.7a2 2 0 0 1 .2-2.8c.1 0 .2-.2.1-.4l-.3-.2c-1 0-2-.6-2.2-1.8V9.5a2 2 0 0 1 2.1-1.8l.5-.2-.1-.4a2 2 0 0 1-.2-2.9l1.6-1.6c.9-.7 2.2-.6 2.9.2l.3.1c.2 0 .3-.2.3-.3 0-1.1.7-2 1.8-2.2h2.3c1.1.1 2 1.1 1.9 2.2 0 .2 0 .3.2.3h.4c.7-.8 2-1 2.8-.3.6.5 1.2 1 1.7 1.7.6.8.5 2-.3 2.8 0 .1-.1.3 0 .4 0 .1.1.2.3.2 1 0 2 .7 2.1 1.9v2.3a2 2 0 0 1-2 1.9h-.2c-.1 0-.3 0-.3.2v.4c.5.3.7.8.8 1.3 0 .2-.2.4-.4.4a.4.4 0 0 1-.4-.3c0-.3-.2-.6-.5-.8-.3-.4-.4-.9-.2-1.3.1-.4.6-.7 1-.7h.2c.6 0 1.2-.5 1.2-1.2V9.7c0-.7-.7-1.2-1.3-1.2-.5 0-1-.2-1-.7a1 1 0 0 1 .2-1.3c.5-.4.6-1.2.1-1.7-.4-.6-1-1-1.5-1.5-.5-.4-1.3-.4-1.7.1a1.2 1.2 0 0 1-1.3.3c-.5-.2-.7-.6-.7-1.1 0-.7-.5-1.3-1.1-1.4h-2.2c-.6.1-1.1.7-1.1 1.3 0 .5-.3 1-.7 1.2-.4.1-1 0-1.3-.3-.4-.5-1.2-.6-1.8-.2L4 4.7c-.4.6-.4 1.3.1 1.8.4.3.5.8.3 1.3-.1.4-.6.7-1.2.7S2 9 2 9.6v2.2c0 .7.8 1.1 1.4 1.1a1.1 1.1 0 0 1 .7 2c-.5.5-.5 1.2-.1 1.7.4.6 1 1.1 1.5 1.6.4.3 1.1.3 1.6 0h.5c.2.2.1.5 0 .6-.4.3-.9.4-1.3.4z"/><path fill="#5e686c" d="M11.3 14.3a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-5.2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm7.8 22.4c-.8 0-1.6-.7-1.6-1.6s.8-1.6 1.6-1.6c1 0 1.7.7 1.7 1.6 0 1-.8 1.6-1.7 1.6zm0-2.4c-.4 0-.8.4-.8.8s.4.8.8.8c.5 0 .8-.3.8-.8s-.3-.8-.8-.8z"/><path fill="#5e686c" d="M19.1 29.1a.4.4 0 0 1-.4-.4v-2.4c0-.2.2-.4.4-.4s.4.2.4.4v2.4c0 .2-.1.4-.4.4zM18 30.3h-6.8a.4.4 0 0 1-.4-.4c0-.2.2-.4.4-.4h6.7c.3 0 .4.2.4.4s-.1.4-.4.4zm9 0h-6.6a.4.4 0 0 1-.4-.4c0-.2.1-.4.4-.4H27c.2 0 .4.2.4.4s-.2.4-.4.4z"/><path id="svg-ico" fill="#ee5586" d="M25.7 21.5c-1 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zm0-2.4c-.5 0-.8.4-.8.8s.3.8.8.8c.4 0 .8-.3.8-.8 0-.4-.4-.8-.8-.8z"/><path id="svg-ico" fill="#ee5586" d="M29.4 24.6h-21c-.9 0-1.6-.7-1.6-1.5v-6.3c0-.8.7-1.5 1.6-1.5h21c1 0 1.7.7 1.7 1.5v6.3c0 .8-.8 1.5-1.7 1.5zM8.4 16c-.4 0-.8.3-.8.7V23c0 .3.4.7.8.7h21c.5 0 .9-.3.9-.7v-6.3c0-.4-.4-.7-.9-.7h-21z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1231 v6 / 8x 3.30Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice3; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>8x 3.30Ghz 6 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>64GB (up to 96GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>2 x 1TB SATA 3.5</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 30TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mix linux data4 cores8" data-size="3">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-grey">linux</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path fill="#5e686c" d="M15.04 6.33a1.66 1.66 0 0 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.49a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65zm4.5 11.82a.41.41 0 0 1-.38-.59c.27-.55.4-1.17.4-1.8 0-2-1.27-3.61-2.83-3.61s-2.84 1.61-2.84 3.6c0 .64.14 1.27.4 1.81.09.21 0 .45-.2.55a.42.42 0 0 1-.56-.2 5.2 5.2 0 0 1-.46-2.16c0-2.44 1.64-4.43 3.65-4.43s3.66 1.98 3.66 4.43c0 .76-.16 1.5-.46 2.17a.41.41 0 0 1-.38.23z"/><path fill="#5e686c" d="M18.41 6.33a1.66 1.66 0 1 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.49a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65zm-1.68 4.3a.42.42 0 0 1-.18-.04l-1.69-.8c-.2-.1-.3-.34-.2-.55s.35-.3.56-.2l1.51.73 1.51-.72c.2-.1.45-.02.55.19s.02.45-.2.55l-1.68.8a.53.53 0 0 1-.19.04z"/><path fill="#5e686c" d="M7.3 15.74a.41.41 0 0 1-.37-.22c-.45-.86.54-2.37 2.32-4.95 1.43-2.07 3.04-4.4 3.04-5.73v-.17a4.44 4.44 0 0 1 8.87 0v.2c0 1.4 1.62 3.73 3.05 5.79 1.72 2.46 2.66 3.9 2.27 4.77-.1.2-.34.3-.55.2a.42.42 0 0 1-.21-.55c.22-.49-1.18-2.49-2.19-3.95-1.57-2.26-3.2-4.6-3.2-6.26v-.2a3.61 3.61 0 0 0-7.21 0v.17c0 1.58-1.62 3.93-3.19 6.2-1 1.45-2.5 3.63-2.26 4.1.1.2.02.45-.18.56a.58.58 0 0 1-.2.04zm8.68 16.07c-.91 0-1.66-.74-1.66-1.65a1.66 1.66 0 1 1 1.66 1.65zm0-2.48a.82.82 0 0 0-.82.83.83.83 0 1 0 1.65 0 .82.82 0 0 0-.83-.83z"/><path fill="#5e686c" d="M15.98 29.33a.41.41 0 0 1-.41-.41v-2.48c0-.23.19-.42.41-.42s.41.2.41.42v2.48c0 .22-.18.41-.4.41zm-1.24 1.24H7.82a.41.41 0 0 1 0-.83h6.92c.23 0 .41.2.41.42a.4.4 0 0 1-.41.4zm9.4 0h-6.92a.41.41 0 0 1 0-.83h6.92c.23 0 .41.2.41.42a.4.4 0 0 1-.41.4z"/><path id="svg-ico" fill="#ee5586" d="M23.45 21.73a1.66 1.66 0 1 1 0-3.32 1.66 1.66 0 0 1 0 3.32zm0-2.48a.82.82 0 1 0 0 1.65.82.82 0 0 0 0-1.65z"/><path id="svg-ico" fill="#ee5586" d="M27.63 25.2H4.32c-.99 0-1.8-.75-1.8-1.66V16.6c0-.9.81-1.65 1.8-1.65h23.3c.98 0 1.78.74 1.78 1.65v6.93c0 .91-.8 1.65-1.78 1.65zm-23.3-9.41c-.53 0-.96.37-.96.82v6.93c0 .45.43.83.96.83h23.3c.53 0 .96-.37.96-.83V16.6c0-.45-.43-.82-.97-.82H4.34z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1231 v5 / 8x 3.40Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice4; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>8x 3.40Ghz 8 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>96GB (up to 128GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>4 x 1TB SATA 3.0</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 20TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mix windows data5 cores12" data-size="4">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-grey">windows</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path fill="#5e686b" d="M5.94 10.57h8.12a.4.4 0 0 0 .4-.4V2.28a.4.4 0 0 0-.46-.4L5.88 3.01a.4.4 0 0 0-.35.4v6.76c0 .22.18.4.4.4zm.4-6.82 7.32-1.01v7.03H6.34V3.75zm9.09 6.82h10.64a.4.4 0 0 0 .4-.4V.71c0-.12-.05-.23-.14-.3s-.2-.12-.32-.1L15.38 1.77a.4.4 0 0 0-.35.4v8c0 .22.18.4.4.4zm.4-8.04 9.83-1.36v8.6h-9.83V2.54z"/><path id="svg-ico" fill="#ee5586" d="M23.26 18.38a1.6 1.6 0 1 0 0 3.21 1.6 1.6 0 0 0 0-3.2zm0 2.41c-.44 0-.8-.36-.8-.8s.36-.8.8-.8c.45 0 .8.35.8.8s-.35.8-.8.8z"/><path fill="#5e686b" d="M6.34 11.94h7.32v3.07h.8v-3.47a.4.4 0 0 0-.4-.4H5.94a.4.4 0 0 0-.4.4v3.47h.8v-3.07zm9.49 0h9.83v3.07h.8v-3.47a.4.4 0 0 0-.4-.4H15.44a.4.4 0 0 0-.4.4v3.47h.8v-3.07z"/><path id="svg-ico" fill="#ee5586" d="M27.32 15.01H4.68c-.96 0-1.74.72-1.74 1.6v6.74c0 .89.78 1.6 1.74 1.6h22.64c.97 0 1.74-.71 1.74-1.6v-6.73c0-.89-.77-1.6-1.73-1.6zm.94 8.34c0 .44-.42.8-.94.8H4.68c-.52 0-.94-.36-.94-.8v-6.73c0-.45.42-.8.94-.8h22.64c.52 0 .94.35.94.8v6.73z"/><path fill="#5e686b" d="M23.94 29.74h-6.38c-.14-.56-.6-1-1.15-1.16v-2.06c0-.23-.18-.4-.4-.4s-.4.18-.4.4v2.06c-.57.15-1.01.6-1.16 1.16H8.08a.4.4 0 0 0-.4.4c0 .22.18.4.4.4h6.37a1.6 1.6 0 0 0 3.11 0h6.38a.4.4 0 0 0 .4-.4.4.4 0 0 0-.4-.4zM16 30.94a.81.81 0 0 1-.8-.8c0-.45.36-.8.8-.8s.8.35.8.8a.8.8 0 0 1-.8.8z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1230 v6 / 8x 3.20Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice5; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>8x 3.20Ghz 12 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>128GB (up to 265GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>4 x 2TB SATA 3.0</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 30TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mix managed data6 cores16" data-size="5">
+              <div class="wrapper text-start noshadow">
+                <div class="plans badge feat bg-grey">managed</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <div class="lazyload">
+                    <!-- <svg class="svg mb-3" viewBox="0 0 32 32"><path id="svg-ico" fill="#ee5586" d="M25.7 18.4a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2zm0 2.4a.8.8 0 0 1 0-1.6.8.8 0 0 1 0 1.6zm-14.4-6.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-5.2a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zm15.8 20.5h-6.4c-.1-.6-.6-1-1.2-1.2v-2a.4.4 0 1 0-.8 0v2c-.5.2-1 .6-1.1 1.2h-6.4a.4.4 0 1 0 0 .8h6.4c.1.7.8 1.2 1.5 1.2s1.4-.5 1.6-1.2H27c.2 0 .4-.2.4-.4s-.2-.4-.4-.4zm-8 1.2c-.4 0-.8-.3-.8-.8s.4-.8.8-.8c.5 0 .8.4.8.8 0 .5-.3.8-.8.8z"/><path fill="#5e686c" d="M6.2 19.2c-.5 0-1-.1-1.4-.4-.6-.5-1.1-1-1.6-1.7a2 2 0 0 1 .2-2.8c.1 0 .2-.2.1-.4l-.3-.2c-1 0-2-.6-2.2-1.8V9.5a2 2 0 0 1 2.1-1.8l.5-.2-.1-.4a2 2 0 0 1-.2-2.9l1.6-1.6c.9-.7 2.2-.6 2.9.2l.3.1c.2 0 .3-.2.3-.3 0-1.1.7-2 1.8-2.2h2.3c1.1.1 2 1.1 1.9 2.2 0 .2 0 .3.2.3h.4c.7-.8 2-1 2.8-.3.6.5 1.2 1 1.7 1.7.6.8.5 2-.3 2.8 0 .1-.1.3 0 .4 0 .1.1.2.3.2 1 0 2 .7 2.1 1.9v2.3a2 2 0 0 1-2 1.9h-.2c-.1 0-.3 0-.3.2v.4c.5.3.7.8.8 1.3 0 .2-.2.4-.4.4a.4.4 0 0 1-.4-.3c0-.3-.2-.6-.5-.8-.3-.4-.4-.9-.2-1.3.1-.4.6-.7 1-.7h.2c.6 0 1.2-.5 1.2-1.2V9.7c0-.7-.7-1.2-1.3-1.2-.5 0-1-.2-1-.7a1 1 0 0 1 .2-1.3c.5-.4.6-1.2.1-1.7-.4-.6-1-1-1.5-1.5-.5-.4-1.3-.4-1.7.1a1.2 1.2 0 0 1-1.3.3c-.5-.2-.7-.6-.7-1.1 0-.7-.5-1.3-1.1-1.4h-2.2c-.6.1-1.1.7-1.1 1.3 0 .5-.3 1-.7 1.2-.4.1-1 0-1.3-.3-.4-.5-1.2-.6-1.8-.2L4 4.7c-.4.6-.4 1.3.1 1.8.4.3.5.8.3 1.3-.1.4-.6.7-1.2.7S2 9 2 9.6v2.2c0 .7.8 1.1 1.4 1.1a1.1 1.1 0 0 1 .7 2c-.5.5-.5 1.2-.1 1.7.4.6 1 1.1 1.5 1.6.4.3 1.1.3 1.6 0h.5c.2.2.1.5 0 .6-.4.3-.9.4-1.3.4z"/><path fill="#5e686c" d="M11.3 14.3a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-5.2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm7.8 22.4c-.8 0-1.6-.7-1.6-1.6s.8-1.6 1.6-1.6c1 0 1.7.7 1.7 1.6 0 1-.8 1.6-1.7 1.6zm0-2.4c-.4 0-.8.4-.8.8s.4.8.8.8c.5 0 .8-.3.8-.8s-.3-.8-.8-.8z"/><path fill="#5e686c" d="M19.1 29.1a.4.4 0 0 1-.4-.4v-2.4c0-.2.2-.4.4-.4s.4.2.4.4v2.4c0 .2-.1.4-.4.4zM18 30.3h-6.8a.4.4 0 0 1-.4-.4c0-.2.2-.4.4-.4h6.7c.3 0 .4.2.4.4s-.1.4-.4.4zm9 0h-6.6a.4.4 0 0 1-.4-.4c0-.2.1-.4.4-.4H27c.2 0 .4.2.4.4s-.2.4-.4.4z"/><path id="svg-ico" fill="#ee5586" d="M25.7 21.5c-1 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zm0-2.4c-.5 0-.8.4-.8.8s.3.8.8.8c.4 0 .8-.3.8-.8 0-.4-.4-.8-.8-.8z"/><path id="svg-ico" fill="#ee5586" d="M29.4 24.6h-21c-.9 0-1.6-.7-1.6-1.5v-6.3c0-.8.7-1.5 1.6-1.5h21c1 0 1.7.7 1.7 1.5v6.3c0 .8-.8 1.5-1.7 1.5zM8.4 16c-.4 0-.8.3-.8.7V23c0 .3.4.7.8.7h21c.5 0 .9-.3.9-.7v-6.3c0-.4-.4-.7-.9-.7h-21z"/></svg> -->
+                  </div>
+                  <div class="title">Intel Xeon E3-1231 v6 / 8x 3.30Ghz</div>
+                  <div class="fromer seccolor">Serveur haute performance dédié</div>
+                  <div class="price mergecolor"><?php echo $dedicatedPrice6; ?></div>
+                  <a href="#" class="btn btn-default-yellow-fill">Configurer</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <div>PROCESSEUR<br><span>8x 3.30Ghz 16 Cores</span></div></li>
+                  <li><i class="icon-ram"></i> <div>MÉMOIRE<br><span>256GB (up to 512GB)</span></div></li>
+                  <li><i class="icon-drivessd"></i> <div>DISQUES<br><span>2 x 1TB SATA 3.5</span></div></li>
+                  <li><i class="icon-git"></i> <div>LIAISON<br><span>1Gbps - 30TB</span></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+          </div>
+        </div>
+        <div class="cd-fail-message bg-seccolorstyle seccolor noshadow">" Aucun élément ne correspond aux critères sélectionnés "</div>
+      </div>
+    </div>
+    </section>
+    <!-- ***** HELP ***** -->
+    <section class="help pt-4 pb-80 bg-colorstyle">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="help-container bg-seccolorstyle noshadow">
+              <div class="plans badge feat left bg-grey"><i class="fas fa-long-arrow-alt-left"></i></div>
+              <a href="hosting" class="help-item">
+                <div class="img">
+                  <div class="lazyload">
+                    <!-- <svg class="svg ico" viewBox="0 0 32 32"><path id="svg-ico" d="M21.294 1.969h-.232c-5.325.087-10.656 3.756-10.656 10.688 0 .238.194.425.425.425.238 0 .425-.194.425-.425 0-6.719 5.125-9.8 9.912-9.838 5.387.038 9.762 4.438 9.762 9.838 0 5.425-4.412 9.837-9.838 9.837H7.767c-3.725 0-6.756-3.031-6.756-6.756s3.031-6.756 6.756-6.756c.238 0 .425-.194.425-.425s-.194-.425-.425-.425c-4.2-.006-7.612 3.412-7.612 7.606s3.413 7.613 7.612 7.613h13.331c5.894 0 10.694-4.794 10.694-10.694 0-5.825-4.694-10.581-10.5-10.688z"/><path fill="#5e686c" d="M24.413 28.15h-6.781c-.156-.6-.631-1.075-1.231-1.231v-2.194c0-.238-.194-.425-.425-.425-.238 0-.425.194-.425.425v2.194c-.6.156-1.075.631-1.231 1.231H7.539c-.237 0-.425.194-.425.425s.194.425.425.425h6.781c.188.738.863 1.281 1.656 1.281s1.469-.544 1.656-1.281h6.781c.238 0 .425-.194.425-.425s-.188-.425-.425-.425zm-8.438 1.281c-.469 0-.856-.381-.856-.856 0-.469.381-.856.856-.856s.856.381.856.856-.387.856-.856.856zM21.238 6.931c.238 0 .425-.194.425-.431-.006-.237-.219-.444-.431-.425-3.381.044-6.375 2.719-6.675 6.044l.006.075c.006.156.012.313.012.463 0 .238.194.425.425.425.238 0 .425-.194.425-.425 0-.162-.006-.331-.012-.525l-.012-.019c.269-2.819 2.888-5.144 5.838-5.181z"/></svg> -->
+                  </div>
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Aller au revendeur cloud</div>
+                  <div class="description seccolor">Besoin d'héberger plusieurs sites web ?</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="help-container bg-seccolorstyle noshadow">
+              <div class="plans badge feat bg-grey"><i class="fas fa-long-arrow-alt-right"></i></div>
+              <a href="vps" class="help-item">
+                <div class="img">
+                  <div class="lazyload">
+                    <!-- <svg class="svg ico" viewBox="0 0 32 32"><path fill="#5e686b" d="M29.55 13.35H13.37a.42.42 0 0 0 0 .84h16.18c.65 0 1.18.45 1.18 1.02v8.05c0 .57-.53 1.03-1.18 1.03H2.47c-.65 0-1.18-.46-1.18-1.03v-8.05c0-.56.53-1.02 1.18-1.02h4.17a.42.42 0 0 0 0-.84H2.47c-1.11 0-2.03.84-2.03 1.86v8.05c0 1.03.91 1.87 2.03 1.87h27.08c1.11 0 2.02-.84 2.02-1.87v-8.05c0-1.02-.9-1.86-2.02-1.86zM29.55.27H13.37a.42.42 0 0 0 0 .84h16.18c.65 0 1.18.45 1.18 1.02v8.05c0 .57-.53 1.03-1.18 1.03H2.47c-.65 0-1.18-.46-1.18-1.03V2.13c0-.56.53-1.02 1.18-1.02h4.17a.42.42 0 0 0 0-.84H2.47C1.36.27.45 1.1.45 2.13v8.05c0 1.03.9 1.86 2.03 1.86h27.08c1.1 0 2.02-.83 2.02-1.86V2.13c0-1.02-.92-1.86-2.03-1.86z"/><path id="svg-ico" d="M25.77 19.66a.42.42 0 0 0 0-.84h-2.16a.42.42 0 0 0 0 .84h2.16zM25.77 6.58a.42.42 0 0 0 0-.84h-2.16a.42.42 0 0 0 0 .83h2.16z"/><path fill="#5e686b" d="M26 29.61h-8.36a1.7 1.7 0 0 0-1.2-1.2v-1.88a.42.42 0 0 0-.85 0v1.87c-.58.15-1.05.62-1.2 1.21H6.02a.42.42 0 0 0 0 .84h8.36a1.69 1.69 0 0 0 3.26 0H26c.23 0 .42-.19.42-.42 0-.23-.2-.42-.43-.42zM16 30.88a.84.84 0 1 1 0-1.7.84.84 0 0 1 0 1.7z"/></svg> -->
+                  </div>
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Aller au serveur VPS</div>
+                  <div class="description seccolor">Besoin de ressources évolutives dans un environnement d'hébergement ?</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+    <footer id="footer"> </footer>
+  </div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#" class="cd-top" title="Haut de page"> <i class="fas fa-angle-up"></i> </a>
+</body>
+</html>

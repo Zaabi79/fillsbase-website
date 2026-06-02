@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect deprecated store page
+RewriteRule ^store/hebergement-web/?$ hosting [R=301,L,NC]
+RewriteRule ^checkout/?$ index.php [R=301,L,NC]
+RewriteRule ^database/?$ index.php [R=301,L,NC]
+RewriteRule ^ddos/?$ index.php [R=301,L,NC]
+RewriteRule ^colocation/?$ index.php [R=301,L,NC]
+
+
+# 1. Match the exact Production Article Pattern
+# Production: /client/knowledgebase/1/slug.html
+# Local: /knowledgebase/1/slug.html
+RewriteRule ^knowledgebase/([0-9]+)/.*\.html$ knowledgebase.php?action=displayarticle&id=$1 [L,NC,QSA]
+
+# 2. Match the exact Production Category Pattern
+# Production: /client/knowledgebase/1/slug
+# Local: /knowledgebase/1/slug
+RewriteRule ^knowledgebase/([0-9]+)/([^/]*)$ knowledgebase.php?action=displaycat&id=$1 [L,NC,QSA]
+
+# 3. Handle root Knowledgebase
+RewriteRule ^knowledgebase/?$ knowledgebase.php [L,NC]
+
+# 4. Dynamic PHP pages override
+RewriteRule ^knowledgebase-list/?$ knowledgebase.php [L,NC,QSA]
+
+# Contact page — serve WHMCS contact.php with custom template
+RewriteRule ^contact/?$ contact.php [L,NC,QSA]
+
+# 5. Standard Logicweb Static HTML Fallback
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.html [L]
+
+DirectoryIndex index.html index.php
