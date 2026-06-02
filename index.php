@@ -1,4 +1,6 @@
 <?php
+// WHMCS client area routes
+if (!empty($_GET["rp"])) { require_once __DIR__ . "/whmcs.php"; exit; }
 /**
  * Fillsbase Route Dispatcher Fallback
  * Ensures that clean URLs (e.g., /hosting) correctly load their respective template files
