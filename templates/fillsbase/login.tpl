@@ -3,10 +3,8 @@
         
         <div class="row login-page-header">
             <a class="navbar-brand" href="{$WEB_ROOT}/index.php">
-              <img class="svg logo-menu d-block" src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}">
-              <img class="svg logo-menu d-none" src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}">
+              <img src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}" style="width:180px;height:auto;">
             </a>
-            <a href="{$WEB_ROOT}/register.php"> <i class="ico-user-plus" data-toggle="tooltip" data-placement="left" title="{$LANG.registerintro}"></i> </a>
         </div>
 
         <div class="logincontent">
