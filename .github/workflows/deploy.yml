@@ -21,7 +21,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /home/fillsbase/public_html
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
             find . -type f -not -path './.git/*' -exec chmod 644 {} \;
             find . -type d -not -path './.git/*' -exec chmod 755 {} \;
             chown -R fillsbase:fillsbase .
