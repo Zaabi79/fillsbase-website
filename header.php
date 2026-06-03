@@ -70,7 +70,7 @@ if (class_exists('\WHMCS\Config\Setting')) {
   $whmcsLogo = \WHMCS\Config\Setting::getValue('LogoURL');
   $companyName = \WHMCS\Config\Setting::getValue('CompanyName');
 }
-$displayLogo = './assets/img/fillsbase.png';
+$displayLogo = './assets/img/fillsbase_logo.png';
 ?>
 <div class="menu-wrap">
   <div class="nav-menu">
