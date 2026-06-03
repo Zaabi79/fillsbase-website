@@ -52,7 +52,7 @@ $summary = $result ? parseWhois(html_entity_decode($result)) : [];
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Vérifiez les informations WHOIS de n'importe quel nom de domaine.">
   <link href="assets/img/favicon.ico" rel="shortcut icon">
-  <title>WHOIS Lookup | Fillsbase Africa</title>
+  <title>WHOIS Lookup | Fillsbase</title>
   <link href="assets/fonts/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="assets/fonts/fonts.min.css" rel="stylesheet">
   <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel="stylesheet" class="rtl" disabled>

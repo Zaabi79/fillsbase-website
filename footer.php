@@ -70,7 +70,7 @@ $displayLogo = './assets/img/fillsbase.png';
         <div class="col-sm-6 col-md-4">
           <img class="logo-footer d-block" src="<?php echo $displayLogo; ?>" alt="logo <?php echo $companyName; ?>" width="180">
           <img class="logo-footer d-none"  src="<?php echo $displayLogo; ?>" alt="logo <?php echo $companyName; ?>" width="180">
-          <div class="copyright" style="margin-top:12px;">Fillsbase.com is your trusted partner for web hosting, custom development, AI automation, and digital marketing in Africa and beyond.</div>
+          <div class="copyright" style="margin-top:12px;">Fillsbase.com is your trusted partner for web hosting, custom development, AI automation, and digital marketing worldwide.</div>
           <div class="soc-icons">
             <a href="#" title="Facebook"><i class="fab fa-facebook-f withborder noshadow"></i></a>
             <a href="#" title="YouTube"><i class="fab fa-youtube withborder noshadow"></i></a>

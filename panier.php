@@ -39,7 +39,7 @@ try {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panier | Fillsbase Africa</title>
+  <title>Panier | Fillsbase</title>
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="assets/fonts/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="assets/fonts/fonts.min.css" rel="stylesheet">
