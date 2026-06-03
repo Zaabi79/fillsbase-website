@@ -1,170 +1,93 @@
 <style>
-.login-modern-page {
-    min-height: 100vh;
-    background: #0f1923;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 16px;
-}
-.login-modern-logo {
-    margin-bottom: 40px;
-    text-align: center;
-}
-.login-modern-logo img { width: 160px; height: auto; }
-.login-modern-box {
-    background: #1a2535;
-    border-radius: 16px;
-    padding: 48px 48px 40px;
-    width: 100%;
-    max-width: 560px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-.login-modern-box h2 {
-    color: #fff;
-    font-size: 1.9rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-.login-modern-box p.subtitle {
-    color: #8a9bb0;
-    font-size: 0.95rem;
-    margin-bottom: 28px;
-}
-.login-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 28px;
-}
-.login-tab {
-    padding: 10px 22px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-.login-tab.active {
-    background: #ee5586;
-    color: #fff;
-}
-.login-tab.inactive {
-    background: #2d3a4a;
-    color: #8a9bb0;
-}
-.login-tab.inactive:hover { background: #364557; color: #fff; }
-.login-modern-box .form-group { margin-bottom: 18px; }
-.login-modern-box label {
-    color: #8a9bb0;
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-    display: block;
-}
-.login-modern-box .form-control {
-    background: #0f1923;
-    border: 1px solid #2d3a4a;
-    border-radius: 10px;
-    color: #fff;
-    padding: 13px 16px;
-    font-size: 0.95rem;
-    width: 100%;
-    outline: none;
-    transition: border 0.2s;
-}
-.login-modern-box .form-control:focus { border-color: #ee5586; }
-.login-modern-box .form-control::placeholder { color: #4a5a6a; }
-.pw-wrapper { position: relative; }
-.pw-wrapper .form-control { padding-right: 46px; }
-.pw-toggle {
-    position: absolute; right: 14px; top: 50%;
-    transform: translateY(-50%);
-    background: none; border: none; color: #8a9bb0; cursor: pointer; font-size: 16px;
-}
-.login-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 28px;
-    flex-wrap: wrap;
-}
-.btn-login {
-    background: #ee5586;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 32px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-    display: flex; align-items: center; gap: 8px;
-}
-.btn-login:hover { background: #d4406e; }
-.forgot-link { color: #ee5586; font-size: 0.9rem; text-decoration: none; }
-.forgot-link:hover { text-decoration: underline; }
-.remember-wrap { display: flex; align-items: center; gap: 8px; color: #8a9bb0; font-size: 0.88rem; margin-left: auto; }
-.remember-wrap input { accent-color: #ee5586; }
-@media(max-width: 560px) {
-    .login-modern-box { padding: 32px 22px 28px; }
-    .login-modern-box h2 { font-size: 1.5rem; }
-}
+  .body-borders .top-border,
+  .body-borders .right-border,
+  .body-borders .bottom-border,
+  .body-borders .left-border { background: #fff !important; }
+  .comments-form input[type=email],
+  .comments-form input[type=password] { border-color: #fff !important; }
 </style>
 
-<div class="login-modern-page">
-    <div class="login-modern-logo">
-        <a href="{$WEB_ROOT}/index.php">
-            <img src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}">
-        </a>
-    </div>
-
-    <div class="login-modern-box">
+<div class="fullrock config sec-bg3 motpath bg-colorstyle">
+  <a href="{$WEB_ROOT}/index.php" class="closebtn">
+    <img class="svg closer bg-transparent" src="{$WEB_ROOT}/assets/fonts/svg/close.svg" alt="">
+  </a>
+  <section class="fullrock-content">
+    <div class="container">
+      <div class="sec-main sec-bg1 tabs bg-seccolorstyle noshadow">
+        <div class="randomline">
+          <div class="bigline"></div>
+          <div class="smallline"></div>
+        </div>
         {include file="$template/includes/flashmessage.tpl"}
-
-        <h2>Log in to your customer area</h2>
-        <p class="subtitle">Log in to manage your services, domains and invoices.</p>
-
-        <div class="login-tabs">
-            <span class="login-tab active">Already A Customer?</span>
-            <a href="{$WEB_ROOT}/register.php" class="login-tab inactive">Create An Account</a>
+        <h2 class="mergecolor"><b>{$LANG.clientareahomeloginbtn}</b></h2>
+        <p class="mb-5 mergecolor">{$LANG.restrictedpage}</p>
+        <div class="tabs-header btn-select-customer">
+          <ul class="btn-group d-block">
+            <li class="btn btn-secondary active mb-2">{$LANG.clientarealogin}</li>
+            <li class="btn btn-secondary">{$LANG.register}</li>
+          </ul>
         </div>
-
-        <div class="{if !$linkableProviders}hidden{/if}">
-            {include file="$template/includes/linkedaccounts.tpl" linkContext="login" customFeedback=true}
-        </div>
-        <div class="providerLinkingFeedback"></div>
-
-        <form method="post" action="{routePath('login-validate')}" class="login-form" role="form">
-            <div class="form-group">
-                <label for="inputEmail">{$LANG.clientareaemail}</label>
-                <input type="email" name="username" class="form-control" id="inputEmail" placeholder="you@example.com" autofocus>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword">{$LANG.clientareapassword}</label>
-                <div class="pw-wrapper">
-                    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="••••••••" autocomplete="off">
-                    <button type="button" class="pw-toggle" onclick="var f=document.getElementById('inputPassword');f.type=f.type==='password'?'text':'password';this.innerHTML=f.type==='password'?'<i class=\'fas fa-eye\'></i>':'<i class=\'fas fa-eye-slash\'></i>'">
-                        <i class="fas fa-eye"></i>
-                    </button>
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- LOGIN -->
+            <div class="table tabs-item active">
+              <div class="cd-filter-block mb-0">
+                <h4 class="m-0 mergecolor">{$LANG.clientarealogin}</h4>
+                <div class="cd-filter-content">
+                  <div class="{if !$linkableProviders}hidden{/if}">
+                    {include file="$template/includes/linkedaccounts.tpl" linkContext="login" customFeedback=true}
+                  </div>
+                  <div class="providerLinkingFeedback mx-3"></div>
+                  <form method="post" action="{routePath('login-validate')}" class="comments-form login-form" role="form">
+                    <div class="row">
+                      <div class="col-md-6 position-relative">
+                        <label><i class="fas fa-envelope"></i></label>
+                        <input type="email" name="username" placeholder="{$LANG.pwresetemailrequired}" required autofocus>
+                      </div>
+                      <div class="col-md-6 position-relative">
+                        <label><span onclick="var i=document.getElementById('loginPassword');i.type=i.type==='password'?'text':'password';this.querySelector('i').className=i.type==='password'?'fas fa-eye':'fas fa-eye-slash';" style="cursor:pointer;"><i class="fas fa-eye"></i></span></label>
+                        <input type="password" name="password" id="loginPassword" placeholder="{$LANG.twofaconfirmpw}" autocomplete="current-password" required>
+                      </div>
+                      {if $captcha->isEnabled()}
+                      <div class="col-md-12 mt-3">
+                        {include file="$template/includes/captcha.tpl"}
+                      </div>
+                      {/if}
+                      <div class="col-md-12 mt-5 position-relative">
+                        <button type="submit" id="login" value="login" class="btn btn-default-yellow-fill mt-0 mb-3 me-3 {$captcha->getButtonClass($captchaForm)}">
+                          {$LANG.loginbutton} <i class="fas fa-lock"></i>
+                        </button>
+                        <a href="{routePath('password-reset-begin')}" class="golink me-3 position-relative">{$LANG.forgotpw}</a>
+                        <ul class="list d-inline">
+                          <li>
+                            <input name="rememberme" type="checkbox" id="rememberme" class="filter">
+                            <label for="rememberme" class="checkbox-label c-grey seccolor">{$LANG.loginrememberme}</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
-
-            {if $captcha->isEnabled()}
-            <div class="mt-3">{include file="$template/includes/captcha.tpl"}</div>
-            {/if}
-
-            <div class="login-actions">
-                <button type="submit" id="login" class="btn-login {$captcha->getButtonClass($captchaForm)}">
-                    {$LANG.loginbutton} <i class="fas fa-lock"></i>
-                </button>
-                <a class="forgot-link" href="{routePath('password-reset-begin')}">{$LANG.forgotpw}</a>
-                <label class="remember-wrap">
-                    <input type="checkbox" name="rememberme" id="rememberme">
-                    {$LANG.loginrememberme}
-                </label>
+            <!-- REGISTER -->
+            <div class="table tabs-item">
+              <div class="cd-filter-block mb-0">
+                <h4 class="mergecolor">{$LANG.register}</h4>
+                <div class="cd-filter-content">
+                  <form action="{$WEB_ROOT}/register.php" method="get" class="comments-form">
+                    <div class="col-md-12 mt-3">
+                      <button type="submit" class="btn btn-default-yellow-fill">
+                        {$LANG.register} <i class="fas fa-user-plus"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-        </form>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 </div>
