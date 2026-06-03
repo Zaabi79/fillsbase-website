@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/captcha.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc181152_54780703',
+  'unifunc' => 'content_6a209bf74af3a4_11462091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36b3bf10cdaae8ed3b01b9962fe5ae077235feff' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/captcha.tpl',
-      1 => 1780432728,
+      1 => 1780521578,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc181152_54780703 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209bf74af3a4_11462091 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['captcha']->value->isEnabled() && $_smarty_tpl->tpl_vars['captcha']->value->isEnabledForForm($_smarty_tpl->tpl_vars['captchaForm']->value)) {?>
     <div class="text-center<?php if ($_smarty_tpl->tpl_vars['containerClass']->value) {
 echo $_smarty_tpl->tpl_vars['containerClass']->value;

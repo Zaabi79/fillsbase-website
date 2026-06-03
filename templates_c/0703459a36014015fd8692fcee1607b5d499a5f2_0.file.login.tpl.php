@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc0f9ec5_02726860',
+  'unifunc' => 'content_6a209bf7477e71_69253483',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0703459a36014015fd8692fcee1607b5d499a5f2' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/login.tpl',
-      1 => 1780432728,
+      1 => 1780521759,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc0f9ec5_02726860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209bf7477e71_69253483 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="loginpage sec-bg3 motpath fullrock-content bg-colorstyle">
     <div class="container">
         
@@ -30,11 +30,11 @@ function content_6a2061fc0f9ec5_02726860 (Smarty_Internal_Template $_smarty_tpl)
               <img class="svg logo-menu d-block" src="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>
 /assets/img/fillsbase_logo.png" alt="<?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
-">
+" style="width:160px;height:auto;">
               <img class="svg logo-menu d-none" src="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>
 /assets/img/fillsbase_logo.png" alt="<?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
-">
+" style="width:160px;height:auto;">
             </a>
             <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /register.php"> <i class="ico-user-plus" data-toggle="tooltip" data-placement="left" title="<?php echo $_smarty_tpl->tpl_vars['LANG']->value['registerintro'];?>

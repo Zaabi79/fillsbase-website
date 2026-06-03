@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/flashmessage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc10e0b5_26058373',
+  'unifunc' => 'content_6a209bf748b4e1_64285969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00396cb6824b476b98bb8d5f86792301f272ace8' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/flashmessage.tpl',
-      1 => 1780432728,
+      1 => 1780521578,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc10e0b5_26058373 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209bf748b4e1_64285969 (Smarty_Internal_Template $_smarty_tpl) {
 $_prefixVariable1 = get_flash_message();
 $_smarty_tpl->_assignInScope('message', $_prefixVariable1);
 if ($_prefixVariable1) {?>

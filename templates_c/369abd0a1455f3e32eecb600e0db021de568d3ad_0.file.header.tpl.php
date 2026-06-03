@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 20:45:06
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc06cf21_53146101',
+  'unifunc' => 'content_6a209252b1b2a2_66804283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc06cf21_53146101 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209252b1b2a2_66804283 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="<?php echo $_smarty_tpl->tpl_vars['language']->value;?>
 ">

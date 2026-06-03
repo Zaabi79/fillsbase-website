@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/generate-password.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc0e62b8_58635556',
+  'unifunc' => 'content_6a209bf745e393_26732257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f41131245b38daa9f6893f3c1ae80ed98fe1c51' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/generate-password.tpl',
-      1 => 1780432728,
+      1 => 1780521578,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc0e62b8_58635556 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209bf745e393_26732257 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="#" id="frmGeneratePassword" class="form-horizontal">
     <div class="modal fade" id="modalGeneratePassword">
         <div class="modal-dialog generatepassword">

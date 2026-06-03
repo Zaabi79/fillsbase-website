@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 20:45:06
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc0874f4_38167011',
+  'unifunc' => 'content_6a209252b21fe5_06545639',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df390cea7e7e58f11cf479dcfed66b1d12ebcf95' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/head.tpl',
-      1 => 1780432728,
+      1 => 1780510720,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc0874f4_38167011 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209252b21fe5_06545639 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Fonts Assets -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@ function content_6a2061fc0874f4_38167011 (Smarty_Internal_Template $_smarty_tpl)
 <link href="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /assets/css/theme.min.css" rel="stylesheet">
 <link href="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
-/assets/css/fillsbase_custom.css?v=5.2" rel="stylesheet">
+/assets/css/fillsbase_custom.css?v=5.3" rel="stylesheet">
 
 
 <?php echo '<script'; ?>

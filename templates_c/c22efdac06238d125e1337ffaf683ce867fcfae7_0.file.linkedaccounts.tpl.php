@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 17:18:52
+/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/linkedaccounts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a2061fc1681b9_81933156',
+  'unifunc' => 'content_6a209bf74a1863_15041984',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c22efdac06238d125e1337ffaf683ce867fcfae7' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/includes/linkedaccounts.tpl',
-      1 => 1780432728,
+      1 => 1780521578,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a2061fc1681b9_81933156 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6a209bf74a1863_15041984 (Smarty_Internal_Template $_smarty_tpl) {
 if (($_smarty_tpl->tpl_vars['linkableProviders']->value || $_smarty_tpl->tpl_vars['hasLinkedProvidersEnabled']->value) && $_smarty_tpl->tpl_vars['linkContext']->value == 'linktable') {?>
     <table id="tableLinkedAccounts" class="table display data-driven"
            data-ajax-url="<?php echo $_smarty_tpl->tpl_vars['linkedAccountsUrl']->value;?>
