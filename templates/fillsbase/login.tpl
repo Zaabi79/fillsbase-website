@@ -1,3 +1,4 @@
+{php}header("Location: /login"); exit;{/php}
 <div class="loginpage sec-bg3 motpath fullrock-content bg-colorstyle">
     <div class="container">
         
