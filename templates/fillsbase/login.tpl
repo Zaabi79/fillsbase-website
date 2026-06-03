@@ -1,100 +1,67 @@
-<style>
-.login-page-wrap {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 16px;
-}
-.login-box {
-    width: 100%;
-    max-width: 780px;
-}
-.login-box .randomline { margin-bottom: 20px; }
-.login-box h2 { font-size: 1.8rem; font-weight: 700; }
-.login-box .tabs-header ul { list-style: none; padding: 0; margin: 0 0 30px 0; display: flex; gap: 10px; }
-.login-box .tabs-header ul li { cursor: pointer; }
-.comments-form input[type=email],
-.comments-form input[type=password],
-.comments-form input[type=text],
-.comments-form input[type=tel] { border-color: rgba(255,255,255,0.2) !important; }
-</style>
-
-<div class="login-page-wrap">
-  <div class="login-box">
-    <div class="sec-main sec-bg1 tabs bg-seccolorstyle noshadow">
-      <div class="randomline">
-        <div class="bigline"></div>
-        <div class="smallline"></div>
-      </div>
-      {include file="$template/includes/flashmessage.tpl"}
-      <h2 class="mergecolor"><b>{$LANG.clientareahomeloginbtn}</b></h2>
-      <p class="mb-5 mergecolor">{$LANG.restrictedpage}</p>
-      <div class="tabs-header btn-select-customer">
-        <ul class="btn-group d-block">
-          <li class="btn btn-secondary active mb-2">{$LANG.clientarealogin}</li>
-          <li class="btn btn-secondary">{$LANG.register}</li>
-        </ul>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- LOGIN TAB -->
-          <div class="table tabs-item active">
-            <div class="cd-filter-block mb-0">
-              <h4 class="m-0 mergecolor">{$LANG.clientarealogin}</h4>
-              <div class="cd-filter-content">
-                <div class="{if !$linkableProviders}hidden{/if}">
-                  {include file="$template/includes/linkedaccounts.tpl" linkContext="login" customFeedback=true}
-                </div>
-                <div class="providerLinkingFeedback mx-3"></div>
-                <form method="post" action="{routePath('login-validate')}" class="comments-form login-form" role="form">
-                  <div class="row">
-                    <div class="col-md-6 position-relative">
-                      <label><i class="fas fa-envelope"></i></label>
-                      <input type="email" name="username" placeholder="{$LANG.pwresetemailrequired}" required autofocus>
-                    </div>
-                    <div class="col-md-6 position-relative">
-                      <label>
-                        <span onclick="var i=document.getElementById('loginPw');i.type=i.type==='password'?'text':'password';this.querySelector('i').className=i.type==='password'?'fas fa-eye':'fas fa-eye-slash';" style="cursor:pointer;">
-                          <i class="fas fa-eye"></i>
-                        </span>
-                      </label>
-                      <input type="password" name="password" id="loginPw" placeholder="{$LANG.twofaconfirmpw}" autocomplete="current-password" required>
-                    </div>
-                    {if $captcha->isEnabled()}
-                    <div class="col-md-12 mt-3">{include file="$template/includes/captcha.tpl"}</div>
-                    {/if}
-                    <div class="col-md-12 mt-5 position-relative">
-                      <button type="submit" id="login" value="login" class="btn btn-default-yellow-fill mt-0 mb-3 me-3 {$captcha->getButtonClass($captchaForm)}">
-                        {$LANG.loginbutton} <i class="fas fa-lock"></i>
-                      </button>
-                      <a href="{routePath('password-reset-begin')}" class="golink me-3 position-relative">{$LANG.forgotpw}</a>
-                      <ul class="list d-inline">
-                        <li>
-                          <input name="rememberme" type="checkbox" id="rememberme" class="filter">
-                          <label for="rememberme" class="checkbox-label c-grey seccolor">{$LANG.loginrememberme}</label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <!-- REGISTER TAB -->
-          <div class="table tabs-item">
-            <div class="cd-filter-block mb-0">
-              <h4 class="mergecolor">{$LANG.register}</h4>
-              <div class="cd-filter-content">
-                <p class="seccolor mb-4">{$LANG.registerintro}</p>
-                <a href="{$WEB_ROOT}/register.php" class="btn btn-default-yellow-fill">
-                  {$LANG.register} <i class="fas fa-user-plus ms-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+<div class="loginpage sec-bg3 motpath fullrock-content bg-colorstyle">
+    <div class="container">
+        
+        <div class="row login-page-header">
+            <a class="navbar-brand" href="{$WEB_ROOT}/index.php">
+              <img class="svg logo-menu d-block" src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}" style="width:160px;height:auto;">
+              <img class="svg logo-menu d-none" src="{$WEB_ROOT}/templates/{$template}/assets/img/fillsbase_logo.png" alt="{$companyname}" style="width:160px;height:auto;">
+            </a>
+            <a href="{$WEB_ROOT}/register.php"> <i class="ico-user-plus" data-toggle="tooltip" data-placement="left" title="{$LANG.registerintro}"></i> </a>
         </div>
-      </div>
+
+        <div class="logincontent">
+            <div class="login-wrapper">
+                <div class="login-form-container sec-main sec-bg1 tabs bg-seccolorstyle noshadow">
+                    {include file="$template/includes/flashmessage.tpl"}
+                    
+                    <div class="text-center">
+                        <h2 class="section-heading whitecolor mergecolor">{$LANG.clientareahomeloginbtn}</h2>
+                        <p class="section-subheading whitecolor mergecolor">{$LANG.restrictedpage}</p>
+                    </div>
+
+                    <div class="mt-50">
+                        <div class="{if !$linkableProviders}hidden{/if}">
+                            {include file="$template/includes/linkedaccounts.tpl" linkContext="login" customFeedback=true}
+                            <div class="divider">
+                                <span></span>
+                                <span>{$LANG.remoteAuthn.titleOr}</span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="providerLinkingFeedback mx-3"></div>
+                        <form method="post" action="{routePath('login-validate')}" class="login-form" role="form">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="username" class="form-control" id="inputEmail" placeholder="{$LANG.pwresetemailrequired}" autofocus>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="{$LANG.twofaconfirmpw}" autocomplete="off" >
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mt-5 position-relative aitems-center">
+                                <button type="submit" id="login" value="login" class="btn btn-default-yellow-fill mt-0 me-5 {$captcha->getButtonClass($captchaForm)}"> 
+                                    <span class="me-2">{$LANG.loginbutton}</span>
+                                    <i class="fas fa-lock"></i>
+                                </button>
+                                <a class="golink me-5 position-relative forgotpw-txt" href="{routePath('password-reset-begin')}">{$LANG.forgotpw}</a>
+                                <div class="list d-inline custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="rememberme" id="rememberme">
+                                    <label class="custom-control-label mb-0" for="rememberme">{$LANG.loginrememberme}</label>
+                                </div>
+                            </div>
+                            {if $captcha->isEnabled()}
+                            <div class="text-center margin-bottom">
+                                {include file="$template/includes/captcha.tpl"}
+                            </div>
+                            {/if}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
