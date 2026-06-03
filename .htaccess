@@ -1,6 +1,12 @@
 RewriteEngine On
 RewriteBase /
 
+# Redirect WHMCS login/register to custom pages
+RewriteCond %{QUERY_STRING} rp=/login
+RewriteRule ^index\.php$ /login [R=302,L]
+RewriteCond %{QUERY_STRING} rp=/register
+RewriteRule ^index\.php$ /register [R=302,L]
+
 # Redirect deprecated store page
 RewriteRule ^store/hebergement-web/?$ hosting [R=301,L,NC]
 RewriteRule ^checkout/?$ index.php [R=301,L,NC]
