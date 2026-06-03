@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 .hero-orb-1 {
     width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(45,79,126,0.25) 0%, transparent 70%);
-    top: -200px; right: -50px; left: auto;
+    top: 0; right: -50px; left: auto;
     animation: orb-float 8s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
