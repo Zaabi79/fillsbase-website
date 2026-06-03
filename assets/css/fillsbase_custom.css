@@ -480,6 +480,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 .menu-wrap:not(.mobile) {
     background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important;
     border-bottom: none !important;
+    box-shadow: none !important;
     position: relative !important;
     top: auto !important;
     left: auto !important;
