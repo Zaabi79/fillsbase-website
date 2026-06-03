@@ -9,8 +9,6 @@
       <div class="col-12 col-md-5 link">
         <div class="infonews-nav float-end">
           <a href="/promos" class="iconews" title="Specials"><i class="fas fa-tags f-14 w-icon pe-1"></i> Specials</a>
-          <a href="/blackfriday" class="iconews" title="Black Friday"><i class="fas fa-fire f-14 w-icon pe-1"></i> Black
-            Friday</a>
           <a href="/announcements" class="iconews" title="Notifications"><i class="ico-bell f-18 w-icon"></i></a>
           <a href="panier.php" class="iconews" title="Panier"><i class="ico-shopping-cart f-18 w-icon"></i></a>
           <a href="tel:+971505442538" class="iconews tabphone" title="Phone Number">+971-50-544-2538</a>
@@ -319,8 +317,6 @@ $displayLogo = './assets/img/fillsbase.png';
                     class="badge inside bg-pink ms-2">NEW</div></a>
 
                 <a href="/promos" class="dropdown-item menu-item" title="Promotions">Promotions</a>
-                <a href="/blackfriday" class="dropdown-item menu-item" title="Blackfriday">Blackfriday <div
-                    class="badge inside bg-pink ms-2">HOT</div></a>
               </div>
             </div>
 

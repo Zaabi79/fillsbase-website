@@ -122,7 +122,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     <div class="container" style="position:relative;z-index:2;">
       <!-- Hero Top: Pill Badge + Headline -->
       <div class="hero-top-text text-center mb-4">
-        <a href="/blackfriday" class="hero-pill-badge">
+        <a href="/promos" class="hero-pill-badge">
           <i class="fas fa-tags me-1"></i> Special Offers Live Now &nbsp;<i class="fas fa-arrow-right"></i>
         </a>
         <h1 class="hero-main-title" data-i18n="hero.main_title">Web Hosting, Domains &amp; Digital Solutions</h1>
