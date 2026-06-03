@@ -126,7 +126,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
           <i class="fas fa-tags me-1"></i> Special Offers Live Now &nbsp;<i class="fas fa-arrow-right"></i>
         </a>
         <h1 class="hero-main-title" data-i18n="hero.main_title">Web Hosting, Domains &amp; Digital Solutions</h1>
-        <p class="hero-sub-title" data-i18n="hero.sub_title">Reliable hosting, smart domains, and powerful digital tools for businesses in Africa and beyond.</p>
+        <p class="hero-sub-title" data-i18n="hero.sub_title">Reliable hosting, smart domains, and powerful digital tools for businesses worldwide.</p>
       </div>
       <!-- Domain Search Wrapper -->
       <div class="hero-domain-wrapper">

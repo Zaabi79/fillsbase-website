@@ -13,7 +13,7 @@
     --gray-light-border: #f0f0f0;
     --text-main: #111111;
     --text-muted: #777777;
-    --text-light: #1a1a2e;
+    --text-light: #ffffff;
     --card-shadow: none;
     --card-shadow-hover: none;
     --heading-font: 'Josefin Sans', sans-serif;
@@ -502,7 +502,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .nav-menu .main-menu .menu-item > a {
-    color: var(--text-light) !important;
+    color: #1a1a2e !important;
 }
 
 /* Make news bar flow normally too */
@@ -513,7 +513,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .nav-menu .main-menu .menu-item > a {
-    color: var(--text-light) !important;
+    color: #1a1a2e !important;
 }
 
 .nav-menu .main-menu .menu-item:hover > a {
@@ -530,29 +530,41 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 /* --- Black Mega Menu Redesign --- */
-.sub-menu, 
+.sub-menu,
 .dropdown-menu,
 .megamenu-list,
 .service-list.bg-colorstyle,
 .sub-menu.bg-colorstyle {
-    background-color: var(--secondary-color) !important;
+    background-color: #111111 !important;
     border: 1px solid #222 !important;
 }
 
+.sub-menu *,
 .sub-menu a,
 .sub-menu .menu-item a,
+.sub-menu li,
+.sub-menu li a,
+.sub-menu span,
+.sub-menu p,
+.dropdown-menu *,
 .dropdown-menu a,
+.dropdown-menu li,
+.dropdown-menu li a,
+.megamenu-list *,
 .megamenu-list a,
+.megamenu-list li,
 .sub-menu .mergecolor,
 .megamenu-list .mergecolor,
 .dropdown-menu .mergecolor,
 .sub-menu .text-muted,
+.sub-menu .seccolor,
 .sub-menu .c-grey {
-    color: var(--text-light) !important;
+    color: #ffffff !important;
 }
 
 .sub-menu a:hover,
 .sub-menu .menu-item a:hover,
+.sub-menu li a:hover,
 .sub-menu .mergecolor:hover {
     color: var(--primary-color) !important;
 }
