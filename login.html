@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fillsbase – Espace Client">
+    <meta name="description" content="Fillsbase – Client Area">
     <link href="assets/img/favicon.ico" rel="shortcut icon">
-    <title>Connexion – Fillsbase</title>
+    <title>Login – Fillsbase</title>
     <link href="assets/fonts/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="assets/fonts/fonts.min.css" rel="stylesheet">
     <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel="stylesheet" class="rtl" disabled>
@@ -40,6 +40,7 @@
         <div class="double-bounce1"></div>
         <div class="double-bounce2"></div>
         <div class="spinner-txt">Fillsbase...</div>
+
       </div>
     </div>
     <div class="body-borders" data-border="20">
@@ -60,12 +61,12 @@
               <div class="bigline"></div>
               <div class="smallline"></div>
             </div>
-            <h2 class="mergecolor"><b>Connexion à votre espace client</b></h2>
-            <p class="mb-5 mergecolor">Connectez-vous pour gérer vos services, domaines et factures.</p>
+            <h2 class="mergecolor"><b>Log in to your client area</b></h2>
+            <p class="mb-5 mergecolor">Log in to manage your services, domains and invoices.</p>
             <div class="tabs-header btn-select-customer">
               <ul class="btn-group d-block">
-                <li class="btn btn-secondary active mb-2">Déjà client ?</li>
-                <li class="btn btn-secondary">Créer un compte</li>
+                <li class="btn btn-secondary active mb-2">Already a Customer?</li>
+                <li class="btn btn-secondary">Create an Account</li>
               </ul>
             </div>
             <div class="row">
@@ -73,28 +74,28 @@
                 <!-- LOGIN -->
                 <div class="table tabs-item active">
                   <div class="cd-filter-block mb-0">
-                    <h4 class="m-0 mergecolor">Connexion</h4>
+                    <h4 class="m-0 mergecolor">Login</h4>
                     <div class="cd-filter-content">
                       <script>var _e=new URLSearchParams(location.search).get('error');if(_e)document.write('<div style="background:#f8d7da;color:#721c24;padding:10px 14px;border-radius:8px;margin-bottom:16px;font-size:13px;"><i class=\'fas fa-exclamation-circle\' style=\'margin-right:6px;\'></i>'+(_e==='invalid'?'Identifiants incorrects.':'Champs manquants.')+'</div>');</script>
                       <form action="/do_login.php" method="post" class="comments-form">
                         <div class="row">
                           <div class="col-md-6 position-relative">
                             <label><i class="fas fa-envelope"></i></label>
-                            <input type="email" name="username" placeholder="Adresse e-mail" required autofocus>
+                            <input type="email" name="username" placeholder="Email Address" required autofocus>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label><span onclick="var i=document.getElementById('loginPassword');i.type=i.type==='password'?'text':'password';this.querySelector('i').className=i.type==='password'?'fas fa-eye':'fas fa-eye-slash';" style="cursor:pointer;"><i class="fas fa-eye"></i></span></label>
-                            <input type="password" name="password" id="loginPassword" placeholder="Mot de passe" autocomplete="current-password" required>
+                            <input type="password" name="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
                           </div>
                           <div class="col-md-12 mt-5 position-relative">
                             <button type="submit" value="login" id="login" class="btn btn-default-yellow-fill mt-0 mb-3 me-3">
-                              Se connecter <i class="fas fa-lock"></i>
+                              Login <i class="fas fa-lock"></i>
                             </button>
-                            <a href="/pwreset.php" class="golink me-3 position-relative">Mot de passe oublié ?</a>
+                            <a href="/pwreset.php" class="golink me-3 position-relative">Forgot Password?</a>
                             <ul class="list d-inline">
                               <li>
                                 <input name="rememberme" type="checkbox" id="rememberme" class="filter">
-                                <label for="rememberme" class="checkbox-label c-grey seccolor">Se souvenir de moi</label>
+                                <label for="rememberme" class="checkbox-label c-grey seccolor">Remember Me</label>
                               </li>
                             </ul>
                           </div>
@@ -106,37 +107,37 @@
                 <!-- REGISTER -->
                 <div class="table tabs-item">
                   <div class="cd-filter-block mb-0">
-                    <h4 class="mergecolor">Créer un compte</h4>
+                    <h4 class="mergecolor">Create an Account</h4>
                     <div class="cd-filter-content">
                       <form action="/register.php" method="post" name="orderfrm" class="comments-form">
-                        <div class="seccolor"><small>Informations personnelles</small></div>
+                        <div class="seccolor"><small>Personal Information</small></div>
                         <div class="row mb-5">
                           <div class="col-md-6 position-relative">
                             <label for="firstname"><i class="fas fa-user-tie"></i></label>
-                            <input type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label for="inputLastName"><i class="fas fa-user-tie"></i></label>
-                            <input type="text" name="lastname" id="inputLastName" placeholder="Nom" required>
+                            <input type="text" name="lastname" id="inputLastName" placeholder="Last Name" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label for="inputEmail"><i class="fas fa-envelope"></i></label>
-                            <input type="email" name="email" id="inputEmail" placeholder="Adresse e-mail" required>
+                            <input type="email" name="email" id="inputEmail" placeholder="Email Address" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label for="inputPhone"><i class="fas fa-phone"></i></label>
-                            <input type="tel" name="phonenumber" id="inputPhone" placeholder="Numéro de téléphone" required>
+                            <input type="tel" name="phonenumber" id="inputPhone" placeholder="Phone Number" required>
                           </div>
                         </div>
-                        <div class="mergecolor"><small>Adresse de facturation</small></div>
+                        <div class="mergecolor"><small>Billing Address</small></div>
                         <div class="row mb-5">
                           <div class="col-md-6 position-relative">
                             <label for="inputAddress1"><i class="far fa-building"></i></label>
-                            <input type="text" name="address1" id="inputAddress1" placeholder="Adresse" required>
+                            <input type="text" name="address1" id="inputAddress1" placeholder="Address" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label for="inputCity"><i class="fas fa-map-marker-alt"></i></label>
-                            <input type="text" name="city" id="inputCity" placeholder="Ville" required>
+                            <input type="text" name="city" id="inputCity" placeholder="City" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <div class="cd-select mt-4">
@@ -164,19 +165,19 @@
                             </div>
                           </div>
                         </div>
-                        <div class="mergecolor"><small>Sécurité du compte</small></div>
+                        <div class="mergecolor"><small>Account Security</small></div>
                         <div class="row mb-5">
                           <div class="col-md-6 position-relative">
                             <label for="inputNewPassword1"><i class="fas fa-lock"></i></label>
-                            <input type="password" name="password" id="inputNewPassword1" placeholder="Mot de passe" required>
+                            <input type="password" name="password" id="inputNewPassword1" placeholder="Password" required>
                           </div>
                           <div class="col-md-6 position-relative">
                             <label for="inputNewPassword2"><i class="fas fa-lock"></i></label>
-                            <input type="password" name="password2" id="inputNewPassword2" placeholder="Confirmer le mot de passe" required>
+                            <input type="password" name="password2" id="inputNewPassword2" placeholder="Confirm Password" required>
                           </div>
                         </div>
                         <button type="submit" value="Submit" class="btn btn-default-yellow-fill mb-1 disable-on-click spinner-on-click">
-                          Créer mon compte
+                          Create Account
                         </button>
                       </form>
                     </div>
