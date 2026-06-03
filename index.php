@@ -241,7 +241,6 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   <!-- ***** PROCESS ANIMATION SECTION ***** -->
   <section class="process-section sec-normal">
     <div class="container">
-      <div class="process-inner-card">
       <div class="row">
         <div class="col-md-12 text-center">
           <h2 class="section-heading">Your Path to Success</h2>
@@ -313,7 +312,6 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
           </div>
         </div>
       </div>
-      </div><!-- /.process-inner-card -->
     </div>
   </section>
   <!-- ***** PRICING TABLES ***** -->
