@@ -6,14 +6,14 @@
     --primary-dark: #a02f2d;
     --secondary-color: #111111;
     --secondary-light: #1a1a1a;
-    --header-bg: #111111;
+    --header-bg: transparent;
     --white: #ffffff;
     --gray-bg: #f4f7f6;
     --gray-border: #eeeeee;
     --gray-light-border: #f0f0f0;
     --text-main: #111111;
     --text-muted: #777777;
-    --text-light: #ffffff;
+    --text-light: #1a1a2e;
     --card-shadow: none;
     --card-shadow-hover: none;
     --heading-font: 'Josefin Sans', sans-serif;
@@ -478,8 +478,8 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* --- FIX HEADER POSITIONING --- */
 .menu-wrap:not(.mobile) {
-    background-color: var(--header-bg) !important;
-    border-bottom: 1px solid #222;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important;
+    border-bottom: none !important;
     position: relative !important;
     top: auto !important;
     left: auto !important;
@@ -491,7 +491,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* --- KILL STICKY/FIXED HEADER --- */
 .menu-wrap.fixed:not(.mobile) {
-    background-color: var(--header-bg) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important;
     position: relative !important;
     top: auto !important;
     width: 100% !important;
@@ -521,7 +521,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .nav-menu .menu-toggle .icon {
-    background-color: var(--white) !important;
+    background-color: #1a1a2e !important;
 }
 
 /* Logo inversion for dark background - Disabled to allow green icon to show */
@@ -1259,7 +1259,7 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 }
 
 .domain-suggestion.list-group-item .btn-add-to-cart {
-    background: var(--header-bg) !important;
+    background: #111111 !important;
     color: #fff !important;
     border: none !important;
     border-radius: 8px !important;
@@ -2222,10 +2222,10 @@ img { max-width: 100%; height: auto; }
   }
 }
 
-/* ── Mobile nav dark background so white logo text is visible ── */
+/* ── Mobile nav matches hero gradient ── */
 @media (max-width: 991px) {
   .menu-wrap.mobile {
-    background-color: #0f1923 !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 40%, #c8d8f0 70%, #f5b8a0 100%) !important;
   }
 }
 /* ══════════════════════════════════════════
