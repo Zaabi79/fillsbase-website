@@ -118,37 +118,38 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .infonews *, .infonews a, .infonews .iconews { color: #fff !important; }
   .infonews .news span { color: var(--fb-red-soft) !important; }
 
-  /* ── HEADER / NAVBAR ── */
+  /* ── HEADER / NAVBAR — restore original peach gradient ── */
   .menu-wrap:not(.mobile),
   .menu-wrap.fixed:not(.mobile) {
-    background: var(--fb-white) !important;
-    border-bottom: 1px solid var(--fb-navy-light) !important;
-    box-shadow: 0 2px 20px rgba(27,54,115,0.08) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
   }
-  .nav-menu .main-menu .menu-item > a { color: var(--fb-navy) !important; }
+  .nav-menu .main-menu .menu-item > a { color: #1a1a2e !important; }
   .nav-menu .main-menu .menu-item:hover > a { color: var(--fb-red) !important; }
-  .nav-menu .menu-toggle .icon { background-color: var(--fb-navy) !important; }
+  .nav-menu .menu-toggle .icon { background-color: #1a1a2e !important; }
 
-  /* ── HERO SECTION ── */
+  /* ── HERO SECTION — restore original peach gradient ── */
   .hero-new {
-    background: linear-gradient(135deg, var(--fb-white) 0%, var(--fb-navy-light) 40%, var(--fb-red-light) 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important;
   }
   .hero-main-title { color: var(--fb-navy) !important; }
   .hero-sub-title { color: var(--fb-muted) !important; }
   .hero-pill-badge {
-    background: var(--fb-navy-light) !important;
+    background: rgba(255,255,255,0.7) !important;
     color: var(--fb-navy) !important;
-    border: 1px solid var(--fb-navy-soft) !important;
+    border: 1px solid rgba(27,54,115,0.15) !important;
+    backdrop-filter: blur(8px);
   }
   .hero-pill-badge:hover { background: var(--fb-navy) !important; color: #fff !important; }
-  .hero-cards-grid .card-item { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-light) !important; }
-  .hero-cards-grid .card-item:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 40px rgba(200,62,60,0.1) !important; }
+  .hero-cards-grid .card-item { background: rgba(255,255,255,0.85) !important; border: 1px solid rgba(255,255,255,0.6) !important; backdrop-filter: blur(10px); }
+  .hero-cards-grid .card-item:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 40px rgba(200,62,60,0.12) !important; }
   .hero-cards-grid .card-tag { color: var(--fb-red) !important; }
   .hero-cards-grid .card-btn { background: var(--fb-navy) !important; color: #fff !important; }
   .hero-cards-grid .card-btn:hover { background: var(--fb-red) !important; }
-  .hero-tlds-list .tld-item { background: var(--fb-navy-light) !important; color: var(--fb-navy) !important; }
-  .hero-search-form { background: var(--fb-white) !important; border: 1.5px solid var(--fb-navy-soft) !important; box-shadow: 0 8px 32px rgba(27,54,115,0.1) !important; }
-  .hero-search-btn { background: var(--fb-red) !important; }
+  .hero-search-form { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 8px 40px rgba(27,54,115,0.12) !important; border-radius: 16px !important; }
+  .hero-search-btn { background: var(--fb-navy) !important; border-radius: 12px !important; }
+  .hero-search-btn:hover { background: var(--fb-red) !important; }
 
   /* ── PROCESS SECTION ── */
   .process-section { background: var(--fb-navy-light) !important; }
