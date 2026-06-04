@@ -226,7 +226,7 @@ $displayLogo = './assets/img/fillsbase_logo.png';
               </div>
 
               <div class="menu-item">
-                <a href="/clientarea.php" class="pe-0 me-0" title="Client Area">
+                <a href="/login" class="pe-0 me-0" title="Client Area">
                   <div class="btn btn-default-yellow-fill question">Client Area <i class="fas fa-lock ps-1"></i></div>
                 </a>
               </div>
@@ -336,7 +336,7 @@ $displayLogo = './assets/img/fillsbase_logo.png';
               <p class="c-grey-light seccolor"><small>Email: antler@mail.com</small> </p>
             </div>
             <div>
-              <a href="/clientarea.php">
+              <a href="/login">
                 <div class="btn btn-default-yellow-fill mt-3" title="Client Area">CLIENT AREA</div>
               </a>
             </div>
