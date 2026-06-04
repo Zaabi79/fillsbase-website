@@ -1,3 +1,20 @@
+/* ── Login page: break out of WHMCS wrapper ── */
+.wrapper:has(.loginpage) {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.wrapper .container:has(.loginpage) {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.wrapper .container .row:has(.loginpage),
+.wrapper .container .row .col-md-12:has(.loginpage) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 /* Hide language switcher globally */
 #drop-lng, .lng-drop, [id="drop-lng"], .settings-panel .lng-section { display: none !important; }
 
