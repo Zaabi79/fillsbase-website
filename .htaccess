@@ -1,6 +1,12 @@
 RewriteEngine On
 RewriteBase /
 
+# Clean URL: redirect index.php?rp=/login and ?rp=/register to custom pages
+RewriteCond %{QUERY_STRING} ^rp=/login$
+RewriteRule ^index\.php$ /login? [R=301,L]
+RewriteCond %{QUERY_STRING} ^rp=/register$
+RewriteRule ^index\.php$ /register? [R=301,L]
+
 # Redirect deprecated store page
 RewriteRule ^store/hebergement-web/?$ hosting [R=301,L,NC]
 RewriteRule ^checkout/?$ index.php [R=301,L,NC]
@@ -21,7 +27,11 @@ RewriteRule ^knowledgebase-list/?$ knowledgebase.php [L,NC,QSA]
 RewriteRule ^contact/?$ contact.php [L,NC,QSA]
 
 # WHMCS direct PHP pages
-RewriteRule ^(cart|clientarea|register|login|logout|dologin|pwreset|submitticket|supporttickets|viewticket|viewinvoice|viewquote|creditcard|whois|serverstatus|announcements|downloads|dl|affiliates|unsubscribe|upgrade|configuressl|networkissues|banned)/?$ $1.php [L,NC,QSA]
+# /login and /register serve custom HTML pages (not WHMCS login.php)
+RewriteRule ^login/?$ login.html [L,NC]
+RewriteRule ^register/?$ login.html [L,NC]
+
+RewriteRule ^(cart|clientarea|logout|dologin|pwreset|submitticket|supporttickets|viewticket|viewinvoice|viewquote|creditcard|whois|serverstatus|announcements|downloads|dl|affiliates|unsubscribe|upgrade|configuressl|networkissues|banned)/?$ $1.php [L,NC,QSA]
 
 # All other extensionless URLs through index.php dispatcher (handles .html and .php)
 RewriteCond %{REQUEST_FILENAME} !-f
