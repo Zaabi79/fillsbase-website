@@ -486,6 +486,51 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
       </div>
     </div>
   </section>
+
+  <!-- ***** SOLUTIONS ***** -->
+  <section class="services sec-normal bg-colorstyle">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row text-center mb-4">
+          <div class="col-12">
+            <h2 class="section-heading mergecolor">Our Solutions</h2>
+            <p class="section-subheading text-muted mergecolor">Powerful platforms built to transform your industry</p>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
+              <div style="font-size:2.5rem;margin-bottom:12px;">🐄</div>
+              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Dairy</div>
+              <p class="subtitle seccolor text-muted mt-2">Smart dairy farm management platform</p>
+              <a href="/x-dairy" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
+              <div style="font-size:2.5rem;margin-bottom:12px;">🎵</div>
+              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Music</div>
+              <p class="subtitle seccolor text-muted mt-2">AI-powered music management platform</p>
+              <a href="/x-music" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
+            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
+              <div style="font-size:2.5rem;margin-bottom:12px;">✈️</div>
+              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Booking</div>
+              <p class="subtitle seccolor text-muted mt-2">AI-powered travel &amp; booking platform</p>
+              <a href="/x-booking" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ***** HELP ***** -->
   <section class="services help pt-4 pb-80 bg-colorstyle">
     <div class="container">
