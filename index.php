@@ -147,7 +147,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .hero-cards-grid .card-tag { color: var(--fb-red) !important; }
   .hero-cards-grid .card-btn { background: var(--fb-navy) !important; color: #fff !important; }
   .hero-cards-grid .card-btn:hover { background: var(--fb-red) !important; }
-  .hero-search-form { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 8px 40px rgba(27,54,115,0.12) !important; }
+  .hero-search-form { background: transparent !important; border: none !important; box-shadow: none !important; }
   .hero-search-btn { background: var(--fb-navy) !important; }
   .hero-search-btn:hover { background: var(--fb-red) !important; }
 
