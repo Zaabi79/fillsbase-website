@@ -488,61 +488,124 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   </section>
 
   <!-- ***** SOLUTIONS ***** -->
-  <section class="services sec-normal bg-colorstyle" style="padding:80px 0;">
+  <style>
+    .sol-section { padding: 100px 0; background: linear-gradient(180deg, transparent 0%, rgba(238,85,134,0.03) 50%, transparent 100%); }
+    .sol-pill { display:inline-flex;align-items:center;gap:8px;border-radius:50px;padding:6px 18px;font-size:0.75rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px; }
+    .sol-card { border-radius:28px;overflow:hidden;position:relative;transition:transform .3s ease,box-shadow .3s ease; }
+    .sol-card:hover { transform:translateY(-6px); }
+    .sol-img-wrap { position:relative;border-radius:24px;overflow:hidden; }
+    .sol-img-wrap::after { content:'';position:absolute;inset:0;border-radius:24px;border:1px solid rgba(255,255,255,0.08); }
+    .sol-img-wrap img { width:100%;display:block;border-radius:24px;transition:transform .5s ease; }
+    .sol-img-wrap:hover img { transform:scale(1.03); }
+    .sol-glow-green { box-shadow:0 0 80px rgba(22,163,74,0.12),0 30px 60px rgba(0,0,0,0.12); }
+    .sol-glow-purple { box-shadow:0 0 80px rgba(124,58,237,0.12),0 30px 60px rgba(0,0,0,0.12); }
+    .sol-glow-blue { box-shadow:0 0 80px rgba(37,99,235,0.12),0 30px 60px rgba(0,0,0,0.12); }
+    .sol-feature { display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:0.88rem; }
+    .sol-feature i { width:20px;text-align:center;font-size:0.8rem; }
+    .sol-divider { height:1px;background:linear-gradient(90deg,transparent,rgba(238,85,134,0.2),transparent);margin:70px 0; }
+    .sol-btn-primary { display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#ee5586,#c83e3c);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:0.88rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 8px 24px rgba(238,85,134,0.3); }
+    .sol-btn-primary:hover { transform:translateY(-2px);box-shadow:0 12px 32px rgba(238,85,134,0.45);color:#fff; }
+    .sol-btn-ghost { display:inline-flex;align-items:center;gap:8px;background:transparent;color:inherit;border:1.5px solid rgba(128,128,128,0.3);border-radius:50px;padding:11px 26px;font-size:0.88rem;font-weight:600;text-decoration:none;transition:all .2s; }
+    .sol-btn-ghost:hover { border-color:#ee5586;color:#ee5586;transform:translateY(-2px); }
+    .sol-number { font-size:5rem;font-weight:900;line-height:1;opacity:0.05;position:absolute;top:-10px;right:20px;letter-spacing:-4px; }
+  </style>
+
+  <section class="sol-section">
     <div class="container">
-      <div class="text-center mb-5">
-        <span style="display:inline-block;background:rgba(238,85,134,0.12);color:#ee5586;border:1px solid rgba(238,85,134,0.3);border-radius:50px;padding:6px 20px;font-size:0.8rem;font-weight:700;letter-spacing:1px;margin-bottom:16px;">OUR SOLUTIONS</span>
-        <h2 class="section-heading mergecolor">Powerful Platforms Built for Your Industry</h2>
+
+      <!-- Header -->
+      <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="600">
+        <div class="sol-pill" style="background:rgba(238,85,134,0.1);color:#ee5586;border:1px solid rgba(238,85,134,0.25);margin:0 auto 16px;">
+          <i class="fas fa-cube"></i> Our Solutions
+        </div>
+        <h2 class="section-heading mergecolor" style="font-size:2.4rem;font-weight:900;">Powerful Platforms Built<br>for Your Industry</h2>
         <p class="section-subheading text-muted mergecolor">Ready-to-deploy software solutions with AI at the core</p>
       </div>
 
       <!-- X Dairy -->
-      <div class="row align-items-center mb-5 pb-4" style="border-bottom:1px solid rgba(128,128,128,0.15);" data-aos="fade-up" data-aos-duration="800">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="assets/img/xdairy.png" alt="X Dairy" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+      <div class="row align-items-center g-5 mb-0" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6">
+          <div class="sol-img-wrap sol-glow-green">
+            <div class="sol-number">01</div>
+            <img src="assets/img/xdairy.png" alt="X Dairy">
+          </div>
         </div>
-        <div class="col-lg-6 ps-lg-5">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(22,163,74,0.1);color:#16a34a;border:1px solid rgba(22,163,74,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-microchip"></i> AI-Powered Platform</div>
-          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Dairy</h3>
-          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">Smart Dairy Farm Management System</p>
-          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">AI-powered, all-in-one dairy farm management system that simplifies daily operations with intelligent automation. Track animal records, milk production, breeding, calving, and finances from a single smart dashboard — with 10+ integrated modules.</p>
-          <div class="mt-4 d-flex flex-wrap gap-2">
-            <a href="https://xdairy.fillsbase.com/" target="_blank" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Live Demo</a>
-            <a href="/x-dairy" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Learn More</a>
+        <div class="col-lg-6">
+          <div class="sol-pill" style="background:rgba(22,163,74,0.1);color:#16a34a;border:1px solid rgba(22,163,74,0.25);">
+            <i class="fas fa-microchip"></i> AI-Powered
+          </div>
+          <h3 class="mergecolor" style="font-size:2.2rem;font-weight:900;margin-bottom:6px;">X Dairy</h3>
+          <p style="color:#ee5586;font-weight:700;font-size:1rem;margin-bottom:18px;">Smart Dairy Farm Management System</p>
+          <p class="text-muted seccolor" style="font-size:0.92rem;line-height:1.9;margin-bottom:24px;">AI-powered, all-in-one dairy farm management system that simplifies daily operations with intelligent automation. Track animal records, milk production, breeding, calving, and finances from a single smart dashboard.</p>
+          <div style="margin-bottom:28px;">
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#16a34a;"></i> 10+ Integrated Modules</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#16a34a;"></i> AI-driven analytics & herd health insights</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#16a34a;"></i> Automated alerts for vaccinations & breeding</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#16a34a;"></i> Milk, Finance, Stock & Employee Management</div>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="https://xdairy.fillsbase.com/" target="_blank" class="sol-btn-primary"><i class="fas fa-play"></i> Live Demo</a>
+            <a href="/x-dairy" class="sol-btn-ghost mergecolor"><i class="fas fa-arrow-right"></i> Learn More</a>
           </div>
         </div>
       </div>
+
+      <div class="sol-divider"></div>
 
       <!-- X Music -->
-      <div class="row align-items-center mb-5 pb-4 flex-lg-row-reverse" style="border-bottom:1px solid rgba(128,128,128,0.15);" data-aos="fade-up" data-aos-duration="800">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="assets/img/xdairy.png" alt="X Music" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+      <div class="row align-items-center g-5 flex-lg-row-reverse mb-0" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6">
+          <div class="sol-img-wrap sol-glow-purple">
+            <div class="sol-number">02</div>
+            <img src="assets/img/xdairy.png" alt="X Music">
+          </div>
         </div>
-        <div class="col-lg-6 pe-lg-5">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.1);color:#7c3aed;border:1px solid rgba(124,58,237,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-music"></i> All-in-One Music Platform</div>
-          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Music</h3>
-          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">AI-Powered Music Streaming Platform</p>
-          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">Complete music streaming platform — launch your own Spotify-like service across Android, iOS, and web. Supports songs, albums, playlists, radio streaming, podcasts, live concerts, and personalized AI recommendations with full monetization.</p>
-          <div class="mt-4 d-flex flex-wrap gap-2">
-            <a href="/x-music" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Learn More</a>
-            <a href="#" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Get Pricing</a>
+        <div class="col-lg-6">
+          <div class="sol-pill" style="background:rgba(124,58,237,0.1);color:#7c3aed;border:1px solid rgba(124,58,237,0.25);">
+            <i class="fas fa-music"></i> All-in-One Platform
+          </div>
+          <h3 class="mergecolor" style="font-size:2.2rem;font-weight:900;margin-bottom:6px;">X Music</h3>
+          <p style="color:#ee5586;font-weight:700;font-size:1rem;margin-bottom:18px;">AI-Powered Music Streaming Platform</p>
+          <p class="text-muted seccolor" style="font-size:0.92rem;line-height:1.9;margin-bottom:24px;">Launch your own Spotify-like streaming service across Android, iOS, and web. Complete entertainment ecosystem with AI-powered recommendations, live concerts, radio, and full monetization built in.</p>
+          <div style="margin-bottom:28px;">
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#7c3aed;"></i> Android, iOS & Web apps included</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#7c3aed;"></i> Songs, Albums, Playlists & Podcasts</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#7c3aed;"></i> Live streaming & concert events</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#7c3aed;"></i> Premium plans, ads & in-app purchases</div>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="/x-music" class="sol-btn-primary"><i class="fas fa-arrow-right"></i> Learn More</a>
+            <a href="#" class="sol-btn-ghost mergecolor"><i class="fas fa-tag"></i> Get Pricing</a>
           </div>
         </div>
       </div>
 
+      <div class="sol-divider"></div>
+
       <!-- X Booking -->
-      <div class="row align-items-center" data-aos="fade-up" data-aos-duration="800">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="assets/img/xbooking.png" alt="X Booking" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+      <div class="row align-items-center g-5" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6">
+          <div class="sol-img-wrap sol-glow-blue">
+            <div class="sol-number">03</div>
+            <img src="assets/img/xbooking.png" alt="X Booking">
+          </div>
         </div>
-        <div class="col-lg-6 ps-lg-5">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.1);color:#2563eb;border:1px solid rgba(37,99,235,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-microchip"></i> AI-Powered Platform</div>
-          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Booking</h3>
-          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">AI-Powered Travel &amp; Booking Platform</p>
-          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">All-in-one travel and booking management platform — manage Hotels, Tours, Cars, Events, Flights, Boats, Spaces &amp; Visa from one dashboard. AI-driven analytics, real-time availability, smart automation, and multi-currency support across 9+ modules.</p>
-          <div class="mt-4 d-flex flex-wrap gap-2">
-            <a href="/x-booking" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Learn More</a>
-            <a href="#" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Get Pricing</a>
+        <div class="col-lg-6">
+          <div class="sol-pill" style="background:rgba(37,99,235,0.1);color:#2563eb;border:1px solid rgba(37,99,235,0.25);">
+            <i class="fas fa-microchip"></i> AI-Powered
+          </div>
+          <h3 class="mergecolor" style="font-size:2.2rem;font-weight:900;margin-bottom:6px;">X Booking</h3>
+          <p style="color:#ee5586;font-weight:700;font-size:1rem;margin-bottom:18px;">AI-Powered Travel &amp; Booking Platform</p>
+          <p class="text-muted seccolor" style="font-size:0.92rem;line-height:1.9;margin-bottom:24px;">All-in-one travel and booking management — manage Hotels, Tours, Cars, Events, Flights, Boats, Spaces &amp; Visa from a single smart dashboard. AI analytics, real-time availability &amp; multi-currency support.</p>
+          <div style="margin-bottom:28px;">
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#2563eb;"></i> 9+ booking categories in one platform</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#2563eb;"></i> AI-driven revenue & occupancy analytics</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#2563eb;"></i> Multi-currency & multilingual search</div>
+            <div class="sol-feature seccolor"><i class="fas fa-check-circle" style="color:#2563eb;"></i> Smart automation for confirmations & reminders</div>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="/x-booking" class="sol-btn-primary"><i class="fas fa-arrow-right"></i> Learn More</a>
+            <a href="#" class="sol-btn-ghost mergecolor"><i class="fas fa-tag"></i> Get Pricing</a>
           </div>
         </div>
       </div>
