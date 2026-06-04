@@ -15,6 +15,9 @@
     margin: 0 !important;
 }
 
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
 /* Hide language switcher globally */
 #drop-lng, .lng-drop, [id="drop-lng"], .settings-panel .lng-section { display: none !important; }
 
