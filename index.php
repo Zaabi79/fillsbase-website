@@ -488,46 +488,65 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   </section>
 
   <!-- ***** SOLUTIONS ***** -->
-  <section class="services sec-normal bg-colorstyle">
+  <section class="services sec-normal bg-colorstyle" style="padding:80px 0;">
     <div class="container">
-      <div class="service-wrap">
-        <div class="row text-center mb-4">
-          <div class="col-12">
-            <h2 class="section-heading mergecolor">Our Solutions</h2>
-            <p class="section-subheading text-muted mergecolor">Powerful platforms built to transform your industry</p>
-          </div>
+      <div class="text-center mb-5">
+        <span style="display:inline-block;background:rgba(238,85,134,0.12);color:#ee5586;border:1px solid rgba(238,85,134,0.3);border-radius:50px;padding:6px 20px;font-size:0.8rem;font-weight:700;letter-spacing:1px;margin-bottom:16px;">OUR SOLUTIONS</span>
+        <h2 class="section-heading mergecolor">Powerful Platforms Built for Your Industry</h2>
+        <p class="section-subheading text-muted mergecolor">Ready-to-deploy software solutions with AI at the core</p>
+      </div>
+
+      <!-- X Dairy -->
+      <div class="row align-items-center mb-5 pb-4" style="border-bottom:1px solid rgba(128,128,128,0.15);" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="assets/img/xdairy.png" alt="X Dairy" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
         </div>
-        <div class="row">
-
-          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="800">
-            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
-              <div style="font-size:2.5rem;margin-bottom:12px;">🐄</div>
-              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Dairy</div>
-              <p class="subtitle seccolor text-muted mt-2">Smart dairy farm management platform</p>
-              <a href="/x-dairy" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
-            </div>
+        <div class="col-lg-6 ps-lg-5">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(22,163,74,0.1);color:#16a34a;border:1px solid rgba(22,163,74,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-microchip"></i> AI-Powered Platform</div>
+          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Dairy</h3>
+          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">Smart Dairy Farm Management System</p>
+          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">AI-powered, all-in-one dairy farm management system that simplifies daily operations with intelligent automation. Track animal records, milk production, breeding, calving, and finances from a single smart dashboard — with 10+ integrated modules.</p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a href="https://xdairy.fillsbase.com/" target="_blank" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Live Demo</a>
+            <a href="/x-dairy" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Learn More</a>
           </div>
-
-          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1000">
-            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
-              <div style="font-size:2.5rem;margin-bottom:12px;">🎵</div>
-              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Music</div>
-              <p class="subtitle seccolor text-muted mt-2">AI-powered music management platform</p>
-              <a href="/x-music" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-4" data-aos="fade-up" data-aos-duration="1200">
-            <div class="service-section bg-seccolorstyle noshadow" style="border-top:3px solid #ee5586;border-radius:14px;padding:32px 24px;">
-              <div style="font-size:2.5rem;margin-bottom:12px;">✈️</div>
-              <div class="title mergecolor" style="font-size:1.2rem;font-weight:700;">X Booking</div>
-              <p class="subtitle seccolor text-muted mt-2">AI-powered travel &amp; booking platform</p>
-              <a href="/x-booking" class="btn btn-default-pink-fill mt-3" style="font-size:0.85rem;">Learn More</a>
-            </div>
-          </div>
-
         </div>
       </div>
+
+      <!-- X Music -->
+      <div class="row align-items-center mb-5 pb-4 flex-lg-row-reverse" style="border-bottom:1px solid rgba(128,128,128,0.15);" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="assets/img/xdairy.png" alt="X Music" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+        </div>
+        <div class="col-lg-6 pe-lg-5">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.1);color:#7c3aed;border:1px solid rgba(124,58,237,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-music"></i> All-in-One Music Platform</div>
+          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Music</h3>
+          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">AI-Powered Music Streaming Platform</p>
+          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">Complete music streaming platform — launch your own Spotify-like service across Android, iOS, and web. Supports songs, albums, playlists, radio streaming, podcasts, live concerts, and personalized AI recommendations with full monetization.</p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a href="/x-music" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Learn More</a>
+            <a href="#" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Get Pricing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- X Booking -->
+      <div class="row align-items-center" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="assets/img/xbooking.png" alt="X Booking" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.1);color:#2563eb;border:1px solid rgba(37,99,235,0.3);border-radius:50px;padding:5px 16px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i class="fas fa-microchip"></i> AI-Powered Platform</div>
+          <h3 class="mergecolor" style="font-size:1.8rem;font-weight:800;line-height:1.2;">X Booking</h3>
+          <p class="seccolor" style="font-size:1rem;font-weight:600;color:#ee5586;margin-bottom:12px;">AI-Powered Travel &amp; Booking Platform</p>
+          <p class="seccolor text-muted" style="font-size:0.93rem;line-height:1.8;">All-in-one travel and booking management platform — manage Hotels, Tours, Cars, Events, Flights, Boats, Spaces &amp; Visa from one dashboard. AI-driven analytics, real-time availability, smart automation, and multi-currency support across 9+ modules.</p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a href="/x-booking" class="btn btn-default-pink-fill" style="font-size:0.85rem;">Learn More</a>
+            <a href="#" class="btn btn-default-yellow-fill" style="font-size:0.85rem;">Get Pricing</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
