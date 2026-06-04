@@ -90,6 +90,132 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
     <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
     <link href="assets/css/fillsbase_custom.css?v=<?php echo time(); ?>" rel="stylesheet">
+  <style>
+  /* ═══════════════════════════════════════════════
+     FILLSBASE HOMEPAGE — 2-COLOR LIGHT SCHEME
+     Navy: #1B3673  |  Red: #C83E3C
+     Light Navy: #EEF2FF #DDE6FF #C5D5FF
+     Light Red:  #FFF0F0 #FFE0E0 #FECDCD
+  ═══════════════════════════════════════════════ */
+  :root {
+    --fb-navy:       #1B3673;
+    --fb-navy-mid:   #2a4a99;
+    --fb-navy-light: #EEF2FF;
+    --fb-navy-soft:  #DDE6FF;
+    --fb-red:        #C83E3C;
+    --fb-red-light:  #FFF0F0;
+    --fb-red-soft:   #FFE0E0;
+    --fb-white:      #ffffff;
+    --fb-text:       #1a2340;
+    --fb-muted:      #5a6a8a;
+  }
+
+  /* Body background — clean white */
+  body[data-background=origin] .box-container { background: var(--fb-white) !important; }
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .infonews { background: var(--fb-navy) !important; }
+  .infonews *, .infonews a, .infonews .iconews { color: #fff !important; }
+  .infonews .news span { color: var(--fb-red-soft) !important; }
+
+  /* ── HEADER / NAVBAR ── */
+  .menu-wrap:not(.mobile),
+  .menu-wrap.fixed:not(.mobile) {
+    background: var(--fb-white) !important;
+    border-bottom: 1px solid var(--fb-navy-light) !important;
+    box-shadow: 0 2px 20px rgba(27,54,115,0.08) !important;
+  }
+  .nav-menu .main-menu .menu-item > a { color: var(--fb-navy) !important; }
+  .nav-menu .main-menu .menu-item:hover > a { color: var(--fb-red) !important; }
+  .nav-menu .menu-toggle .icon { background-color: var(--fb-navy) !important; }
+
+  /* ── HERO SECTION ── */
+  .hero-new {
+    background: linear-gradient(135deg, var(--fb-white) 0%, var(--fb-navy-light) 40%, var(--fb-red-light) 100%) !important;
+  }
+  .hero-main-title { color: var(--fb-navy) !important; }
+  .hero-sub-title { color: var(--fb-muted) !important; }
+  .hero-pill-badge {
+    background: var(--fb-navy-light) !important;
+    color: var(--fb-navy) !important;
+    border: 1px solid var(--fb-navy-soft) !important;
+  }
+  .hero-pill-badge:hover { background: var(--fb-navy) !important; color: #fff !important; }
+  .hero-cards-grid .card-item { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-light) !important; }
+  .hero-cards-grid .card-item:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 40px rgba(200,62,60,0.1) !important; }
+  .hero-cards-grid .card-tag { color: var(--fb-red) !important; }
+  .hero-cards-grid .card-btn { background: var(--fb-navy) !important; color: #fff !important; }
+  .hero-cards-grid .card-btn:hover { background: var(--fb-red) !important; }
+  .hero-tlds-list .tld-item { background: var(--fb-navy-light) !important; color: var(--fb-navy) !important; }
+  .hero-search-form { background: var(--fb-white) !important; border: 1.5px solid var(--fb-navy-soft) !important; box-shadow: 0 8px 32px rgba(27,54,115,0.1) !important; }
+  .hero-search-btn { background: var(--fb-red) !important; }
+
+  /* ── PROCESS SECTION ── */
+  .process-section { background: var(--fb-navy-light) !important; }
+  .process-step-num { background: var(--fb-navy) !important; color: #fff !important; }
+  .process-line { background: var(--fb-navy-soft) !important; }
+
+  /* ── PRICING SECTION ── */
+  .pricing.special { background: var(--fb-white) !important; }
+  .pricing .wrapper .top-content { background: var(--fb-navy-light) !important; }
+  .pricing .wrapper .list-info { background: var(--fb-navy) !important; }
+  .pricing .wrapper.recommended .top-content { background: var(--fb-navy) !important; }
+  .pricing .wrapper.recommended .title,
+  .pricing .wrapper.recommended .price .discount { color: #fff !important; }
+
+  /* ── WHY CHOOSE SECTION ── */
+  .why-choose-new { background: var(--fb-red-light) !important; }
+  .why-box { background: var(--fb-white) !important; border: 1px solid var(--fb-red-soft) !important; border-radius: 16px; }
+  .why-box:hover { border-color: var(--fb-navy) !important; box-shadow: 0 12px 40px rgba(27,54,115,0.1) !important; }
+  .why-box .icon-wrap { background: var(--fb-navy-light) !important; color: var(--fb-navy) !important; }
+
+  /* ── DATA CENTERS MAP SECTION ── */
+  .services.maping { background: var(--fb-navy) !important; }
+
+  /* ── SOLUTIONS SECTION ── */
+  .sol-section { background: linear-gradient(180deg, var(--fb-navy-light) 0%, var(--fb-white) 50%, var(--fb-red-light) 100%) !important; }
+  .sol-divider { background: linear-gradient(90deg, transparent, var(--fb-navy-soft), transparent) !important; }
+
+  /* ── HELP / SUPPORT SECTION ── */
+  .services.help { background: var(--fb-navy-light) !important; }
+  .help-container { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-soft) !important; border-radius: 16px; transition: all .25s; }
+  .help-container:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 32px rgba(200,62,60,0.1) !important; transform: translateY(-4px); }
+
+  /* ── SERVICE / FEATURE CARDS ── */
+  .service-section.bg-seccolorstyle { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-light) !important; border-radius: 16px; }
+  .service-section.bg-seccolorstyle:hover { border-color: var(--fb-navy-soft) !important; box-shadow: 0 12px 40px rgba(27,54,115,0.08) !important; }
+
+  /* ── GLOBAL TEXT ── */
+  .mergecolor { color: var(--fb-navy) !important; }
+  .seccolor, .text-muted { color: var(--fb-muted) !important; }
+  .section-heading { color: var(--fb-navy) !important; }
+
+  /* ── BUTTONS ── */
+  .btn-default-pink-fill, .btn-default-yellow-fill { background: var(--fb-red) !important; border-color: var(--fb-red) !important; color: #fff !important; }
+  .btn-default-pink-fill:hover, .btn-default-yellow-fill:hover { background: var(--fb-navy) !important; border-color: var(--fb-navy) !important; }
+  .sol-btn-primary { background: linear-gradient(135deg, var(--fb-red), #a32f2d) !important; }
+  .sol-btn-ghost { border-color: var(--fb-navy-soft) !important; color: var(--fb-navy) !important; }
+  .sol-btn-ghost:hover { border-color: var(--fb-red) !important; color: var(--fb-red) !important; }
+
+  /* ── PILLS / BADGES ── */
+  .badge.bg-pink { background: var(--fb-red) !important; }
+  .badge.bg-purple { background: var(--fb-navy) !important; }
+  .c-pink { color: var(--fb-red) !important; }
+  .bg-pink { background-color: var(--fb-red) !important; }
+
+  /* ── FOOTER ── */
+  #footer { background: var(--fb-navy) !important; }
+  #footer * { color: rgba(255,255,255,0.85) !important; }
+  #footer .golink, #footer a:hover { color: var(--fb-red-soft) !important; }
+
+  /* ── RANDOMLINE DECORATORS ── */
+  .bigline { background: var(--fb-navy) !important; }
+  .smallline { background: var(--fb-red) !important; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar-thumb { background: var(--fb-navy-soft) !important; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--fb-navy) !important; }
+  </style>
   </head>
   <body data-layout="wideboxed" data-background="origin" data-color="green" data-header="" data-textDirection="ltr" data-radius="sixradius">
 
