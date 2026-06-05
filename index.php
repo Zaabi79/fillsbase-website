@@ -363,6 +363,69 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     </div>
   </section>
 
+  <!-- ***** PRICING TABLES ***** -->
+  <section class="pricing special sec-up-slider bg-colorstyle specialposition">
+    <div class="container">
+      <div class="row">
+        <!-- Personal Plan -->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="wrapper first text-start noshadow">
+            <div class="top-content bg-seccolorstyle topradius">
+              <div class="lazyload"></div>
+              <div class="title">Personal Plan</div>
+              <div class="fromer seccolor">1 Free Domain Name</div>
+              <div class="price seccolor"><?php echo $sharedPrice; ?></div>
+              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>10 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>100 GB</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>10 Accounts</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>10</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Business Plan -->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="wrapper text-start noshadow">
+            <div class="plans badge feat bg-purple">recommended</div>
+            <div class="top-content bg-seccolorstyle topradius">
+              <div class="lazyload"></div>
+              <div class="title">Business Plan</div>
+              <div class="fromer seccolor">3 Free Domain Names</div>
+              <div class="price seccolor"><?php echo $businessPrice; ?></div>
+              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>50 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>500 GB</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Pro Plan -->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="wrapper third text-start noshadow">
+            <div class="top-content bg-seccolorstyle topradius">
+              <div class="lazyload"></div>
+              <div class="title">Pro Plan</div>
+              <div class="fromer seccolor">5 Free Domain Names</div>
+              <div class="price seccolor"><?php echo $proPrice; ?></div>
+              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+            </div>
+            <ul class="list-info bg-purple">
+              <li><i class="icon-drives"></i> <div>DISK<br> <span>100 GB</span></div></li>
+              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
+              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ***** WHY CHOOSE FILLSBASE ***** -->
   <section class="why-choose-new sec-normal">
     <div class="container">
