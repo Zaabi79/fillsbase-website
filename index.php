@@ -64,10 +64,11 @@ $mlPrice  = formatFillsbasePrice(getFillsbaseTldPrice('ml'));
 $snPrice  = formatFillsbasePrice(getFillsbaseTldPrice('sn'));
 $ciPrice  = formatFillsbasePrice(getFillsbaseTldPrice('ci'));
 
-// Fetch product prices (using IDs from database)
-$sharedPrice  = formatFillsbasePrice(getFillsbaseProductPrice(291, 'annually')) . ' /yr';
-$businessPrice = formatFillsbasePrice(getFillsbaseProductPrice(292, 'annually')) . ' /yr';
-$proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually')) . ' /yr';
+// Fetch Digital Business Ecosystem product prices (IDs 1-4)
+$basicPrice    = formatFillsbasePrice(getFillsbaseProductPrice(1, 'monthly'));
+$proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(2, 'monthly'));
+$enterprisePrice = formatFillsbasePrice(getFillsbaseProductPrice(3, 'monthly'));
+$monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -162,7 +163,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   section, .section { margin-top: 0 !important; margin-bottom: 0 !important; }
 
   /* Unified padding for every section */
-  .pricing.special       { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .dbe-pricing-section   { padding-top: 80px !important; padding-bottom: 80px !important; }
   .why-choose-new        { padding-top: 72px !important; padding-bottom: 72px !important; }
   .sol-section           { padding-top: 72px !important; padding-bottom: 72px !important; }
   .services.help         { padding-top: 60px !important; padding-bottom: 60px !important; }
@@ -177,20 +178,55 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     ) !important;
   }
 
-  /* ── 2. PRICING: picks up peach from use-cases bottom ── */
-  .pricing.special {
-    background: linear-gradient(180deg,
-      #fde8d8 0%,
-      #f9ddc8 35%,
-      #f5d0b5 65%,
-      #fbe8d5 100%
-    ) !important;
+  /* ── 2. DBE PRICING SECTION ── */
+  .dbe-pricing-section {
+    padding: 80px 0 80px;
+    background: linear-gradient(180deg, #fde8d8 0%, #f9ddc8 35%, #f5d0b5 65%, #fbe8d5 100%);
   }
-  .pricing .wrapper .top-content { background: rgba(255,255,255,0.88) !important; }
-  .pricing .wrapper .list-info { background: var(--fb-navy) !important; }
-  .pricing .wrapper.recommended .top-content { background: var(--fb-navy) !important; }
-  .pricing .wrapper.recommended .title,
-  .pricing .wrapper.recommended .price .discount { color: #fff !important; }
+  .dbe-eyebrow { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C83E3C; margin-bottom: 6px; }
+  .dbe-main-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #1B3673; line-height: 1.1; margin-bottom: 0; }
+
+  /* Cards */
+  .dbe-card { background: #fff; border-radius: 18px; border: 2px solid #e8e8e8; overflow: hidden; display: flex; flex-direction: column; height: 100%; transition: transform 0.28s ease, box-shadow 0.28s ease; }
+  .dbe-card:hover { transform: translateY(-6px); box-shadow: 0 24px 56px rgba(27,54,115,0.14); }
+  .dbe-card-featured { background: #1B3673; border-color: #1B3673; color: #fff; }
+  .dbe-card-badge { display: inline-block; background: #fde8d8; color: #C83E3C; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; padding: 6px 18px; border-radius: 50px; margin: 20px 20px 0; width: fit-content; }
+  .dbe-card-featured .dbe-card-badge { background: rgba(255,255,255,0.18); color: #fff; }
+  .dbe-card-top { padding: 16px 24px 20px; flex: 1; }
+  .dbe-plan-subtitle { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 14px; }
+  .dbe-card-featured .dbe-plan-subtitle { color: rgba(255,255,255,0.65); }
+  .dbe-features { list-style: none; padding: 0; margin: 0 0 18px; }
+  .dbe-features li { font-size: 0.9rem; color: #444; padding: 5px 0; display: flex; align-items: center; gap: 8px; }
+  .dbe-features li i { color: #1B3673; font-size: 0.85rem; flex-shrink: 0; }
+  .dbe-card-featured .dbe-features li { color: rgba(255,255,255,0.9); }
+  .dbe-card-featured .dbe-features li i { color: #7dd3fc; }
+  .dbe-price { font-size: 2.2rem; font-weight: 900; color: #1B3673; margin-top: 10px; }
+  .dbe-price::before { content: 'AED '; font-size: 1rem; font-weight: 700; vertical-align: top; margin-top: 8px; display: inline-block; }
+  .dbe-card-featured .dbe-price { color: #fff; }
+  .dbe-btn { display: block; text-align: center; background: #111; color: #fff !important; font-weight: 800; font-size: 0.9rem; letter-spacing: 0.08em; padding: 14px 24px; margin: 0 20px 20px; border-radius: 50px; transition: background 0.22s ease; text-decoration: none; }
+  .dbe-btn:hover { background: #1B3673; color: #fff !important; }
+  .dbe-btn-featured { background: #00c6f0; color: #fff !important; }
+  .dbe-btn-featured:hover { background: #00a8cf; }
+
+  /* Legend + Contacts */
+  .dbe-legend { list-style: none; padding: 0; margin: 0; }
+  .dbe-legend li { font-size: 0.88rem; color: #444; padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+  .dbe-contacts { display: flex; flex-direction: column; gap: 8px; }
+  .dbe-contact-btn { display: flex; align-items: center; gap: 10px; background: #1B3673; color: #fff !important; font-size: 0.88rem; font-weight: 700; padding: 11px 20px; border-radius: 50px; text-decoration: none; width: fit-content; transition: background 0.22s; }
+  .dbe-contact-btn:hover { background: #C83E3C; }
+  .dbe-contact-btn i { font-size: 1.1rem; }
+
+  /* Monthly subscription box */
+  .dbe-monthly-box { background: linear-gradient(135deg, #1B3673 0%, #2a4fa8 100%); border-radius: 18px; padding: 28px; color: #fff; }
+  .dbe-monthly-title { font-size: 1.1rem; font-weight: 800; color: #fff; }
+  .dbe-monthly-price { color: #7dd3fc; font-size: 1.4rem; font-weight: 900; }
+  .dbe-monthly-price::before { content: 'AED '; font-size: 0.9rem; font-weight: 700; }
+  .dbe-monthly-list { list-style: none; padding: 0; margin: 0; }
+  .dbe-monthly-list li { font-size: 0.85rem; color: rgba(255,255,255,0.9); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+  .dbe-monthly-list li i { color: #7dd3fc; font-size: 0.8rem; }
+  .dbe-first-free { font-size: 1rem; font-weight: 900; color: #fff; text-align: center; margin-top: 16px; padding: 10px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; }
+  .dbe-btn-monthly { background: #fff; color: #1B3673 !important; margin: 0; }
+  .dbe-btn-monthly:hover { background: #C83E3C; color: #fff !important; }
 
   /* ── 3. WHY CHOOSE: continues peach → fades to white ── */
   .why-choose-new {
@@ -673,66 +709,126 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   </script>
 
   <!-- ***** PRICING TABLES ***** -->
-  <section class="pricing special sec-up-slider bg-colorstyle specialposition">
+  <!-- ===== DIGITAL BUSINESS ECOSYSTEM PRICING ===== -->
+  <section class="dbe-pricing-section">
     <div class="container">
-      <div class="row">
-        <!-- Personal Plan -->
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="wrapper first text-start noshadow">
-            <div class="top-content bg-seccolorstyle topradius">
-              <div class="lazyload"></div>
-              <div class="title">Personal Plan</div>
-              <div class="fromer seccolor">1 Free Domain Name</div>
-              <div class="price seccolor"><?php echo $sharedPrice; ?></div>
-              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+      <div class="text-center mb-5">
+        <p class="dbe-eyebrow">Digital Business Ecosystem</p>
+        <h2 class="dbe-main-title">Pricing Plans</h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Basic Plan -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="dbe-card">
+            <div class="dbe-card-badge">BASIC PLAN</div>
+            <div class="dbe-card-top">
+              <p class="dbe-plan-subtitle">BUSINESS WEBSITE</p>
+              <ul class="dbe-features">
+                <li><i class="fas fa-check-circle"></i> Domain</li>
+                <li><i class="fas fa-check-circle"></i> Hosting &amp; SSL</li>
+                <li><i class="fas fa-check-circle"></i> Website Design</li>
+                <li><i class="fas fa-check-circle"></i> Booking System</li>
+                <li><i class="fas fa-check-circle"></i> WhatsApp Integration</li>
+                <li><i class="fas fa-check-circle"></i> Lead Collection Forms</li>
+                <li><i class="fas fa-check-circle"></i> Initial Setup &amp; Branding</li>
+              </ul>
+              <div class="dbe-price"><?php echo $basicPrice; ?></div>
             </div>
-            <ul class="list-info bg-purple">
-              <li><i class="icon-drives"></i> <div>DISK<br> <span>10 GB</span></div></li>
-              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>100 GB</span></div></li>
-              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>10 Accounts</span></div></li>
-              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>10</span></div></li>
-            </ul>
+            <a href="cart.php?a=add&pid=1" class="dbe-btn">SELECT PLAN</a>
           </div>
         </div>
-        <!-- Business Plan -->
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="wrapper text-start noshadow">
-            <div class="plans badge feat bg-purple">recommended</div>
-            <div class="top-content bg-seccolorstyle topradius">
-              <div class="lazyload"></div>
-              <div class="title">Business Plan</div>
-              <div class="fromer seccolor">3 Free Domain Names</div>
-              <div class="price seccolor"><?php echo $businessPrice; ?></div>
-              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+
+        <!-- Pro Plan (featured) -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="dbe-card dbe-card-featured">
+            <div class="dbe-card-badge">PRO PLAN</div>
+            <div class="dbe-card-top">
+              <p class="dbe-plan-subtitle">WEBSITE + CRM</p>
+              <ul class="dbe-features">
+                <li><i class="fas fa-check-circle"></i> Domain</li>
+                <li><i class="fas fa-check-circle"></i> Hosting &amp; SSL</li>
+                <li><i class="fas fa-check-circle"></i> Website Design</li>
+                <li><i class="fas fa-check-circle"></i> Booking System</li>
+                <li><i class="fas fa-check-circle"></i> WhatsApp Integration</li>
+                <li><i class="fas fa-check-circle"></i> CRM</li>
+                <li><i class="fas fa-check-circle"></i> SEO</li>
+                <li><i class="fas fa-check-circle"></i> Admin Access</li>
+              </ul>
+              <div class="dbe-price"><?php echo $proPrice; ?></div>
             </div>
-            <ul class="list-info bg-purple">
-              <li><i class="icon-drives"></i> <div>DISK<br> <span>50 GB</span></div></li>
-              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>500 GB</span></div></li>
-              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
-              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
-            </ul>
+            <a href="cart.php?a=add&pid=2" class="dbe-btn dbe-btn-featured">SELECT PLAN</a>
           </div>
         </div>
-        <!-- Pro Plan -->
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="wrapper third text-start noshadow">
-            <div class="top-content bg-seccolorstyle topradius">
-              <div class="lazyload"></div>
-              <div class="title">Pro Plan</div>
-              <div class="fromer seccolor">5 Free Domain Names</div>
-              <div class="price seccolor"><?php echo $proPrice; ?></div>
-              <a href="hosting" class="btn btn-default-yellow-fill">All Plans</a>
+
+        <!-- Enterprise Plan -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="dbe-card">
+            <div class="dbe-card-badge">ENTERPRISE PLAN</div>
+            <div class="dbe-card-top">
+              <p class="dbe-plan-subtitle">WEB SITE + CRM + ERP</p>
+              <ul class="dbe-features">
+                <li><i class="fas fa-check-circle"></i> Domain</li>
+                <li><i class="fas fa-check-circle"></i> Hosting &amp; SSL</li>
+                <li><i class="fas fa-check-circle"></i> Website Design</li>
+                <li><i class="fas fa-check-circle"></i> SEO</li>
+                <li><i class="fas fa-check-circle"></i> Booking System</li>
+                <li><i class="fas fa-check-circle"></i> CRM</li>
+                <li><i class="fas fa-check-circle"></i> ERP</li>
+                <li><i class="fas fa-check-circle"></i> Profit/Loss Analytics</li>
+                <li><i class="fas fa-check-circle"></i> VAT Ready Reports</li>
+                <li><i class="fas fa-check-circle"></i> WhatsApp Integration</li>
+                <li><i class="fas fa-check-circle"></i> Lead Collection Forms</li>
+                <li><i class="fas fa-check-circle"></i> Admin Access</li>
+              </ul>
+              <div class="dbe-price"><?php echo $enterprisePrice; ?></div>
             </div>
-            <ul class="list-info bg-purple">
-              <li><i class="icon-drives"></i> <div>DISK<br> <span>100 GB</span></div></li>
-              <li><i class="icon-speed"></i> <div>BANDWIDTH<br> <span>Unlimited</span></div></li>
-              <li><i class="icon-emailopen"></i> <div>EMAIL<br> <span>Unlimited</span></div></li>
-              <li><i class="icon-domains"></i> <div>SUBDOMAINS<br> <span>Unlimited</span></div></li>
-            </ul>
+            <a href="cart.php?a=add&pid=3" class="dbe-btn">SELECT PLAN</a>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+      <!-- Bottom row: legend + monthly subscription -->
+      <div class="row mt-4 g-4 align-items-center">
+        <div class="col-md-6">
+          <ul class="dbe-legend">
+            <li><i class="fas fa-check-circle" style="color:#C83E3C;"></i> <strong>CRM</strong> = Customer Relationship Management</li>
+            <li><i class="fas fa-check-circle" style="color:#C83E3C;"></i> <strong>ERP</strong> = Enterprise Resource Planning (Account Software)</li>
+            <li><i class="fas fa-check-circle" style="color:#C83E3C;"></i> <strong>SEO</strong> = Search Engine Optimization</li>
+          </ul>
+          <div class="dbe-contacts mt-3">
+            <a href="https://wa.me/971505442538" class="dbe-contact-btn" target="_blank"><i class="fab fa-whatsapp"></i> UAE +971-50-544-2538</a>
+            <a href="tel:+18333224404" class="dbe-contact-btn mt-2"><i class="fas fa-phone"></i> USA +1 (833) 322-4404</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="dbe-monthly-box">
+            <div class="dbe-monthly-title">Monthly Subscription: <span class="dbe-monthly-price"><?php echo $monthlySubPrice; ?></span></div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <ul class="dbe-monthly-list">
+                  <li><i class="fas fa-check-circle"></i> Hosting Maintenance</li>
+                  <li><i class="fas fa-check-circle"></i> Technical Support</li>
+                  <li><i class="fas fa-check-circle"></i> Website Updates</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="dbe-monthly-list">
+                  <li><i class="fas fa-check-circle"></i> Backups</li>
+                  <li><i class="fas fa-check-circle"></i> Monitoring</li>
+                  <li><i class="fas fa-check-circle"></i> Minor Changes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="dbe-first-free">First Month FREE</div>
+            <a href="cart.php?a=add&pid=4" class="dbe-btn dbe-btn-monthly mt-3">GET STARTED</a>
           </div>
         </div>
       </div>
-    </div>
+
+    </div><!-- /.container -->
   </section>
 
   <!-- ***** WHY CHOOSE FILLSBASE ***** -->
