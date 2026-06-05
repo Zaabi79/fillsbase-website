@@ -154,6 +154,17 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .process-step-num { background: var(--fb-navy) !important; color: #fff !important; }
   .process-line { background: var(--fb-navy-soft) !important; }
 
+  /* ── SECTION FLOW — remove hard breaks between sections ── */
+  .pricing.special,
+  .why-choose-new,
+  section.sec-normal,
+  section.sec-bg2 {
+    margin-top: 0 !important;
+  }
+  /* tighten default section vertical padding */
+  .pricing.special { padding-top: 60px !important; padding-bottom: 60px !important; }
+  .why-choose-new  { padding-top: 60px !important; padding-bottom: 60px !important; }
+
   /* ── PRICING SECTION ── */
   .pricing.special { background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important; }
   .pricing .wrapper .top-content { background: rgba(255,255,255,0.85) !important; }
@@ -408,8 +419,17 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
   <!-- ***** WHO IS FILLSBASE FOR ***** -->
   <style>
-    .usecases-section { padding: 90px 0 70px; background: #fff; overflow: visible; }
-    .uc-heading-row { margin-bottom: 44px; }
+    .usecases-section { padding: 60px 0 60px; background: #fff; overflow: visible; position: relative; }
+    /* fade from peach gradient hero into white */
+    .usecases-section::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, #fff);
+      pointer-events: none;
+    }
+    .uc-heading-row { margin-bottom: 36px; }
     .uc-main-title { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800; color: #111; line-height: 1.2; margin: 0; letter-spacing: -0.01em; white-space: nowrap; }
     .uc-scroll-outer { width: 100%; overflow: hidden; }
     .usecases-scroll { padding-left: max(24px, calc((100vw - 1140px) / 2)); padding-right: 24px; }

@@ -100,10 +100,19 @@ h1, h2, h3, h4, h5, h6, .section-heading {
 
 /* Custom Hero Section Styles - Fillsbase */
 .hero-new {
-    padding: 60px 0 120px 0;
+    padding: 60px 0 80px 0;
     background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%);
     overflow: hidden;
     position: relative;
+}
+/* smooth fade from hero into next section */
+.hero-new::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    pointer-events: none;
 }
 
 
