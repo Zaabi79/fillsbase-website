@@ -144,10 +144,10 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .hero-pill-badge:hover { background: var(--fb-navy) !important; color: #fff !important; }
   .hero-cards-grid .card-item { background: rgba(255,255,255,0.85) !important; border: 1px solid rgba(255,255,255,0.6) !important; backdrop-filter: blur(10px); }
   .hero-cards-grid .card-item:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 40px rgba(200,62,60,0.12) !important; }
-  .hero-cards-grid .card-tag { color: var(--fb-red) !important; font-size: 0.72rem !important; }
-  .hero-cards-grid .card-btn { background: var(--fb-navy) !important; color: #fff !important; font-size: 0.82rem !important; }
-  .hero-cards-grid .card-btn:hover { background: var(--fb-red) !important; }
-  .hero-cards-grid h3 { font-size: 1.1rem !important; line-height: 1.3 !important; }
+  .hero-cards-grid .card-tag { color: var(--fb-red) !important; font-size: 0.78rem !important; font-weight: 700 !important; }
+  .hero-cards-grid .card-btn { background: #ffffff !important; color: var(--fb-navy) !important; font-size: 0.9rem !important; font-weight: 700 !important; border: none !important; }
+  .hero-cards-grid .card-btn:hover { background: var(--fb-red) !important; color: #fff !important; }
+  .hero-cards-grid h3 { font-size: 1.25rem !important; line-height: 1.35 !important; }
   .hero-search-form { background: transparent !important; border: none !important; box-shadow: none !important; }
   .hero-search-btn { background: var(--fb-navy) !important; }
   .hero-search-btn:hover { background: var(--fb-red) !important; }
@@ -299,8 +299,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         <div class="feature-card white">
           <div class="card-text">
             <span class="card-tag" data-i18n="hero.tag_hosting">HOSTING & DOMAIN</span>
-            <h3 data-i18n="hero.hosting_title" style="font-size:1.1rem;">Fast & Reliable Hosting with Free Domain!</h3>
-            <a href="hosting" class="card-btn" data-i18n="hero.btn_get_started" style="font-size:0.82rem;">Get Started</a>
+            <h3 data-i18n="hero.hosting_title">Fast & Reliable Hosting with Free Domain!</h3>
+            <a href="hosting" class="card-btn" data-i18n="hero.btn_get_started">Get Started</a>
           </div>
           <img src="assets/img/hero-hosting.png" alt="Hosting Mockup" class="card-mockup-img">
         </div>
@@ -308,9 +308,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         <!-- Card 2: Websites -->
         <div class="feature-card teal">
           <div class="card-text">
-            <span class="card-tag" data-i18n="hero.tag_development" style="font-size:0.72rem;">WEB DEVELOPMENT</span>
-            <h3 data-i18n="hero.websites_title" style="font-size:1.1rem;">Custom Web & App Development</h3>
-            <a href="aiagents" class="card-btn" data-i18n="hero.btn_get_started" style="font-size:0.82rem;">Get Started</a>
+            <span class="card-tag" data-i18n="hero.tag_development">WEB DEVELOPMENT</span>
+            <h3 data-i18n="hero.websites_title">Custom Web & App Development</h3>
+            <a href="aiagents" class="card-btn" data-i18n="hero.btn_get_started">Get Started</a>
           </div>
           <img src="assets/img/hero-website.png" alt="Website Mockup" class="card-mockup-img">
         </div>
@@ -319,8 +319,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         <div class="feature-card white">
           <div class="card-text">
             <span class="card-tag" data-i18n="hero.tag_seo">SEO & MARKETING</span>
-            <h3 data-i18n="hero.seo_title" style="font-size:1.1rem;">Grow Your Business with Expert SEO!</h3>
-            <a href="seo" class="card-btn" data-i18n="hero.btn_explore" style="font-size:0.82rem;">Explore Plans</a>
+            <h3 data-i18n="hero.seo_title">Grow Your Business with Expert SEO!</h3>
+            <a href="seo" class="card-btn" data-i18n="hero.btn_explore">Explore Plans</a>
           </div>
           <img src="assets/img/hero-seo.png" alt="SEO Mockup" class="card-mockup-img">
         </div>
