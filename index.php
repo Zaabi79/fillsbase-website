@@ -155,8 +155,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .process-line { background: var(--fb-navy-soft) !important; }
 
   /* ── PRICING SECTION ── */
-  .pricing.special { background: var(--fb-white) !important; }
-  .pricing .wrapper .top-content { background: var(--fb-navy-light) !important; }
+  .pricing.special { background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important; }
+  .pricing .wrapper .top-content { background: rgba(255,255,255,0.85) !important; }
   .pricing .wrapper .list-info { background: var(--fb-navy) !important; }
   .pricing .wrapper.recommended .top-content { background: var(--fb-navy) !important; }
   .pricing .wrapper.recommended .title,
