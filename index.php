@@ -62,7 +62,7 @@ use WHMCS\Database\Capsule;
 $netPrice  = formatFillsbasePrice(getFillsbaseTldPrice('net'));
 $orgPrice  = formatFillsbasePrice(getFillsbaseTldPrice('org'));
 $infoPrice = formatFillsbasePrice(getFillsbaseTldPrice('info'));
-$mlPrice   = formatFillsbasePrice(getFillsbaseTldPrice('ml'));
+$comPrice  = formatFillsbasePrice(getFillsbaseTldPrice('com'));
 
 // Fetch Digital Business Ecosystem product prices (IDs 1-4)
 $basicPrice    = formatFillsbasePrice(getFillsbaseProductPrice(1, 'monthly'));
@@ -409,9 +409,9 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
             <span class="tld-name">.info</span>
             <span class="tld-price"><?php echo $infoPrice; ?> /an</span>
           </div>
-          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.ml').focus();">
-            <span class="tld-name">.ml</span>
-            <span class="tld-price"><?php echo $mlPrice; ?> /an</span>
+          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.com').focus();">
+            <span class="tld-name">.com</span>
+            <span class="tld-price"><?php echo $comPrice; ?> /an</span>
           </div>
         </div>
 
