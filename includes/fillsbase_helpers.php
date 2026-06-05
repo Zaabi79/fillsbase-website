@@ -17,9 +17,9 @@ function getFillsbaseCurrency() {
         if (!$currency) {
             // Fallback if no default found
             $currency = (object)[
-                'code' => 'FCFA',
-                'prefix' => '',
-                'suffix' => ' FCFA',
+                'code' => 'AED',
+                'prefix' => 'AED',
+                'suffix' => '',
                 'format' => 1
             ];
         }
