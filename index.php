@@ -299,9 +299,32 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
   .sol-sub { font-size:0.95rem; color:#666; max-width:520px; margin:0 auto; }
   .sol-card { border-radius:18px; border:1.5px solid #e8eaf0; background:#fff; overflow:hidden; display:flex; flex-direction:column; height:100%; transition:transform 0.26s ease, box-shadow 0.26s ease; }
   .sol-card:hover { transform:translateY(-6px); box-shadow:0 20px 48px rgba(27,54,115,0.12); }
-  .sol-card-img { position:relative; height:160px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-  .sol-card-img img { max-height:120px; max-width:80%; object-fit:contain; filter:drop-shadow(0 4px 12px rgba(0,0,0,0.12)); }
-  .sol-tag { position:absolute; top:12px; right:12px; padding:4px 12px; border-radius:50px; font-size:0.72rem; font-weight:700; color:#fff; display:flex; align-items:center; gap:5px; }
+  .sol-card-img { position:relative; height:200px; overflow:hidden; }
+  .sol-mockup-bar { position:absolute; top:0; left:0; right:0; height:22px; background:rgba(0,0,0,0.35); display:flex; align-items:center; padding:0 10px; gap:5px; z-index:2; }
+  .sol-mockup-bar span { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.35); }
+  .sol-mockup-bar span:first-child { background:#ff5f57; }
+  .sol-mockup-bar span:nth-child(2) { background:#febc2e; }
+  .sol-mockup-bar span:nth-child(3) { background:#28c840; }
+  .sol-screenshots { position:absolute; inset:22px 0 0; display:flex; align-items:flex-end; justify-content:center; gap:8px; padding:8px 10px 0; }
+  .sol-ss { border-radius:8px 8px 0 0; object-fit:cover; box-shadow:0 8px 24px rgba(0,0,0,0.35); transition:transform 0.3s ease; }
+  .sol-ss-main { width:58%; height:140px; }
+  .sol-ss-side { width:34%; height:110px; opacity:0.85; }
+  .sol-card:hover .sol-ss { transform:translateY(-4px); }
+  .sol-tag { position:absolute; top:30px; right:10px; padding:4px 11px; border-radius:50px; font-size:0.7rem; font-weight:700; color:#fff; display:flex; align-items:center; gap:5px; z-index:3; }
+  /* X Music visual */
+  .sol-music-vis { position:absolute; inset:22px 0 0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+  .sol-music-icon { width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; border:2px solid rgba(255,255,255,0.25); }
+  .sol-music-bars { display:flex; align-items:flex-end; gap:4px; height:36px; }
+  .sol-music-bars span { width:5px; border-radius:3px 3px 0 0; background:rgba(255,255,255,0.7); animation:solBeat 1.1s ease-in-out infinite; }
+  .sol-music-bars span:nth-child(1){height:14px;animation-delay:0s}
+  .sol-music-bars span:nth-child(2){height:28px;animation-delay:0.15s}
+  .sol-music-bars span:nth-child(3){height:20px;animation-delay:0.3s}
+  .sol-music-bars span:nth-child(4){height:36px;animation-delay:0.45s}
+  .sol-music-bars span:nth-child(5){height:22px;animation-delay:0.6s}
+  .sol-music-bars span:nth-child(6){height:30px;animation-delay:0.75s}
+  .sol-music-bars span:nth-child(7){height:16px;animation-delay:0.9s}
+  @keyframes solBeat { 0%,100%{transform:scaleY(1)}50%{transform:scaleY(0.4)} }
+  .sol-music-label { font-size:0.72rem; color:rgba(255,255,255,0.6); font-weight:600; letter-spacing:0.05em; }
   .sol-card-body { padding:20px 22px 22px; flex:1; display:flex; flex-direction:column; }
   .sol-card-title { font-size:1.2rem; font-weight:800; color:#1B3673; margin-bottom:8px; }
   .sol-card-desc { font-size:0.85rem; color:#666; line-height:1.6; margin-bottom:14px; flex:1; }
@@ -972,16 +995,20 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         <!-- X Dairy -->
         <div class="col-md-4">
           <div class="sol-card">
-            <div class="sol-card-img" style="background:linear-gradient(135deg,#dcfce7 0%,#bbf7d0 100%);">
-              <img src="assets/img/xdairy.png" alt="X Dairy">
+            <div class="sol-card-img" style="background:linear-gradient(150deg,#0f4c2a 0%,#166534 100%);">
+              <div class="sol-mockup-bar"><span></span><span></span><span></span></div>
+              <div class="sol-screenshots">
+                <img class="sol-ss sol-ss-main" src="assets/img/xdairy.png" alt="X Dairy">
+                <img class="sol-ss sol-ss-side" src="assets/img/x dairy milk.png" alt="X Dairy Milk">
+              </div>
               <span class="sol-tag" style="background:#16a34a;"><i class="fas fa-microchip"></i> AI-Powered</span>
             </div>
             <div class="sol-card-body">
               <h3 class="sol-card-title">X Dairy</h3>
-              <p class="sol-card-desc">Smart dairy farm management — track animals, milk, breeding & finances from one AI dashboard.</p>
+              <p class="sol-card-desc">Smart dairy farm management — track animals, milk, breeding &amp; finances from one AI dashboard.</p>
               <ul class="sol-card-feats">
                 <li><i class="fas fa-check" style="color:#16a34a;"></i> 10+ Modules · Herd Health AI</li>
-                <li><i class="fas fa-check" style="color:#16a34a;"></i> Milk, Finance & Stock Management</li>
+                <li><i class="fas fa-check" style="color:#16a34a;"></i> Milk, Finance &amp; Stock Management</li>
               </ul>
               <div class="sol-card-btns">
                 <a href="https://xdairy.fillsbase.com/" target="_blank" class="sol-cta-primary"><i class="fas fa-play"></i> Live Demo</a>
@@ -994,13 +1021,20 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         <!-- X Music -->
         <div class="col-md-4">
           <div class="sol-card">
-            <div class="sol-card-img" style="background:linear-gradient(135deg,#ede9fe 0%,#ddd6fe 100%);">
-              <img src="assets/img/xdairy.png" alt="X Music">
+            <div class="sol-card-img" style="background:linear-gradient(150deg,#2e1065 0%,#4c1d95 100%);">
+              <div class="sol-mockup-bar"><span></span><span></span><span></span></div>
+              <div class="sol-music-vis">
+                <div class="sol-music-icon"><i class="fas fa-music"></i></div>
+                <div class="sol-music-bars">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="sol-music-label">Your own streaming platform</p>
+              </div>
               <span class="sol-tag" style="background:#7c3aed;"><i class="fas fa-music"></i> Streaming</span>
             </div>
             <div class="sol-card-body">
               <h3 class="sol-card-title">X Music</h3>
-              <p class="sol-card-desc">Launch your own Spotify-like platform with AI recommendations, live concerts & full monetization.</p>
+              <p class="sol-card-desc">Launch your own Spotify-like platform with AI recommendations, live concerts &amp; full monetization.</p>
               <ul class="sol-card-feats">
                 <li><i class="fas fa-check" style="color:#7c3aed;"></i> Android, iOS &amp; Web apps</li>
                 <li><i class="fas fa-check" style="color:#7c3aed;"></i> Live streaming · Ads &amp; Subscriptions</li>
@@ -1016,13 +1050,17 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         <!-- X Booking -->
         <div class="col-md-4">
           <div class="sol-card">
-            <div class="sol-card-img" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);">
-              <img src="assets/img/xbooking.png" alt="X Booking">
+            <div class="sol-card-img" style="background:linear-gradient(150deg,#0c2d6b 0%,#1e40af 100%);">
+              <div class="sol-mockup-bar"><span></span><span></span><span></span></div>
+              <div class="sol-screenshots">
+                <img class="sol-ss sol-ss-main" src="assets/img/xbookinghome.png" alt="X Booking">
+                <img class="sol-ss sol-ss-side" src="assets/img/xbookinghotelsearch.png" alt="X Booking Hotels">
+              </div>
               <span class="sol-tag" style="background:#2563eb;"><i class="fas fa-calendar-check"></i> Travel</span>
             </div>
             <div class="sol-card-body">
               <h3 class="sol-card-title">X Booking</h3>
-              <p class="sol-card-desc">Hotels, Tours, Cars, Flights, Boats & Visa — all in one AI-powered travel management platform.</p>
+              <p class="sol-card-desc">Hotels, Tours, Cars, Flights, Boats &amp; Visa — all in one AI-powered travel management platform.</p>
               <ul class="sol-card-feats">
                 <li><i class="fas fa-check" style="color:#2563eb;"></i> 9+ Booking categories in one place</li>
                 <li><i class="fas fa-check" style="color:#2563eb;"></i> Multi-currency · AI revenue analytics</li>
