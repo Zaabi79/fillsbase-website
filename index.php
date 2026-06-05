@@ -410,7 +410,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   <style>
     .usecases-section { padding: 90px 0 70px; background: #fff; overflow: visible; }
     .uc-heading-row { margin-bottom: 44px; }
-    .uc-main-title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; color: #111; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+    .uc-main-title { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800; color: #111; line-height: 1.2; margin: 0; letter-spacing: -0.01em; white-space: nowrap; }
     .uc-scroll-outer { width: 100%; overflow: hidden; }
     .usecases-scroll { padding-left: max(24px, calc((100vw - 1140px) / 2)); padding-right: 24px; }
     .usecases-scroll { display:flex; gap:18px; overflow-x:auto; padding-bottom:8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
@@ -430,8 +430,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     .usecase-card:hover { transform: translateY(-8px); box-shadow: 0 28px 64px rgba(0,0,0,0.22); }
     .usecase-card .uc-bg {
       position: absolute; inset: 0;
-      background-size: cover;
-      background-position: center top;
+      background-size: cover !important;
+      background-position: center center !important;
       transition: transform 0.55s ease;
     }
     .usecase-card:hover .uc-bg { transform: scale(1.07); }
@@ -489,7 +489,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   <section class="usecases-section">
     <div class="container">
       <div class="uc-heading-row">
-        <h2 class="uc-main-title">Who is Fillsbase for?<br>See for yourself</h2>
+        <h2 class="uc-main-title">Who is Fillsbase for? See for yourself</h2>
       </div>
     </div>
     <div class="uc-scroll-outer">
@@ -507,7 +507,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Ecommerce -->
         <a href="ecommerce" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/ecommerce_platform_bg.png'); background-color:#C83E3C;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/ecommerce_platform_bg.png'); background-color:#C83E3C; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -518,7 +518,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Classifieds -->
         <a href="classifieds" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/classifieds_hero_bg.png'); background-color:#0f766e;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/classifieds_hero_bg.png'); background-color:#0f766e; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -529,7 +529,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Blog & News -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner01.jpg'); background-color:#374151;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/topbanner03.jpg'); background-color:#374151; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Blog & News</p>
@@ -539,7 +539,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- eLearning -->
         <a href="elearning" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/elearning_hero_bg.png'); background-color:#1B3673;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/elearning_hero_bg.png'); background-color:#1B3673; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">eLearning</p>
@@ -549,7 +549,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Portfolio -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner04.jpg'); background-color:#9333ea;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/topbanner05.jpg'); background-color:#9333ea; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Portfolio</p>
@@ -559,7 +559,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Event Platform -->
         <a href="event-platform" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png'); background-color:#C83E3C;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png'); background-color:#C83E3C; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Event Platform</p>
@@ -569,7 +569,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Food & Grocery -->
         <a href="food-grocery" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/food_grocery_bg.png'); background-color:#16a34a;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/food_grocery_bg.png'); background-color:#16a34a; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -580,7 +580,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Radio Streaming -->
         <a href="radio-streaming" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner10.jpg'); background-color:#0ea5e9;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/topbanner04.jpg'); background-color:#0ea5e9; background-size:cover; background-position:center;"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Radio Streaming</p>
