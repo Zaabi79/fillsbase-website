@@ -190,11 +190,51 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .section-heading { color: var(--fb-navy) !important; }
 
   /* ── BUTTONS ── */
-  .btn-default-pink-fill, .btn-default-yellow-fill { background: var(--fb-red) !important; border-color: var(--fb-red) !important; color: #fff !important; }
-  .btn-default-pink-fill:hover, .btn-default-yellow-fill:hover { background: var(--fb-navy) !important; border-color: var(--fb-navy) !important; }
+  .btn-default-pink-fill, .btn-default-yellow-fill {
+    background: var(--fb-red) !important;
+    border-color: var(--fb-red) !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 0 8px 24px rgba(200,62,60,0.25) !important;
+    transition: all 0.25s ease !important;
+  }
+  .btn-default-pink-fill:hover, .btn-default-yellow-fill:hover {
+    background: var(--fb-navy) !important;
+    border-color: var(--fb-navy) !important;
+    box-shadow: 0 12px 32px rgba(27,54,115,0.3) !important;
+    transform: translateY(-2px) !important;
+  }
   .sol-btn-primary { background: linear-gradient(135deg, var(--fb-red), #a32f2d) !important; }
   .sol-btn-ghost { border-color: var(--fb-navy-soft) !important; color: var(--fb-navy) !important; }
   .sol-btn-ghost:hover { border-color: var(--fb-red) !important; color: var(--fb-red) !important; }
+
+  /* ── HERO CTA BUTTONS ── */
+  .hero-cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:28px; margin-bottom:8px; }
+  .hero-btn-primary {
+    display:inline-flex; align-items:center; gap:10px;
+    background: #1B3673;
+    color:#fff !important; text-decoration:none;
+    padding:14px 32px; border-radius:50px;
+    font-weight:700; font-size:1rem;
+    box-shadow:0 8px 28px rgba(27,54,115,0.3);
+    transition:all 0.25s ease;
+  }
+  .hero-btn-primary:hover { background:#C83E3C; box-shadow:0 12px 36px rgba(200,62,60,0.4); transform:translateY(-3px); color:#fff !important; }
+  .hero-btn-ghost {
+    display:inline-flex; align-items:center; gap:10px;
+    background:transparent;
+    color:#1B3673 !important; text-decoration:none;
+    padding:13px 30px; border-radius:50px;
+    font-weight:700; font-size:1rem;
+    border:2px solid rgba(27,54,115,0.35);
+    transition:all 0.25s ease;
+  }
+  .hero-btn-ghost:hover { border-color:#C83E3C; color:#C83E3C !important; transform:translateY(-3px); }
 
   /* ── PILLS / BADGES ── */
   .badge.bg-pink { background: var(--fb-red) !important; }
@@ -252,6 +292,11 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
         <h1 class="hero-main-title" data-i18n="hero.main_title">Grow Your Business with Our Digital Business Ecosystem</h1>
         <p class="hero-sub-title" data-i18n="hero.sub_title" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:clamp(0.55rem,1.1vw,1rem);">Website &bull; Domain &bull; Hosting &bull; CRM &bull; Business Dashboard &bull; SEO &bull; Booking &bull; Mobile Apps &bull; Social Media &bull; Custom Software</p>
+        <!-- Hero CTA Buttons -->
+        <div class="hero-cta-btns">
+          <a href="hosting" class="hero-btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+          <a href="#solutions" class="hero-btn-ghost">Discover More <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
       <!-- Domain Search Wrapper -->
       <div class="hero-domain-wrapper">
@@ -297,7 +342,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
           <div class="card-text">
             <span class="card-tag" data-i18n="hero.tag_hosting">HOSTING & DOMAIN</span>
             <h3 data-i18n="hero.hosting_title">Fast & Reliable Hosting with Free Domain!</h3>
-            <a href="hosting" class="card-btn" data-i18n="hero.btn_get_started">Get Started</a>
+            <a href="hosting" class="card-btn" data-i18n="hero.btn_get_started">Get Started <i class="fas fa-arrow-right"></i></a>
           </div>
           <img src="assets/img/hero-hosting.png" alt="Hosting Mockup" class="card-mockup-img">
         </div>
@@ -307,7 +352,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
           <div class="card-text">
             <span class="card-tag" data-i18n="hero.tag_development">WEB DEVELOPMENT</span>
             <h3 data-i18n="hero.websites_title">Custom Web & App Development</h3>
-            <a href="aiagents" class="card-btn" data-i18n="hero.btn_get_started">Get Started</a>
+            <a href="aiagents" class="card-btn" data-i18n="hero.btn_get_started">Get Started <i class="fas fa-arrow-right"></i></a>
           </div>
           <img src="assets/img/hero-website.png" alt="Website Mockup" class="card-mockup-img">
         </div>
@@ -317,7 +362,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
           <div class="card-text">
             <span class="card-tag" data-i18n="hero.tag_seo">SEO & MARKETING</span>
             <h3 data-i18n="hero.seo_title">Grow Your Business with Expert SEO!</h3>
-            <a href="seo" class="card-btn" data-i18n="hero.btn_explore">Explore Plans</a>
+            <a href="seo" class="card-btn" data-i18n="hero.btn_explore">Explore Plans <i class="fas fa-arrow-right"></i></a>
           </div>
           <img src="assets/img/hero-seo.png" alt="SEO Mockup" class="card-mockup-img">
         </div>
@@ -560,7 +605,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     .sol-number { font-size:5rem;font-weight:900;line-height:1;opacity:0.05;position:absolute;top:-10px;right:20px;letter-spacing:-4px; }
   </style>
 
-  <section class="sol-section">
+  <section class="sol-section" id="solutions">
     <div class="container">
 
       <!-- Header -->
