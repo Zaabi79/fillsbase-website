@@ -21,8 +21,22 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /home/fillsbase/public_html
+            # Backup WHMCS folders not tracked in git
+            [ -d admin ]       && cp -r admin       /tmp/whmcs_admin_bak       || true
+            [ -d vendor ]      && cp -r vendor      /tmp/whmcs_vendor_bak      || true
+            [ -d ioncube ]     && cp -r ioncube     /tmp/whmcs_ioncube_bak     || true
+            [ -f configuration.php ] && cp configuration.php /tmp/whmcs_config_bak.php || true
+            # Deploy from git
             git fetch origin main
             git reset --hard origin/main
+            # Restore WHMCS folders
+            [ -d /tmp/whmcs_admin_bak ]   && cp -rn /tmp/whmcs_admin_bak/. admin/     || true
+            [ -d /tmp/whmcs_vendor_bak ]  && cp -rn /tmp/whmcs_vendor_bak/. vendor/   || true
+            [ -d /tmp/whmcs_ioncube_bak ] && cp -rn /tmp/whmcs_ioncube_bak/. ioncube/ || true
+            [ -f /tmp/whmcs_config_bak.php ] && cp /tmp/whmcs_config_bak.php configuration.php || true
+            # Cleanup temp backups
+            rm -rf /tmp/whmcs_admin_bak /tmp/whmcs_vendor_bak /tmp/whmcs_ioncube_bak /tmp/whmcs_config_bak.php
+            # Set permissions
             find . -type f -not -path './.git/*' -exec chmod 644 {} \;
             find . -type d -not -path './.git/*' -exec chmod 755 {} \;
             chown -R fillsbase:fillsbase .
