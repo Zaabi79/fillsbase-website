@@ -280,7 +280,6 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   <header id="header"><?php include __DIR__ . '/header.php'; ?></header>
   <!-- ***** HERO NEW ***** -->
   <section class="main-container hero-new">
-    <canvas id="heroParticleCanvas"></canvas>
     <div class="hero-bg-orb hero-orb-1"></div>
     <div class="hero-bg-orb hero-orb-2"></div>
     <div class="hero-bg-orb hero-orb-3"></div>
@@ -369,7 +368,6 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Card 4: AI -->
         <div class="feature-card ai-card">
-          <canvas class="ai-particles-canvas" id="aiCanvas"></canvas>
           <div class="card-text">
             <span class="card-tag ai-tag">
               <i class="fas fa-microchip me-1"></i> AI &amp; AUTOMATION
@@ -1153,115 +1151,5 @@ $(document).ready(function() {
         });
     });
     </script>
-<script>
-/* ── Hero section full-background particle network ── */
-(function() {
-  var canvas = document.getElementById('heroParticleCanvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var W, H, dots = [];
-
-  function resize() {
-    var sec = canvas.parentElement;
-    W = canvas.width  = sec.offsetWidth;
-    H = canvas.height = sec.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', function(){ resize(); dots=[]; init(); });
-
-  function init() {
-    dots = [];
-    var count = Math.floor(W / 18);
-    for (var i = 0; i < count; i++) {
-      dots.push({
-        x:  Math.random() * W,
-        y:  Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.45,
-        vy: (Math.random() - 0.5) * 0.45,
-        r:  Math.random() * 2.2 + 0.8
-      });
-    }
-  }
-  init();
-
-  var mouse = {x: -9999, y: -9999};
-  canvas.parentElement.addEventListener('mousemove', function(e) {
-    var r = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - r.left;
-    mouse.y = e.clientY - r.top;
-  });
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    var LINK = 130, REPEL = 80;
-
-    dots.forEach(function(d) {
-      /* mouse repel */
-      var mx = d.x - mouse.x, my = d.y - mouse.y;
-      var md = Math.sqrt(mx*mx + my*my);
-      if (md < REPEL) {
-        var force = (REPEL - md) / REPEL * 0.6;
-        d.vx += (mx / md) * force;
-        d.vy += (my / md) * force;
-      }
-      /* damping */
-      d.vx *= 0.99; d.vy *= 0.99;
-      d.x += d.vx; d.y += d.vy;
-      if (d.x < 0 || d.x > W) d.vx *= -1;
-      if (d.y < 0 || d.y > H) d.vy *= -1;
-
-      ctx.beginPath();
-      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(80,210,158,0.65)';
-      ctx.fill();
-    });
-
-    for (var i = 0; i < dots.length; i++) {
-      for (var j = i + 1; j < dots.length; j++) {
-        var dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
-        var dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < LINK) {
-          ctx.beginPath();
-          ctx.moveTo(dots[i].x, dots[i].y);
-          ctx.lineTo(dots[j].x, dots[j].y);
-          ctx.strokeStyle = 'rgba(80,210,158,' + (0.2 * (1 - dist/LINK)) + ')';
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-
-/* ── AI card mini canvas ── */
-(function() {
-  var canvas = document.getElementById('aiCanvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var W, H, dots = [];
-  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
-  resize();
-  for (var i = 0; i < 30; i++) {
-    dots.push({ x: Math.random()*W, y: Math.random()*H, vx:(Math.random()-.5)*.5, vy:(Math.random()-.5)*.5, r:Math.random()*1.8+.6 });
-  }
-  (function draw() {
-    ctx.clearRect(0,0,W,H);
-    dots.forEach(function(d){
-      d.x+=d.vx; d.y+=d.vy;
-      if(d.x<0||d.x>W)d.vx*=-1; if(d.y<0||d.y>H)d.vy*=-1;
-      ctx.beginPath(); ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(80,210,158,0.8)'; ctx.fill();
-    });
-    for(var i=0;i<dots.length;i++) for(var j=i+1;j<dots.length;j++){
-      var dx=dots[i].x-dots[j].x,dy=dots[i].y-dots[j].y,dist=Math.sqrt(dx*dx+dy*dy);
-      if(dist<80){ ctx.beginPath(); ctx.moveTo(dots[i].x,dots[i].y); ctx.lineTo(dots[j].x,dots[j].y);
-        ctx.strokeStyle='rgba(80,210,158,'+(0.25*(1-dist/80))+')'; ctx.lineWidth=.7; ctx.stroke(); }
-    }
-    requestAnimationFrame(draw);
-  })();
-})();
-</script>
 </body>
 </html>

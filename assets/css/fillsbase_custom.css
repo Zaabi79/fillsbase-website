@@ -106,46 +106,30 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     position: relative;
 }
 
-/* Full-section particle canvas */
-#heroParticleCanvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.45;
-}
 
-/* Glowing ambient orbs behind the whole section */
+/* Glowing ambient orbs behind the whole section — static, no animation */
 .hero-bg-orb {
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
-    filter: blur(80px);
+    filter: blur(60px);
+    opacity: 0.8;
 }
 .hero-orb-1 {
     width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(45,79,126,0.25) 0%, transparent 70%);
     top: 0; right: -50px; left: auto;
-    animation: orb-float 8s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
     width: 500px; height: 500px;
     background: radial-gradient(circle, rgba(249,160,100,0.30) 0%, transparent 70%);
     bottom: -100px; right: 10%;
-    animation: orb-float 10s ease-in-out infinite alternate-reverse;
 }
 .hero-orb-3 {
     width: 350px; height: 350px;
     background: radial-gradient(circle, rgba(220,130,200,0.22) 0%, transparent 70%);
     top: 20%; right: 30%; left: auto;
-    animation: orb-float 12s ease-in-out infinite alternate;
-}
-@keyframes orb-float {
-    0%   { transform: translate(0,0) scale(1); }
-    100% { transform: translate(30px, 20px) scale(1.1); }
 }
 
 .hero-domain-wrapper {
@@ -468,49 +452,21 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     border-radius: 50%;
     filter: blur(50px);
     pointer-events: none;
-    animation: ai-pulse 4s ease-in-out infinite alternate;
 }
 .ai-orb-1 {
-    width: 180px;
-    height: 180px;
+    width: 180px; height: 180px;
     background: radial-gradient(circle, rgba(80,210,158,0.25) 0%, transparent 70%);
-    bottom: -40px;
-    right: -40px;
+    bottom: -40px; right: -40px;
 }
 .ai-orb-2 {
-    width: 120px;
-    height: 120px;
+    width: 120px; height: 120px;
     background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);
-    top: 20px;
-    right: 30px;
-    animation-delay: 2s;
-}
-@keyframes ai-pulse {
-    0%   { opacity: 0.5; transform: scale(1); }
-    100% { opacity: 1;   transform: scale(1.15); }
+    top: 20px; right: 30px;
 }
 .ai-circuit {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 220px;
-    height: 220px;
-    opacity: 0.4;
-    pointer-events: none;
-    animation: ai-spin 30s linear infinite;
-}
-@keyframes ai-spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-.ai-particles-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.5;
+    position: absolute; bottom: -20px; right: -20px;
+    width: 220px; height: 220px;
+    opacity: 0.4; pointer-events: none;
 }
 .feature-card.ai-card .card-text {
     position: relative;
