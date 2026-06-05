@@ -410,27 +410,82 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
   <!-- ***** WHO IS FILLSBASE FOR ***** -->
   <style>
-    .usecases-section { padding: 100px 0 80px; background: #fff; }
-    .usecases-section .section-label { display:inline-flex; align-items:center; gap:8px; background:rgba(200,62,60,0.08); color:#C83E3C; border-radius:50px; padding:6px 18px; font-size:0.82rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:20px; }
-    .usecases-section h2 { font-size:clamp(1.9rem,3.5vw,2.8rem); font-weight:800; color:#1B3673; line-height:1.2; margin-bottom:12px; }
-    .usecases-section .section-sub { color:#6b7a99; font-size:1rem; margin-bottom:50px; }
-    .usecases-scroll { display:flex; gap:20px; overflow-x:auto; padding-bottom:16px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    .usecases-section { padding: 90px 0 70px; background: #fff; }
+    .usecases-section .section-label { display:inline-flex; align-items:center; gap:8px; background:rgba(200,62,60,0.08); color:#C83E3C; border-radius:50px; padding:6px 18px; font-size:0.82rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:18px; }
+    .usecases-section h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; color:#1B3673; line-height:1.2; margin-bottom:10px; }
+    .usecases-section .section-sub { color:#6b7a99; font-size:1rem; margin-bottom:48px; }
+    .usecases-scroll { display:flex; gap:18px; overflow-x:auto; padding-bottom:8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
     .usecases-scroll::-webkit-scrollbar { display:none; }
-    .usecase-card { flex:0 0 260px; height:340px; border-radius:20px; position:relative; overflow:hidden; cursor:pointer; scroll-snap-align:start; text-decoration:none; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-    .usecase-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(0,0,0,0.18); }
-    .usecase-card .uc-bg { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform 0.5s ease; }
-    .usecase-card:hover .uc-bg { transform:scale(1.06); }
-    .usecase-card .uc-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,15,40,0.88) 0%, rgba(10,15,40,0.3) 50%, transparent 100%); }
-    .usecase-card .uc-badge { position:absolute; top:16px; right:16px; background:#C83E3C; color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:0.08em; padding:3px 9px; border-radius:50px; text-transform:uppercase; }
-    .usecase-card .uc-icon { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:64px; height:64px; background:rgba(255,255,255,0.12); border:1.5px solid rgba(255,255,255,0.25); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#fff; backdrop-filter:blur(4px); transition:all 0.3s ease; }
-    .usecase-card:hover .uc-icon { background:rgba(200,62,60,0.7); border-color:rgba(200,62,60,0.8); transform:translate(-50%,-50%) scale(1.1); }
-    .usecase-card .uc-info { position:absolute; bottom:0; left:0; right:0; padding:24px 22px; }
-    .usecase-card .uc-title { font-size:1.15rem; font-weight:700; color:#fff; margin:0 0 4px; line-height:1.3; }
-    .usecase-card .uc-desc { font-size:0.8rem; color:rgba(255,255,255,0.75); margin:0; line-height:1.5; max-height:0; overflow:hidden; transition:max-height 0.35s ease, opacity 0.35s ease; opacity:0; }
-    .usecase-card:hover .uc-desc { max-height:60px; opacity:1; }
-    .usecases-dots { display:flex; justify-content:center; gap:8px; margin-top:28px; }
-    .usecases-dots span { width:8px; height:8px; border-radius:50%; background:rgba(27,54,115,0.2); cursor:pointer; transition:all 0.2s; }
-    .usecases-dots span.active { background:#1B3673; width:24px; border-radius:50px; }
+    .usecase-card {
+      flex: 0 0 280px;
+      height: 380px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      scroll-snap-align: start;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.32s ease, box-shadow 0.32s ease;
+    }
+    .usecase-card:hover { transform: translateY(-8px); box-shadow: 0 28px 64px rgba(0,0,0,0.22); }
+    .usecase-card .uc-bg {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center top;
+      transition: transform 0.55s ease;
+    }
+    .usecase-card:hover .uc-bg { transform: scale(1.07); }
+    /* always-on dark overlay, stronger at bottom */
+    .usecase-card .uc-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(8,12,35,0.92) 0%,
+        rgba(8,12,35,0.45) 45%,
+        rgba(8,12,35,0.10) 100%);
+      transition: background 0.32s ease;
+    }
+    .usecase-card:hover .uc-overlay {
+      background: linear-gradient(to top,
+        rgba(8,12,35,0.96) 0%,
+        rgba(8,12,35,0.55) 55%,
+        rgba(8,12,35,0.18) 100%);
+    }
+    .usecase-card .uc-badge {
+      position: absolute; top: 14px; right: 14px;
+      background: #C83E3C; color: #fff;
+      font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em;
+      padding: 3px 10px; border-radius: 50px; text-transform: uppercase;
+      z-index: 3;
+    }
+    .usecase-card .uc-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 26px 22px 24px;
+      z-index: 3;
+    }
+    .usecase-card .uc-title {
+      font-size: 1.18rem; font-weight: 700; color: #fff;
+      margin: 0 0 6px; line-height: 1.3;
+    }
+    .usecase-card .uc-desc {
+      font-size: 0.82rem; color: rgba(255,255,255,0.78);
+      margin: 0; line-height: 1.55;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.38s ease, opacity 0.38s ease;
+      opacity: 0;
+    }
+    .usecase-card:hover .uc-desc { max-height: 72px; opacity: 1; }
+    .usecases-nav { display:flex; justify-content:center; align-items:center; gap:12px; margin-top:32px; }
+    .usecases-nav button {
+      width:36px; height:36px; border-radius:50%; border:2px solid rgba(27,54,115,0.2);
+      background:#fff; color:#1B3673; cursor:pointer; font-size:0.9rem;
+      display:flex; align-items:center; justify-content:center;
+      transition:all 0.2s;
+    }
+    .usecases-nav button:hover { background:#1B3673; color:#fff; border-color:#1B3673; }
+    .usecases-dots { display:flex; gap:7px; align-items:center; }
+    .usecases-dots span { width:7px; height:7px; border-radius:50%; background:rgba(27,54,115,0.2); cursor:pointer; transition:all 0.2s; }
+    .usecases-dots span.active { background:#1B3673; width:22px; border-radius:50px; }
   </style>
   <section class="usecases-section">
     <div class="container">
@@ -443,9 +498,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Website Creation -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#1B3673 0%,#2d5bb5 100%);"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/hero-website.png'); background-color:#1B3673;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-globe"></i></div>
           <div class="uc-info">
             <p class="uc-title">Website Creation</p>
             <p class="uc-desc">Professional websites built to convert visitors into customers.</p>
@@ -454,9 +508,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Fashion Store -->
         <a href="ecommerce" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#7c3aed 0%,#c026d3 100%);"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/ai_merchandising_fashion_1778941238829.png'); background-color:#7c3aed; background-position:center center;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-tshirt"></i></div>
           <div class="uc-info">
             <p class="uc-title">Fashion Store</p>
             <p class="uc-desc">Stylish online stores for clothing, accessories & lifestyle brands.</p>
@@ -465,10 +518,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Ecommerce -->
         <a href="ecommerce" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#C83E3C 0%,#f97316 100%);"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/ecommerce_platform_bg.png'); background-color:#C83E3C;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
-          <div class="uc-icon"><i class="fas fa-shopping-cart"></i></div>
           <div class="uc-info">
             <p class="uc-title">Ecommerce</p>
             <p class="uc-desc">Full-featured online shops with payments, inventory & analytics.</p>
@@ -476,11 +528,10 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
         <!-- Classifieds -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#0f766e 0%,#0891b2 100%);"></div>
+        <a href="classifieds" class="usecase-card">
+          <div class="uc-bg" style="background-image:url('assets/img/classifieds_hero_bg.png'); background-color:#0f766e;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
-          <div class="uc-icon"><i class="fas fa-list-alt"></i></div>
           <div class="uc-info">
             <p class="uc-title">Classifieds</p>
             <p class="uc-desc">Marketplace platforms for buying, selling and listing anything.</p>
@@ -489,9 +540,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Blog & News -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#374151 0%,#6b7280 100%);"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner01.jpg'); background-color:#374151;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-newspaper"></i></div>
           <div class="uc-info">
             <p class="uc-title">Blog & News</p>
             <p class="uc-desc">Content-rich news portals and blogs with SEO built in.</p>
@@ -499,10 +549,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
         <!-- eLearning -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#1B3673 0%,#0f766e 100%);"></div>
+        <a href="elearning" class="usecase-card">
+          <div class="uc-bg" style="background-image:url('assets/img/elearning_hero_bg.png'); background-color:#1B3673;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-graduation-cap"></i></div>
           <div class="uc-info">
             <p class="uc-title">eLearning</p>
             <p class="uc-desc">Online course platforms with video lessons, quizzes & certificates.</p>
@@ -511,9 +560,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
         <!-- Portfolio -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#9333ea 0%,#1B3673 100%);"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner04.jpg'); background-color:#9333ea;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-briefcase"></i></div>
           <div class="uc-info">
             <p class="uc-title">Portfolio</p>
             <p class="uc-desc">Stunning personal and agency portfolios that win clients.</p>
@@ -521,10 +569,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
         <!-- Event Platform -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#C83E3C 0%,#9333ea 100%);"></div>
+        <a href="event-platform" class="usecase-card">
+          <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png'); background-color:#C83E3C;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-calendar-alt"></i></div>
           <div class="uc-info">
             <p class="uc-title">Event Platform</p>
             <p class="uc-desc">Ticketing, RSVP & event management for any scale.</p>
@@ -532,11 +579,10 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
         <!-- Food & Grocery -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#16a34a 0%,#ca8a04 100%);"></div>
+        <a href="food-grocery" class="usecase-card">
+          <div class="uc-bg" style="background-image:url('assets/img/food_grocery_bg.png'); background-color:#16a34a;"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
-          <div class="uc-icon"><i class="fas fa-utensils"></i></div>
           <div class="uc-info">
             <p class="uc-title">Food & Grocery</p>
             <p class="uc-desc">Online ordering, delivery tracking & menu management systems.</p>
@@ -544,10 +590,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
         <!-- Radio Streaming -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background:linear-gradient(135deg,#0ea5e9 0%,#1B3673 100%);"></div>
+        <a href="radio-streaming" class="usecase-card">
+          <div class="uc-bg" style="background-image:url('assets/img/blog/topbanner10.jpg'); background-color:#0ea5e9;"></div>
           <div class="uc-overlay"></div>
-          <div class="uc-icon"><i class="fas fa-broadcast-tower"></i></div>
           <div class="uc-info">
             <p class="uc-title">Radio Streaming</p>
             <p class="uc-desc">Live audio streaming platforms with player & schedule pages.</p>
@@ -555,8 +600,13 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
       </div>
-      <div class="usecases-dots" id="usecasesDots">
-        <span class="active"></span><span></span><span></span><span></span><span></span>
+      <!-- Navigation -->
+      <div class="usecases-nav">
+        <button id="ucPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="usecases-dots" id="usecasesDots">
+          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <button id="ucNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -564,15 +614,21 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     (function(){
       var scroll = document.getElementById('usecasesScroll');
       var dots = document.querySelectorAll('#usecasesDots span');
+      var cardW = 280 + 18; // card width + gap
       if(!scroll) return;
-      scroll.addEventListener('scroll', function(){
-        var idx = Math.round(scroll.scrollLeft / (scroll.scrollWidth / dots.length));
+      function updateDots(){
+        var idx = Math.min(Math.round(scroll.scrollLeft / cardW), dots.length - 1);
         dots.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
-      });
+      }
+      scroll.addEventListener('scroll', updateDots);
       dots.forEach(function(d,i){
-        d.addEventListener('click', function(){
-          scroll.scrollTo({ left: i * (scroll.scrollWidth / dots.length), behavior:'smooth' });
-        });
+        d.addEventListener('click', function(){ scroll.scrollTo({ left: i * cardW, behavior:'smooth' }); });
+      });
+      document.getElementById('ucPrev').addEventListener('click', function(){
+        scroll.scrollBy({ left: -(cardW * 3), behavior:'smooth' });
+      });
+      document.getElementById('ucNext').addEventListener('click', function(){
+        scroll.scrollBy({ left: cardW * 3, behavior:'smooth' });
       });
     })();
   </script>
