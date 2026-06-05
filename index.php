@@ -59,10 +59,10 @@ require_once __DIR__ . '/includes/fillsbase_helpers.php';
 use WHMCS\Database\Capsule;
 
 // Fetch TLD prices
-$comPrice = formatFillsbasePrice(getFillsbaseTldPrice('com'));
-$mlPrice  = formatFillsbasePrice(getFillsbaseTldPrice('ml'));
-$snPrice  = formatFillsbasePrice(getFillsbaseTldPrice('sn'));
-$ciPrice  = formatFillsbasePrice(getFillsbaseTldPrice('ci'));
+$netPrice  = formatFillsbasePrice(getFillsbaseTldPrice('net'));
+$orgPrice  = formatFillsbasePrice(getFillsbaseTldPrice('org'));
+$infoPrice = formatFillsbasePrice(getFillsbaseTldPrice('info'));
+$mlPrice   = formatFillsbasePrice(getFillsbaseTldPrice('ml'));
 
 // Fetch Digital Business Ecosystem product prices (IDs 1-4)
 $basicPrice    = formatFillsbasePrice(getFillsbaseProductPrice(1, 'monthly'));
@@ -397,22 +397,21 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
           </div>
         </form>
         <div class="hero-tlds-list d-none d-lg-flex">
-          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.com').focus();">
-            <span class="badge-promo">-25%</span>
-            <span class="tld-name">.com</span>
-            <span class="tld-price"><?php echo $comPrice; ?> /an</span>
+          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.net').focus();">
+            <span class="tld-name">.net</span>
+            <span class="tld-price"><?php echo $netPrice; ?> /an</span>
+          </div>
+          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.org').focus();">
+            <span class="tld-name">.org</span>
+            <span class="tld-price"><?php echo $orgPrice; ?> /an</span>
+          </div>
+          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.info').focus();">
+            <span class="tld-name">.info</span>
+            <span class="tld-price"><?php echo $infoPrice; ?> /an</span>
           </div>
           <div class="tld-card" onclick="$('#domainSearchInput').val('domain.ml').focus();">
             <span class="tld-name">.ml</span>
             <span class="tld-price"><?php echo $mlPrice; ?> /an</span>
-          </div>
-          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.sn').focus();">
-            <span class="tld-name">.sn</span>
-            <span class="tld-price"><?php echo $snPrice; ?> /an</span>
-          </div>
-          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.ci').focus();">
-            <span class="tld-name">.ci</span>
-            <span class="tld-price"><?php echo $ciPrice; ?> /an</span>
           </div>
         </div>
 
