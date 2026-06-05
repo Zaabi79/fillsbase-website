@@ -408,6 +408,175 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     </div>
   </section>
 
+  <!-- ***** WHO IS FILLSBASE FOR ***** -->
+  <style>
+    .usecases-section { padding: 100px 0 80px; background: #fff; }
+    .usecases-section .section-label { display:inline-flex; align-items:center; gap:8px; background:rgba(200,62,60,0.08); color:#C83E3C; border-radius:50px; padding:6px 18px; font-size:0.82rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:20px; }
+    .usecases-section h2 { font-size:clamp(1.9rem,3.5vw,2.8rem); font-weight:800; color:#1B3673; line-height:1.2; margin-bottom:12px; }
+    .usecases-section .section-sub { color:#6b7a99; font-size:1rem; margin-bottom:50px; }
+    .usecases-scroll { display:flex; gap:20px; overflow-x:auto; padding-bottom:16px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    .usecases-scroll::-webkit-scrollbar { display:none; }
+    .usecase-card { flex:0 0 260px; height:340px; border-radius:20px; position:relative; overflow:hidden; cursor:pointer; scroll-snap-align:start; text-decoration:none; transition:transform 0.3s ease, box-shadow 0.3s ease; }
+    .usecase-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(0,0,0,0.18); }
+    .usecase-card .uc-bg { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform 0.5s ease; }
+    .usecase-card:hover .uc-bg { transform:scale(1.06); }
+    .usecase-card .uc-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,15,40,0.88) 0%, rgba(10,15,40,0.3) 50%, transparent 100%); }
+    .usecase-card .uc-badge { position:absolute; top:16px; right:16px; background:#C83E3C; color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:0.08em; padding:3px 9px; border-radius:50px; text-transform:uppercase; }
+    .usecase-card .uc-icon { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:64px; height:64px; background:rgba(255,255,255,0.12); border:1.5px solid rgba(255,255,255,0.25); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#fff; backdrop-filter:blur(4px); transition:all 0.3s ease; }
+    .usecase-card:hover .uc-icon { background:rgba(200,62,60,0.7); border-color:rgba(200,62,60,0.8); transform:translate(-50%,-50%) scale(1.1); }
+    .usecase-card .uc-info { position:absolute; bottom:0; left:0; right:0; padding:24px 22px; }
+    .usecase-card .uc-title { font-size:1.15rem; font-weight:700; color:#fff; margin:0 0 4px; line-height:1.3; }
+    .usecase-card .uc-desc { font-size:0.8rem; color:rgba(255,255,255,0.75); margin:0; line-height:1.5; max-height:0; overflow:hidden; transition:max-height 0.35s ease, opacity 0.35s ease; opacity:0; }
+    .usecase-card:hover .uc-desc { max-height:60px; opacity:1; }
+    .usecases-dots { display:flex; justify-content:center; gap:8px; margin-top:28px; }
+    .usecases-dots span { width:8px; height:8px; border-radius:50%; background:rgba(27,54,115,0.2); cursor:pointer; transition:all 0.2s; }
+    .usecases-dots span.active { background:#1B3673; width:24px; border-radius:50px; }
+  </style>
+  <section class="usecases-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label"><i class="fas fa-th-large"></i> What We Build</span>
+        <h2>Who is Fillsbase for?<br>See for yourself</h2>
+        <p class="section-sub">We build powerful digital products for every industry — pick yours.</p>
+      </div>
+      <div class="usecases-scroll" id="usecasesScroll">
+
+        <!-- Website Creation -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#1B3673 0%,#2d5bb5 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-globe"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Website Creation</p>
+            <p class="uc-desc">Professional websites built to convert visitors into customers.</p>
+          </div>
+        </a>
+
+        <!-- Fashion Store -->
+        <a href="ecommerce" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#7c3aed 0%,#c026d3 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-tshirt"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Fashion Store</p>
+            <p class="uc-desc">Stylish online stores for clothing, accessories & lifestyle brands.</p>
+          </div>
+        </a>
+
+        <!-- Ecommerce -->
+        <a href="ecommerce" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#C83E3C 0%,#f97316 100%);"></div>
+          <div class="uc-overlay"></div>
+          <span class="uc-badge">NEW</span>
+          <div class="uc-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Ecommerce</p>
+            <p class="uc-desc">Full-featured online shops with payments, inventory & analytics.</p>
+          </div>
+        </a>
+
+        <!-- Classifieds -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#0f766e 0%,#0891b2 100%);"></div>
+          <div class="uc-overlay"></div>
+          <span class="uc-badge">NEW</span>
+          <div class="uc-icon"><i class="fas fa-list-alt"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Classifieds</p>
+            <p class="uc-desc">Marketplace platforms for buying, selling and listing anything.</p>
+          </div>
+        </a>
+
+        <!-- Blog & News -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#374151 0%,#6b7280 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-newspaper"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Blog & News</p>
+            <p class="uc-desc">Content-rich news portals and blogs with SEO built in.</p>
+          </div>
+        </a>
+
+        <!-- eLearning -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#1B3673 0%,#0f766e 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">eLearning</p>
+            <p class="uc-desc">Online course platforms with video lessons, quizzes & certificates.</p>
+          </div>
+        </a>
+
+        <!-- Portfolio -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#9333ea 0%,#1B3673 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Portfolio</p>
+            <p class="uc-desc">Stunning personal and agency portfolios that win clients.</p>
+          </div>
+        </a>
+
+        <!-- Event Platform -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#C83E3C 0%,#9333ea 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Event Platform</p>
+            <p class="uc-desc">Ticketing, RSVP & event management for any scale.</p>
+          </div>
+        </a>
+
+        <!-- Food & Grocery -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#16a34a 0%,#ca8a04 100%);"></div>
+          <div class="uc-overlay"></div>
+          <span class="uc-badge">NEW</span>
+          <div class="uc-icon"><i class="fas fa-utensils"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Food & Grocery</p>
+            <p class="uc-desc">Online ordering, delivery tracking & menu management systems.</p>
+          </div>
+        </a>
+
+        <!-- Radio Streaming -->
+        <a href="web-development" class="usecase-card">
+          <div class="uc-bg" style="background:linear-gradient(135deg,#0ea5e9 0%,#1B3673 100%);"></div>
+          <div class="uc-overlay"></div>
+          <div class="uc-icon"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="uc-info">
+            <p class="uc-title">Radio Streaming</p>
+            <p class="uc-desc">Live audio streaming platforms with player & schedule pages.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="usecases-dots" id="usecasesDots">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var scroll = document.getElementById('usecasesScroll');
+      var dots = document.querySelectorAll('#usecasesDots span');
+      if(!scroll) return;
+      scroll.addEventListener('scroll', function(){
+        var idx = Math.round(scroll.scrollLeft / (scroll.scrollWidth / dots.length));
+        dots.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
+      });
+      dots.forEach(function(d,i){
+        d.addEventListener('click', function(){
+          scroll.scrollTo({ left: i * (scroll.scrollWidth / dots.length), behavior:'smooth' });
+        });
+      });
+    })();
+  </script>
+
   <!-- ***** PRICING TABLES ***** -->
   <section class="pricing special sec-up-slider bg-colorstyle specialposition">
     <div class="container">
