@@ -397,6 +397,10 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
           </div>
         </form>
         <div class="hero-tlds-list d-none d-lg-flex">
+          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.com').focus();">
+            <span class="tld-name">.com</span>
+            <span class="tld-price"><?php echo $comPrice; ?> /an</span>
+          </div>
           <div class="tld-card" onclick="$('#domainSearchInput').val('domain.net').focus();">
             <span class="tld-name">.net</span>
             <span class="tld-price"><?php echo $netPrice; ?> /an</span>
@@ -408,10 +412,6 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
           <div class="tld-card" onclick="$('#domainSearchInput').val('domain.info').focus();">
             <span class="tld-name">.info</span>
             <span class="tld-price"><?php echo $infoPrice; ?> /an</span>
-          </div>
-          <div class="tld-card" onclick="$('#domainSearchInput').val('domain.com').focus();">
-            <span class="tld-name">.com</span>
-            <span class="tld-price"><?php echo $comPrice; ?> /an</span>
           </div>
         </div>
 
