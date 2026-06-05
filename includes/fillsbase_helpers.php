@@ -58,8 +58,12 @@ function getFillsbaseProductPrice($pid, $cycle = 'annually') {
         ->where('currency', $currency->id)
         ->first();
         
-    if ($pricing && isset($pricing->$cycle) && $pricing->$cycle > 0) {
-        return $pricing->$cycle;
+    if ($pricing) {
+        if (isset($pricing->$cycle) && $pricing->$cycle > 0) return $pricing->$cycle;
+        // fallback: try monthly then annually
+        foreach (['monthly','annually','quarterly','semiannually'] as $c) {
+            if (isset($pricing->$c) && $pricing->$c > 0) return $pricing->$c;
+        }
     }
     return 0;
 }
@@ -75,10 +79,14 @@ function getFillsbaseTldPrice($tld) {
         ->join('tblpricing', 'tbldomainpricing.id', '=', 'tblpricing.relid')
         ->where('tblpricing.type', 'domainregister')
         ->where('tblpricing.currency', $currency->id)
-        ->select('tblpricing.msetupfee')
+        ->select('tblpricing.annually', 'tblpricing.msetupfee')
         ->first();
 
-    return $pricing ? $pricing->msetupfee : 0;
+    if ($pricing) {
+        if ($pricing->annually > 0) return $pricing->annually;
+        if ($pricing->msetupfee > 0) return $pricing->msetupfee;
+    }
+    return 0;
 }
 
 /**
