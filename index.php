@@ -168,15 +168,22 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .services.help         { padding-top: 60px !important; padding-bottom: 60px !important; }
 
   /* ── 1. HERO → USE-CASES: white, no separator ── */
-  .usecases-section { background: #fff !important; }
+  .usecases-section {
+    background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 50%,
+      #fdf3ec 75%,
+      #fde8d8 100%
+    ) !important;
+  }
 
-  /* ── 2. USE-CASES → PRICING: white fades into peach ── */
+  /* ── 2. PRICING: picks up peach from use-cases bottom ── */
   .pricing.special {
     background: linear-gradient(180deg,
-      #fdf6f0 0%,
-      #f9e8d8 40%,
-      #f5d5be 70%,
-      #faeee5 100%
+      #fde8d8 0%,
+      #f9ddc8 35%,
+      #f5d0b5 65%,
+      #fbe8d5 100%
     ) !important;
   }
   .pricing .wrapper .top-content { background: rgba(255,255,255,0.88) !important; }
@@ -185,38 +192,40 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .pricing .wrapper.recommended .title,
   .pricing .wrapper.recommended .price .discount { color: #fff !important; }
 
-  /* ── 3. PRICING → WHY CHOOSE: peach fades into soft red tint ── */
+  /* ── 3. WHY CHOOSE: continues peach → fades to white ── */
   .why-choose-new {
     background: linear-gradient(180deg,
-      #faeee8 0%,
-      #fff5f5 50%,
+      #fbe8d5 0%,
+      #fdf3ec 30%,
+      #fff8f5 65%,
       #ffffff 100%
     ) !important;
   }
-  .why-box { background: var(--fb-white) !important; border: 1px solid var(--fb-red-soft) !important; border-radius: 16px; }
+  .why-box { background: rgba(255,255,255,0.92) !important; border: 1px solid var(--fb-red-soft) !important; border-radius: 16px; }
   .why-box:hover { border-color: var(--fb-navy) !important; box-shadow: 0 12px 40px rgba(27,54,115,0.1) !important; }
   .why-box .icon-wrap { background: var(--fb-navy-light) !important; color: var(--fb-navy) !important; }
 
-  /* ── 4. WHY CHOOSE → SOLUTIONS: white into navy-light ── */
+  /* ── 4. SOLUTIONS: white → soft blue ── */
   .sol-section {
     background: linear-gradient(180deg,
       #ffffff 0%,
-      #f0f4ff 30%,
-      #e8f0fb 70%,
-      #f0f4ff 100%
+      #f0f4ff 25%,
+      #e8f0fb 60%,
+      #eef3fc 100%
     ) !important;
   }
   .sol-divider { background: linear-gradient(90deg, transparent, var(--fb-navy-soft), transparent) !important; }
 
-  /* ── 5. SOLUTIONS → HELP: navy-light into clean white ── */
+  /* ── 5. HELP: continues blue tint → fades to white ── */
   .services.help {
     background: linear-gradient(180deg,
-      #e8f0fb 0%,
-      #f4f7ff 40%,
+      #eef3fc 0%,
+      #f4f7ff 35%,
+      #fafbff 70%,
       #ffffff 100%
     ) !important;
   }
-  .help-container { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-soft) !important; border-radius: 16px; transition: all .25s; }
+  .help-container { background: rgba(255,255,255,0.95) !important; border: 1px solid var(--fb-navy-soft) !important; border-radius: 16px; transition: all .25s; }
   .help-container:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 32px rgba(200,62,60,0.1) !important; transform: translateY(-4px); }
 
   /* ── SERVICE / FEATURE CARDS ── */
@@ -447,16 +456,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
   <!-- ***** WHO IS FILLSBASE FOR ***** -->
   <style>
-    .usecases-section { padding: 60px 0 60px; background: #fff; overflow: visible; position: relative; }
-    /* fade from peach gradient hero into white */
-    .usecases-section::before {
-      content: '';
-      position: absolute;
-      top: -80px; left: 0; right: 0;
-      height: 80px;
-      background: linear-gradient(to bottom, transparent, #fff);
-      pointer-events: none;
-    }
+    .usecases-section { padding: 60px 0 40px; background: transparent; overflow: visible; position: relative; }
     .uc-heading-row { margin-bottom: 36px; }
     .uc-main-title { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800; color: #111; line-height: 1.2; margin: 0; letter-spacing: -0.01em; white-space: nowrap; }
     .uc-scroll-outer { width: 100%; overflow: hidden; }
@@ -522,7 +522,7 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
       opacity: 0;
     }
     .usecase-card:hover .uc-desc { max-height: 72px; opacity: 1; }
-    .usecases-nav { display:flex; justify-content:center; align-items:center; gap:12px; margin-top:32px; }
+    .usecases-nav { display:flex; justify-content:center; align-items:center; gap:12px; margin-top:24px; margin-bottom:0; }
     .usecases-nav button {
       width:36px; height:36px; border-radius:50%; border:2px solid rgba(27,54,115,0.2);
       background:#fff; color:#1B3673; cursor:pointer; font-size:0.9rem;
