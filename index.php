@@ -408,9 +408,11 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
 
   <!-- ***** WHO IS FILLSBASE FOR ***** -->
   <style>
-    .usecases-section { padding: 90px 0 70px; background: #fff; }
+    .usecases-section { padding: 90px 0 70px; background: #fff; overflow: visible; }
     .uc-heading-row { margin-bottom: 44px; }
     .uc-main-title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; color: #111; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+    .uc-scroll-outer { width: 100%; overflow: hidden; }
+    .usecases-scroll { padding-left: max(24px, calc((100vw - 1140px) / 2)); padding-right: 24px; }
     .usecases-scroll { display:flex; gap:18px; overflow-x:auto; padding-bottom:8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
     .usecases-scroll::-webkit-scrollbar { display:none; }
     .usecase-card {
@@ -489,17 +491,9 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
       <div class="uc-heading-row">
         <h2 class="uc-main-title">Who is Fillsbase for?<br>See for yourself</h2>
       </div>
+    </div>
+    <div class="uc-scroll-outer">
       <div class="usecases-scroll" id="usecasesScroll">
-
-        <!-- Website Creation -->
-        <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/hero-website.png'); background-color:#1B3673;"></div>
-          <div class="uc-overlay"></div>
-          <div class="uc-info">
-            <p class="uc-title">Website Creation</p>
-            <p class="uc-desc">Professional websites built to convert visitors into customers.</p>
-          </div>
-        </a>
 
         <!-- Fashion Store -->
         <a href="ecommerce" class="usecase-card">
@@ -595,11 +589,13 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
         </a>
 
       </div>
+    </div><!-- end uc-scroll-outer -->
+    <div class="container">
       <!-- Navigation -->
       <div class="usecases-nav">
         <button id="ucPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
         <div class="usecases-dots" id="usecasesDots">
-          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
         <button id="ucNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
       </div>
