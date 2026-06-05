@@ -558,29 +558,6 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
     </div>
   </section>
   <!-- ***** MAP ***** -->
-  <section class="services maping sec-normal item17 overlay bg-colorstyle">
-    <div class="container">
-      <div class="service-wrap">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h2 class="section-heading text-white">Our Data Centers Across 7 Regions</h2>
-            <p class="section-subheading text-light"><span class="golink">Fillsbase.com</span> provides premium and reliable web hosting solutions <span class="c-pink">tailored to your success</span> and performance</p>
-          </div>
-          <div class="col-md-12 pt-5 position-relative">
-            <div class="lazyload">
-            </div>
-            <span class="datacenters montreal" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Montreal" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="Montreal"></span>
-            <span class="datacenters newyork" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="New York" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="New York"></span>
-            <span class="datacenters portugal"  data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Portugal" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="Portugal"></span>
-            <span class="datacenters london" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="London" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="London"></span>
-            <span class="datacenters moskow" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Moskow"  data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="Moskow"></span>
-            <span class="datacenters hongkong" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Hong Kong" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="Hong Kong"></span>
-            <span class="datacenters singapure" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Singapure" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." role="button" aria-label="Singapure"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ***** SOLUTIONS ***** -->
   <style>
