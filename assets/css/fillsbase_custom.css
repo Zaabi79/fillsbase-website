@@ -105,14 +105,15 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     overflow: hidden;
     position: relative;
 }
-/* smooth fade from hero into next section */
+/* smooth fade from hero into use-cases (white) */
 .hero-new::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 100px;
+    height: 120px;
     background: linear-gradient(to bottom, transparent, #ffffff);
     pointer-events: none;
+    z-index: 3;
 }
 
 
@@ -2306,63 +2307,56 @@ img { max-width: 100%; height: auto; }
 
 
 /* ══════════════════════════════════════════════════════
-   HOMEPAGE SECTION CONSISTENCY — white-left / gradient-right
-   All sections share the same palette as the hero
+   SEAMLESS SECTION FLOW — top-to-bottom gradients
+   Each section fades smoothly into the next
    ══════════════════════════════════════════════════════ */
 
-/* ── Process Section — white bg, handled in .process-section rule above ── */
+/* Remove all gaps between sections */
+section { margin-top: 0 !important; margin-bottom: 0 !important; }
 
-/* ── Pricing Section ── */
+/* ── Pricing Section: peach gradient vertical ── */
 .pricing.special {
-    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #ccdaf2 60%, #fcd9be 100%) !important;
+    background: linear-gradient(180deg,
+      #fdf6f0 0%,
+      #f9e8d8 40%,
+      #f5d5be 70%,
+      #faeee5 100%
+    ) !important;
     position: relative;
     overflow: hidden;
 }
-.pricing.special::after {
-    content: '';
-    position: absolute;
-    width: 600px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(249,160,100,0.15) 0%, transparent 70%);
-    bottom: -100px; right: 5%;
-    pointer-events: none;
-}
 
-/* ── Why Choose Section ── */
+/* ── Why Choose Section: soft warm white ── */
 .why-choose-new.sec-normal {
-    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 30%, #c8d8f2 62%, #f8d5b8 100%) !important;
+    background: linear-gradient(180deg,
+      #faeee5 0%,
+      #fff8f5 40%,
+      #ffffff 100%
+    ) !important;
     position: relative;
     overflow: hidden;
 }
-.why-choose-new.sec-normal::after {
-    content: '';
-    position: absolute;
-    width: 450px; height: 450px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(45,79,126,0.12) 0%, transparent 70%);
-    top: 0; right: -60px;
-    pointer-events: none;
+
+/* ── Solutions Section: white to soft blue ── */
+.sol-section {
+    background: linear-gradient(180deg,
+      #ffffff 0%,
+      #f4f7ff 35%,
+      #eaf0fb 65%,
+      #f4f7ff 100%
+    ) !important;
+    position: relative;
 }
 
-/* ── Map / Services Section ── */
-section.services.maping {
-    background: linear-gradient(to right, #0a1628 0%, #162847 50%, #2d4f7e 100%) !important;
-}
-
-/* ── Help Section ── */
+/* ── Help / Support Section: blue-tint to white ── */
 section.services.help {
-    background: linear-gradient(to right, #ffffff 0%, #f0f4ff 30%, #ccdaf2 65%, #fce0c8 100%) !important;
+    background: linear-gradient(180deg,
+      #eaf0fb 0%,
+      #f4f7ff 40%,
+      #ffffff 100%
+    ) !important;
     position: relative;
     overflow: hidden;
-}
-section.services.help::after {
-    content: '';
-    position: absolute;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(45,79,126,0.10) 0%, transparent 70%);
-    top: -80px; right: -60px;
-    pointer-events: none;
 }
 
 /* ── Section headings — consistent dark color on light bg ── */

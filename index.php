@@ -154,40 +154,68 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   .process-step-num { background: var(--fb-navy) !important; color: #fff !important; }
   .process-line { background: var(--fb-navy-soft) !important; }
 
-  /* ── SECTION FLOW — remove hard breaks between sections ── */
-  .pricing.special,
-  .why-choose-new,
-  section.sec-normal,
-  section.sec-bg2 {
-    margin-top: 0 !important;
-  }
-  /* tighten default section vertical padding */
-  .pricing.special { padding-top: 60px !important; padding-bottom: 60px !important; }
-  .why-choose-new  { padding-top: 60px !important; padding-bottom: 60px !important; }
+  /* ══════════════════════════════════════════════
+     SEAMLESS SECTION FLOW — no hard breaks
+     All sections: zero margin, continuous bg
+  ══════════════════════════════════════════════ */
+  /* Remove all default section gaps */
+  section, .section { margin-top: 0 !important; margin-bottom: 0 !important; }
 
-  /* ── PRICING SECTION ── */
-  .pricing.special { background: linear-gradient(to right, #ffffff 0%, #f0f4ff 25%, #c8d8f0 55%, #f5b8a0 80%, #f9cfa0 100%) !important; }
-  .pricing .wrapper .top-content { background: rgba(255,255,255,0.85) !important; }
+  /* Unified padding for every section */
+  .pricing.special       { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .why-choose-new        { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .sol-section           { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .services.help         { padding-top: 60px !important; padding-bottom: 60px !important; }
+
+  /* ── 1. HERO → USE-CASES: white, no separator ── */
+  .usecases-section { background: #fff !important; }
+
+  /* ── 2. USE-CASES → PRICING: white fades into peach ── */
+  .pricing.special {
+    background: linear-gradient(180deg,
+      #fdf6f0 0%,
+      #f9e8d8 40%,
+      #f5d5be 70%,
+      #faeee5 100%
+    ) !important;
+  }
+  .pricing .wrapper .top-content { background: rgba(255,255,255,0.88) !important; }
   .pricing .wrapper .list-info { background: var(--fb-navy) !important; }
   .pricing .wrapper.recommended .top-content { background: var(--fb-navy) !important; }
   .pricing .wrapper.recommended .title,
   .pricing .wrapper.recommended .price .discount { color: #fff !important; }
 
-  /* ── WHY CHOOSE SECTION ── */
-  .why-choose-new { background: var(--fb-red-light) !important; }
+  /* ── 3. PRICING → WHY CHOOSE: peach fades into soft red tint ── */
+  .why-choose-new {
+    background: linear-gradient(180deg,
+      #faeee8 0%,
+      #fff5f5 50%,
+      #ffffff 100%
+    ) !important;
+  }
   .why-box { background: var(--fb-white) !important; border: 1px solid var(--fb-red-soft) !important; border-radius: 16px; }
   .why-box:hover { border-color: var(--fb-navy) !important; box-shadow: 0 12px 40px rgba(27,54,115,0.1) !important; }
   .why-box .icon-wrap { background: var(--fb-navy-light) !important; color: var(--fb-navy) !important; }
 
-  /* ── DATA CENTERS MAP SECTION ── */
-  .services.maping { background: var(--fb-navy) !important; }
-
-  /* ── SOLUTIONS SECTION ── */
-  .sol-section { background: linear-gradient(180deg, var(--fb-navy-light) 0%, var(--fb-white) 50%, var(--fb-red-light) 100%) !important; }
+  /* ── 4. WHY CHOOSE → SOLUTIONS: white into navy-light ── */
+  .sol-section {
+    background: linear-gradient(180deg,
+      #ffffff 0%,
+      #f0f4ff 30%,
+      #e8f0fb 70%,
+      #f0f4ff 100%
+    ) !important;
+  }
   .sol-divider { background: linear-gradient(90deg, transparent, var(--fb-navy-soft), transparent) !important; }
 
-  /* ── HELP / SUPPORT SECTION ── */
-  .services.help { background: var(--fb-navy-light) !important; }
+  /* ── 5. SOLUTIONS → HELP: navy-light into clean white ── */
+  .services.help {
+    background: linear-gradient(180deg,
+      #e8f0fb 0%,
+      #f4f7ff 40%,
+      #ffffff 100%
+    ) !important;
+  }
   .help-container { background: var(--fb-white) !important; border: 1px solid var(--fb-navy-soft) !important; border-radius: 16px; transition: all .25s; }
   .help-container:hover { border-color: var(--fb-red) !important; box-shadow: 0 12px 32px rgba(200,62,60,0.1) !important; transform: translateY(-4px); }
 
