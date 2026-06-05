@@ -411,9 +411,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   <!-- ***** WHO IS FILLSBASE FOR ***** -->
   <style>
     .usecases-section { padding: 90px 0 70px; background: #fff; }
-    .usecases-section .section-label { display:inline-flex; align-items:center; gap:8px; background:rgba(200,62,60,0.08); color:#C83E3C; border-radius:50px; padding:6px 18px; font-size:0.82rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:18px; }
-    .usecases-section h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; color:#1B3673; line-height:1.2; margin-bottom:10px; }
-    .usecases-section .section-sub { color:#6b7a99; font-size:1rem; margin-bottom:48px; }
+    .uc-heading-row { margin-bottom: 44px; }
+    .uc-main-title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; color: #111; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
     .usecases-scroll { display:flex; gap:18px; overflow-x:auto; padding-bottom:8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
     .usecases-scroll::-webkit-scrollbar { display:none; }
     .usecase-card {
@@ -489,10 +488,8 @@ $proPrice      = formatFillsbasePrice(getFillsbaseProductPrice(293, 'annually'))
   </style>
   <section class="usecases-section">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label"><i class="fas fa-th-large"></i> What We Build</span>
-        <h2>Who is Fillsbase for?<br>See for yourself</h2>
-        <p class="section-sub">We build powerful digital products for every industry — pick yours.</p>
+      <div class="uc-heading-row">
+        <h2 class="uc-main-title">Who is Fillsbase for?<br>See for yourself</h2>
       </div>
       <div class="usecases-scroll" id="usecasesScroll">
 
