@@ -175,8 +175,8 @@
                         <div class="inner">
                           <h4 class="title my-3">{$LANG.submenu.vps} SSD <br>Get 50% Discount</h4>
                           <div class="inner-content mb-4">Enjoy increased flexibility and get the performance you need - SSD Storage.</div>
-                          <span class="m-0">Before <del class="c-pink">$20.00 /mo</del></span><br>
-                          <h4 class="m-0"><b>Now</b> <b class="c-pink">$9.99 /mo</b></h4>
+                          <span class="m-0">Before <del class="c-pink">AED 20.00 /mo</del></span><br>
+                          <h4 class="m-0"><b>Now</b> <b class="c-pink">AED 9.99 /mo</b></h4>
                           <a href="{$WEB_ROOT}/vps" class="btn btn-default-pink-fill mt-4">See Plans</a>
                         </div>
                       </div>
@@ -550,7 +550,7 @@
       <div class="col-md-6">
         <a href="{$WEB_ROOT}/domains">
           <div class="card mb-4 br-12 upping cursor-p p-relative noshadow border-0 bg-white bg-seccolorstyle">
-            <div class="plans badge feat bg-grey">$5.80</div>
+            <div class="plans badge feat bg-grey">AED 5.80</div>
             <div class="row g-0 d-flex">
               <div class="col-md-4">
                 <img class="svg img-fluid rounded-start" src="{$WEB_ROOT}/templates/{$template}/assets/fonts/svg/domains.svg" alt="Email Security">

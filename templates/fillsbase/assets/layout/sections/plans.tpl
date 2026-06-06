@@ -8,7 +8,7 @@
                 <img class="svg mb-3" src="templates/{$template}/assets/fonts/svg/cloudfiber.svg" >
                 <div class="title">{$LANG.header.services}</div>
                 <div class="fromer seccolor">Starting at:</div>
-                <div class="price seccolor"><sup>$</sup>2.75 USD <span class="period">Monthly</span></div>
+                <div class="price seccolor">AED 2.75 <span class="period">Monthly</span></div>
                 <a href="{$WEB_ROOT}/store/shared-hosting" class="btn btn-default-yellow-fill">All plans</a>
               </div>
               <ul class="list-info">
@@ -26,7 +26,7 @@
                 <img class="svg mb-3" src="templates/{$template}/assets/fonts/svg/dedicated.svg" alt="">
                 <div class="title">{$LANG.dedicated_server}</div>
                 <div class="fromer seccolor">annually get (20% discount)</div>
-                <div class="price seccolor"><sup>$</sup>82.00 USD <span class="period">Monthly</span></div>
+                <div class="price seccolor">AED 82.00 <span class="period">Monthly</span></div>
                 <a href="{$WEB_ROOT}/store/dedicated-server" class="btn btn-default-yellow-fill">Configure</a>
               </div>
               <ul class="list-info bg-purple">
@@ -43,7 +43,7 @@
                 <img class="svg mb-3" src="templates/{$template}/assets/fonts/svg/vps.svg" alt="">
                 <div class="title">{$LANG.cloud_vps}</div>
                 <div class="fromer seccolor">Starting at:</div>
-                <div class="price seccolor"><sup>$</sup>9.99 USD <span class="period">Monthly</span></div>
+                <div class="price seccolor">AED 9.99 <span class="period">Monthly</span></div>
                 <a href="{$WEB_ROOT}/store/vps-server" class="btn btn-default-yellow-fill">All plans</a>
               </div>
               <ul class="list-info">
