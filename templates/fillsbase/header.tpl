@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
-    <link rel="icon" href="{$WEB_ROOT}/assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="{$WEB_ROOT}/assets/img/fillabase fvicon.png">
+    <link rel="apple-touch-icon" href="{$WEB_ROOT}/assets/img/fillabase fvicon.png">
     <title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
     {include file="$template/includes/head.tpl"} 
     {$headoutput}

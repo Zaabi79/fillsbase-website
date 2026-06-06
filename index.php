@@ -77,7 +77,8 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Fillsbase.com offers premium web hosting, VPS, dedicated servers, and domain name registration worldwide.">
-    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <link href="assets/img/fillabase fvicon.png" rel="icon" type="image/png">
+    <link href="assets/img/fillabase fvicon.png" rel="apple-touch-icon">
     <title>Fillsbase.com - Web Hosting, Development & Digital Marketing</title>
     <!-- Font Style -->
     <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
