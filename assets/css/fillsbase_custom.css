@@ -537,38 +537,35 @@ h1, h2, h3, h4, h5, h6, .section-heading {
     /* filter: brightness(0) invert(1); */
 }
 
-/* --- Black Mega Menu Redesign --- */
+/* --- Dropdown Menu (white, clean) --- */
 .sub-menu,
 .sub-menu.bg-colorstyle,
 .sub-menu.menu-large,
 .sub-menu.menu-large.bg-colorstyle,
 .dropdown-menu,
+.secundary-nav,
 .megamenu-list,
 .service-list.bg-colorstyle {
-    background-color: #111111 !important;
-    border: 1px solid #222 !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e8eaf0 !important;
+    box-shadow: 0 12px 36px rgba(27,54,115,0.12) !important;
+    border-radius: 12px !important;
 }
 
-/* Force ALL text inside dropdowns white regardless of theme overrides */
+/* Dark text inside dropdowns */
 .box-container .sub-menu *,
 .box-container .sub-menu a,
 .box-container .sub-menu li a,
 .box-container .sub-menu .menu-item > a,
-.box-container .sub-menu .menu-item.mergecolor,
-.box-container .sub-menu .menu-item.mergecolor a,
 .box-container .sub-menu .mergecolor,
 .box-container .sub-menu .seccolor,
-.box-container .sub-menu .text-muted,
-.box-container .sub-menu .c-grey,
 .box-container .sub-menu span,
 .box-container .dropdown-menu *,
 .box-container .dropdown-menu a,
 .box-container .megamenu-list *,
 .box-container .megamenu-list a,
-[data-background=dark] .box-container .sub-menu .mergecolor,
-[data-background=dark] .box-container .sub-menu a {
-    color: #ffffff !important;
+.secundary-nav a, .secundary-nav li a {
+    color: #1B3673 !important;
 }
 
 .sub-menu a:hover,

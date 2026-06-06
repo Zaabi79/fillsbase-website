@@ -620,7 +620,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Fashion Store -->
         <a href="ecommerce" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/ai_merchandising_fashion_1778941238829.png'); background-color:#7c3aed; background-position:center center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/ai_merchandising_fashion_1778941238829.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Fashion Store</p>
@@ -630,7 +630,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Ecommerce -->
         <a href="ecommerce" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/ecommerce_platform_bg.png'); background-color:#C83E3C; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/ecommerce_platform_bg.png');"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -641,7 +641,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Classifieds -->
         <a href="classifieds" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/classifieds_hero_bg.png'); background-color:#0f766e; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/classifieds_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -652,7 +652,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Blog & News -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/topbanner03.jpg'); background-color:#374151; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/news_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Blog & News</p>
@@ -662,7 +662,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- eLearning -->
         <a href="elearning" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/elearning_hero_bg.png'); background-color:#1B3673; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/elearning_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">eLearning</p>
@@ -672,7 +672,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Portfolio -->
         <a href="web-development" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/topbanner05.jpg'); background-color:#9333ea; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/portfolio_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Portfolio</p>
@@ -682,7 +682,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Event Platform -->
         <a href="event-platform" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png'); background-color:#C83E3C; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Event Platform</p>
@@ -692,7 +692,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Food & Grocery -->
         <a href="food-grocery" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/food_grocery_bg.png'); background-color:#16a34a; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/food_grocery_bg.png');"></div>
           <div class="uc-overlay"></div>
           <span class="uc-badge">NEW</span>
           <div class="uc-info">
@@ -703,7 +703,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
 
         <!-- Radio Streaming -->
         <a href="radio-streaming" class="usecase-card">
-          <div class="uc-bg" style="background-image:url('assets/img/topbanner04.jpg'); background-color:#0ea5e9; background-size:cover; background-position:center;"></div>
+          <div class="uc-bg" style="background-image:url('assets/img/radio_platform_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
             <p class="uc-title">Radio Streaming</p>
