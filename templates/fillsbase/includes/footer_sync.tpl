@@ -3,7 +3,6 @@
 {/if}
 
 <footer class="footer">
-  <img class="logo-bg logo-footer" src="{$WEB_ROOT}/assets/img/symbol.svg" alt="logo" width="600" height="290">
   <div class="container">
     <div class="footer-top">
       <div class="row">
