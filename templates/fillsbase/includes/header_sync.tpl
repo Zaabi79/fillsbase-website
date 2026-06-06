@@ -70,7 +70,6 @@
               <!-- HOSTING -->
               <div class="menu-item menu-item-has-children">
                 <a href="#">Hosting</a>
-                <div class="badge bg-grey align-middle">pro</div>
                 <div class="sub-menu menu-large bg-colorstyle">
                   <div class="service-list">
                     <div class="service">
@@ -221,7 +220,7 @@
           </button>
           <div class="main-menu bg-seccolorstyle">
             <div class="menu-item">
-              <a href="#" class="mergecolor" data-bs-toggle="dropdown">Hosting <div class="badge bg-grey">pro</div></a>
+              <a href="#" class="mergecolor" data-bs-toggle="dropdown">Hosting</a>
               <div class="dropdown-menu">
                 <a href="{$WEB_ROOT}/hosting"       class="dropdown-item menu-item" title="Shared Hosting">Shared Hosting</a>
                 <a href="{$WEB_ROOT}/wordpress"     class="dropdown-item menu-item" title="WordPress Hosting">WordPress Hosting</a>
