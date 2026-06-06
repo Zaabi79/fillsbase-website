@@ -401,7 +401,7 @@
               <a href="{$WEB_ROOT}/" class="mergecolor">Accueil</a>
             </div>
             <div class="menu-item dropdown">
-              <a href="#" class="mergecolor dropdown-toggle" data-toggle="dropdown"  data-toggle="dropdown">Hosting <div class="badge bg-purple">PRO</div></a>
+              <a href="#" class="mergecolor dropdown-toggle" data-toggle="dropdown"  data-toggle="dropdown">Hosting</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item menu-item" href="{$WEB_ROOT}/hosting" data-i18n="submenu.hosting">Shared Hosting</a>
                 <a class="dropdown-item menu-item" href="{$WEB_ROOT}/dedicated" data-i18n="submenu.dedicated">Dedicated Server</a>

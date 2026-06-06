@@ -651,7 +651,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         </a>
 
         <!-- Blog & News -->
-        <a href="web-development" class="usecase-card">
+        <a href="news-blogging" class="usecase-card">
           <div class="uc-bg" style="background-image:url('assets/img/news_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
@@ -671,7 +671,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         </a>
 
         <!-- Portfolio -->
-        <a href="web-development" class="usecase-card">
+        <a href="business-portfolio" class="usecase-card">
           <div class="uc-bg" style="background-image:url('assets/img/portfolio_hero_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
@@ -681,7 +681,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         </a>
 
         <!-- Event Platform -->
-        <a href="event-platform" class="usecase-card">
+        <a href="event" class="usecase-card">
           <div class="uc-bg" style="background-image:url('assets/img/event_platform_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
@@ -702,7 +702,7 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
         </a>
 
         <!-- Radio Streaming -->
-        <a href="radio-streaming" class="usecase-card">
+        <a href="radio" class="usecase-card">
           <div class="uc-bg" style="background-image:url('assets/img/radio_platform_bg.png');"></div>
           <div class="uc-overlay"></div>
           <div class="uc-info">
