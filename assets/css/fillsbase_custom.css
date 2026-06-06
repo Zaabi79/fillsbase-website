@@ -1,6 +1,13 @@
 /* Hide footer background watermark icon */
 .logo-bg { display: none !important; }
 
+/* Hide Hosting PRO badge in top navbar */
+.nav-menu li a .badge,
+.nav-menu .badge.bg-purple,
+.main-menu li > a > .badge,
+.main-menu li > a > div.badge,
+ul.main-menu .badge { display: none !important; }
+
 /* ── Login page: break out of WHMCS wrapper ── */
 .wrapper:has(.loginpage) {
     background: transparent !important;
