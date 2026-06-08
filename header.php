@@ -97,7 +97,7 @@ $displayLogo = './assets/img/fillsbase_logo.png';
               </div>
               <div class="menu-item menu-item-has-children">
                 <a href="#">Hosting</a>
-                <div class="badge bg-grey align-middle">pro</div>
+                
                 <div class="sub-menu menu-large bg-colorstyle">
                   <div class="service-list">
                     <div class="service">
@@ -212,7 +212,6 @@ $displayLogo = './assets/img/fillsbase_logo.png';
                               <a href="/seo" class="mergecolor" title="SEO">SEO <span class="badge inside bg-pink">NEW</span></a>
                               <a href="/gsuite" class="mergecolor" title="Google Suite">Google Suite</a>
                               <a href="/emailsecurity" class="mergecolor" title="Email Security">Email Security</a>
-                              <a href="/press" class="mergecolor" title="Blog">Blog</a>
 
 
                             </div>
@@ -261,7 +260,7 @@ $displayLogo = './assets/img/fillsbase_logo.png';
               </div>
             </div>
             <div class="menu-item">
-              <a href="#" class="mergecolor" data-bs-toggle="dropdown">Hosting <div class="badge bg-grey">pro</div></a>
+              <a href="#" class="mergecolor" data-bs-toggle="dropdown">Hosting</a>
               <div class="dropdown-menu">
                 <a href="/hosting" class="dropdown-item menu-item" title="Shared Hosting">Shared Hosting</a>
                 <!-- Dedicated & VPS hidden -->

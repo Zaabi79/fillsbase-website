@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2026-06-03 21:26:15
+/* Smarty version 4.5.3, created on 2026-06-04 00:13:28
   from '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6a209bf7477e71_69253483',
+  'unifunc' => 'content_6a20c328363024_56868245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0703459a36014015fd8692fcee1607b5d499a5f2' => 
     array (
       0 => '/Users/mac/Desktop/filsbase_Projects/fillsbase-website/templates/fillsbase/login.tpl',
-      1 => 1780521759,
+      1 => 1780525349,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6a209bf7477e71_69253483 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="loginpage sec-bg3 motpath fullrock-content bg-colorstyle">
+function content_6a20c328363024_56868245 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<div class="loginpage sec-bg3 motpath fullrock-content bg-colorstyle">
     <div class="container">
         
         <div class="row login-page-header">

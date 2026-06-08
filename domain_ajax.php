@@ -30,7 +30,7 @@ $inputSld = preg_replace('/[^a-z0-9\-]/', '', $inputSld);
 if (!$inputSld) { echo json_encode([]); exit; }
 
 // TLD list — put user's detected TLD first
-$defaultTlds = ['.com', '.ml', '.sn', '.ci'];
+$defaultTlds = ['.com', '.net', '.org', '.info'];
 if ($inputTld && !in_array($inputTld, $defaultTlds)) {
     array_unshift($defaultTlds, $inputTld);
 } elseif ($inputTld) {

@@ -1219,7 +1219,7 @@ $(document).ready(function() {
             }
 
             $suggestions.show();
-            $list.html('<div class="suggestion-loading"><i class="fas fa-spinner fa-spin"></i> Recherche en cours...</div>');
+            $list.html('<div class="suggestion-loading"><i class="fas fa-spinner fa-spin"></i> Searching...</div>');
 
             $.ajax({
                 url: 'domain_ajax.php',
@@ -1232,19 +1232,19 @@ $(document).ready(function() {
                             let statusBadge, actionIcon, itemClass, priceStyle, onclickAttr;
 
                             if (item.status === 'available') {
-                                statusBadge  = `<span style="background:#d4edda;color:#155724;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">✓ Disponible</span>`;
+                                statusBadge  = `<span style="background:#d4edda;color:#155724;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">✓ Available</span>`;
                                 actionIcon   = `<i class="fas fa-cart-plus" style="color:var(--primary-color);font-size:15px;"></i>`;
                                 itemClass    = '';
                                 priceStyle   = 'color:#155724;';
                                 onclickAttr  = `addDomainFromSearch('${item.domain}', '${item.price}', this)`;
                             } else if (item.status === 'taken') {
-                                statusBadge  = `<span style="background:#f8d7da;color:#721c24;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">✗ Non disponible</span>`;
+                                statusBadge  = `<span style="background:#f8d7da;color:#721c24;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">✗ Taken</span>`;
                                 actionIcon   = `<i class="fas fa-times-circle" style="color:#ccc;font-size:15px;"></i>`;
                                 itemClass    = 'disabled';
                                 priceStyle   = 'text-decoration:line-through;opacity:0.4;';
                                 onclickAttr  = '';
                             } else {
-                                statusBadge  = `<span style="background:#e2e3e5;color:#383d41;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">? Inconnu</span>`;
+                                statusBadge  = `<span style="background:#e2e3e5;color:#383d41;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;">? Unknown</span>`;
                                 actionIcon   = `<i class="fas fa-search" style="color:#aaa;font-size:15px;"></i>`;
                                 itemClass    = '';
                                 priceStyle   = 'opacity:0.6;';
@@ -1282,10 +1282,10 @@ $(document).ready(function() {
             btn.css('pointer-events', 'none');
             $.post('cart_add_domain.php', { action: 'add', domain: domain, regperiod: 1 }, function(res) {
                 if (res.status === 'success' || res.status === 'exists') {
-                    setTimeout(function() { window.location.href = '/panier.php'; }, 400);
+                    setTimeout(function() { window.location.href = '/cart.php'; }, 400);
                 } else {
                     btn.css('pointer-events', '');
-                    alert(res.message || 'Erreur');
+                    alert(res.message || 'Error adding domain');
                 }
             }, 'json').fail(function() {
                 btn.css('pointer-events', '');
