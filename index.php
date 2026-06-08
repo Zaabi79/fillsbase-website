@@ -490,6 +490,26 @@ $monthlySubPrice = formatFillsbasePrice(getFillsbaseProductPrice(4, 'monthly'));
           <img src="assets/img/hero-seo.png" alt="SEO Mockup" class="card-mockup-img">
         </div>
 
+        <!-- Card 5: Events -->
+        <div class="feature-card white">
+          <div class="card-text">
+            <span class="card-tag">EVENTS & TICKETING</span>
+            <h3>Launch Your Event Platform</h3>
+            <a href="event" class="card-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <img src="assets/img/event_platform_bg.png" alt="Event Platform" class="card-mockup-img">
+        </div>
+
+        <!-- Card 6: Services -->
+        <div class="feature-card teal">
+          <div class="card-text">
+            <span class="card-tag">MANAGED SERVICES</span>
+            <h3>All-in-One Business Services</h3>
+            <a href="seo" class="card-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <img src="assets/img/hero-seo.png" alt="Business Services" class="card-mockup-img">
+        </div>
+
         <!-- Card 4: AI -->
         <div class="feature-card ai-card">
           <div class="card-text">

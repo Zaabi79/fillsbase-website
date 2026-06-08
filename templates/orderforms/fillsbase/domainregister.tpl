@@ -9,7 +9,7 @@
                     <div style="position:absolute;right:-20px;bottom:-20px;opacity:0.1;transform:rotate(-15deg);">
                         <i class="fas fa-globe fa-10x text-white"></i>
                     </div>
-                    <h2 class="text-white font-weight-bold mb-4" style="text-shadow:0 2px 4px rgba(0,0,0,0.1);">Trouvez votre nom de domaine</h2>
+                    <h2 class="text-white font-weight-bold mb-4" style="text-shadow:0 2px 4px rgba(0,0,0,0.1);">Find Your Domain Name</h2>
                     <div class="lw-search-box" style="background:#fff;padding:10px;border-radius:50px;display:flex;align-items:center;box-shadow:0 15px 35px rgba(0,0,0,0.1);">
                         <input type="text" id="inputDomain" class="form-control border-0 px-4"
                                placeholder="{$LANG.findyourdomain}" value="{$lookupTerm}"
@@ -24,7 +24,7 @@
                 <div id="lwResults">
                     <div id="lwLoading" class="text-center py-5" style="display:none;">
                         <div class="spinner-border" role="status" style="width:3rem;height:3rem;color:#50d29e!important;"></div>
-                        <p class="mt-3 text-muted font-weight-bold">Vérification de la disponibilité...</p>
+                        <p class="mt-3 text-muted font-weight-bold">Checking availability...</p>
                     </div>
                     <div id="lwResultsList"></div>
                 </div>
@@ -33,11 +33,11 @@
             <!-- Cart Sidebar -->
             <div class="col-lg-4">
                 <div class="cart-summary-card sticky-top" style="top:20px;background:#fff;border-radius:20px;border:1px solid #eee;padding:30px;box-shadow:0 5px 20px rgba(0,0,0,0.05);">
-                    <h5 class="font-weight-bold mb-4" style="color:#1a1a2e;">Récapitulatif</h5>
+                    <h5 class="font-weight-bold mb-4" style="color:#1a1a2e;">Order Summary</h5>
                     <div id="lwCartContent">
                         <div class="text-center py-5 bg-light rounded mb-4" style="border:2px dashed #eee;">
                             <i class="fas fa-shopping-cart fa-3x text-muted mb-3" style="opacity:.3;display:block;"></i>
-                            <p class="text-muted small mb-0">Votre panier est vide.</p>
+                            <p class="text-muted small mb-0">Your cart is empty.</p>
                         </div>
                     </div>
                     <hr class="my-4">
@@ -45,7 +45,7 @@
                     <a href="{$WEB_ROOT}/cart.php?a=view" id="btnCheckout"
                        class="btn btn-block btn-lg mt-4"
                        style="border-radius:12px;font-weight:700;background:#50d29e;border:none;color:#fff;box-shadow:0 5px 15px rgba(80,210,158,0.3);">
-                        Voir le panier <i class="fas fa-chevron-right ml-2"></i>
+                        View Cart <i class="fas fa-chevron-right ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -113,7 +113,7 @@ function lwDrawSidebar() {
         jQuery('#lwCartContent').html(
             '<div class="text-center py-5 bg-light rounded mb-4" style="border:2px dashed #eee;">' +
             '<i class="fas fa-shopping-cart fa-3x text-muted mb-3" style="opacity:.3;display:block;"></i>' +
-            '<p class="text-muted small mb-0">Votre panier est vide.</p></div>'
+            '<p class="text-muted small mb-0">Your cart is empty.</p></div>'
         );
         jQuery('#lwTotalsArea').html('');
         return;
@@ -123,7 +123,7 @@ function lwDrawSidebar() {
         var item = lwCart[domain];
         total += item.raw;
         html += '<div class="mb-2 p-3 rounded" style="background:#f8f9fa;border:1px solid #eef0f3;">' +
-            '<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#00d1b2;margin-bottom:3px;">Enregistrement</div>' +
+            '<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#00d1b2;margin-bottom:3px;">Registration</div>' +
             '<div class="d-flex justify-content-between align-items-center">' +
             '<span style="font-weight:800;color:#1a1a2e;font-size:14px;">' + domain + '</span>' +
             '<span style="font-weight:700;color:#1a1a2e;font-size:13px;">' + item.price + '</span>' +
@@ -131,7 +131,7 @@ function lwDrawSidebar() {
     });
     jQuery('#lwCartContent').html(html);
     if (total > 0) {
-        var fmt = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' FCFA';
+        var fmt = 'AED ' + total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         jQuery('#lwTotalsArea').html(
             '<div class="d-flex justify-content-between align-items-center p-3 rounded" style="background:#f8f9fa;">' +
             '<span class="font-weight-bold">Total</span>' +
@@ -144,52 +144,21 @@ function lwDrawSidebar() {
     $(document).ready(function() {
         var webRoot = lwWebRoot;
 
-        /* Normalise price: 7,872 FCFA → 7 872 FCFA */
-        function normPrice(s) {
-            return (s || '').trim().replace(/(\d),(\d{3})/g, '$1 $2');
-        }
-
-        /* Extract price from WHMCS domainoptions HTML response */
-        function extractPrice(html) {
-            var $wrap = $('<div>').html(html);
-            var el = $wrap.find('.lw-ajax-price').first();
-            if (el.length) return normPrice(el.text().trim());
-            var m = html.match(/[\d,\. ]+\s*FCFA/i);
-            return m ? normPrice(m[0].trim()) : '';
-        }
-
-        /* Check one TLD */
-        function checkTld(sld, tld, isPrimary, callback) {
-            $.ajax({
-                url: webRoot + '/cart.php',
-                type: 'POST',
-                data: { a: 'domainoptions', checktype: 'register', ajax: '1', sld: sld, tld: tld },
-                timeout: 15000,
-                success: function(html) {
-                    var ok  = html.indexOf('domain-checker-available') !== -1;
-                    var bad = html.indexOf('domain-checker-unavailable') !== -1;
-                    callback({ domain: sld + tld, available: ok, taken: bad, price: ok ? extractPrice(html) : '', primary: isPrimary });
-                },
-                error: function() {
-                    callback({ domain: sld + tld, available: false, taken: false, price: '', primary: isPrimary, error: true });
-                }
-            });
-        }
-
         /* Build result card */
-        function buildCard(res) {
+        function buildCard(res, isPrimary) {
             var parts = res.domain.split('.');
             var sld = parts[0];
             var tld = '.' + parts.slice(1).join('.');
-            var statusCls  = res.available ? 'lw-status-available' : 'lw-status-taken';
-            var statusIcon = res.available ? 'fa-check-circle' : 'fa-times-circle';
-            var statusTxt  = res.available ? 'Disponible' : (res.error ? 'Erreur' : 'Non disponible');
-            var cardCls    = 'lw-domain-item ' + (res.available ? 'available' : 'unavailable') + (res.primary ? ' primary' : '');
+            var avail = res.status === 'available';
+            var statusCls  = avail ? 'lw-status-available' : 'lw-status-taken';
+            var statusIcon = avail ? 'fa-check-circle' : 'fa-times-circle';
+            var statusTxt  = avail ? 'Available' : 'Taken';
+            var cardCls    = 'lw-domain-item ' + (avail ? 'available' : 'unavailable') + (isPrimary ? ' primary' : '');
 
-            var btn = res.available
+            var btn = avail
                 ? '<button class="lw-btn-add" data-sld="' + sld + '" data-tld="' + tld + '" data-domain="' + res.domain + '" data-price="' + res.price + '">' +
-                  '<i class="fas fa-cart-plus mr-1"></i> Ajouter</button>'
-                : '<button class="lw-btn-add" disabled>Non disponible</button>';
+                  '<i class="fas fa-cart-plus mr-1"></i> Add to Cart</button>'
+                : '<button class="lw-btn-add" disabled>Taken</button>';
 
             return '<div class="' + cardCls + '">' +
                 '<div class="lw-domain-info">' +
@@ -197,53 +166,48 @@ function lwDrawSidebar() {
                     '<div class="lw-domain-status ' + statusCls + '"><i class="fas ' + statusIcon + ' mr-1"></i>' + statusTxt + '</div>' +
                 '</div>' +
                 '<div class="lw-domain-actions">' +
-                    (res.price ? '<div><span class="lw-price-amount">' + res.price + '</span><span class="lw-price-period">/ an</span></div>' : '') +
+                    (res.price ? '<div><span class="lw-price-amount">' + res.price + '</span><span class="lw-price-period">/ yr</span></div>' : '') +
                     btn +
                 '</div></div>';
         }
 
-        /* Main search */
+        /* Main search — uses domain_ajax.php for real availability + pricing */
         function performSearch(input) {
             if (!input || input.length < 2) return;
             input = input.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
-            var dot = input.lastIndexOf('.');
-            var sld = (dot > 0 ? input.substring(0, dot) : input).replace(/[^a-z0-9\-]/g, '');
-            var detectedTld = dot > 0 ? input.substring(dot) : '.com';
-            if (!sld) return;
+            if (!input) return;
 
             lwCart = {};
             lwDrawSidebar();
-
-            var tlds = ['.com', '.ml', '.sn', '.ci'];
-            if (tlds.indexOf(detectedTld) === -1) tlds.unshift(detectedTld);
-            else { tlds.splice(tlds.indexOf(detectedTld), 1); tlds.unshift(detectedTld); }
-
             $('#lwLoading').show();
             $('#lwResultsList').empty();
 
-            var done = 0;
-            var cards = new Array(tlds.length);
-
-            function renderAll() {
-                var html = '';
-                $.each(cards, function(i, card) {
-                    if (i === 1) html += '<div class="lw-section-title">Autres extensions</div>';
-                    if (card) html += card;
-                });
-                $('#lwResultsList').html(html);
-            }
-
-            $.each(tlds, function(i, tld) {
-                checkTld(sld, tld, i === 0, function(res) {
-                    cards[i] = buildCard(res);
-                    done++;
-                    if (done === 1) $('#lwLoading').hide();
-                    renderAll();
-                });
+            $.ajax({
+                url: webRoot + '/domain_ajax.php',
+                data: { query: input },
+                dataType: 'json',
+                timeout: 20000,
+                success: function(data) {
+                    $('#lwLoading').hide();
+                    if (!data || !data.length) {
+                        $('#lwResultsList').html('<p class="text-muted text-center py-4">No results found.</p>');
+                        return;
+                    }
+                    var html = '';
+                    $.each(data, function(i, res) {
+                        if (i === 1) html += '<div class="lw-section-title">Other Extensions</div>';
+                        html += buildCard(res, i === 0);
+                    });
+                    $('#lwResultsList').html(html);
+                },
+                error: function() {
+                    $('#lwLoading').hide();
+                    $('#lwResultsList').html('<p class="text-danger text-center py-4">Search failed. Please try again.</p>');
+                }
             });
         }
 
-        /* Add to cart via cart_add_domain.php — no redirect, then go to panier.php */
+        /* Add to cart via cart_add_domain.php */
         $(document).on('click', '.lw-btn-add:not(:disabled):not(.added)', function() {
             var btn    = $(this);
             var sld    = btn.data('sld');
@@ -258,13 +222,12 @@ function lwDrawSidebar() {
                 function(res) {
                     if (res.status === 'success' || res.status === 'exists') {
                         lwAddToSidebar(domain, price);
-                        btn.html('<i class="fas fa-check mr-1"></i> Ajouté').addClass('added');
-                        /* Redirect to cart after short delay */
+                        btn.html('<i class="fas fa-check mr-1"></i> Added').addClass('added');
                         setTimeout(function() {
-                            window.location.href = webRoot + '/panier.php';
+                            window.location.href = webRoot + '/cart.php?a=view';
                         }, 800);
                     } else {
-                        btn.html('<i class="fas fa-cart-plus mr-1"></i> Ajouter').prop('disabled', false);
+                        btn.html('<i class="fas fa-cart-plus mr-1"></i> Add to Cart').prop('disabled', false);
                     }
                 }, 'json'
             ).fail(function() {

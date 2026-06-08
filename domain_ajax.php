@@ -45,7 +45,10 @@ $prefix = trim($currency['prefix'] ?? '');
 $suffix = trim($currency['suffix'] ?? '');
 
 function fmtDomainPrice($amount, $prefix, $suffix) {
-    return trim(implode(' ', array_filter([$prefix, number_format((float)$amount, 0, ',', ' '), $suffix])));
+    $num = number_format((float)$amount, 0);
+    if ($prefix) return trim($prefix . ' ' . $num);
+    if ($suffix) return trim($num . ' ' . $suffix);
+    return $num;
 }
 
 function getDomainPrice($tld, $currencyId) {
@@ -55,9 +58,13 @@ function getDomainPrice($tld, $currencyId) {
             ->where('tbldomainpricing.extension', $tld)
             ->where('tblpricing.type', 'domainregister')
             ->where('tblpricing.currency', $currencyId)
-            ->select('tblpricing.msetupfee as price')
+            ->select('tblpricing.annually', 'tblpricing.msetupfee')
             ->first();
-        return ($row && $row->price > 0) ? (float)$row->price : null;
+        if ($row) {
+            if ($row->annually > 0) return (float)$row->annually;
+            if ($row->msetupfee > 0) return (float)$row->msetupfee;
+        }
+        return null;
     } catch (\Exception $e) {
         return null;
     }

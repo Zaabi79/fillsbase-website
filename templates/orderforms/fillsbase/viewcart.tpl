@@ -1,7 +1,6 @@
 {if $checkout}
 {include file="orderforms/$carttpl/checkout.tpl"}
 {else}
-<script>window.location.replace('/panier.php');</script>
 <script>var statesTab=10;var stateNotRequired=true;</script>
 {include file="orderforms/fillsbase/common.tpl"}
 <script type="text/javascript" src="{$BASE_PATH_JS}/StatesDropdown.js"></script>
@@ -165,7 +164,7 @@
     <div>
 
       {* Add more *}
-      <div class="vc-label"><i class="fas fa-plus-circle"></i> Ajouter des produits</div>
+      <div class="vc-label"><i class="fas fa-plus-circle"></i> Add Products</div>
       <div class="vc-card" style="margin-bottom:24px;">
         <div class="vc-tabs" id="vcTabNav">
           <div class="vc-tab active" onclick="vcTab(0)" id="vcT0">
@@ -197,7 +196,7 @@
             <span class="vc-tld-pill" onclick="vcTld('.io')">.io</span>
           </div>
           <div id="vcDomLoad" style="display:none;text-align:center;padding:14px;color:#9aa3b0;">
-            <i class="fas fa-spinner fa-spin" style="color:var(--primary);margin-right:6px;"></i> Vérification...
+            <i class="fas fa-spinner fa-spin" style="color:var(--primary);margin-right:6px;"></i> Checking...
           </div>
           <div id="vcDomRes" style="margin-top:10px;"></div>
           <div style="text-align:center;margin-top:12px;">
@@ -230,8 +229,8 @@
         {* Services pane *}
         <div class="vc-pane" id="vcP2">
           <div class="vc-link-grid">
-            <a href="{$WEB_ROOT}/cart.php?a=add&domain=register" class="vc-link"><i class="fas fa-globe"></i>Enregistrer domaine</a>
-            <a href="{$WEB_ROOT}/cart.php?a=add&domain=transfer" class="vc-link"><i class="fas fa-exchange-alt"></i>Transférer domaine</a>
+            <a href="{$WEB_ROOT}/cart.php?a=add&domain=register" class="vc-link"><i class="fas fa-globe"></i>Register Domain</a>
+            <a href="{$WEB_ROOT}/cart.php?a=add&domain=transfer" class="vc-link"><i class="fas fa-exchange-alt"></i>Transfer Domain</a>
             <a href="{$WEB_ROOT}/cart.php?a=add&domain=renew" class="vc-link"><i class="fas fa-redo"></i>Renouveler domaine</a>
             <a href="{$WEB_ROOT}/submitticket.php" class="vc-link"><i class="fas fa-headset"></i>Support</a>
             <a href="{$WEB_ROOT}/clientarea.php?action=services" class="vc-link"><i class="fas fa-list"></i>Mes services</a>
@@ -241,7 +240,7 @@
 
       {* Cart items *}
       <div class="vc-label">
-        <i class="fas fa-shopping-bag"></i> Articles dans le panier
+        <i class="fas fa-shopping-bag"></i> Items in Cart
         {if $cartitems > 0}<span style="background:var(--dark);color:#fff;font-size:10px;font-weight:800;border-radius:20px;padding:2px 9px;">{$cartitems}</span>{/if}
       </div>
 
@@ -251,7 +250,7 @@
         <div class="vc-card">
           <div class="vc-empty">
             <i class="fas fa-shopping-cart"></i>
-            <h5>Votre panier est vide</h5>
+            <h5>Your cart is empty</h5>
             <p>Utilisez les onglets ci-dessus pour ajouter des domaines ou des hébergements.</p>
           </div>
         </div>
@@ -263,7 +262,7 @@
           <div class="vc-item">
             <div class="vc-item-icon domain"><i class="fas fa-globe"></i></div>
             <div class="vc-item-info">
-              <div class="vc-item-tag">{if $domain.type eq "register"}Enregistrement de domaine{else}Transfert de domaine{/if}</div>
+              <div class="vc-item-tag">{if $domain.type eq "register"}Domain Registration{else}Domain Transfer{/if}</div>
               <div class="vc-item-name">{$domain.domain}</div>
               <div class="vc-item-meta">
                 {if $domain.dnsmanagement}<span style="color:var(--primary);margin-right:8px;"><i class="fas fa-check-circle"></i> DNS</span>{/if}
@@ -480,7 +479,7 @@
     <div>
       <div class="vc-summary">
         <div class="vc-summary-head">
-          <h5><i class="fas fa-receipt"></i> Récapitulatif</h5>
+          <h5><i class="fas fa-receipt"></i> Order Summary</h5>
           <div style="display:flex;align-items:center;gap:10px;">
             {if $cartitems > 0}
             <span style="background:var(--primary);color:#fff;font-size:11px;font-weight:800;border-radius:20px;padding:3px 10px;">{$cartitems} article{if $cartitems > 1}s{/if}</span>
@@ -596,7 +595,7 @@
   <div class="modal fade" id="modalEmptyCart" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm"><div class="modal-content" style="border-radius:16px;overflow:hidden;border:none;">
       <div class="modal-header" style="background:var(--dark);color:#fff;border:none;padding:20px 24px;">
-        <h5 class="modal-title" style="font-weight:800;"><i class="fas fa-trash-alt" style="margin-right:8px;"></i>Vider le panier</h5>
+        <h5 class="modal-title" style="font-weight:800;"><i class="fas fa-trash-alt" style="margin-right:8px;"></i>Clear Cart</h5>
         <button type="button" class="close" data-dismiss="modal" style="color:#fff;opacity:.6;">&times;</button>
       </div>
       <div class="modal-body text-center py-4" style="color:#555;">{$LANG.cartemptyconfirm}</div>
@@ -660,10 +659,10 @@ function vcDoSearch(domain) {
         res.innerHTML += '<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;margin-bottom:8px;border:1px solid #e4e8ef;background:#fff;">' +
           '<div><div style="font-size:15px;font-weight:700;color:#1a1a2e;">' + name + '</div>' +
           '<div style="font-size:11px;font-weight:700;margin-top:3px;color:' + (avail ? '#27ae60' : '#e74c3c') + ';">' +
-          (avail ? '<i class="fas fa-check-circle"></i> Disponible' : '<i class="fas fa-times-circle"></i> Non disponible') + '</div></div>' +
+          (avail ? '<i class="fas fa-check-circle"></i> Available' : '<i class="fas fa-times-circle"></i> Taken') + '</div></div>' +
           '<div style="display:flex;align-items:center;gap:10px;">' +
           (price ? '<span style="font-size:14px;font-weight:800;color:#1a1a2e;">' + price + '</span>' : '') +
-          (avail ? '<a href="/cart.php?a=add&domain=register&query=' + encodeURIComponent(name) + '" style="background:#00d1b2;color:#fff;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;text-decoration:none;">Ajouter</a>'
+          (avail ? '<a href="/cart.php?a=add&domain=register&query=' + encodeURIComponent(name) + '" style="background:#00d1b2;color:#fff;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;text-decoration:none;">Add</a>'
                  : '<span style="background:#f0f2f5;color:#9aa3b0;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;">Non dispo.</span>') +
           '</div></div>';
       });
