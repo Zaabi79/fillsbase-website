@@ -68,7 +68,7 @@
                                     {/if}
 
                                 </form>
-                            <div class="special-note"><span class="text">Recherchez un domaine de votre choix à partir de <b>4.000 FCFA/an</b></span></div>
+                            <div class="special-note"><span class="text">Search for your domain starting from <b>AED 39/yr</b></span></div>
                         </div>
 
                     </div>

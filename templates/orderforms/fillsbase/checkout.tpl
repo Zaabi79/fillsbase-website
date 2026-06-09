@@ -412,15 +412,15 @@
 
                         <!-- Payment Details -->
                         <div class="checkout-section mb-5 p-4 bg-white rounded-20 shadow-sm border" style="border: 1px solid #eef0f3 !important;">
-                            <h5 class="font-weight-bold mb-4" style="color: #1a1a2e;">Informations de paiement</h5>
+                            <h5 class="font-weight-bold mb-4" style="color: #1a1a2e;">Payment Information</h5>
                             
                             <div class="alert alert-light text-center py-4 mb-4" style="border-radius: 16px; background: #f8fbff; border: 1px solid #e1e9f5;">
-                                <span class="text-muted small">Total à payer aujourd'hui:</span>
+                                <span class="text-muted small">Total Due Today:</span>
                                 <h2 class="font-weight-bold text-primary mt-1 mb-0" style="font-size: 36px;" id="totalCartPrice">{$total}</h2>
                             </div>
 
                             {if !$inExpressCheckout}
-                                <p class="small font-weight-bold text-muted mb-3">Veuillez choisir votre mode de paiement.</p>
+                                <p class="small font-weight-bold text-muted mb-3">Please select your payment method.</p>
                                 <div class="payment-methods-grid mb-5">
                                     {foreach $gateways as $gateway}
                                         <label class="gateway-option {if $selectedgateway eq $gateway.sysname}active{/if} mb-0">
@@ -478,7 +478,7 @@
                             
                             <div class="input-with-icon mb-4">
                                 <i class="fas fa-pen input-icon" style="top: 25px;"></i>
-                                <textarea name="notes" class="form-control" rows="3" placeholder="Saisissez ici vos notes supplémentaires ou les informations nécessaires au traitement de votre commande." style="padding-top: 15px; min-height: 100px;">{$orderNotes}</textarea>
+                                <textarea name="notes" class="form-control" rows="3" placeholder="Add any additional notes or order information here." style="padding-top: 15px; min-height: 100px;">{$orderNotes}</textarea>
                             </div>
 
                             <div class="tos-check mb-5">
@@ -494,7 +494,7 @@
                             </div>
 
                             <button type="submit" id="btnCompleteOrder" class="btn btn-primary btn-block py-3 disable-on-click spinner-on-click" style="border-radius: 14px; font-weight: 700; background: #50d29e; border: none; font-size: 18px; box-shadow: 0 10px 25px rgba(80, 210, 158, 0.3); transition: 0.3s;">
-                                {if $inExpressCheckout}Régler la commande{else}Régler la commande{/if} <i class="fas fa-arrow-right ml-2"></i>
+                                {if $inExpressCheckout}Complete Order{else}Complete Order{/if} <i class="fas fa-arrow-right ml-2"></i>
                             </button>
                         </div>
                     </form>
@@ -741,7 +741,7 @@ $(document).ready(function() {
         var token = $('input[name="token"]').val();
 
         if (!email || !password) {
-            toastr.warning('Veuillez saisir votre email et votre mot de passe.');
+            toastr.warning('Please enter your email and password.');
             return;
         }
 

@@ -142,15 +142,15 @@
   {* Steps *}
   <div class="vc-steps">
     <div class="vc-step active">
-      <div class="vc-step-num"><i class="fas fa-check"></i></div> Panier
+      <div class="vc-step-num"><i class="fas fa-check"></i></div> Cart
     </div>
     <div class="vc-step-sep done"></div>
     <div class="vc-step">
-      <div class="vc-step-num">2</div> Compte
+      <div class="vc-step-num">2</div> Account
     </div>
     <div class="vc-step-sep"></div>
     <div class="vc-step">
-      <div class="vc-step-num">3</div> Paiement
+      <div class="vc-step-num">3</div> Payment
     </div>
     <div class="vc-step-sep"></div>
     <div class="vc-step">
@@ -168,10 +168,10 @@
       <div class="vc-card" style="margin-bottom:24px;">
         <div class="vc-tabs" id="vcTabNav">
           <div class="vc-tab active" onclick="vcTab(0)" id="vcT0">
-            <i class="fas fa-globe"></i>Domaines
+            <i class="fas fa-globe"></i>Domains
           </div>
           <div class="vc-tab" onclick="vcTab(1)" id="vcT1">
-            <i class="fas fa-server"></i>Hébergement
+            <i class="fas fa-server"></i>Hosting
           </div>
           <div class="vc-tab" onclick="vcTab(2)" id="vcT2">
             <i class="fas fa-th-large"></i>Services
@@ -181,9 +181,9 @@
         {* Domains pane *}
         <div class="vc-pane active" id="vcP0">
           <div class="vc-dom-search">
-            <input type="text" id="vcDomQ" placeholder="Recherchez votre nom de domaine..." autocomplete="off"
+            <input type="text" id="vcDomQ" placeholder="Search your domain name..." autocomplete="off"
               onkeydown="if(event.key==='Enter'){literal}{{/literal}vcDomSearch(){literal}}{/literal}" />
-            <button onclick="vcDomSearch()"><i class="fas fa-search"></i> Rechercher</button>
+            <button onclick="vcDomSearch()"><i class="fas fa-search"></i> Search</button>
           </div>
           <div class="vc-tld-pills">
             <span class="vc-tld-pill" onclick="vcTld('.com')">.com</span>
@@ -201,7 +201,7 @@
           <div id="vcDomRes" style="margin-top:10px;"></div>
           <div style="text-align:center;margin-top:12px;">
             <a href="{$WEB_ROOT}/cart.php?a=add&domain=register" style="font-size:13px;color:var(--primary);font-weight:700;text-decoration:none;">
-              <i class="fas fa-external-link-alt" style="margin-right:4px;"></i> Recherche avancée de domaine
+              <i class="fas fa-external-link-alt" style="margin-right:4px;"></i> Advanced Domain Search
             </a>
           </div>
         </div>
@@ -218,7 +218,7 @@
                 {/foreach}
               {/foreach}
             {else}
-              <a href="{$WEB_ROOT}/hosting" class="vc-link"><i class="fas fa-server"></i>Hébergement Web</a>
+              <a href="{$WEB_ROOT}/hosting" class="vc-link"><i class="fas fa-server"></i>Web Hosting</a>
               <a href="{$WEB_ROOT}/vps" class="vc-link"><i class="fas fa-cube"></i>Cloud VPS</a>
               <a href="{$WEB_ROOT}/dedicated" class="vc-link"><i class="fas fa-microchip"></i>Serveur Dédié</a>
               <a href="{$WEB_ROOT}/cart.php" class="vc-link"><i class="fas fa-shopping-bag"></i>Toutes nos offres</a>
@@ -251,7 +251,7 @@
           <div class="vc-empty">
             <i class="fas fa-shopping-cart"></i>
             <h5>Your cart is empty</h5>
-            <p>Utilisez les onglets ci-dessus pour ajouter des domaines ou des hébergements.</p>
+            <p>Use the tabs above to add domains or hosting.</p>
           </div>
         </div>
         {/if}
@@ -430,7 +430,7 @@
       <div class="vc-card">
         <div class="vc-card-head">
           <i class="fas fa-tag" style="color:var(--primary);"></i>
-          <h6>Code promotionnel</h6>
+          <h6>Promo Code</h6>
         </div>
         <div class="vc-card-body">
           {if $promotioncode}
@@ -441,9 +441,9 @@
           {else}
           <form method="post" action="{$WEB_ROOT}/cart.php?a=view">
             <div class="vc-promo-form">
-              <input type="text" name="promocode" placeholder="Entrez votre code promotionnel">
+              <input type="text" name="promocode" placeholder="Enter your promo code">
               <button type="submit" name="validatepromo" value="{$LANG.orderpromovalidatebutton}">
-                <i class="fas fa-check" style="margin-right:4px;"></i>Appliquer
+                <i class="fas fa-check" style="margin-right:4px;"></i>Apply
               </button>
             </div>
           </form>
@@ -460,7 +460,7 @@
         <div class="vc-card-body">
           <form method="post" action="{$WEB_ROOT}/cart.php?a=setstateandcountry">
             <div class="row">
-              <div class="col-sm-5 mb-2"><input type="text" name="state" value="{$clientsdetails.state}" class="form-control" placeholder="Région" style="border-radius:10px;border:1.5px solid var(--border);"/></div>
+              <div class="col-sm-5 mb-2"><input type="text" name="state" value="{$clientsdetails.state}" class="form-control" placeholder="State/Region" style="border-radius:10px;border:1.5px solid var(--border);"/></div>
               <div class="col-sm-5 mb-2">
                 <select name="country" class="form-control" style="border-radius:10px;border:1.5px solid var(--border);">
                   {foreach $countries as $cc => $cl}<option value="{$cc}"{if (!$country && $cc==$defaultcountry)||$cc==$country} selected{/if}>{$cl}</option>{/foreach}
@@ -539,7 +539,7 @@
 
           <div class="vc-total-box">
             <div>
-              <div class="vc-total-label">Total dû aujourd'hui</div>
+              <div class="vc-total-label">Total Due Today</div>
               <div class="vc-total-amount" id="totalDueToday">{$total}</div>
             </div>
             <i class="fas fa-shield-alt" style="font-size:2rem;color:var(--primary);opacity:.25;"></i>
@@ -552,14 +552,14 @@
 
           <a href="{$WEB_ROOT}/cart.php?a=checkout&e=false" id="checkout"
             class="vc-checkout-btn{if $cartitems==0} disabled{/if}">
-            <i class="fas fa-lock" style="margin-right:8px;"></i> Passer la commande
+            <i class="fas fa-lock" style="margin-right:8px;"></i> Place Order
           </a>
           <a href="{$WEB_ROOT}/cart.php" class="vc-continue">
-            <i class="fas fa-chevron-left" style="margin-right:4px;"></i> Continuer mes achats
+            <i class="fas fa-chevron-left" style="margin-right:4px;"></i> Continue Shopping
           </a>
 
           <div class="vc-trust">
-            <div class="vc-trust-item"><i class="fas fa-shield-alt"></i> Paiement sécurisé</div>
+            <div class="vc-trust-item"><i class="fas fa-shield-alt"></i> Secure Payment</div>
             <div class="vc-trust-item"><i class="fas fa-lock"></i> SSL 256-bit</div>
             <div class="vc-trust-item"><i class="fas fa-headset"></i> Support 24/7</div>
           </div>
@@ -651,7 +651,7 @@ function vcDoSearch(domain) {
       var r = typeof data === 'string' ? JSON.parse(data) : data;
       var items = r.domains || r.results || [];
       if (!items.length && r.domain) items = [r];
-      if (!items.length) { res.innerHTML = '<p style="text-align:center;color:#999;padding:12px;">Aucun résultat.</p>'; return; }
+      if (!items.length) { res.innerHTML = '<p style="text-align:center;color:#999;padding:12px;">No results found.</p>'; return; }
       items.forEach(function(d) {
         var avail = d.status === 'available' || d.available;
         var name = d.domain || domain;
@@ -663,16 +663,16 @@ function vcDoSearch(domain) {
           '<div style="display:flex;align-items:center;gap:10px;">' +
           (price ? '<span style="font-size:14px;font-weight:800;color:#1a1a2e;">' + price + '</span>' : '') +
           (avail ? '<a href="/cart.php?a=add&domain=register&query=' + encodeURIComponent(name) + '" style="background:#00d1b2;color:#fff;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;text-decoration:none;">Add</a>'
-                 : '<span style="background:#f0f2f5;color:#9aa3b0;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;">Non dispo.</span>') +
+                 : '<span style="background:#f0f2f5;color:#9aa3b0;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;">Taken</span>') +
           '</div></div>';
       });
     } catch(e) {
       load.style.display = 'none';
-      res.innerHTML = '<p style="text-align:center;padding:12px;"><a href="/cart.php?a=add&domain=register" style="color:#00d1b2;font-weight:700;">Utiliser la page de recherche</a></p>';
+      res.innerHTML = '<p style="text-align:center;padding:12px;"><a href="/cart.php?a=add&domain=register" style="color:#00d1b2;font-weight:700;">Use the search page</a></p>';
     }
   }).fail(function() {
     load.style.display = 'none';
-    res.innerHTML = '<p style="text-align:center;padding:12px;"><a href="/cart.php?a=add&domain=register" style="color:#00d1b2;font-weight:700;">Utiliser la page de recherche</a></p>';
+    res.innerHTML = '<p style="text-align:center;padding:12px;"><a href="/cart.php?a=add&domain=register" style="color:#00d1b2;font-weight:700;">Use the search page</a></p>';
   });
 }
 
@@ -683,6 +683,6 @@ function vcNorm() {
   });
 }
 document.addEventListener('DOMContentLoaded', vcNorm);
-new MutationObserver(vcNorm).observe(document.body, { childList: true, subtree: true, characterData: true });
+
 {/literal}
 </script>

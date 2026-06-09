@@ -77,7 +77,7 @@
     <!-- Logout -->
     <div class="lw-sb-footer">
         <a href="{$WEB_ROOT}/logout.php" class="lw-sb-logout">
-            <i class="fas fa-sign-out-alt"></i><span>Déconnexion</span>
+            <i class="fas fa-sign-out-alt"></i><span>Logout</span>
         </a>
     </div>
 
